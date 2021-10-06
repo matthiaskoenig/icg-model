@@ -1,3 +1,7 @@
+.. image:: https://zenodo.org/badge/55952847.svg
+   :target: https://zenodo.org/badge/latestdoi/55952847
+   :alt: Zenodo DOI
+
 # ICG model
 This repository provides the indocyanine green physiological based pharmacokinetics model (PBPK) described in
 
@@ -6,12 +10,10 @@ This repository provides the indocyanine green physiological based pharmacokinet
 bioRxiv 2021.06.15.448411; doi: [https://doi.org/10.1101/2021.06.15.448411](https://doi.org/10.1101/2021.06.15.448411)
 
 
-The model is distributed as [SBML](http://sbml.org) and available from [`icg_body_flat.xml`](./models/icg_body_flat.xml)
+The model is distributed as [SBML](http://sbml.org) available from [`icg_body_flat.xml`](./models/icg_body_flat.xml) with 
+corresponding SBML4humans model report at [https://sbml4humans.de/model_url?url=https://raw.githubusercontent.com/matthiaskoenig/icg-model/main/models/icg_body.xml](https://sbml4humans.de/model_url?url=https://raw.githubusercontent.com/matthiaskoenig/icg-model/main/models/icg_body_flat.xml) 
 
 ![Visualization of the model using cy3sbml](./visualization/icg_body_flat.png)
-
-The SBML4humans model report is available via
-[https://sbml4humans.de/model_url?url=https://raw.githubusercontent.com/matthiaskoenig/icg-model/main/models/icg_body.xml](https://sbml4humans.de/model_url?url=https://raw.githubusercontent.com/matthiaskoenig/icg-model/main/models/icg_body_flat.xml)
 
 ### Comp submodels
 The liver submodel is available from [`icg_liver.xml`](./models/icg_liver.xml) with corresponding SBML4humans report at
