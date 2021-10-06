@@ -9,13 +9,13 @@ bioRxiv 2021.06.15.448411; doi: [https://doi.org/10.1101/2021.06.15.448411](http
 
 
 The model is distributed as [SBML](http://sbml.org) available from [`icg_body_flat.xml`](./models/icg_body_flat.xml) with 
-corresponding SBML4humans model report at [https://sbml4humans.de/model_url?url=https://raw.githubusercontent.com/matthiaskoenig/icg-model/main/models/icg_body.xml](https://sbml4humans.de/model_url?url=https://raw.githubusercontent.com/matthiaskoenig/icg-model/main/models/icg_body_flat.xml) 
+corresponding SBML4humans model report at [https://sbml4humans.de/model_url?url=https://raw.githubusercontent.com/matthiaskoenig/icg-model/main/models/icg_body_flat.xml](https://sbml4humans.de/model_url?url=https://raw.githubusercontent.com/matthiaskoenig/icg-model/main/models/icg_body_flat.xml) 
 
 ![Visualization of the model using cy3sbml](./visualization/icg_body_flat.png)
 
 ### Comp submodels
 The liver submodel is available from [`icg_liver.xml`](./models/icg_liver.xml) with corresponding SBML4humans report at
-[https://sbml4humans.de/model_url?url=https://raw.githubusercontent.com/matthiaskoenig/icg-model/main/models/icg_body.xml](https://sbml4humans.de/model_url?url=https://raw.githubusercontent.com/matthiaskoenig/icg-model/main/models/icg_liver.xml)
+[https://sbml4humans.de/model_url?url=https://raw.githubusercontent.com/matthiaskoenig/icg-model/main/models/icg_liver.xml](https://sbml4humans.de/model_url?url=https://raw.githubusercontent.com/matthiaskoenig/icg-model/main/models/icg_liver.xml)
 
 ![Visualization of the liver submodel using cy3sbml](./visualization/icg_liver.png)
 
