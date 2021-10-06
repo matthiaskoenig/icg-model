@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5552397.svg)](https://doi.org/10.5281/zenodo.5552397)
+
 # ICG model
 This repository provides the indocyanine green physiological based pharmacokinetics model (PBPK) described in
 
