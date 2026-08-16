@@ -1,11 +1,14 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5552397.svg)](https://doi.org/10.5281/zenodo.5552397)
 
 # ICG model
-This repository provides the indocyanine green physiological based pharmacokinetics model (PBPK) described in
+This repository provides the indocyanine (ICG) green physiological based pharmacokinetics model (PBPK) described in
 
 > Prediction of survival after partial hepatectomy using a physiologically based pharmacokinetic model of indocyanine green liver function tests
-*Adrian Köller, Jan Grzegorzewski, Hans-Michael Tautenhahn, Matthias König*
-bioRxiv 2021.06.15.448411; doi: [https://doi.org/10.1101/2021.06.15.448411](https://doi.org/10.1101/2021.06.15.448411)
+*Adrian Köller, Jan Grzegorzewski, Hans-Michael Tautenhahn, Matthias König*  
+Front. Physiol., 22 November 2021 (publication). doi:[10.3389/fphys.2021.730418](https://doi.org/10.3389/fphys.2021.730418).
+
+
+![Model overview](./visualization/icg_model.png)
 
 
 The model is distributed as [SBML](http://sbml.org) available from [`icg_body_flat.xml`](./models/icg_body_flat.xml) with 
@@ -25,35 +28,31 @@ The whole-body submodel is available from [`icg_body.xml`](./models/icg_body.xml
 
 ## How to cite
 
- Prediction of survival after partial hepatectomy using a physiologically based pharmacokinetic model of indocyanine green liver function tests
-*Adrian Köller, Jan Grzegorzewski, Hans-Michael Tautenhahn, Matthias König*
-bioRxiv 2021.06.15.448411; doi: [https://doi.org/10.1101/2021.06.15.448411](https://doi.org/10.1101/2021.06.15.448411)
+> Prediction of survival after partial hepatectomy using a physiologically based pharmacokinetic model of indocyanine green liver function tests
+*Adrian Köller, Jan Grzegorzewski, Hans-Michael Tautenhahn, Matthias König*  
+Front. Physiol., 22 November 2021 (publication). doi:[10.3389/fphys.2021.730418](https://doi.org/10.3389/fphys.2021.730418).
 
+Additional applications of the model can be found in
+
+> Physiologically based modeling of the effect of physiological and anthropometric variability on indocyanine green based liver function tests  
+*Adrian Köller, Jan Grzegorzewski and Matthias König*
+Front Physiol. 2021 Nov 22;12:757293 (publication). doi:[10.3389/fphys.2021.757293](https://doi.org/10.3389/fphys.2021.757293).
 
 ## License
 
-* Source Code: [LGPLv3](http://opensource.org/licenses/LGPL-3.0)
+* Source Code: [MIT](https://opensource.org/license/MIT)
 * Documentation: [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/)
 * Models: [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/)
 
-The icg-model source is released under both the GPL and LGPL licenses version 2 or
-later. You may choose which license you choose to use the software under.
-
-This program is free software: you can redistribute it and/or modify it under
-the terms of the GNU General Public License or the GNU Lesser General Public
-License as published by the Free Software Foundation, either version 2 of the
-License, or (at your option) any later version.
-
 This program is distributed in the hope that it will be useful, but WITHOUT ANY
 WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
-PARTICULAR PURPOSE. See the GNU General Public License for more details.
+PARTICULAR PURPOSE.
 
-Funding
-=======
-Adrian Köller and Matthias König are supported by the Federal Ministry of Education and Research (BMBF, Germany)
-within the research network Systems Medicine of the Liver (**LiSyM**, grant number 031L0054). Matthias König
-is supported by the German Research Foundation (DFG) within the Research Unit Programme FOR 5151
-[QuaLiPerF](https://qualiperf.de) (Quantifying Liver Perfusion-Function Relationship in Complex Resecti)
-A Systems Medicine Approach)" by grant number 436883643.
+## Funding
 
-© 2020-2021 [Matthias König](https://livermetabolism.com)
+Adrian Köller and Matthias König were supported by the Federal Ministry of Education and Research (BMBF, Germany)
+within the research network Systems Medicine of the Liver (LiSyM, grant number 031L0054). 
+Matthias König was supported by the Federal Ministry of Research, Technology and Space (BMFTR, Germany) within ATLAS by grant number 031L0304B and by the German Research Foundation (DFG) within the Research Unit Program FOR 5151 QuaLiPerF (Quantifying Liver Perfusion-Function Relationship in Complex Resection - A Systems Medicine Approach) by grant number 436883643 and by grant number 465194077 (Priority Programme SPP 2311, Subproject SimLivA). This work was supported by the BMBF-funded de.NBI Cloud within the German Network for Bioinformatics Infrastructure (de.NBI) (031A537B, 031A533A, 031A538A, 031A533B, 031A535A, 031A537C, 031A534A, 031A532B). 
+
+
+© 2020-2026 [Matthias König](https://livermetabolism.com)
