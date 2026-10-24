@@ -1,0 +1,8 @@
+study	name	group_count	parent	measurement	choice	median	min	max	unit	count
+Sunagawa2021	all	193	NA	species	homo sapiens	NA	NA	NA	NA	193
+Sunagawa2021	all	193	NA	age	NA	68.0	19.0	85.0	yr	193
+Sunagawa2021	all	193	NA	sex	F	NA	NA	NA	NA	59
+Sunagawa2021	all	193	NA	sex	M	NA	NA	NA	NA	134
+Sunagawa2021	all	193	NA	healthy	N	NA	NA	NA	NA	193
+Sunagawa2021	all	193	NA	child-pugh score	child-pugh class A	NA	NA	NA	NA	189
+Sunagawa2021	all	193	NA	child-pugh score	child-pugh class B	NA	NA	NA	NA	4

@@ -1,0 +1,11 @@
+study	group	intervention	measurement_type	tissue	substance	mean	se	unit
+Huet1980	controls	Lidiv, Lidor	kel	plasma	lidocaine	0.0081	0.0009	1/min
+Huet1980	controls	Lidiv, Lidor	thalf	plasma	lidocaine	92.6	8.6	min
+Huet1980	controls	Lidiv, Lidor	vd	plasma	lidocaine	1.84	0.12	l/kg
+Huet1980	controls	Lidiv	auc_inf	plasma	lidocaine	99.9	8.2	microg/ml*min
+Huet1980	controls	Lidor	auc_inf	plasma	lidocaine	33.4	7.5	microg/ml*min
+Huet1980	patients	Lidiv, Lidor	kel	plasma	lidocaine	0.0075	0.0009	1/min
+Huet1980	patients	Lidiv, Lidor	thalf	plasma	lidocaine	97.2	8.1	min
+Huet1980	patients	Lidiv, Lidor	vd	plasma	lidocaine	2.94	0.4	l/kg
+Huet1980	patients	Lidiv	auc_inf	plasma	lidocaine	76.4	7.5	microg/ml*min
+Huet1980	patients	Lidor	auc_inf	plasma	lidocaine	23.6	6.9	microg/ml*min

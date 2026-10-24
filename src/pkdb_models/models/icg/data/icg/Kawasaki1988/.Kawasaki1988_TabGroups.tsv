@@ -1,0 +1,26 @@
+study	name	group_count	parent	measurement_type	choice	count
+Kawasaki1988	all	29	NA	sex	M	25
+Kawasaki1988	all	29	NA	sex	F	4
+Kawasaki1988	all	29	NA	species	homo sapiens	29
+Kawasaki1988	all	29	NA	overnight fast	Y	29
+Kawasaki1988	all	29	NA	healthy	Y	5
+Kawasaki1988	all	29	NA	healthy	N	24
+Kawasaki1988	normal	5	all	sex	M	5
+Kawasaki1988	normal	5	all	healthy	Y	5
+Kawasaki1988	cirrhosis	17	all	sex	M	15
+Kawasaki1988	cirrhosis	17	all	sex	F	2
+Kawasaki1988	cirrhosis	17	all	healthy	N	17
+Kawasaki1988	cirrhosis	17	all	disease	liver cirrhosis	17
+Kawasaki1988	FibEPO	5	all	sex	NR	5
+Kawasaki1988	FibEPO	5	all	healthy	N	5
+Kawasaki1988	EPO	3	FibEPO	sex	M	2
+Kawasaki1988	EPO	3	FibEPO	sex	F	1
+Kawasaki1988	EPO	3	FibEPO	healthy	N	3
+Kawasaki1988	EPO	3	FibEPO	disease	extrahepatic portal obstruction	3
+Kawasaki1988	Fibrosis	2	FibEPO	sex	M	2
+Kawasaki1988	Fibrosis	2	FibEPO	healthy	N	2
+Kawasaki1988	Fibrosis	2	FibEPO	disease	liver fibrosis	2
+Kawasaki1988	Hepatitis	2	all	sex	M	1
+Kawasaki1988	Hepatitis	2	all	sex	F	1
+Kawasaki1988	Hepatitis	2	all	healthy	N	2
+Kawasaki1988	Hepatitis	2	all	disease	hepatitis	2

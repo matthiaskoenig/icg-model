@@ -1,0 +1,43 @@
+study	group	intervention	measurement_type	tissue	substance	mean	sd	min	max	unit
+Kearns1990	Control	ICG, Lor, AP	vd_ss	plasma	antipyrine	0.5	0.03	0.4	0.7	l/kg
+Kearns1990	Control	ICG, Lor, AP	vd_ss	plasma	antipyrine	15.5	1.2	10.1	19.4	l/m^2
+Kearns1990	Control	ICG, Lor, AP	vd_ss	plasma	antipyrine	22.9	2.9	9.2	36.7	l
+Kearns1990	Control	ICG, Lor, AP	clearance	plasma	antipyrine	0.7	0.09	0.3	1.0	ml/min/kg
+Kearns1990	Control	ICG, Lor, AP	clearance	plasma	antipyrine	20.7	2.0	12.2	29.6	ml/min/m^2
+Kearns1990	Control	ICG, Lor, AP	clearance	plasma	antipyrine	27.9	3.0	16.2	34.7	ml/min
+Kearns1990	Control	ICG, Lor, AP	kel	plasma	antipyrine	0.08	0.01	0.04	0.1	1/hr
+Kearns1990	Control	ICG, Lor, AP	vd_ss	plasma	lorazepam	0.8	0.06	0.4	1.1	l/kg
+Kearns1990	Control	ICG, Lor, AP	vd_ss	plasma	lorazepam	25.0	2.0	11.9	32.2	l/m^2
+Kearns1990	Control	ICG, Lor, AP	vd_ss	plasma	lorazepam	36.2	5.4	15.9	61.4	l
+Kearns1990	Control	ICG, Lor, AP	clearance	plasma	lorazepam	0.8	0.08	0.4	1.1	ml/min/kg
+Kearns1990	Control	ICG, Lor, AP	clearance	plasma	lorazepam	25.9	1.9	14.9	31.7	ml/min/m^2
+Kearns1990	Control	ICG, Lor, AP	clearance	plasma	lorazepam	36.3	4.5	22.2	61.7	ml/min
+Kearns1990	Control	ICG, Lor, AP	kel	plasma	lorazepam	0.06	0.01	0.04	0.09	1/hr
+Kearns1990	Control	ICG, Lor, AP	vd_ss	plasma	indocyanine green	0.03	0.006	0.01	0.06	l/kg
+Kearns1990	Control	ICG, Lor, AP	vd_ss	plasma	indocyanine green	1.0	0.2	0.2	1.9	l/m^2
+Kearns1990	Control	ICG, Lor, AP	vd_ss	plasma	indocyanine green	1.4	0.4	0.2	3.7	l
+Kearns1990	Control	ICG, Lor, AP	clearance	plasma	indocyanine green	8.1	1.4	1.6	16.1	ml/min/kg
+Kearns1990	Control	ICG, Lor, AP	clearance	plasma	indocyanine green	256.5	41.7	50.8	432.7	ml/min/m^2
+Kearns1990	Control	ICG, Lor, AP	clearance	plasma	indocyanine green	364.6	76.2	75.7	865.3	ml/min
+Kearns1990	Control	ICG, Lor, AP	kel	plasma	indocyanine green	17.9	1.0	14.4	24.3	1/min
+Kearns1990	CF	ICG, Lor, AP	vd_ss	plasma	antipyrine	0.7	0.04	0.5	1.0	l/kg
+Kearns1990	CF	ICG, Lor, AP	vd_ss	plasma	antipyrine	22.7	1.4	15.5	34.8	l/m^2
+Kearns1990	CF	ICG, Lor, AP	vd_ss	plasma	antipyrine	31.9	3.2	16.9	62.7	l
+Kearns1990	CF	ICG, Lor, AP	clearance	plasma	antipyrine	0.9	0.1	0.4	2.2	ml/min/kg
+Kearns1990	CF	ICG, Lor, AP	clearance	plasma	antipyrine	27.2	3.8	12.2	65.1	ml/min/m^2
+Kearns1990	CF	ICG, Lor, AP	clearance	plasma	antipyrine	37.5	5.2	14.3	80.1	ml/min
+Kearns1990	CF	ICG, Lor, AP	kel	plasma	antipyrine	0.1	0.04	0.03	0.2	1/hr
+Kearns1990	CF	ICG, Lor, AP	vd_ss	plasma	lorazepam	1.5	0.1	1.2	2.2	l/kg
+Kearns1990	CF	ICG, Lor, AP	vd_ss	plasma	lorazepam	48.2	2.9	37.5	73.5	l/m^2
+Kearns1990	CF	ICG, Lor, AP	vd_ss	plasma	lorazepam	67.6	6.4	41.9	132.4	l
+Kearns1990	CF	ICG, Lor, AP	clearance	plasma	lorazepam	1.8	0.2	1.2	3.7	ml/min/kg
+Kearns1990	CF	ICG, Lor, AP	clearance	plasma	lorazepam	56.5	5.2	33.7	108.6	ml/min/m^2
+Kearns1990	CF	ICG, Lor, AP	clearance	plasma	lorazepam	78.1	7.3	35.5	133.6	ml/min
+Kearns1990	CF	ICG, Lor, AP	kel	plasma	lorazepam	0.1	0.01	0.04	0.1	1/hr
+Kearns1990	CF	ICG, Lor, AP	vd_ss	plasma	indocyanine green	0.1	0.03	0.04	0.4	l/kg
+Kearns1990	CF	ICG, Lor, AP	vd_ss	plasma	indocyanine green	4.0	0.8	1.6	12.4	l/m^2
+Kearns1990	CF	ICG, Lor, AP	vd_ss	plasma	indocyanine green	5.6	1.2	2.1	19.1	l
+Kearns1990	CF	ICG, Lor, AP	clearance	plasma	indocyanine green	29.0	5.4	11.7	89.1	ml/min/kg
+Kearns1990	CF	ICG, Lor, AP	clearance	plasma	indocyanine green	892.5	176.4	416.9	2962.8	ml/min/m^2
+Kearns1990	CF	ICG, Lor, AP	clearance	plasma	indocyanine green	1238.5	273.0	533.8	4562.8	ml/min
+Kearns1990	CF	ICG, Lor, AP	kel	plasma	indocyanine green	12.0	1.0	6.2	22.2	1/min

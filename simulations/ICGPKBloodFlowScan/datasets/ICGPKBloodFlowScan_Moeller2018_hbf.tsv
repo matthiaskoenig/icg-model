@@ -1,0 +1,4 @@
+study	group	intervention	measurement	tissue	substance	mean	mean_sd	time	time_unit	ctp	count	mean_unit	count_unit
+Moeller2018	Child_A	ICG	hbf	liver		1.38	0.25			A	17	l/min	dimensionless
+Moeller2018	Child_B	ICG	hbf	liver		1.44	0.56			B	37	l/min	dimensionless
+Moeller2018	Child_C	ICG	hbf	liver		1.59	0.83			C	14	l/min	dimensionless

@@ -1,0 +1,18 @@
+study	name	group_count	parent	measurement	mean	sd	unit	choice	count
+Herold2001	all	101	NA	species	NA	NA	NA	homo sapiens	101
+Herold2001	all	101	NA	sex	NA	NA	NA	M	67
+Herold2001	all	101	NA	sex	NA	NA	NA	F	24
+Herold2001	all	101	NA	healthy	NA	NA	NA	Y	15
+Herold2001	all	101	NA	healthy	NA	NA	NA	N	86
+Herold2001	Controls	15	all	healthy	NA	NA	NA	Y	15
+Herold2001	Controls	15	all	sex	NA	NA	NA	M	9
+Herold2001	Controls	15	all	sex	NA	NA	NA	F	6
+Herold2001	Controls	15	all	age	48.3	11.7	yr	NA	9
+Herold2001	Cirrhosis	86	all	healthy	NA	NA	NA	N	86
+Herold2001	Cirrhosis	86	all	disease	NA	NA	NA	liver cirrhosis	86
+Herold2001	Cirrhosis	86	all	sex	NA	NA	NA	M	58
+Herold2001	Cirrhosis	86	all	sex	NA	NA	NA	F	28
+Herold2001	Cirrhosis	86	all	age	28.7	9.6	yr	NA	86
+Herold2001	Child_A	47	Cirrhosis	child-pugh score	NA	NA	NA	child-pugh class A	47
+Herold2001	Child_B	24	Cirrhosis	child-pugh score	NA	NA	NA	child-pugh class B	24
+Herold2001	Child_C	15	Cirrhosis	child-pugh score	NA	NA	NA	child-pugh class C	15

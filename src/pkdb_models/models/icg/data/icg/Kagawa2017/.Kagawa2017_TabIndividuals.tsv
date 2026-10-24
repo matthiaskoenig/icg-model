@@ -1,0 +1,13 @@
+study	group	name	measurement	choice	value	unit
+Kagawa2017	all	P1	age	NA	44.0	yr
+Kagawa2017	all	P1	sex	F	NA	NA
+Kagawa2017	all	P1	disease	pbc	NA	NA
+Kagawa2017	all	P2	age	NA	58.0	yr
+Kagawa2017	all	P2	sex	F	NA	NA
+Kagawa2017	all	P2	disease	pbc	NA	NA
+Kagawa2017	all	P3	age	NA	62.0	yr
+Kagawa2017	all	P3	sex	M	NA	NA
+Kagawa2017	all	P3	disease	nafld	NA	NA
+Kagawa2017	all	P4	age	NA	53.0	yr
+Kagawa2017	all	P4	sex	F	NA	NA
+Kagawa2017	all	P4	disease	hepatocellular carcinoma	NA	NA

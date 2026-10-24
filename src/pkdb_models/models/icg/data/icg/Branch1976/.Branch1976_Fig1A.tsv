@@ -1,0 +1,53 @@
+study	individual	intervention	measurement	substance	tissue	label	unit	value
+Branch1976	C1	ICG	clearance	indocyanine green	blood	clearance A	ml/min	2007.3395
+Branch1976	C2	ICG	clearance	indocyanine green	blood	clearance A	ml/min	1383.4862
+Branch1976	C3	ICG	clearance	indocyanine green	blood	clearance A	ml/min	1324.7706
+Branch1976	C4	ICG	clearance	indocyanine green	blood	clearance A	ml/min	983.48627
+Branch1976	C5	ICG	clearance	indocyanine green	blood	clearance A	ml/min	924.7706
+Branch1976	C6	ICG	clearance	indocyanine green	blood	clearance A	ml/min	682.5688
+Branch1976	P1	ICG	clearance	indocyanine green	blood	clearance A	ml/min	1016.51373
+Branch1976	P2	ICG	clearance	indocyanine green	blood	clearance A	ml/min	818.34863
+Branch1976	P3	ICG	clearance	indocyanine green	blood	clearance A	ml/min	785.3211
+Branch1976	P4	ICG	clearance	indocyanine green	blood	clearance A	ml/min	744.9541
+Branch1976	P5	ICG	clearance	indocyanine green	blood	clearance A	ml/min	689.90826
+Branch1976	P6	ICG	clearance	indocyanine green	blood	clearance A	ml/min	671.55963
+Branch1976	P7	ICG	clearance	indocyanine green	blood	clearance A	ml/min	565.13763
+Branch1976	P8	ICG	clearance	indocyanine green	blood	clearance A	ml/min	568.8073
+Branch1976	P9	ICG	clearance	indocyanine green	blood	clearance A	ml/min	510.09174
+Branch1976	P10	ICG	clearance	indocyanine green	blood	clearance A	ml/min	495.41284
+Branch1976	P11	ICG	clearance	indocyanine green	blood	clearance A	ml/min	381.65137
+Branch1976	P12	ICG	clearance	indocyanine green	blood	clearance A	ml/min	245.87157
+Branch1976	P13	ICG	clearance	indocyanine green	blood	clearance A	ml/min	176.14679
+Branch1976	P14	ICG	clearance	indocyanine green	blood	clearance A	ml/min	168.80734
+Branch1976	P15	ICG	clearance	indocyanine green	blood	clearance A	ml/min	157.79817
+Branch1976	P16	ICG	clearance	indocyanine green	blood	clearance A	ml/min	124.770645
+Branch1976	P17	ICG	clearance	indocyanine green	blood	clearance A	ml/min	69.72477
+Branch1976	P18	ICG	clearance	indocyanine green	blood	clearance A	ml/min	66.055046
+Branch1976	P19	ICG	clearance	indocyanine green	blood	clearance A	ml/min	47.70642
+Branch1976	P20	ICG	clearance	indocyanine green	blood	clearance A	ml/min	33.027523
+Branch1976	C1	ICG	concentration_ss	albumin	plasma	albumin	g/(100*ml)	4.5660377
+Branch1976	C2	ICG	concentration_ss	albumin	plasma	albumin	g/(100*ml)	3.95283
+Branch1976	C3	ICG	concentration_ss	albumin	plasma	albumin	g/(100*ml)	4.462264
+Branch1976	C4	ICG	concentration_ss	albumin	plasma	albumin	g/(100*ml)	4.3396225
+Branch1976	C5	ICG	concentration_ss	albumin	plasma	albumin	g/(100*ml)	3.6698112
+Branch1976	C6	ICG	concentration_ss	albumin	plasma	albumin	g/(100*ml)	3.8679245
+Branch1976	P1	ICG	concentration_ss	albumin	plasma	albumin	g/(100*ml)	3.7735848
+Branch1976	P2	ICG	concentration_ss	albumin	plasma	albumin	g/(100*ml)	3.8679245
+Branch1976	P3	ICG	concentration_ss	albumin	plasma	albumin	g/(100*ml)	4.0660377
+Branch1976	P4	ICG	concentration_ss	albumin	plasma	albumin	g/(100*ml)	3.6603773
+Branch1976	P5	ICG	concentration_ss	albumin	plasma	albumin	g/(100*ml)	4.462264
+Branch1976	P6	ICG	concentration_ss	albumin	plasma	albumin	g/(100*ml)	3.6792452
+Branch1976	P7	ICG	concentration_ss	albumin	plasma	albumin	g/(100*ml)	2.8867924
+Branch1976	P8	ICG	concentration_ss	albumin	plasma	albumin	g/(100*ml)	3.8679245
+Branch1976	P9	ICG	concentration_ss	albumin	plasma	albumin	g/(100*ml)	3.0
+Branch1976	P10	ICG	concentration_ss	albumin	plasma	albumin	g/(100*ml)	3.9339623
+Branch1976	P11	ICG	concentration_ss	albumin	plasma	albumin	g/(100*ml)	2.7735848
+Branch1976	P12	ICG	concentration_ss	albumin	plasma	albumin	g/(100*ml)	2.7924528
+Branch1976	P13	ICG	concentration_ss	albumin	plasma	albumin	g/(100*ml)	2.7452831
+Branch1976	P14	ICG	concentration_ss	albumin	plasma	albumin	g/(100*ml)	3.2641509
+Branch1976	P15	ICG	concentration_ss	albumin	plasma	albumin	g/(100*ml)	2.8773584
+Branch1976	P16	ICG	concentration_ss	albumin	plasma	albumin	g/(100*ml)	2.7169812
+Branch1976	P17	ICG	concentration_ss	albumin	plasma	albumin	g/(100*ml)	3.0660377
+Branch1976	P18	ICG	concentration_ss	albumin	plasma	albumin	g/(100*ml)	2.7452831
+Branch1976	P19	ICG	concentration_ss	albumin	plasma	albumin	g/(100*ml)	2.0943396
+Branch1976	P20	ICG	concentration_ss	albumin	plasma	albumin	g/(100*ml)	2.8679245

@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leevy1962 | sbmlsim experiment</title>
+<style>
+:root {
+  --bg: #ffffff; --bg-soft: #f6f7f9; --bg-card: #ffffff;
+  --fg: #1b1f24; --fg-soft: #5b6472; --line: #e3e6ea;
+  --accent: #3b5bdb; --training: #2f9e44; --validation: #1c7ed6; --outlier: #e8590c;
+  --excluded: #868e96;
+  --radius: 10px; --shadow: 0 1px 2px rgba(16,24,40,.06), 0 1px 3px rgba(16,24,40,.1);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14171c; --bg-soft: #1a1e24; --bg-card: #1a1e24;
+    --fg: #e6e9ee; --fg-soft: #9aa4b2; --line: #2a3038;
+    --accent: #748ffc; --training: #51cf66; --validation: #4dabf7; --outlier: #ff922b;
+    --excluded: #adb5bd;
+    --shadow: none;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+code, .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .92em; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+header.top {
+  position: sticky; top: 0; z-index: 20; background: var(--bg);
+  border-bottom: 1px solid var(--line); padding: 14px 24px 0;
+}
+.top .row { display: flex; flex-wrap: wrap; gap: 12px; align-items: baseline; }
+.top h1 { margin: 0; font-size: 20px; font-weight: 650; letter-spacing: -.01em; }
+.top .sub { color: var(--fg-soft); font-size: 13px; }
+.badges { display: flex; flex-wrap: wrap; gap: 8px; margin-left: auto; }
+.badge {
+  background: var(--bg-soft); border: 1px solid var(--line); border-radius: 999px;
+  padding: 2px 10px; font-size: 12px; color: var(--fg-soft); white-space: nowrap;
+}
+.badge b { color: var(--fg); font-weight: 600; }
+.badge.failed, .badge.failed b { color: var(--outlier); border-color: var(--outlier); }
+nav.sections { display: flex; gap: 4px; margin-top: 12px; }
+nav.sections a {
+  padding: 8px 14px; border-bottom: 2px solid transparent; color: var(--fg-soft);
+  font-size: 14px; font-weight: 550;
+}
+nav.sections a.active { color: var(--fg); border-bottom-color: var(--accent); }
+.search { display: flex; gap: 8px; align-items: center; padding: 10px 0 12px; }
+.search input {
+  flex: 1; max-width: 460px; padding: 8px 12px; font-size: 14px; color: var(--fg);
+  background: var(--bg-soft); border: 1px solid var(--line); border-radius: 8px;
+}
+.search input:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+.chip {
+  border: 1px solid var(--line); background: var(--bg-soft); color: var(--fg-soft);
+  border-radius: 999px; padding: 5px 12px; font-size: 12.5px; cursor: pointer;
+}
+.chip[aria-pressed="true"] { color: #fff; border-color: transparent; }
+.chip[data-kind="training"][aria-pressed="true"] { background: var(--training); }
+.chip[data-kind="validation"][aria-pressed="true"] { background: var(--validation); }
+.chip[data-kind="outlier"][aria-pressed="true"] { background: var(--outlier); }
+.chip[data-kind="excluded"][aria-pressed="true"] { background: var(--excluded); }
+#hits { color: var(--fg-soft); font-size: 12.5px; margin-left: auto; }
+
+main { padding: 24px; max-width: 1400px; margin: 0 auto; }
+section { margin-bottom: 44px; scroll-margin-top: 150px; }
+section > h2 {
+  font-size: 17px; font-weight: 650; margin: 0 0 4px; padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+}
+h3 { font-size: 14px; font-weight: 600; color: var(--fg-soft); margin: 26px 0 10px;
+     text-transform: uppercase; letter-spacing: .04em; }
+.card {
+  background: var(--bg-card); border: 1px solid var(--line); border-radius: var(--radius);
+  box-shadow: var(--shadow); padding: 16px; margin-bottom: 16px;
+}
+/* a heading which opens a card sits at the padding of the card */
+.card > h3:first-child { margin-top: 0; }
+.grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+        margin-bottom: 16px; }
+/* the gap of the grid is the space between its cards */
+.grid > .card { margin-bottom: 0; }
+.card.wide { grid-column: 1 / -1; }
+
+table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+/* two tables in one card, e.g. the networks and their arrays */
+table + table { margin-top: 24px; }
+th, td { text-align: left; padding: 7px 12px 7px 0; border-bottom: 1px solid var(--line); }
+th { color: var(--fg-soft); font-weight: 600; white-space: nowrap; }
+th[data-sort] { cursor: pointer; user-select: none; }
+th[data-sort]:hover { color: var(--fg); }
+th[data-sort]::after { content: " ⇅"; opacity: .35; }
+th[data-sort].asc::after { content: " ↑"; opacity: 1; }
+th[data-sort].desc::after { content: " ↓"; opacity: 1; }
+td.num, th.num { text-align: right; padding-right: 18px; font-variant-numeric: tabular-nums; }
+tbody tr:hover { background: var(--bg-soft); }
+tr.total td { font-weight: 650; border-top: 2px solid var(--line); }
+
+.kv { display: grid; grid-template-columns: max-content 1fr; gap: 4px 20px; font-size: 13.5px;
+      margin: 0; }
+.kv dt { color: var(--fg-soft); }
+.kv dd { margin: 0; word-break: break-word; white-space: pre-line; }
+
+.tag { border-radius: 999px; padding: 1px 9px; font-size: 11.5px; font-weight: 600; color: #fff; }
+.tag.training { background: var(--training); }
+.tag.validation { background: var(--validation); }
+.tag.outlier { background: var(--outlier); }
+.tag.excluded { background: var(--excluded); }
+.warn { color: var(--outlier); }
+
+/* what a value means, on the header of a column or next to a figure */
+.hint {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 14px; height: 14px; margin-left: 4px; border-radius: 50%;
+  border: 1px solid var(--line); color: var(--fg-soft);
+  font-size: 10px; font-weight: 700; line-height: 1; cursor: help;
+  position: relative; vertical-align: middle; user-select: none;
+}
+.hint:hover, .hint:focus { border-color: var(--accent); color: var(--accent); }
+.hint::after {
+  content: attr(data-tip);
+  position: absolute; bottom: calc(100% + 8px); left: 50%;
+  transform: translateX(-50%);
+  width: max-content; max-width: 320px; padding: 8px 10px;
+  border-radius: 6px; border: 1px solid var(--line);
+  background: var(--bg); color: var(--fg); box-shadow: 0 4px 16px rgb(0 0 0 / 18%);
+  font-size: 12px; font-weight: 400; line-height: 1.45; text-align: left;
+  white-space: normal; opacity: 0; visibility: hidden; transition: opacity .12s;
+  z-index: 20; pointer-events: none;
+}
+.hint:hover::after, .hint:focus::after { opacity: 1; visibility: visible; }
+/* a tooltip of the last columns would leave the page */
+td:last-child .hint::after, th:last-child .hint::after { left: auto; right: 0; transform: none; }
+/* on a phone a wide table scrolls inside its card and not the page; the
+   tooltips of its header open downwards, into the table, not above the card */
+@media (max-width: 700px) {
+  .card { overflow-x: auto; }
+  th .hint::after { bottom: auto; top: calc(100% + 8px); }
+  /* the header of a phone is not sticky, it would cover half of the screen,
+     and its rows wrap; the gutter is 16px */
+  header.top { position: static; padding: 12px 16px 0; }
+  main { padding: 16px; }
+  footer { padding: 8px 16px 24px; }
+  section { scroll-margin-top: 16px; }
+  nav.sections { overflow-x: auto; }
+  nav.sections a { padding: 8px 10px; white-space: nowrap; }
+  .search { flex-wrap: wrap; }
+  .search input { flex-basis: 100%; max-width: none; }
+}
+
+figure { margin: 0; }
+figure img {
+  width: 100%; height: auto; background: #fff; border: 1px solid var(--line);
+  border-radius: 8px; cursor: zoom-in;
+}
+figcaption { color: var(--fg-soft); font-size: 12.5px; margin-top: 6px; }
+
+.mapping { }
+.mapping header { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; margin-bottom: 10px; }
+.mapping header .name { font-weight: 650; }
+.mapping header .exp { color: var(--fg-soft); font-size: 13px; }
+.mapping .metrics { margin-left: auto; display: flex; gap: 14px; font-size: 12.5px; color: var(--fg-soft); }
+.mapping .metrics b { color: var(--fg); font-weight: 600; }
+.hidden { display: none !important; }
+.failed { color: var(--outlier); }
+.empty { color: var(--fg-soft); font-style: italic; padding: 16px 0; }
+
+pre.code {
+  margin: 0; padding: 14px 16px; overflow-x: auto; max-height: 70vh;
+  background: var(--bg-soft); border: 1px solid var(--line); border-radius: 8px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12.5px; line-height: 1.5; tab-size: 4;
+}
+#lightbox {
+  position: fixed; inset: 0; background: rgba(8,10,14,.86); z-index: 50;
+  display: none; align-items: center; justify-content: center; padding: 24px; cursor: zoom-out;
+}
+#lightbox.open { display: flex; }
+#lightbox img { max-width: 100%; max-height: 100%; background: #fff; border-radius: 8px; }
+footer { color: var(--fg-soft); font-size: 12.5px; padding: 8px 24px 32px; max-width: 1400px; margin: 0 auto; }
+</style>
+<style>
+  /* an interactive figure is a page of its own, shown in place of the image */
+  figure iframe { width: 100%; height: 520px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg-card); }
+  /* a figure of one panel is not stretched to the width of the page, a figure
+     of many panels still uses it */
+  #figures figure img { width: auto; max-width: 100%; max-height: 70vh; display: block; margin: 0 auto; }
+  .mapping header .exp a + a::before { content: "·"; color: var(--fg-soft); margin: 0 6px; }
+</style>
+</head>
+<body data-items="figures">
+
+<header class="top">
+  <div class="row">
+    <h1>Leevy1962</h1>
+    <span class="sub">simulation experiment</span>
+    <div class="badges">
+<span class="badge">models <b>1</b></span>
+<span class="badge">datasets <b>28</b></span>
+<span class="badge">figures <b>7</b></span>
+    </div>
+  </div>
+  <nav class="sections">
+<a href="#overview">Overview</a>
+<a href="#figures">Figures</a>
+<a href="#code">Code</a>
+  </nav>
+  <div class="search">
+    <input id="search" type="search" placeholder="Search figures, models, datasets …" autocomplete="off">
+    <span id="hits"></span>
+  </div>
+</header>
+
+<main>
+
+<section id="overview">
+  <h2>Overview</h2>
+
+  <h3>Models</h3>
+  <div class="card">
+    <table data-filter="row">
+      <thead><tr><th data-sort="text">model</th><th data-sort="text">source</th></tr></thead>
+      <tbody>
+      <tr><td class="mono">model</td><td><a href="../../../../src/pkdb_models/models/icg/models/output/models/icg_body_flat.xml" title="../../../../src/pkdb_models/models/icg/models/output/models/icg_body_flat.xml">icg_body_flat.xml</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Datasets</h3>
+  <div class="card">
+    <table data-filter="row">
+      <thead><tr><th data-sort="text">dataset</th><th data-sort="text">file</th></tr></thead>
+      <tbody>
+      <tr><td class="mono">Tab1Mean_concentration_ss</td><td><a href="datasets/Leevy1962_Tab1Mean_concentration_ss.tsv">datasets/Leevy1962_Tab1Mean_concentration_ss.tsv</a></td></tr>
+      <tr><td class="mono">Tab1Mean_extraction_ratio</td><td><a href="datasets/Leevy1962_Tab1Mean_extraction_ratio.tsv">datasets/Leevy1962_Tab1Mean_extraction_ratio.tsv</a></td></tr>
+      <tr><td class="mono">Tab1Mean_excretion_rate</td><td><a href="datasets/Leevy1962_Tab1Mean_excretion_rate.tsv">datasets/Leevy1962_Tab1Mean_excretion_rate.tsv</a></td></tr>
+      <tr><td class="mono">Tab1Mean_hbf</td><td><a href="datasets/Leevy1962_Tab1Mean_hbf.tsv">datasets/Leevy1962_Tab1Mean_hbf.tsv</a></td></tr>
+      <tr><td class="mono">Tab1_icg</td><td><a href="datasets/Leevy1962_Tab1_icg.tsv">datasets/Leevy1962_Tab1_icg.tsv</a></td></tr>
+      <tr><td class="mono">Tab1_ER</td><td><a href="datasets/Leevy1962_Tab1_ER.tsv">datasets/Leevy1962_Tab1_ER.tsv</a></td></tr>
+      <tr><td class="mono">Tab1_HBF</td><td><a href="datasets/Leevy1962_Tab1_HBF.tsv">datasets/Leevy1962_Tab1_HBF.tsv</a></td></tr>
+      <tr><td class="mono">Tab2_alb</td><td><a href="datasets/Leevy1962_Tab2_alb.tsv">datasets/Leevy1962_Tab2_alb.tsv</a></td></tr>
+      <tr><td class="mono">Tab2_bil</td><td><a href="datasets/Leevy1962_Tab2_bil.tsv">datasets/Leevy1962_Tab2_bil.tsv</a></td></tr>
+      <tr><td class="mono">Tab2_ER</td><td><a href="datasets/Leevy1962_Tab2_ER.tsv">datasets/Leevy1962_Tab2_ER.tsv</a></td></tr>
+      <tr><td class="mono">Tab2_HBF</td><td><a href="datasets/Leevy1962_Tab2_HBF.tsv">datasets/Leevy1962_Tab2_HBF.tsv</a></td></tr>
+      <tr><td class="mono">Fig1_icg_ar</td><td><a href="datasets/Leevy1962_Fig1_icg_ar.tsv">datasets/Leevy1962_Fig1_icg_ar.tsv</a></td></tr>
+      <tr><td class="mono">Fig1_icg_hv</td><td><a href="datasets/Leevy1962_Fig1_icg_hv.tsv">datasets/Leevy1962_Fig1_icg_hv.tsv</a></td></tr>
+      <tr><td class="mono">Tab9_ER_ICG0p15</td><td><a href="datasets/Leevy1962_Tab9_ER_ICG0p15.tsv">datasets/Leevy1962_Tab9_ER_ICG0p15.tsv</a></td></tr>
+      <tr><td class="mono">Tab9_ER_ICG0p25</td><td><a href="datasets/Leevy1962_Tab9_ER_ICG0p25.tsv">datasets/Leevy1962_Tab9_ER_ICG0p25.tsv</a></td></tr>
+      <tr><td class="mono">Tab9_ER_ICG0p5</td><td><a href="datasets/Leevy1962_Tab9_ER_ICG0p5.tsv">datasets/Leevy1962_Tab9_ER_ICG0p5.tsv</a></td></tr>
+      <tr><td class="mono">Tab4_concentration_ss_Controls</td><td><a href="datasets/Leevy1962_Tab4_concentration_ss_Controls.tsv">datasets/Leevy1962_Tab4_concentration_ss_Controls.tsv</a></td></tr>
+      <tr><td class="mono">Tab4_concentration_ss_Cirrhosis</td><td><a href="datasets/Leevy1962_Tab4_concentration_ss_Cirrhosis.tsv">datasets/Leevy1962_Tab4_concentration_ss_Cirrhosis.tsv</a></td></tr>
+      <tr><td class="mono">Tab4_extraction_ratio_Controls</td><td><a href="datasets/Leevy1962_Tab4_extraction_ratio_Controls.tsv">datasets/Leevy1962_Tab4_extraction_ratio_Controls.tsv</a></td></tr>
+      <tr><td class="mono">Tab4_extraction_ratio_Cirrhosis</td><td><a href="datasets/Leevy1962_Tab4_extraction_ratio_Cirrhosis.tsv">datasets/Leevy1962_Tab4_extraction_ratio_Cirrhosis.tsv</a></td></tr>
+      <tr><td class="mono">Caesar1961_Tab3_ICG_extraction_ratio_Cirrhosis</td><td><a href="datasets/Leevy1962_Caesar1961_Tab3_ICG_extraction_ratio_Cirrhosis.tsv">datasets/Leevy1962_Caesar1961_Tab3_ICG_extraction_ratio_Cirrhosis.tsv</a></td></tr>
+      <tr><td class="mono">Caesar1961_Tab3_ICG_extraction_ratio_Controls</td><td><a href="datasets/Leevy1962_Caesar1961_Tab3_ICG_extraction_ratio_Controls.tsv">datasets/Leevy1962_Caesar1961_Tab3_ICG_extraction_ratio_Controls.tsv</a></td></tr>
+      <tr><td class="mono">Caesar1961_Tab3_ICG_concentration_ss_Cirrhosis</td><td><a href="datasets/Leevy1962_Caesar1961_Tab3_ICG_concentration_ss_Cirrhosis.tsv">datasets/Leevy1962_Caesar1961_Tab3_ICG_concentration_ss_Cirrhosis.tsv</a></td></tr>
+      <tr><td class="mono">Caesar1961_Tab3_ICG_concentration_ss_Controls</td><td><a href="datasets/Leevy1962_Caesar1961_Tab3_ICG_concentration_ss_Controls.tsv">datasets/Leevy1962_Caesar1961_Tab3_ICG_concentration_ss_Controls.tsv</a></td></tr>
+      <tr><td class="mono">Caesar1961_Tab3_ICG_hbf_Cirrhosis</td><td><a href="datasets/Leevy1962_Caesar1961_Tab3_ICG_hbf_Cirrhosis.tsv">datasets/Leevy1962_Caesar1961_Tab3_ICG_hbf_Cirrhosis.tsv</a></td></tr>
+      <tr><td class="mono">Caesar1961_Tab3_ICG_hbf_Controls</td><td><a href="datasets/Leevy1962_Caesar1961_Tab3_ICG_hbf_Controls.tsv">datasets/Leevy1962_Caesar1961_Tab3_ICG_hbf_Controls.tsv</a></td></tr>
+      <tr><td class="mono">Caesar1961_Tab3_bilirubin_Cirrhosis</td><td><a href="datasets/Leevy1962_Caesar1961_Tab3_bilirubin_Cirrhosis.tsv">datasets/Leevy1962_Caesar1961_Tab3_bilirubin_Cirrhosis.tsv</a></td></tr>
+      <tr><td class="mono">Caesar1961_Tab3_bilirubin_Controls</td><td><a href="datasets/Leevy1962_Caesar1961_Tab3_bilirubin_Controls.tsv">datasets/Leevy1962_Caesar1961_Tab3_bilirubin_Controls.tsv</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="figures">
+  <h2>Figures (7)</h2>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name mono">fig_dose</span>
+      <span class="exp">
+<a href="Leevy1962_fig_dose.svg">svg</a>      </span>
+    </header>
+    <figure>
+      <img loading="lazy" src="Leevy1962_fig_dose.svg" alt="fig_dose">
+    </figure>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name mono">fig_icg03car</span>
+      <span class="exp">
+<a href="Leevy1962_fig_icg03car.svg">svg</a>      </span>
+    </header>
+    <figure>
+      <img loading="lazy" src="Leevy1962_fig_icg03car.svg" alt="fig_icg03car">
+    </figure>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name mono">fig_icg03er</span>
+      <span class="exp">
+<a href="Leevy1962_fig_icg03er.svg">svg</a>      </span>
+    </header>
+    <figure>
+      <img loading="lazy" src="Leevy1962_fig_icg03er.svg" alt="fig_icg03er">
+    </figure>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name mono">fig_icg15ar</span>
+      <span class="exp">
+<a href="Leevy1962_fig_icg15ar.svg">svg</a>      </span>
+    </header>
+    <figure>
+      <img loading="lazy" src="Leevy1962_fig_icg15ar.svg" alt="fig_icg15ar">
+    </figure>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name mono">fig_icg15er</span>
+      <span class="exp">
+<a href="Leevy1962_fig_icg15er.svg">svg</a>      </span>
+    </header>
+    <figure>
+      <img loading="lazy" src="Leevy1962_fig_icg15er.svg" alt="fig_icg15er">
+    </figure>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name mono">fig_hbf</span>
+      <span class="exp">
+<a href="Leevy1962_fig_hbf.svg">svg</a>      </span>
+    </header>
+    <figure>
+      <img loading="lazy" src="Leevy1962_fig_hbf.svg" alt="fig_hbf">
+    </figure>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name mono">fig_bil</span>
+      <span class="exp">
+<a href="Leevy1962_fig_bil.svg">svg</a>      </span>
+    </header>
+    <figure>
+      <img loading="lazy" src="Leevy1962_fig_bil.svg" alt="fig_bil">
+    </figure>
+  </div>
+  <p class="empty hidden" data-empty>No figure matches the search.</p>
+</section>
+
+<section id="code">
+  <h2>Code</h2>
+  <div class="card">
+    <p><a href="../../../../src/pkdb_models/models/icg/experiments/studies/Leevy1962.py" title="../../../../src/pkdb_models/models/icg/experiments/studies/Leevy1962.py">Leevy1962.py</a></p>
+    <pre class="code"><code>&#34;&#34;&#34;Simulation experiment of the study Leevy1962.&#34;&#34;&#34;
+
+from typing import ClassVar, override
+
+import numpy as np
+from matplotlib.axes import Axes
+from pkpdsim.metadata import (
+    ApplicationForm,
+    DataType,
+    Dosing,
+    Fasting,
+    Health,
+    PKPDData,
+    PKPDMappingMetaData,
+    Route,
+    Tissue,
+)
+from pkpdsim.scan import end_values
+from sbmlsim import Q
+from sbmlsim.data import DataSet
+from sbmlsim.fit import FitData, FitMapping
+from sbmlsim.plot import Axis, Figure
+from sbmlsim.plot.serialization_matplotlib import FigureMPL
+from sbmlsim.simulation import Dimension, Scan, Simulation
+from sbmlsim.units import Quantity
+
+from pkdb_models.models.icg.experiments.base_experiment import ICGSimulationExperiment
+from pkdb_models.models.icg.experiments.fig_templates import base_figure
+
+
+class Leevy1962(ICGSimulationExperiment):
+    &#34;&#34;&#34;Simulation experiment of Leevy1962.
+
+    Extraction ratio and concentrations of indocyanine green during a constant
+    infusion in healthy subjects and in cirrhosis (hepatic vein catheter, Fick
+    principle), the dependency of the extraction ratio on the dose, on the
+    hepatic blood flow and on the plasma bilirubin (with the data of
+    Caesar1961).
+
+    - Table I: 14 healthy men (BSA 1.46 - 1.95 m^2, mean 1.784), 0.3
+      mg/m^2/min after a loading dose of 10 mg, arterial and hepatic venous
+      samples every 5 min at steady state (45 - 60 min); the &#34;peripheral
+      conc.&#34; is arterial plasma in mg%. The removal rate of Table I (0.99
+      mg/min) is 1.8 times the stated infusion (0.54 mg/min), so that the
+      concentrations cannot be described with the stated infusion: the
+      extraction ratio (independent of the rate) is the robust result.
+    - Table IV: 0.3 mg/m^2/min is replaced by 1.5 mg/m^2/min after 10 mg in 4
+      controls (BSA 1.91 m^2) and 3 cirrhosis patients (1.75 m^2), with
+      bromsulphalein (BSP) given simultaneously, a competitor of the hepatic
+      uptake which is not modelled.
+    - Table IX: 2 healthy subjects, boluses of 0.15, 0.25 and 0.5 mg/kg,
+      samples every 2 min for 14 min; the time of the extraction ratio is
+      not reported (8 min, the middle of the samples). The body weight is
+      not reported, the model&#39;s 75 kg are used.
+    - Fig 1: one healthy subject, 0.3 mg/m^2/min; the concentrations of the
+      figure are 10 times below the axis of the curation and 45 times below
+      Table I: the scale is unknown.
+    &#34;&#34;&#34;
+
+    #: mean body surface area of the subjects of Table I [m^2]
+    bsa: ClassVar[float] = 1.784
+    #: mean body surface area of the subjects of Table IV [m^2], the controls
+    #: and the cirrhosis patients
+    bsa_tab4: ClassVar[dict[str, float]] = {&#34;Control&#34;: 1.91, &#34;cirrhosis&#34;: 1.75}
+    #: the boluses of Table IX [mg/kg]
+    doses: ClassVar[list[float]] = [0.15, 0.25, 0.5]
+    #: the body weight of the boluses [kg]
+    bodyweight: ClassVar[float] = 75.0
+
+    @override
+    def datasets(self) -&gt; dict[str, DataSet]:
+        # a dataset has a single unit: the tables are split by measurement
+        dsets = {}
+
+        df = self.load_dataframe(&#34;Tab1Mean&#34;)
+        for measurement in df.measurement.unique():
+            dset = DataSet.from_df(df[(df.measurement == measurement)], self.ureg)
+            if measurement == &#34;concentration_ss&#34;:
+                # [mg/dl] = [mg%]
+                dset.unit_conversion(&#34;mean&#34;, 1 / self.Mr.icg)
+            elif measurement == &#34;extraction_ratio&#34;:
+                dset.unit_conversion(&#34;mean&#34;, 1 / Q(100, &#34;percent&#34;))
+            dsets[self.to_sid(f&#34;Tab1Mean_{measurement}&#34;)] = dset
+
+        # Table I and II by measurement and substance
+        data_map = {
+            (&#34;concentration_ss&#34;, &#34;albumin&#34;): &#34;alb&#34;,
+            (&#34;concentration_ss&#34;, &#34;bilirubin&#34;): &#34;bil&#34;,
+            (&#34;concentration_ss&#34;, &#34;indocyanine green&#34;): &#34;icg&#34;,
+            (&#34;extraction_ratio&#34;, &#34;indocyanine green&#34;): &#34;ER&#34;,
+            (&#34;hbf&#34;, &#34;indocyanine green&#34;): &#34;HBF&#34;,
+        }
+        for fig_id in [&#34;Tab1&#34;, &#34;Tab2&#34;]:
+            df = self.load_dataframe(fig_id)
+            for (measurement, substance), key in data_map.items():
+                df_subset = df[
+                    (df.measurement == measurement) &amp; (df.substance == substance)
+                ]
+                if df_subset.empty:
+                    continue
+                dset = DataSet.from_df(df_subset, self.ureg)
+                if key == &#34;icg&#34;:
+                    dset.unit_conversion(&#34;value&#34;, 1 / self.Mr.icg)
+                dsets[self.to_sid(f&#34;{fig_id}_{key}&#34;)] = dset
+
+        # the arterial and the hepatic venous concentrations of Fig 1
+        df = self.load_dataframe(&#34;Fig1&#34;)
+        for label in [&#34;ar&#34;, &#34;hv&#34;]:
+            dset = DataSet.from_df(df[df.label == f&#34;Fig1_{label}&#34;], self.ureg)
+            dset.unit_conversion(&#34;value&#34;, 1 / self.Mr.icg)
+            dsets[self.to_sid(f&#34;Fig1_icg_{label}&#34;)] = dset
+
+        df = self.load_dataframe(&#34;Tab9&#34;)
+        for intervention in df.intervention.unique():
+            dset = DataSet.from_df(df[df.intervention == intervention], self.ureg)
+            dsets[self.to_sid(f&#34;Tab9_ER_{intervention}&#34;)] = dset
+
+        df = self.load_dataframe(&#34;Tab4&#34;)
+        for measurement in df.measurement.unique():
+            for group in df.group.unique():
+                dset = DataSet.from_df(
+                    df[(df.measurement == measurement) &amp; (df.group == group)],
+                    self.ureg,
+                )
+                if measurement == &#34;concentration_ss&#34;:
+                    # [mg/dl] = [mg%]
+                    dset.unit_conversion(&#34;value&#34;, 1 / self.Mr.icg)
+                elif measurement == &#34;extraction_ratio&#34;:
+                    dset.unit_conversion(&#34;value&#34;, 1 / Q(100, &#34;percent&#34;))
+                dsets[self.to_sid(f&#34;Tab4_{measurement}_{group}&#34;)] = dset
+
+        # extraction ratio and bilirubin of Caesar1961
+        df_caesar = self.load_dataframe(&#34;Tab3&#34;, study=&#34;Caesar1961&#34;)
+        caesar_groups = [&#34;Cirrhosis&#34;, &#34;Controls&#34;]
+        for measurement in df_caesar.measurement.unique():
+            for group in caesar_groups:
+                df_subset = df_caesar[
+                    (df_caesar.measurement == measurement)
+                    &amp; (df_caesar.group == group)
+                    &amp; (df_caesar.substance == &#34;indocyanine green&#34;)
+                ]
+                dset = DataSet.from_df(df_subset, self.ureg)
+                dsets[self.to_sid(f&#34;Caesar1961_Tab3_ICG_{measurement}_{group}&#34;)] = dset
+        for group in caesar_groups:
+            df_subset = df_caesar[
+                (df_caesar.group == group) &amp; (df_caesar.substance == &#34;bilirubin&#34;)
+            ]
+            dset = DataSet.from_df(df_subset, self.ureg)
+            dsets[self.to_sid(f&#34;Caesar1961_Tab3_bilirubin_{group}&#34;)] = dset
+
+        return dsets
+
+    def _infusion(self, rate: float, bsa: float, **changes: Quantity) -&gt; Simulation:
+        &#34;&#34;&#34;Get the simulation of an infusion after a loading dose of 10 mg.
+
+        Args:
+            rate: the infusion rate [mg/min/m^2].
+            bsa: the body surface area [m^2].
+            changes: further changes of the simulation.
+        &#34;&#34;&#34;
+        return Simulation(
+            time_unit=&#34;min&#34;,
+            end=150,
+            preinit_changes={
+                **self.default_changes(),
+                &#34;IVDOSE_icg&#34;: Q(10, &#34;mg&#34;),
+                &#34;Ri_icg&#34;: Q(rate, &#34;mg/min/m^2&#34;) * Q(bsa, &#34;m^2&#34;),
+                **changes,
+            },
+        )
+
+    @override
+    def simulations(self) -&gt; dict[str, Simulation | Scan]:
+        tcsims: dict[str, Simulation | Scan] = {}
+        # 0.3 mg/min/m^2 * 1.784 m^2 = 0.54 mg/min after 10 mg
+        tcsims[&#34;icg_inf03&#34;] = self._infusion(rate=0.3, bsa=self.bsa)
+
+        for dose in self.doses:
+            tcsims[self.to_sid(f&#34;icg_iv{dose}&#34;)] = Simulation(
+                time_unit=&#34;min&#34;,
+                end=30,
+                preinit_changes={
+                    **self.default_changes(),
+                    &#34;IVDOSE_icg&#34;: Q(dose * self.bodyweight, &#34;mg&#34;),
+                },
+            )
+
+        for key, value in self.cirrhosis_map.items():
+            cirrhosis_changes = {
+                &#34;f_tissue_loss&#34;: Q(value, &#34;dimensionless&#34;),
+                &#34;f_shunts&#34;: Q(value, &#34;dimensionless&#34;),
+            }
+            bsa = self.bsa_tab4[&#34;Control&#34; if key == &#34;Control&#34; else &#34;cirrhosis&#34;]
+            tcsims[self.to_sid(f&#34;icg_inf15_{key}&#34;)] = self._infusion(
+                rate=1.5, bsa=bsa, **cirrhosis_changes
+            )
+            tcsims[self.to_sid(f&#34;scan_bilirubin_{key}&#34;)] = Scan(
+                simulation=self._infusion(rate=0.3, bsa=self.bsa, **cirrhosis_changes),
+                dimensions=[
+                    Dimension(&#34;dim_bil&#34;, values=self.bilirubin_scan_changes()),
+                ],
+            )
+            tcsims[self.to_sid(f&#34;scan_bloodflow_{key}&#34;)] = Scan(
+                simulation=self._infusion(rate=0.3, bsa=self.bsa, **cirrhosis_changes),
+                dimensions=[
+                    Dimension(&#34;dim_bloodflow&#34;, values=self.bloodflow_scan_changes())
+                ],
+            )
+        return tcsims
+
+    @staticmethod
+    def _metadata(dosing: Dosing, data_type: DataType) -&gt; PKPDMappingMetaData:
+        &#34;&#34;&#34;Get the metadata of a fit mapping of the healthy subjects.&#34;&#34;&#34;
+        return PKPDMappingMetaData(
+            tissue=Tissue.PLASMA,
+            route=Route.IV,
+            application_form=ApplicationForm.SOLUTION,
+            dosing=dosing,
+            health=Health.HEALTHY,
+            fasting=Fasting.NR,
+            data=PKPDData.PK,
+            data_type=data_type,
+        )
+
+    @override
+    def fit_mappings(self) -&gt; dict[str, FitMapping]:
+        infusion_mean = self._metadata(Dosing.CONSTANT_INFUSION, DataType.MEAN)
+        infusion_individual = self._metadata(
+            Dosing.CONSTANT_INFUSION, DataType.INDIVIDUAL
+        )
+        mappings = {
+            # Table I, the extraction ratio of the 14 subjects
+            &#34;fm_er_icg&#34;: FitMapping(
+                self,
+                reference=FitData(
+                    self,
+                    dataset=&#34;Tab1Mean_extraction_ratio&#34;,
+                    xid=&#34;time&#34;,
+                    yid=&#34;mean&#34;,
+                    count=&#34;count&#34;,
+                    yid_sd=&#34;mean_sd&#34;,
+                ),
+                observable=FitData(
+                    self, task=&#34;task_icg_inf03&#34;, xid=&#34;time&#34;, yid=&#34;ER_icg&#34;
+                ),
+                metadata=infusion_mean,
+            ),
+            # Table I, the arterial concentration, inconsistent with the
+            # stated infusion rate
+            &#34;fm_Car_icg_tab1&#34;: FitMapping(
+                self,
+                reference=FitData(
+                    self,
+                    dataset=&#34;Tab1Mean_concentration_ss&#34;,
+                    xid=&#34;time&#34;,
+                    yid=&#34;mean&#34;,
+                    count=&#34;count&#34;,
+                    yid_sd=&#34;mean_sd&#34;,
+                ),
+                observable=FitData(
+                    self, task=&#34;task_icg_inf03&#34;, xid=&#34;time&#34;, yid=&#34;[Car_icg]&#34;
+                ),
+                metadata=infusion_mean,
+            ),
+            # Fig 1, the timecourse of one subject with an unknown scale
+            &#34;fm_Chv_icg_fig1&#34;: FitMapping(
+                self,
+                reference=FitData(
+                    self,
+                    dataset=&#34;Fig1_icg_hv&#34;,
+                    xid=&#34;time&#34;,
+                    yid=&#34;value&#34;,
+                    count=&#34;count&#34;,
+                ),
+                observable=FitData(
+                    self, task=&#34;task_icg_inf03&#34;, xid=&#34;time&#34;, yid=&#34;[Chv_icg]&#34;
+                ),
+                metadata=infusion_individual,
+            ),
+            &#34;fm_Car_icg_fig1&#34;: FitMapping(
+                self,
+                reference=FitData(
+                    self,
+                    dataset=&#34;Fig1_icg_ar&#34;,
+                    xid=&#34;time&#34;,
+                    yid=&#34;value&#34;,
+                    count=&#34;count&#34;,
+                ),
+                observable=FitData(
+                    self, task=&#34;task_icg_inf03&#34;, xid=&#34;time&#34;, yid=&#34;[Car_icg]&#34;
+                ),
+                metadata=infusion_individual,
+            ),
+        }
+        # Table IX, the dose dependency of the extraction ratio (2 subjects)
+        for dose in self.doses:
+            mappings[self.to_sid(f&#34;fm_er_{dose}_icg&#34;)] = FitMapping(
+                self,
+                reference=FitData(
+                    self,
+                    dataset=self.to_sid(f&#34;Tab9_ER_ICG{dose}&#34;),
+                    xid=&#34;time&#34;,
+                    yid=&#34;value&#34;,
+                    count=&#34;count&#34;,
+                ),
+                observable=FitData(
+                    self,
+                    task=self.to_sid(f&#34;task_icg_iv{dose}&#34;),
+                    xid=&#34;time&#34;,
+                    yid=&#34;ER_icg&#34;,
+                ),
+                metadata=self._metadata(Dosing.SINGLE, DataType.INDIVIDUAL),
+            )
+        return mappings
+
+    @override
+    def figures(self) -&gt; dict[str, Figure]:
+        return {
+            **self._figure_dose(),
+            **self._figures_icg03(),
+            **self._figures_icg15(),
+        }
+
+    @override
+    def figures_mpl(self) -&gt; dict[str, FigureMPL]:
+        return {
+            **self._figure_er_vs_hbf(),
+            **self._figure_er_vs_bil(),
+        }
+
+    def _figure_dose(self) -&gt; dict[str, Figure]:
+        &#34;&#34;&#34;Extraction ratio after the intravenous doses.&#34;&#34;&#34;
+        fig = Figure(experiment=self, sid=&#34;Tab9&#34;, width=6, height=6)
+        plots = fig.create_plots(xaxis=Axis(&#34;Time&#34;, unit=self.unit_time), legend=True)
+        plots[0].set_yaxis(&#34;ICG extraction ratio&#34;, self.unit_er)
+
+        colors = {0.15: &#34;orange&#34;, 0.25: &#34;green&#34;, 0.5: &#34;brown&#34;}
+        for dose, color in colors.items():
+            # simulation
+            plots[0].add_data(
+                task=self.to_sid(f&#34;task_icg_iv{dose}&#34;),
+                xid=&#34;time&#34;,
+                yid=&#34;ER_icg&#34;,
+                label=f&#34;Sim: {dose} mg/kg&#34;,
+                color=color,
+            )
+            # data
+            plots[0].add_data(
+                dataset=self.to_sid(f&#34;Tab9_ER_ICG{dose}&#34;),
+                xid=&#34;time&#34;,
+                yid=&#34;value&#34;,
+                color=color,
+                label=f&#34;Leevy 1962 {dose} mg/kg&#34;,
+                linestyle=&#34;&#34;,
+            )
+        return {&#34;fig_dose&#34;: fig}
+
+    def _figures_icg03(self) -&gt; dict[str, Figure]:
+        &#34;&#34;&#34;Concentrations and extraction ratio during the infusion of 0.3 mg/min/m^2.&#34;&#34;&#34;
+        figures = {}
+        for plot in [&#34;car&#34;, &#34;er&#34;]:
+            fig = Figure(experiment=self, sid=&#34;Tab1&#34;, width=6, height=6)
+            plots = fig.create_plots(
+                xaxis=Axis(&#34;Time&#34;, unit=self.unit_time), legend=True
+            )
+            if plot == &#34;car&#34;:
+                plots[0].set_yaxis(&#34;ICG&#34;, self.unit_icg)
+                # simulation
+                plots[0].add_data(
+                    task=&#34;task_icg_inf03&#34;,
+                    xid=&#34;time&#34;,
+                    yid=&#34;[Car_icg]&#34;,
+                    label=&#34;Sim: ICG (arterial plasma)&#34;,
+                    color=&#34;red&#34;,
+                    linestyle=&#34;-&#34;,
+                )
+                plots[0].add_data(
+                    task=&#34;task_icg_inf03&#34;,
+                    xid=&#34;time&#34;,
+                    yid=&#34;[Chv_icg]&#34;,
+                    label=&#34;Sim: ICG (hepatic venous plasma)&#34;,
+                    color=&#34;blue&#34;,
+                )
+
+                # data
+                plots[0].add_data(
+                    dataset=&#34;Tab1Mean_concentration_ss&#34;,
+                    xid=&#34;time&#34;,
+                    yid=&#34;mean&#34;,
+                    yid_sd=&#34;mean_sd&#34;,
+                    count=&#34;count&#34;,
+                    color=&#34;red&#34;,
+                    label=&#34;Leevy 1962 ar (Table I)&#34;,
+                )
+                plots[0].add_data(
+                    dataset=&#34;Fig1_icg_ar&#34;,
+                    xid=&#34;time&#34;,
+                    yid=&#34;value&#34;,
+                    count=&#34;count&#34;,
+                    color=&#34;red&#34;,
+                    marker=&#34;o&#34;,
+                    label=&#34;Leevy 1962 ar (Fig 1)&#34;,
+                )
+                plots[0].add_data(
+                    dataset=&#34;Fig1_icg_hv&#34;,
+                    xid=&#34;time&#34;,
+                    yid=&#34;value&#34;,
+                    count=&#34;count&#34;,
+                    color=&#34;blue&#34;,
+                    marker=&#34;o&#34;,
+                    label=&#34;Leevy 1962 hv (Fig 1)&#34;,
+                )
+
+            else:
+                plots[0].set_yaxis(&#34;ICG extraction ratio&#34;, self.unit_er)
+
+                # simulation
+                plots[0].add_data(
+                    task=&#34;task_icg_inf03&#34;,
+                    xid=&#34;time&#34;,
+                    yid=&#34;ER_icg&#34;,
+                    label=&#34;Sim: ICG extraction ratio&#34;,
+                    color=&#34;black&#34;,
+                )
+
+                # data
+                plots[0].add_data(
+                    dataset=&#34;Tab1Mean_extraction_ratio&#34;,
+                    xid=&#34;time&#34;,
+                    yid=&#34;mean&#34;,
+                    yid_sd=&#34;mean_sd&#34;,
+                    count=&#34;count&#34;,
+                    color=&#34;black&#34;,
+                    label=&#34;Leevy 1962&#34;,
+                )
+                plots[0].add_data(
+                    dataset=&#34;Tab1_ER&#34;,
+                    xid=&#34;time&#34;,
+                    yid=&#34;value&#34;,
+                    color=&#34;black&#34;,
+                    label=&#34;Leevy 1962&#34;,
+                    linestyle=&#34;&#34;,
+                )
+            figures[self.to_sid(f&#34;fig_icg03{plot}&#34;)] = fig
+        return figures
+
+    def _figures_icg15(self) -&gt; dict[str, Figure]:
+        &#34;&#34;&#34;Concentrations and extraction ratio during the infusion of 1.5 mg/min/m^2.&#34;&#34;&#34;
+        figures = {}
+        groups = {&#34;Controls&#34;: &#34;black&#34;, &#34;Cirrhosis&#34;: &#34;purple&#34;}
+        for plot in [&#34;ar&#34;, &#34;er&#34;]:
+            fig = Figure(experiment=self, sid=&#34;Tab4&#34;, width=6, height=6)
+            plots = fig.create_plots(
+                xaxis=Axis(&#34;Time&#34;, unit=self.unit_time), legend=True
+            )
+            if plot == &#34;ar&#34;:
+                plots[0].set_yaxis(&#34;ICG (arterial plasma)&#34;, self.unit_icg)
+                # simulation
+                for key in self.cirrhosis_map:
+                    plots[0].add_data(
+                        task=self.to_sid(f&#34;task_icg_inf15_{key}&#34;),
+                        xid=&#34;time&#34;,
+                        yid=&#34;[Car_icg]&#34;,
+                        label=key,
+                        color=self.cirrhosis_colors[key],
+                    )
+                # data
+                for group, color in groups.items():
+                    plots[0].add_data(
+                        dataset=self.to_sid(f&#34;Tab4_concentration_ss_{group}&#34;),
+                        xid=&#34;time&#34;,
+                        yid=&#34;value&#34;,
+                        label=f&#34;Leevy 1962 ar {group.lower()}&#34;,
+                        marker=&#34;s&#34;,
+                        color=color,
+                        linestyle=&#34;&#34;,
+                    )
+            else:
+                plots[0].set_yaxis(&#34;ICG extraction ratio&#34;, self.unit_er)
+                # simulation
+                for key in self.cirrhosis_map:
+                    plots[0].add_data(
+                        task=self.to_sid(f&#34;task_icg_inf15_{key}&#34;),
+                        xid=&#34;time&#34;,
+                        yid=&#34;ER_icg&#34;,
+                        label=key,
+                        color=self.cirrhosis_colors[key],
+                    )
+                # data
+                for group, color in groups.items():
+                    plots[0].add_data(
+                        dataset=self.to_sid(f&#34;Tab4_extraction_ratio_{group}&#34;),
+                        xid=&#34;time&#34;,
+                        yid=&#34;value&#34;,
+                        label=f&#34;Leevy 1962 {group.lower()}&#34;,
+                        marker=&#34;s&#34;,
+                        color=color,
+                        linestyle=&#34;&#34;,
+                    )
+            figures[self.to_sid(f&#34;fig_icg15{plot}&#34;)] = fig
+        return figures
+
+    def _er_end(self, sim_key: str) -&gt; tuple[np.ndarray, np.ndarray, np.ndarray]:
+        &#34;&#34;&#34;Get the extraction ratio at the end of the simulations of a scan.
+
+        Returns:
+            The values at the points of the scan (the median of the draws in a
+            run over them), the lower and the upper quantile of the draws.
+        &#34;&#34;&#34;
+        er = end_values(self.results[self.to_sid(f&#34;task_{sim_key}&#34;)], &#34;ER_icg&#34;)
+        if self.uncertainty is None:
+            values = np.asarray(er.values, dtype=float)
+            return values, values, values
+        across = self.uncertainty.id
+        low, high = self.uncertainty.quantiles
+        return (
+            np.asarray(er.median(dim=across).values, dtype=float),
+            np.asarray(er.quantile(low, dim=across).values, dtype=float),
+            np.asarray(er.quantile(high, dim=across).values, dtype=float),
+        )
+
+    def _plot_er(self, ax: Axes, x: np.ndarray, sim_key: str, key: str) -&gt; None:
+        &#34;&#34;&#34;Plot the extraction ratio of a scan of a stage of cirrhosis.&#34;&#34;&#34;
+        y, lower, upper = self._er_end(sim_key)
+        color = self.cirrhosis_colors[key]
+        if self.uncertainty is not None:
+            ax.fill_between(x, lower, upper, color=color, alpha=0.2, linewidth=0)
+        ax.plot(x, y, marker=&#34;o&#34;, linestyle=&#34;-&#34;, color=color, label=key)
+
+    def _figure_er_vs_hbf(self) -&gt; dict[str, FigureMPL]:
+        &#34;&#34;&#34;Extraction ratio of indocyanine green vs hepatic blood flow.&#34;&#34;&#34;
+        f, ax = base_figure()
+        ax.set_xlabel(&#34;Hepatic blood flow/BSA\n[l/min/m$^2$]&#34;, fontdict=self.font)
+        ax.set_ylabel(&#34;ICG extraction ratio [-]&#34;, fontdict=self.font)
+        # the hepatic blood flow of the model
+        bsa = Q(self.bsa, &#34;m^2&#34;)
+        ax.axvline(
+            x=(self.hepatic_bloodflow() / bsa).to(&#34;l/min/m^2&#34;).magnitude,
+            color=&#34;grey&#34;,
+            linestyle=&#34;--&#34;,
+        )
+        # the hepatic blood flow of the points of the scan
+        f_bloodflow = self.bloodflow_scan_changes()[&#34;f_bloodflow&#34;].magnitude
+        x = np.array(
+            [
+                (self.hepatic_bloodflow(f_bloodflow=value) / bsa)
+                .to(&#34;l/min/m^2&#34;)
+                .magnitude
+                for value in f_bloodflow
+            ]
+        )
+        for key in self.cirrhosis_map:
+            self._plot_er(ax, x, f&#34;scan_bloodflow_{key}&#34;, key)
+
+        # data: percent -&gt; dimensionless, ml -&gt; l
+        for fig_id, color, label in [
+            (&#34;Tab2&#34;, &#34;purple&#34;, &#34;Leevy 1962 cirrhosis&#34;),
+            (&#34;Tab1&#34;, &#34;black&#34;, &#34;Leevy 1962 healthy&#34;),
+        ]:
+            ydset = self._datasets[self.to_sid(f&#34;{fig_id}_ER&#34;)]
+            xdset = self._datasets[self.to_sid(f&#34;{fig_id}_HBF&#34;)]
+            ax.plot(
+                xdset.get_quantity(&#34;value&#34;).to(&#34;l/min/m^2&#34;).magnitude,
+                ydset.get_quantity(&#34;value&#34;).to(&#34;dimensionless&#34;).magnitude,
+                marker=&#34;s&#34;,
+                linestyle=&#34;&#34;,
+                color=color,
+                label=label,
+            )
+        # the legend above the data
+        ax.set_ylim(bottom=0, top=1.4)
+        ax.legend(fontsize=self.legend_font_size - 2, loc=&#34;upper right&#34;, ncols=2)
+
+        return {&#34;fig_hbf&#34;: f}
+
+    def _figure_er_vs_bil(self) -&gt; dict[str, FigureMPL]:
+        &#34;&#34;&#34;Extraction ratio of indocyanine green vs plasma bilirubin.&#34;&#34;&#34;
+        f, ax = base_figure()
+        ax.set_xlabel(&#34;Plasma bilirubin [mmole/l]&#34;, fontdict=self.font)
+        ax.set_ylabel(&#34;ICG extraction ratio [-]&#34;, fontdict=self.font)
+        # the bilirubin of the model
+        ax.axvline(x=0.01, color=&#34;grey&#34;, linestyle=&#34;--&#34;)
+
+        x = (
+            self.bilirubin_scan_changes()[&#34;[LI__bil_ext]&#34;]
+            .to(self.unit_bilirubin)
+            .magnitude
+        )
+        for key in self.cirrhosis_map:
+            self._plot_er(ax, x, f&#34;scan_bilirubin_{key}&#34;, key)
+
+        # data: datasets of bilirubin (x) and extraction ratio (y), marker, color
+        plot_map = {
+            &#34;Leevy 1962 cirrhosis&#34;: (&#34;Tab2_bil&#34;, &#34;Tab2_ER&#34;, &#34;s&#34;, &#34;purple&#34;),
+            &#34;Caesar 1961 healthy&#34;: (
+                &#34;Caesar1961_Tab3_bilirubin_Controls&#34;,
+                &#34;Caesar1961_Tab3_ICG_extraction_ratio_Controls&#34;,
+                &#34;D&#34;,
+                &#34;black&#34;,
+            ),
+            &#34;Caesar 1961 cirrhosis&#34;: (
+                &#34;Caesar1961_Tab3_bilirubin_Cirrhosis&#34;,
+                &#34;Caesar1961_Tab3_ICG_extraction_ratio_Cirrhosis&#34;,
+                &#34;D&#34;,
+                &#34;purple&#34;,
+            ),
+        }
+        for label, (xdset_key, ydset_key, marker, color) in plot_map.items():
+            xdset = self._datasets[self.to_sid(xdset_key)]
+            ydset = self._datasets[self.to_sid(ydset_key)]
+            bilirubin = xdset.get_quantity(&#34;value&#34;)
+            x_data = self.bilirubin_mM(bilirubin.magnitude, str(bilirubin.units)).to(
+                self.unit_bilirubin
+            )
+            ax.plot(
+                x_data.magnitude,
+                ydset.get_quantity(&#34;value&#34;).to(&#34;dimensionless&#34;).magnitude,
+                marker=marker,
+                linestyle=&#34;&#34;,
+                color=color,
+                label=label,
+            )
+
+        ax.set_xscale(&#34;log&#34;)
+        # the legend above the data
+        ax.set_ylim(bottom=0, top=1.4)
+        ax.legend(fontsize=self.legend_font_size - 2, loc=&#34;upper right&#34;, ncols=2)
+
+        return {&#34;fig_bil&#34;: f}
+</code></pre>
+  </div>
+</section>
+
+</main>
+
+<footer>
+<a href="../index.html">all experiments</a> · <a href="../../../../src/pkdb_models/models/icg/experiments/studies/Leevy1962.py" title="../../../../src/pkdb_models/models/icg/experiments/studies/Leevy1962.py">Leevy1962.py</a>
+</footer>
+
+<div id="lightbox"><img alt=""></div>
+
+<script>
+(function () {
+  "use strict";
+
+  // ---- search and the filter chips ------------------------------------
+  const search = document.getElementById("search");
+  const hits = document.getElementById("hits");
+  const chips = Array.from(document.querySelectorAll(".chip"));
+  const cards = Array.from(document.querySelectorAll('[data-filter="card"]'));
+  const rows = Array.from(document.querySelectorAll('table[data-filter="row"] tbody tr'));
+  const empty = document.querySelector("[data-empty]");
+  const itemLabel = document.body.dataset.items || "items";
+
+  const haystack = new Map();
+  for (const node of [...cards, ...rows]) {
+    haystack.set(node, node.textContent.toLowerCase());
+  }
+
+  function activeKinds() {
+    return new Set(chips.filter((c) => c.getAttribute("aria-pressed") === "true")
+                        .map((c) => c.dataset.kind));
+  }
+
+  function matches(node, query, kinds) {
+    const kind = node.dataset.kind;
+    if (kind && !kinds.has(kind)) return false;
+    return !query || haystack.get(node).includes(query);
+  }
+
+  function apply() {
+    const query = search.value.trim().toLowerCase();
+    const kinds = activeKinds();
+    let shownCards = 0;
+    for (const node of cards) {
+      const show = matches(node, query, kinds);
+      node.classList.toggle("hidden", !show);
+      if (show) shownCards += 1;
+    }
+    for (const node of rows) {
+      node.classList.toggle("hidden", !matches(node, query, kinds));
+    }
+    if (empty) empty.classList.toggle("hidden", shownCards > 0 || cards.length === 0);
+    const filtering = Boolean(query) || (chips.length > 0 && kinds.size < chips.length);
+    hits.textContent = filtering
+      ? shownCards + " / " + cards.length + " " + itemLabel
+      : "";
+  }
+
+  search.addEventListener("input", apply);
+  for (const chip of chips) {
+    chip.addEventListener("click", () => {
+      chip.setAttribute("aria-pressed", chip.getAttribute("aria-pressed") === "true" ? "false" : "true");
+      apply();
+    });
+  }
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "/" && document.activeElement !== search) {
+      event.preventDefault();
+      search.focus();
+    } else if (event.key === "Escape") {
+      if (document.activeElement === search && search.value) { search.value = ""; apply(); }
+      closeLightbox();
+    }
+  });
+
+  // ---- sortable tables -------------------------------------------------
+  function cellValue(row, index, kind) {
+    const text = row.cells[index] ? row.cells[index].textContent.trim() : "";
+    if (kind !== "num") return text.toLowerCase();
+    // the AIC of a perfect fit is -inf, a cell without a value sorts last
+    if (text === "-inf") return Number.NEGATIVE_INFINITY;
+    const value = parseFloat(text);
+    return Number.isNaN(value) ? Number.POSITIVE_INFINITY : value;
+  }
+
+  for (const table of document.querySelectorAll("table")) {
+    const headers = Array.from(table.querySelectorAll("th[data-sort]"));
+    headers.forEach((th, index) => {
+      th.addEventListener("click", () => {
+        const body = table.tBodies[0];
+        if (!body) return;
+        const kind = th.dataset.sort;
+        const descending = th.classList.contains("asc");
+        for (const other of headers) other.classList.remove("asc", "desc");
+        th.classList.add(descending ? "desc" : "asc");
+        const sorted = Array.from(body.rows).sort((a, b) => {
+          const left = cellValue(a, index, kind);
+          const right = cellValue(b, index, kind);
+          if (left < right) return descending ? 1 : -1;
+          if (left > right) return descending ? -1 : 1;
+          return 0;
+        });
+        for (const row of sorted) body.appendChild(row);
+      });
+    });
+  }
+
+  // ---- the section the page is scrolled to -----------------------------
+  // a tab (data-tab) is not a section, its page marks the tab which is shown
+  const links = Array.from(document.querySelectorAll("nav.sections a:not([data-tab])"));
+  const sections = links.map((link) => document.querySelector(link.getAttribute("href")));
+  function scrollspy() {
+    let current = 0;
+    sections.forEach((section, index) => {
+      if (section && section.getBoundingClientRect().top < 200) current = index;
+    });
+    links.forEach((link, index) => link.classList.toggle("active", index === current));
+  }
+  window.addEventListener("scroll", scrollspy, { passive: true });
+  scrollspy();
+
+  // ---- click a figure to enlarge it ------------------------------------
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImage = lightbox.querySelector("img");
+  function closeLightbox() { lightbox.classList.remove("open"); lightboxImage.src = ""; }
+  for (const image of document.querySelectorAll("figure img")) {
+    image.addEventListener("click", () => {
+      lightboxImage.src = image.getAttribute("src");
+      lightbox.classList.add("open");
+    });
+  }
+  lightbox.addEventListener("click", closeLightbox);
+
+  apply();
+})();
+</script>
+</body>
+</html>

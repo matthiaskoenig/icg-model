@@ -1,0 +1,23 @@
+study	subject	intervention	tissue	substance	x_measurement	y_measurement	x	x_unit	y	y_unit	x_label	y_label
+Okochi2002	S1	ICG	plasma	indocyanine green	kel	kel	0.029681979	1/min	0.06548224	1/min	estimated	measured
+Okochi2002	S2	ICG	plasma	indocyanine green	kel	kel	0.027561838	1/min	0.0822335	1/min	estimated	measured
+Okochi2002	S3	ICG	plasma	indocyanine green	kel	kel	0.061130743	1/min	0.07715736	1/min	estimated	measured
+Okochi2002	S4	ICG	plasma	indocyanine green	kel	kel	0.058657244	1/min	0.10253807	1/min	estimated	measured
+Okochi2002	S5	ICG	plasma	indocyanine green	kel	kel	0.083392225	1/min	0.12436548	1/min	estimated	measured
+Okochi2002	S6	ICG	plasma	indocyanine green	kel	kel	0.09893993	1/min	0.17055838	1/min	estimated	measured
+Okochi2002	S7	ICG	plasma	indocyanine green	kel	kel	0.103886925	1/min	0.07360406	1/min	estimated	measured
+Okochi2002	S8	ICG	plasma	indocyanine green	kel	kel	0.11484099	1/min	0.09746193	1/min	estimated	measured
+Okochi2002	S9	ICG	plasma	indocyanine green	kel	kel	0.113780916	1/min	0.15228426	1/min	estimated	measured
+Okochi2002	S10	ICG	plasma	indocyanine green	kel	kel	0.11660777	1/min	0.13705584	1/min	estimated	measured
+Okochi2002	S11	ICG	plasma	indocyanine green	kel	kel	0.13250883	1/min	0.15583757	1/min	estimated	measured
+Okochi2002	S12	ICG	plasma	indocyanine green	kel	kel	0.15159011	1/min	0.12791878	1/min	estimated	measured
+Okochi2002	S13	ICG	plasma	indocyanine green	kel	kel	0.17667845	1/min	0.14467005	1/min	estimated	measured
+Okochi2002	S14	ICG	plasma	indocyanine green	kel	kel	0.16996467	1/min	0.19695431	1/min	estimated	measured
+Okochi2002	S15	ICG	plasma	indocyanine green	kel	kel	0.18091872	1/min	0.19898477	1/min	estimated	measured
+Okochi2002	S16	ICG	plasma	indocyanine green	kel	kel	0.17915194	1/min	0.21624365	1/min	estimated	measured
+Okochi2002	S17	ICG	plasma	indocyanine green	kel	kel	0.17738517	1/min	0.22690356	1/min	estimated	measured
+Okochi2002	S18	ICG	plasma	indocyanine green	kel	kel	0.17773852	1/min	0.24162437	1/min	estimated	measured
+Okochi2002	S19	ICG	plasma	indocyanine green	kel	kel	0.20530035	1/min	0.21370558	1/min	estimated	measured
+Okochi2002	S20	ICG	plasma	indocyanine green	kel	kel	0.20812722	1/min	0.18629442	1/min	estimated	measured
+Okochi2002	S21	ICG	plasma	indocyanine green	kel	kel	0.22614841	1/min	0.20609137	1/min	estimated	measured
+Okochi2002	S22	ICG	plasma	indocyanine green	kel	kel	0.22226149	1/min	0.27309644	1/min	estimated	measured

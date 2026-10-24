@@ -1,0 +1,10 @@
+study	group	count	measurement_type	substance	tissue	intervention	label	time	time_unit	mean	sd	min	max	unit
+Kamimori2000	Follicular	6	concentration	indocyanine green	plasma	ICG	Follicular_ICG	5	min	5.16	1.05453426211944	3.7	6.79	microg/ml
+Kamimori2000	Follicular	7	concentration	indocyanine green	plasma	ICG	Follicular_ICG	10	min	1.74	1.53223875455462	0.55813956	5.0465117	microg/ml
+Kamimori2000	Follicular	7	concentration	indocyanine green	plasma	ICG	Follicular_ICG	15	min	0.57	0.628890566404875	0.023255814	1.8837209	microg/ml
+Kamimori2000	Ovulatory	7	concentration	indocyanine green	plasma	ICG	Ovulatory_ICG	5	min	4.98	0.691887767453773	3.942029	5.7971015	microg/ml
+Kamimori2000	Ovulatory	7	concentration	indocyanine green	plasma	ICG	Ovulatory_ICG	10	min	1.54	0.534292643006241	0.8347826	2.0405798	microg/ml
+Kamimori2000	Ovulatory	7	concentration	indocyanine green	plasma	ICG	Ovulatory_ICG	15	min	0.29	0.225842626756712	0.09275363	0.742029	microg/ml
+Kamimori2000	Luteal	7	concentration	indocyanine green	plasma	ICG	Luteal_ICG	5	min	5.22	0.772396505111806	4.2048187	6.10073	microg/ml
+Kamimori2000	Luteal	7	concentration	indocyanine green	plasma	ICG	Luteal_ICG	10	min	1.61	0.631356696844722	1.1031722	2.8373444	microg/ml
+Kamimori2000	Luteal	7	concentration	indocyanine green	plasma	ICG	Luteal_ICG	15	min	0.48	0.27371571387365	0.059455413	0.8455881	microg/ml

@@ -1,0 +1,53 @@
+study	individual	intervention	measurement	substance	tissue	label	unit	value	group
+Branch1976	C1	ICG	clearance	indocyanine green	blood	clearance B	ml/min	2007.3395	Controls
+Branch1976	C2	ICG	clearance	indocyanine green	blood	clearance B	ml/min	1383.4862	Controls
+Branch1976	C3	ICG	clearance	indocyanine green	blood	clearance B	ml/min	1324.7706	Controls
+Branch1976	C4	ICG	clearance	indocyanine green	blood	clearance B	ml/min	983.48627	Controls
+Branch1976	C5	ICG	clearance	indocyanine green	blood	clearance B	ml/min	924.7706	Controls
+Branch1976	C6	ICG	clearance	indocyanine green	blood	clearance B	ml/min	682.5688	Controls
+Branch1976	P1	ICG	clearance	indocyanine green	blood	clearance B	ml/min	1016.51373	Cirrhosis
+Branch1976	P2	ICG	clearance	indocyanine green	blood	clearance B	ml/min	818.34863	Cirrhosis
+Branch1976	P3	ICG	clearance	indocyanine green	blood	clearance B	ml/min	785.3211	Cirrhosis
+Branch1976	P4	ICG	clearance	indocyanine green	blood	clearance B	ml/min	744.9541	Cirrhosis
+Branch1976	P5	ICG	clearance	indocyanine green	blood	clearance B	ml/min	689.90826	Cirrhosis
+Branch1976	P6	ICG	clearance	indocyanine green	blood	clearance B	ml/min	671.55963	Cirrhosis
+Branch1976	P7	ICG	clearance	indocyanine green	blood	clearance B	ml/min	565.13763	Cirrhosis
+Branch1976	P8	ICG	clearance	indocyanine green	blood	clearance B	ml/min	568.8073	Cirrhosis
+Branch1976	P9	ICG	clearance	indocyanine green	blood	clearance B	ml/min	510.09174	Cirrhosis
+Branch1976	P10	ICG	clearance	indocyanine green	blood	clearance B	ml/min	495.41284	Cirrhosis
+Branch1976	P11	ICG	clearance	indocyanine green	blood	clearance B	ml/min	381.65137	Cirrhosis
+Branch1976	P12	ICG	clearance	indocyanine green	blood	clearance B	ml/min	245.87157	Cirrhosis
+Branch1976	P13	ICG	clearance	indocyanine green	blood	clearance B	ml/min	176.14679	Cirrhosis
+Branch1976	P14	ICG	clearance	indocyanine green	blood	clearance B	ml/min	168.80734	Cirrhosis
+Branch1976	P15	ICG	clearance	indocyanine green	blood	clearance B	ml/min	157.79817	Cirrhosis
+Branch1976	P16	ICG	clearance	indocyanine green	blood	clearance B	ml/min	124.770645	Cirrhosis
+Branch1976	P17	ICG	clearance	indocyanine green	blood	clearance B	ml/min	69.72477	Cirrhosis
+Branch1976	P18	ICG	clearance	indocyanine green	blood	clearance B	ml/min	66.055046	Cirrhosis
+Branch1976	P19	ICG	clearance	indocyanine green	blood	clearance B	ml/min	47.70642	Cirrhosis
+Branch1976	P20	ICG	clearance	indocyanine green	blood	clearance B	ml/min	33.027523	Cirrhosis
+Branch1976	C1	ICG	concentration_ss	bilirubin	plasma	bilirubin	mg/dl	0.71428573	Controls
+Branch1976	C2	ICG	concentration_ss	bilirubin	plasma	bilirubin	mg/dl	0.71428573	Controls
+Branch1976	C3	ICG	concentration_ss	bilirubin	plasma	bilirubin	mg/dl	0.45112783	Controls
+Branch1976	C4	ICG	concentration_ss	bilirubin	plasma	bilirubin	mg/dl	0.90225565	Controls
+Branch1976	C5	ICG	concentration_ss	bilirubin	plasma	bilirubin	mg/dl	0.41353384	Controls
+Branch1976	C6	ICG	concentration_ss	bilirubin	plasma	bilirubin	mg/dl	0.9398496	Controls
+Branch1976	P1	ICG	concentration_ss	bilirubin	plasma	bilirubin	mg/dl	1.2406015	Cirrhosis
+Branch1976	P2	ICG	concentration_ss	bilirubin	plasma	bilirubin	mg/dl	2.481203	Cirrhosis
+Branch1976	P3	ICG	concentration_ss	bilirubin	plasma	bilirubin	mg/dl	0.86466163	Cirrhosis
+Branch1976	P4	ICG	concentration_ss	bilirubin	plasma	bilirubin	mg/dl	1.2030075	Cirrhosis
+Branch1976	P5	ICG	concentration_ss	bilirubin	plasma	bilirubin	mg/dl	0.30075186	Cirrhosis
+Branch1976	P6	ICG	concentration_ss	bilirubin	plasma	bilirubin	mg/dl	2.593985	Cirrhosis
+Branch1976	P7	ICG	concentration_ss	bilirubin	plasma	bilirubin	mg/dl	1.6541353	Cirrhosis
+Branch1976	P8	ICG	concentration_ss	bilirubin	plasma	bilirubin	mg/dl	1.0150375	Cirrhosis
+Branch1976	P9	ICG	concentration_ss	bilirubin	plasma	bilirubin	mg/dl	1.4661654	Cirrhosis
+Branch1976	P10	ICG	concentration_ss	bilirubin	plasma	bilirubin	mg/dl	0.86466163	Cirrhosis
+Branch1976	P11	ICG	concentration_ss	bilirubin	plasma	bilirubin	mg/dl	2.593985	Cirrhosis
+Branch1976	P12	ICG	concentration_ss	bilirubin	plasma	bilirubin	mg/dl	2.744361	Cirrhosis
+Branch1976	P13	ICG	concentration_ss	bilirubin	plasma	bilirubin	mg/dl	2.8195488	Cirrhosis
+Branch1976	P14	ICG	concentration_ss	bilirubin	plasma	bilirubin	mg/dl	6.804511	Cirrhosis
+Branch1976	P15	ICG	concentration_ss	bilirubin	plasma	bilirubin	mg/dl	8.421053	Cirrhosis
+Branch1976	P16	ICG	concentration_ss	bilirubin	plasma	bilirubin	mg/dl	5.5263157	Cirrhosis
+Branch1976	P17	ICG	concentration_ss	bilirubin	plasma	bilirubin	mg/dl	1.6541353	Cirrhosis
+Branch1976	P18	ICG	concentration_ss	bilirubin	plasma	bilirubin	mg/dl	5.488722	Cirrhosis
+Branch1976	P19	ICG	concentration_ss	bilirubin	plasma	bilirubin	mg/dl	9.699248	Cirrhosis
+Branch1976	P20	ICG	concentration_ss	bilirubin	plasma	bilirubin	mg/dl	11.165414	Cirrhosis

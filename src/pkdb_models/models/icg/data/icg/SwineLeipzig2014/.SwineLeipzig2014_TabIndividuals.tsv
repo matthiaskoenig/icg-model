@@ -1,0 +1,76 @@
+study	name	id	group	measurement_type	choice	value	unit	comments	remnant_liver	resected_liver	remnant_liver_volume	resected_liver_volume	liver_density
+SwineLeipzig2014	SUS05	NA	PBS	weight	NA	34.5	kg	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS11	NA	PBS	weight	NA	31.4	kg	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS21	NA	PBS	weight	NA	28.2	kg	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS12	NA	PBS	weight	NA	30.3	kg	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS07	NA	MSC ZV	weight	NA	31.7	kg	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS14	NA	MSC ZV	weight	NA	27.7	kg	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS10	NA	MSC ZV	weight	NA	30.8	kg	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS24	NA	MSC ZV	weight	NA	35.55	kg	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS09	NA	MSC PV	weight	NA	33.3	kg	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS15	NA	MSC PV	weight	NA	26.0	kg	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS18	NA	all	weight	NA	24.6	kg	check	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS20	NA	MSC PV	weight	NA	31.3	kg	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS08	NA	NO_RES	weight	NA	31.4	kg	check	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS16	NA	NO_RES	weight	NA	28.7	kg	check	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS23	NA	NO_RES	weight	NA	29.5	kg	check	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS05	NA	PBS	liver weight	NA	1112.3	g	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS11	NA	PBS	liver weight	NA	738.8	g	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS21	NA	PBS	liver weight	NA	708.2	g	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS12	NA	PBS	liver weight	NA	805.0	g	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS07	NA	MSC ZV	liver weight	NA	797.9	g	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS14	NA	MSC ZV	liver weight	NA	744.0	g	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS10	NA	MSC ZV	liver weight	NA	874.7	g	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS24	NA	MSC ZV	liver weight	NA	1064.4	g	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS09	NA	MSC PV	liver weight	NA	912.0	g	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS15	NA	MSC PV	liver weight	NA	716.8	g	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS18	NA	all	liver weight	NA	689.5	g	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS20	NA	MSC PV	liver weight	NA	868.7	g	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS08	NA	NO_RES	liver weight	NA	949.6	g	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS16	NA	NO_RES	liver weight	NA	792.2	g	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS23	NA	NO_RES	liver weight	NA	955.8	g	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS05	NA	PBS	liver_volume	NA	1000.0	ml	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS11	NA	PBS	liver_volume	NA	688.584330548657	ml	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS21	NA	PBS	liver_volume	NA	610.0	ml	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS12	NA	PBS	liver_volume	NA	750.0	ml	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS07	NA	MSC ZV	liver_volume	NA	775.0	ml	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS14	NA	MSC ZV	liver_volume	NA	640.0	ml	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS10	NA	MSC ZV	liver_volume	NA	850.0	ml	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS24	NA	MSC ZV	liver_volume	NA	1000.0	ml	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS09	NA	MSC PV	liver_volume	NA	828.3	ml	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS15	NA	MSC PV	liver_volume	NA	675.0	ml	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS18	NA	all	liver_volume	NA	610.0	ml	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS20	NA	MSC PV	liver_volume	NA	795.0	ml	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS08	NA	NO_RES	liver_volume	NA	860.0	ml	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS16	NA	NO_RES	liver_volume	NA	600.0	ml	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS23	NA	NO_RES	liver_volume	NA	950.0	ml	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS05	NA	PBS	liver resection rate	NA	0.679313134945608	dimensionless	NA	356.7	755.6	300.0	700.0	1.189
+SwineLeipzig2014	SUS11	NA	PBS	liver resection rate	NA	0.657417433676232	dimensionless	NA	253.1	485.7	228.584330548657	460.0	na
+SwineLeipzig2014	SUS21	NA	PBS	liver resection rate	NA	0.622423044337758	dimensionless	NA	267.4	440.8	210.0	400.0	1.27333333333333
+SwineLeipzig2014	SUS12	NA	PBS	liver resection rate	NA	0.66583850931677	dimensionless	NA	269.0	536.0	250.0	500.0	1.076
+SwineLeipzig2014	SUS07	NA	MSC ZV	liver resection rate	NA	0.646572252161925	dimensionless	NA	282.0	515.9	300.0	475.0	0.94
+SwineLeipzig2014	SUS14	NA	MSC ZV	liver resection rate	NA	0.528360215053764	dimensionless	NA	350.9	393.1	290.0	350.0	1.21
+SwineLeipzig2014	SUS10	NA	MSC ZV	liver resection rate	NA	0.595747113295987	dimensionless	NA	353.6	521.1	350.0	500.0	1.01028571428571
+SwineLeipzig2014	SUS24	NA	MSC ZV	liver resection rate	NA	0.583897031191281	dimensionless	NA	442.9	621.5	400.0	600.0	1.10725
+SwineLeipzig2014	SUS09	NA	MSC PV	liver resection rate	NA	0.571710526315789	dimensionless	NA	390.6	521.4	353.3	475.0	1.10557599773564
+SwineLeipzig2014	SUS15	NA	MSC PV	liver resection rate	NA	0.557338169642857	dimensionless	NA	317.3	399.5	300.0	375.0	1.05766666666667
+SwineLeipzig2014	SUS18	NA	all	liver resection rate	NA	0.615663524292966	dimensionless	NA	265.0	424.5	210.0	400.0	1.26190476190476
+SwineLeipzig2014	SUS20	NA	MSC PV	liver resection rate	NA	0.651087832393231	dimensionless	NA	303.1	565.6	250.0	545.0	1.2124
+SwineLeipzig2014	SUS08	NA	NO_RES	liver resection rate	NA	0.0	dimensionless	NA	949.6	0.0	860.0	0.0	NA
+SwineLeipzig2014	SUS16	NA	NO_RES	liver resection rate	NA	0.0	dimensionless	NA	792.2	0.0	600.0	0.0	NA
+SwineLeipzig2014	SUS23	NA	NO_RES	liver resection rate	NA	0.0	dimensionless	NA	955.8	0.0	950.0	0.0	NA
+SwineLeipzig2014	SUS05	NA	PBS	fractional liver remnant volume	NA	0.320686865054392	dimensionless	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS11	NA	PBS	fractional liver remnant volume	NA	0.342582566323768	dimensionless	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS21	NA	PBS	fractional liver remnant volume	NA	0.377576955662242	dimensionless	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS12	NA	PBS	fractional liver remnant volume	NA	0.33416149068323	dimensionless	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS07	NA	MSC ZV	fractional liver remnant volume	NA	0.353427747838075	dimensionless	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS14	NA	MSC ZV	fractional liver remnant volume	NA	0.471639784946236	dimensionless	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS10	NA	MSC ZV	fractional liver remnant volume	NA	0.404252886704013	dimensionless	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS24	NA	MSC ZV	fractional liver remnant volume	NA	0.416102968808719	dimensionless	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS09	NA	MSC PV	fractional liver remnant volume	NA	0.428289473684211	dimensionless	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS15	NA	MSC PV	fractional liver remnant volume	NA	0.442661830357143	dimensionless	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS18	NA	all	fractional liver remnant volume	NA	0.384336475707034	dimensionless	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS20	NA	MSC PV	fractional liver remnant volume	NA	0.348912167606769	dimensionless	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS08	NA	NO_RES	fractional liver remnant volume	NA	1.0	dimensionless	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS16	NA	NO_RES	fractional liver remnant volume	NA	1.0	dimensionless	NA	NA	NA	NA	NA	NA
+SwineLeipzig2014	SUS23	NA	NO_RES	fractional liver remnant volume	NA	1.0	dimensionless	NA	NA	NA	NA	NA	NA

@@ -1,0 +1,16 @@
+study	group	intervention	measurement_type	tissue	substance	count	mean	sd	unit
+Klockowski1990	all	ICG	auc_inf	plasma	indocyanine green	18	63.9	11.6	microg*min/ml
+Klockowski1990	all	ICG	clearance	plasma	indocyanine green	18	560	102	ml/min
+Klockowski1990	all	ICG	thalf	plasma	indocyanine green	18	3.61	0.73	min
+Klockowski1990	all	ICG	vd_ss	plasma	indocyanine green	18	2.84	0.73	l
+Klockowski1990	all	ICG	mrt	plasma	indocyanine green	18	5.09	0.95	min
+Klockowski1990	all	ICG, I -48, I -36, I -24, I -12, I +0	auc_inf	plasma	indocyanine green	18	54.3	12.1	microg*min/ml
+Klockowski1990	all	ICG, I -48, I -36, I -24, I -12, I +0	clearance	plasma	indocyanine green	18	667	140	ml/min
+Klockowski1990	all	ICG, I -48, I -36, I -24, I -12, I +0	thalf	plasma	indocyanine green	18	2.95	0.56	min
+Klockowski1990	all	ICG, I -48, I -36, I -24, I -12, I +0	vd_ss	plasma	indocyanine green	18	2.82	0.76	l
+Klockowski1990	all	ICG, I -48, I -36, I -24, I -12, I +0	mrt	plasma	indocyanine green	18	4.25	0.84	min
+Klockowski1990	all	ICG, D -48, D -40, D -32, D -24, D -16, D -8, D +0	auc_inf	plasma	indocyanine green	18	55.6	7.5	microg*min/ml
+Klockowski1990	all	ICG, D -48, D -40, D -32, D -24, D -16, D -8, D +0	clearance	plasma	indocyanine green	18	638	97	ml/min
+Klockowski1990	all	ICG, D -48, D -40, D -32, D -24, D -16, D -8, D +0	thalf	plasma	indocyanine green	18	2.95	0.77	min
+Klockowski1990	all	ICG, D -48, D -40, D -32, D -24, D -16, D -8, D +0	vd_ss	plasma	indocyanine green	18	2.69	0.9	l
+Klockowski1990	all	ICG, D -48, D -40, D -32, D -24, D -16, D -8, D +0	mrt	plasma	indocyanine green	18	4.18	1.04	min

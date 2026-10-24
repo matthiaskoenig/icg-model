@@ -1,0 +1,3 @@
+study	group	interventions	measurement	tissue	substance	mean	mean_sd	label	mean_unit
+Hashimoto2000	controls	ICG	kel	plasma	indocyanine green	0.189	0.024	Tab1pk	1/min
+Hashimoto2000	cirrhosis	ICG	kel	plasma	indocyanine green	0.119	0.044	Tab1pk	1/min

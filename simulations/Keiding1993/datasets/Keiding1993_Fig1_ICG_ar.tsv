@@ -1,0 +1,6 @@
+study	subject	count	measurement	intervention	tissue	substance	time	time_unit	value	label	comment	value_unit	count_unit
+Keiding1993	S1	1	concentration	ICG	arterial plasma	indocyanine green	90.0	min	0.33288893	Fig1_ar		micromol/l	dimensionless
+Keiding1993	S1	1	concentration	ICG	arterial plasma	indocyanine green	94.82932	min	0.33142644	Fig1_ar		micromol/l	dimensionless
+Keiding1993	S1	1	concentration	ICG	arterial plasma	indocyanine green	99.86476	min	0.32666487	Fig1_ar		micromol/l	dimensionless
+Keiding1993	S1	1	concentration	ICG	arterial plasma	indocyanine green	104.7572	min	0.34166384	Fig1_ar		micromol/l	dimensionless
+Keiding1993	S1	1	concentration	ICG	arterial plasma	indocyanine green	109.7919	min	0.34350044	Fig1_ar		micromol/l	dimensionless

@@ -1,0 +1,3 @@
+study	name	substance	measurement_type	choice	time	time_unit	route	form	value	unit	application
+Stockmann2009	ICG	indocyanine green	dosing	NA	0	min	iv	solution	0.5	mg/kg	single dose
+Stockmann2009	hepatectomy	NA	liver operation	hepatectomy	0	min	NR	NR	NA	NA	NR

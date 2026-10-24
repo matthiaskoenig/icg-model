@@ -1,0 +1,9 @@
+study	name	group_count	parent	measurement_type	choice	count	mean	sd	unit
+Ma2008	all	13	NA	species	homo sapiens	13	NA	NA	NA
+Ma2008	all	13	NA	healthy	Y	13	NA	NA	NA
+Ma2008	all	13	NA	sex	M	6	NA	NA	NA
+Ma2008	all	13	NA	sex	F	7	NA	NA	NA
+Ma2008	all	13	NA	age	NA	13	36.4	7.2	yr
+Ma2008	all	13	NA	weight	NA	13	75.8	13.3	kg
+Ma2008	allsupine	13	all	body position	supine	13	NA	NA	NA
+Ma2008	allsitting	13	all	body position	sitting	13	NA	NA	NA

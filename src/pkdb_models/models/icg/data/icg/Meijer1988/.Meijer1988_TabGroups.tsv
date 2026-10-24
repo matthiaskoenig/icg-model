@@ -1,0 +1,12 @@
+study	name	group_count	parent	measurement_type	mean	unit	choice	count
+Meijer1988	all	16.0	NA	species	NA	NA	homo sapiens	16.0
+Meijer1988	all	16.0	NA	healthy	NA	NA	Y	15.0
+Meijer1988	all	16.0	NA	healthy	NA	NA	N	1.0
+Meijer1988	all	16.0	NA	medication	NA	NA	NR	16.0
+Meijer1988	all	16.0	NA	sex	NA	NA	NR	16.0
+Meijer1988	ICG0.5	6.0	all	healthy	NA	NA	Y	6.0
+Meijer1988	ICG0.5	6.0	all	weight	62.167	kg	NA	6.0
+Meijer1988	ICG1.0	5.0	all	healthy	NA	NA	Y	5.0
+Meijer1988	ICG1.0	5.0	all	weight	63.8	kg	NA	5.0
+Meijer1988	ICG2.0	4.0	all	healthy	NA	NA	Y	4.0
+Meijer1988	ICG2.0	4.0	all	weight	70.0	kg	NA	4.0

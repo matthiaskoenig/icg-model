@@ -1,0 +1,6 @@
+study	subject	count	measurement	intervention	tissue	substance	time	time_unit	value	label	comment	value_unit	count_unit
+Keiding1993	S1	1	concentration	ICG	hepatic vein	indocyanine green	90.0	min	0.23575947	Fig1_hv		micromol/l	dimensionless
+Keiding1993	S1	1	concentration	ICG	hepatic vein	indocyanine green	94.84814	min	0.23594314	Fig1_hv		micromol/l	dimensionless
+Keiding1993	S1	1	concentration	ICG	hepatic vein	indocyanine green	99.74323	min	0.2361268	Fig1_hv		micromol/l	dimensionless
+Keiding1993	S1	1	concentration	ICG	hepatic vein	indocyanine green	104.7767	min	0.24454118	Fig1_hv		micromol/l	dimensionless
+Keiding1993	S1	1	concentration	ICG	hepatic vein	indocyanine green	109.8117	min	0.24307871	Fig1_hv		micromol/l	dimensionless

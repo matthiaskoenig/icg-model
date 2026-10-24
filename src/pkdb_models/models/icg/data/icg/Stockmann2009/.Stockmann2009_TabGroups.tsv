@@ -1,0 +1,10 @@
+study	name	group_count	parent	measurement_type	choice	mean	sd	unit	count
+Stockmann2009	all	64	NA	species	homo sapiens	NA	NA	NA	64
+Stockmann2009	all	64	NA	healthy	N	NA	NA	NA	64
+Stockmann2009	all	64	NA	sex	M	NA	NA	NA	45
+Stockmann2009	all	64	NA	sex	F	NA	NA	NA	19
+Stockmann2009	all	64	NA	age	NA	59.0	10.0	yr	64
+Stockmann2009	all	64	NA	bmi	NA	25.0	3.7	kg/m^2	64
+Stockmann2009	all	64	NA	child-pugh score	child-pugh class A	NA	NA	NA	50
+Stockmann2009	all	64	NA	child-pugh score	child-pugh class B	NA	NA	NA	14
+Stockmann2009	all	64	NA	disease	liver disease	NA	NA	NA	64

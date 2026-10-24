@@ -1,0 +1,11 @@
+study	group	interventions	measurement	tissue	substance	mean	sd	unit	label
+Haimerl2016	all	ICG	pdr	plasma	indocyanine green	17.1	10.0	percent/min	Tab1pk
+Haimerl2016	controls	ICG	pdr	plasma	indocyanine green	25.8	6.8	percent/min	Tab1pk
+Haimerl2016	ctpa	ICG	pdr	plasma	indocyanine green	15.2	3.9	percent/min	Tab1pk
+Haimerl2016	ctpb	ICG	pdr	plasma	indocyanine green	7.7	3.0	percent/min	Tab1pk
+Haimerl2016	ctpc	ICG	pdr	plasma	indocyanine green	5.0	1.8	percent/min	Tab1pk
+Haimerl2016	all	NA	liver volume	liver	NA	1876.2	509.2	ml	Tab1pk
+Haimerl2016	controls	NA	liver volume	liver	NA	1993.1	382.0	ml	Tab1pk
+Haimerl2016	ctpa	NA	liver volume	liver	NA	1911.0	442.1	ml	Tab1pk
+Haimerl2016	ctpb	NA	liver volume	liver	NA	1564.3	468.1	ml	Tab1pk
+Haimerl2016	ctpc	NA	liver volume	liver	NA	1860.0	798.6	ml	Tab1pk

@@ -1,0 +1,8 @@
+study	subject	intervention	measurement	tissue	substance	value	group	label	value_unit
+Caesar1961	Cirrhosis11	ICG_inf	hbf	plasma	indocyanine green	1470.0	Cirrhosis	Tab3	ml/min
+Caesar1961	Cirrhosis19	ICG_inf	hbf	plasma	indocyanine green	770.0	Cirrhosis	Tab3	ml/min
+Caesar1961	Cirrhosis17	ICG_inf	hbf	plasma	indocyanine green	660.0	Cirrhosis	Tab3	ml/min
+Caesar1961	Cirrhosis21	ICG_inf	hbf	plasma	indocyanine green	620.0	Cirrhosis	Tab3	ml/min
+Caesar1961	Cirrhosis20	ICG_inf	hbf	plasma	indocyanine green	570.0	Cirrhosis	Tab3	ml/min
+Caesar1961	Cirrhosis27	ICG_inf	hbf	plasma	indocyanine green	395.0	Cirrhosis	Tab3	ml/min
+Caesar1961	Cirrhosis23	ICG_inf	hbf	plasma	indocyanine green	300.0	Cirrhosis	Tab3	ml/min

@@ -1,0 +1,6 @@
+study	name	group_count	parent	measurement	mean	sd	choice	unit	count
+Soons1991	all	6	NA	species	NA	NA	homo sapiens	NA	6
+Soons1991	all	6	NA	sex	NA	NA	M	NA	6
+Soons1991	all	6	NA	age	23.0	2.0	NA	yr	6
+Soons1991	all	6	NA	weight	72.0	6.0	NA	kg	6
+Soons1991	all	6	NA	healthy	NA	NA	Y	NA	6

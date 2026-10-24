@@ -1,0 +1,5 @@
+study	name	group_count	parent	measurement	choice	mean	mean_sd	count	mean_unit	count_unit
+Haimerl2016	controls	49	all	weight		79.7	18.1	49	kg	dimensionless
+Haimerl2016	ctpa	22	all	weight		78.6	13.9	22	kg	dimensionless
+Haimerl2016	ctpb	20	all	weight		79.5	15.5	20	kg	dimensionless
+Haimerl2016	ctpc	16	all	weight		75.3	12.5	16	kg	dimensionless

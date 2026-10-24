@@ -1,0 +1,2 @@
+study	group	count	intervention	measurement	substance	tissue	mean	mean_sd	time	time_unit	comments	mean_unit	count_unit
+Leevy1962	ER_controls	14	ICG_Inf_0.3	hbf	indocyanine green	liver	481.4	123.337929680854	50	min	no time provided assuming 50 min steady state	ml/min/m^2	dimensionless

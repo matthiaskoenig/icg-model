@@ -1,0 +1,7 @@
+study	name	group	measurement	choice
+Andersen1999	AntPatient	pancreatitis	sex	NR
+Andersen1999	AntControl	controls	sex	NR
+Andersen1999	OxaPatient	pancreatitis	sex	NR
+Andersen1999	OxaControl	controls	sex	NR
+Andersen1999	ICGPatient	pancreatitis	sex	NR
+Andersen1999	ICGControl	controls	sex	NR

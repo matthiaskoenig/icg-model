@@ -1,0 +1,7 @@
+study	group	intervention	measurement	tissue	substance	mean	sd	min	max	unit	dose	dose_unit
+Andersen1999	pancreatitis	OXA, ANT, ICG	clearance	plasma	antipyrine	27.2	NA	19.4	35.0	ml/min	NA	NA
+Andersen1999	pancreatitis	OXA, ANT, ICG	clearance	plasma	oxazepam	181.0	NA	145.0	217.0	ml/min	NA	NA
+Andersen1999	pancreatitis	OXA, ANT, ICG	clearance	plasma	indocyanine green	501.0	NA	401.0	601.0	ml/min	NA	NA
+Andersen1999	controls	OXA, ANT, ICG	clearance	plasma	antipyrine	46.2	NA	34.7	58.7	ml/min	NA	NA
+Andersen1999	controls	OXA, ANT, ICG	clearance	plasma	oxazepam	178.0	NA	152.0	204.0	ml/min	NA	NA
+Andersen1999	controls	OXA, ANT, ICG	clearance	plasma	indocyanine green	771.0	NA	677.0	865.0	ml/min	NA	NA

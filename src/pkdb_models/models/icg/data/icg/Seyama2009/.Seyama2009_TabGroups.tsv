@@ -1,0 +1,9 @@
+study	name	group_count	parent	measurement	choice	count
+Seyama2009	all	38	NA	species	homo sapiens	38
+Seyama2009	all	38	NA	healthy	N	38
+Seyama2009	all	38	NA	disease	liver cirrhosis	28
+Seyama2009	all	38	NA	sex	NR	38
+Seyama2009	Survivors	28	all	sex	NR	28
+Seyama2009	Nonsurvivors	10	all	sex	NR	10
+Seyama2009	noncirrhotic_surv	9	all	sex	NR	9
+Seyama2009	noncirrhotic_nonsurv	1	all	sex	NR	1

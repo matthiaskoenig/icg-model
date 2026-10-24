@@ -1,0 +1,22 @@
+study	individual	intervention	x_measurement	y_measurement	x_tissue	y_tissue	x_label	y_label	substance	x	y	x_unit	y_unit	group
+Figg1995	Control1	ICG	child-pugh score numeric	clearance	liver	plasma	Child-Score	ICG-clearance	indocyanine green	5	19.831652	dimensionless	ml/kg/min	Controls
+Figg1995	Control2	ICG	child-pugh score numeric	clearance	liver	plasma	Child-Score	ICG-clearance	indocyanine green	5	14.794002	dimensionless	ml/kg/min	Controls
+Figg1995	Control3	ICG	child-pugh score numeric	clearance	liver	plasma	Child-Score	ICG-clearance	indocyanine green	5	10.968759	dimensionless	ml/kg/min	Controls
+Figg1995	Control4	ICG	child-pugh score numeric	clearance	liver	plasma	Child-Score	ICG-clearance	indocyanine green	5	10.059791	dimensionless	ml/kg/min	Controls
+Figg1995	Control5	ICG	child-pugh score numeric	clearance	liver	plasma	Child-Score	ICG-clearance	indocyanine green	5	9.18735	dimensionless	ml/kg/min	Controls
+Figg1995	Control6	ICG	child-pugh score numeric	clearance	liver	plasma	Child-Score	ICG-clearance	indocyanine green	5	8.089013	dimensionless	ml/kg/min	Controls
+Figg1995	Control7	ICG	child-pugh score numeric	clearance	liver	plasma	Child-Score	ICG-clearance	indocyanine green	5	7.4081836	dimensionless	ml/kg/min	Controls
+Figg1995	Control8	ICG	child-pugh score numeric	clearance	liver	plasma	Child-Score	ICG-clearance	indocyanine green	5	6.8405266	dimensionless	ml/kg/min	Controls
+Figg1995	Control9	ICG	child-pugh score numeric	clearance	liver	plasma	Child-Score	ICG-clearance	indocyanine green	5	6.3472714	dimensionless	ml/kg/min	Controls
+Figg1995	Control10	ICG	child-pugh score numeric	clearance	liver	plasma	Child-Score	ICG-clearance	indocyanine green	5	5.81704	dimensionless	ml/kg/min	Controls
+Figg1995	Mild1	ICG	child-pugh score numeric	clearance	liver	plasma	Child-Score	ICG-clearance	indocyanine green	6	7.2389374	dimensionless	ml/kg/min	Mild_cirrhosis
+Figg1995	Mild2	ICG	child-pugh score numeric	clearance	liver	plasma	Child-Score	ICG-clearance	indocyanine green	6	5.988657	dimensionless	ml/kg/min	Mild_cirrhosis
+Figg1995	Mild3	ICG	child-pugh score numeric	clearance	liver	plasma	Child-Score	ICG-clearance	indocyanine green	6	4.2464676	dimensionless	ml/kg/min	Mild_cirrhosis
+Figg1995	Mild4	ICG	child-pugh score numeric	clearance	liver	plasma	Child-Score	ICG-clearance	indocyanine green	6	2.8077157	dimensionless	ml/kg/min	Mild_cirrhosis
+Figg1995	Moderate1	ICG	child-pugh score numeric	clearance	liver	plasma	Child-Score	ICG-clearance	indocyanine green	8	3.6513827	dimensionless	ml/kg/min	Moderate_cirrhosis
+Figg1995	Moderate2	ICG	child-pugh score numeric	clearance	liver	plasma	Child-Score	ICG-clearance	indocyanine green	8	1.9844917	dimensionless	ml/kg/min	Moderate_cirrhosis
+Figg1995	Moderate3	ICG	child-pugh score numeric	clearance	liver	plasma	Child-Score	ICG-clearance	indocyanine green	8	1.4793168	dimensionless	ml/kg/min	Moderate_cirrhosis
+Figg1995	Severe1	ICG	child-pugh score numeric	clearance	liver	plasma	Child-Score	ICG-clearance	indocyanine green	10	3.813323	dimensionless	ml/kg/min	Severe_cirrhosis
+Figg1995	Severe2	ICG	child-pugh score numeric	clearance	liver	plasma	Child-Score	ICG-clearance	indocyanine green	11	3.4569516	dimensionless	ml/kg/min	Severe_cirrhosis
+Figg1995	Severe3	ICG	child-pugh score numeric	clearance	liver	plasma	Child-Score	ICG-clearance	indocyanine green	11	1.183633	dimensionless	ml/kg/min	Severe_cirrhosis
+Figg1995	Severe4	ICG	child-pugh score numeric	clearance	liver	plasma	Child-Score	ICG-clearance	indocyanine green	12	3.1758788	dimensionless	ml/kg/min	Severe_cirrhosis

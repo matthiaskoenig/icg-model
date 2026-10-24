@@ -1,0 +1,4 @@
+study	group	count	intervention	measurement_type	tissue	substance	label	time	time_unit	mean	mean_unit	count_unit
+Meijer1988	ICG0.5	6	0.5icg	concentration	plasma	indocyanine green	fig2_0.5icg_concentration	30.0	min	0.8202349	nmol/ml	dimensionless
+Meijer1988	ICG0.5	6	0.5icg	concentration	plasma	indocyanine green	fig2_0.5icg_concentration	40.0	min	0.7007368	nmol/ml	dimensionless
+Meijer1988	ICG0.5	6	0.5icg	concentration	plasma	indocyanine green	fig2_0.5icg_concentration	50.0	min	0.57449186	nmol/ml	dimensionless

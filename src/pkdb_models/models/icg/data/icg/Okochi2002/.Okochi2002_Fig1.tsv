@@ -1,0 +1,19 @@
+study	group	intervention	tissue	substance	measurement	mean	se	unit	time	time_unit	label
+Okochi2002	all	ICG	plasma	indocyanine green	kel	0.19188568	0.01149416	1/min	0	d	Fig1_a
+Okochi2002	all	ICG	plasma	indocyanine green	kel	0.1592979	0.01274617	1/min	1	d	Fig1_a
+Okochi2002	all	ICG	plasma	indocyanine green	kel	0.14423488	0.01365632	1/min	2	d	Fig1_a
+Okochi2002	all	ICG	plasma	indocyanine green	kel	0.15432112	0.01388392	1/min	3	d	Fig1_a
+Okochi2002	all	ICG	plasma	indocyanine green	kel	0.16133527	0.0142258	1/min	5	d	Fig1_a
+Okochi2002	all	ICG	plasma	indocyanine green	kel	0.15093824	0.01274641	1/min	7	d	Fig1_a
+Okochi2002	noncirrhotic	ICG	plasma	indocyanine green	kel	0.22318436	0.01427374	1/min	0	d	Fig1_b_noncirrhotic
+Okochi2002	noncirrhotic	ICG	plasma	indocyanine green	kel	0.18837988	0.01994414	1/min	1	d	Fig1_b_noncirrhotic
+Okochi2002	noncirrhotic	ICG	plasma	indocyanine green	kel	0.17312849	0.02053073	1/min	2	d	Fig1_b_noncirrhotic
+Okochi2002	noncirrhotic	ICG	plasma	indocyanine green	kel	0.18427375	0.02189943	1/min	3	d	Fig1_b_noncirrhotic
+Okochi2002	noncirrhotic	ICG	plasma	indocyanine green	kel	0.19424582	0.01974859	1/min	5	d	Fig1_b_noncirrhotic
+Okochi2002	noncirrhotic	ICG	plasma	indocyanine green	kel	0.18192737	0.01896648	1/min	7	d	Fig1_b_noncirrhotic
+Okochi2002	cirrhotic	ICG	plasma	indocyanine green	kel	0.16041899	0.01310056	1/min	0	d	Fig1_b_cirrhotic
+Okochi2002	cirrhotic	ICG	plasma	indocyanine green	kel	0.1293296	0.01290504	1/min	1	d	Fig1_b_cirrhotic
+Okochi2002	cirrhotic	ICG	plasma	indocyanine green	kel	0.1152514	0.01173184	1/min	2	d	Fig1_b_cirrhotic
+Okochi2002	cirrhotic	ICG	plasma	indocyanine green	kel	0.123659216	0.013100554	1/min	3	d	Fig1_b_cirrhotic
+Okochi2002	cirrhotic	ICG	plasma	indocyanine green	kel	0.12835196	0.01583798	1/min	5	d	Fig1_b_cirrhotic
+Okochi2002	cirrhotic	ICG	plasma	indocyanine green	kel	0.119553074	0.013296086	1/min	7	d	Fig1_b_cirrhotic

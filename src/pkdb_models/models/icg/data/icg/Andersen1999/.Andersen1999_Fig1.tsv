@@ -1,0 +1,37 @@
+study	individual	count	measurement	substance	tissue	intervention	time	time_unit	value	unit
+Andersen1999	ICGPatient	1.0	concentration	indocyanine green	plasma	OXA, ANT, ICG	3.0	min	6.579413	mg/l
+Andersen1999	ICGPatient	1.0	concentration	indocyanine green	plasma	OXA, ANT, ICG	6.0	min	3.777072	mg/l
+Andersen1999	ICGPatient	1.0	concentration	indocyanine green	plasma	OXA, ANT, ICG	9.0	min	2.2385237	mg/l
+Andersen1999	ICGPatient	1.0	concentration	indocyanine green	plasma	OXA, ANT, ICG	12.0	min	1.2591594	mg/l
+Andersen1999	ICGPatient	1.0	concentration	indocyanine green	plasma	OXA, ANT, ICG	15.0	min	0.6928222	mg/l
+Andersen1999	ICGPatient	1.0	concentration	indocyanine green	plasma	OXA, ANT, ICG	20.0	min	0.31604984	mg/l
+Andersen1999	ICGControl	1.0	concentration	indocyanine green	plasma	OXA, ANT, ICG	3.0	min	5.717081	mg/l
+Andersen1999	ICGControl	1.0	concentration	indocyanine green	plasma	OXA, ANT, ICG	6.0	min	2.691361	mg/l
+Andersen1999	ICGControl	1.0	concentration	indocyanine green	plasma	OXA, ANT, ICG	9.0	min	1.2329559	mg/l
+Andersen1999	ICGControl	1.0	concentration	indocyanine green	plasma	OXA, ANT, ICG	12.0	min	0.8031012	mg/l
+Andersen1999	ICGControl	1.0	concentration	indocyanine green	plasma	OXA, ANT, ICG	15.0	min	0.42234802	mg/l
+Andersen1999	ICGControl	1.0	concentration	indocyanine green	plasma	OXA, ANT, ICG	20.0	min	0.26925915	mg/l
+Andersen1999	OxaPatient	1.0	concentration	oxazepam	plasma	OXA, ANT, ICG	0.5	hr	51.839855	ng/ml
+Andersen1999	OxaPatient	1.0	concentration	oxazepam	plasma	OXA, ANT, ICG	1.0	hr	184.71262	ng/ml
+Andersen1999	OxaPatient	1.0	concentration	oxazepam	plasma	OXA, ANT, ICG	2.0	hr	384.94217	ng/ml
+Andersen1999	OxaPatient	1.0	concentration	oxazepam	plasma	OXA, ANT, ICG	3.0	hr	280.00525	ng/ml
+Andersen1999	OxaPatient	1.0	concentration	oxazepam	plasma	OXA, ANT, ICG	4.0	hr	204.36838	ng/ml
+Andersen1999	OxaPatient	1.0	concentration	oxazepam	plasma	OXA, ANT, ICG	6.0	hr	97.92135	ng/ml
+Andersen1999	OxaPatient	1.0	concentration	oxazepam	plasma	OXA, ANT, ICG	8.0	hr	55.29536	ng/ml
+Andersen1999	OxaPatient	1.0	concentration	oxazepam	plasma	OXA, ANT, ICG	12.0	hr	23.45171	ng/ml
+Andersen1999	OxaPatient	1.0	concentration	oxazepam	plasma	OXA, ANT, ICG	24.0	hr	2.076707	ng/ml
+Andersen1999	OxaControl	1.0	concentration	oxazepam	plasma	OXA, ANT, ICG	0.5	hr	283.88968	ng/ml
+Andersen1999	OxaControl	1.0	concentration	oxazepam	plasma	OXA, ANT, ICG	1.0	hr	310.38763	ng/ml
+Andersen1999	OxaControl	1.0	concentration	oxazepam	plasma	OXA, ANT, ICG	2.0	hr	274.38693	ng/ml
+Andersen1999	OxaControl	1.0	concentration	oxazepam	plasma	OXA, ANT, ICG	3.0	hr	238.38625	ng/ml
+Andersen1999	OxaControl	1.0	concentration	oxazepam	plasma	OXA, ANT, ICG	4.0	hr	209.59863	ng/ml
+Andersen1999	OxaControl	1.0	concentration	oxazepam	plasma	OXA, ANT, ICG	6.0	hr	143.60756	ng/ml
+Andersen1999	OxaControl	1.0	concentration	oxazepam	plasma	OXA, ANT, ICG	8.0	hr	110.09073	ng/ml
+Andersen1999	OxaControl	1.0	concentration	oxazepam	plasma	OXA, ANT, ICG	12.0	hr	70.72028	ng/ml
+Andersen1999	OxaControl	1.0	concentration	oxazepam	plasma	OXA, ANT, ICG	24.0	hr	23.571157	ng/ml
+Andersen1999	AntPatient	1.0	concentration	antipyrine	plasma	OXA, ANT, ICG	8.0	hr	61.9568030189703	micromol/l
+Andersen1999	AntPatient	1.0	concentration	antipyrine	plasma	OXA, ANT, ICG	12.0	hr	39.5822064835723	micromol/l
+Andersen1999	AntPatient	1.0	concentration	antipyrine	plasma	OXA, ANT, ICG	24.0	hr	12.4453925618221	micromol/l
+Andersen1999	AntControl	1.0	concentration	antipyrine	plasma	OXA, ANT, ICG	8.0	hr	72.5479257759521	micromol/l
+Andersen1999	AntControl	1.0	concentration	antipyrine	plasma	OXA, ANT, ICG	12.0	hr	61.4380608866417	micromol/l
+Andersen1999	AntControl	1.0	concentration	antipyrine	plasma	OXA, ANT, ICG	24.0	hr	37.7871119259736	micromol/l

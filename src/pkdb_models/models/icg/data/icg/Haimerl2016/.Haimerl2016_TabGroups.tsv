@@ -1,0 +1,37 @@
+study	name	group_count	parent	measurement	choice	mean	sd	unit	count
+Haimerl2016	all	107	NA	species	homo sapiens	NA	NA	NA	107
+Haimerl2016	all	107	NA	sex	M	NA	NA	NA	73
+Haimerl2016	all	107	NA	sex	F	NA	NA	NA	34
+Haimerl2016	all	107	NA	healthy	N	NA	NA	NA	58
+Haimerl2016	all	107	NA	healthy	Y	NA	NA	NA	49
+Haimerl2016	all	107	NA	age	NA	55.1	13.5	yr	107
+Haimerl2016	all	107	NA	height	NA	171.0	8.0	cm	107
+Haimerl2016	all	107	NA	weight	NA	78.8	15.9	kg	107
+Haimerl2016	all	107	NA	disease	liver cirrhosis	NA	NA	NA	58
+Haimerl2016	controls	49	all	age	NA	50.3	13.9	yr	49
+Haimerl2016	controls	49	all	sex	M	NA	NA	NA	25
+Haimerl2016	controls	49	all	sex	F	NA	NA	NA	24
+Haimerl2016	controls	49	all	height	NA	172.0	8.0	cm	49
+Haimerl2016	controls	49	all	weight	NA	79.7	18.1	kg	49
+Haimerl2016	controls	49	all	healthy	Y	NA	NA	NA	49
+Haimerl2016	ctpa	22	all	age	NA	62.3	11.7	yr	22
+Haimerl2016	ctpa	22	all	sex	M	NA	NA	NA	18
+Haimerl2016	ctpa	22	all	sex	F	NA	NA	NA	4
+Haimerl2016	ctpa	22	all	height	NA	171.0	7.0	cm	22
+Haimerl2016	ctpa	22	all	weight	NA	78.6	13.9	kg	22
+Haimerl2016	ctpa	22	all	healthy	N	NA	NA	NA	22
+Haimerl2016	ctpa	22	all	disease	liver cirrhosis	NA	NA	NA	22
+Haimerl2016	ctpb	20	all	age	NA	58.4	7.3	yr	20
+Haimerl2016	ctpb	20	all	sex	M	NA	NA	NA	17
+Haimerl2016	ctpb	20	all	sex	F	NA	NA	NA	3
+Haimerl2016	ctpb	20	all	height	NA	172.0	7.0	cm	20
+Haimerl2016	ctpb	20	all	weight	NA	79.5	15.5	kg	20
+Haimerl2016	ctpb	20	all	healthy	N	NA	NA	NA	20
+Haimerl2016	ctpb	20	all	disease	liver cirrhosis	NA	NA	NA	20
+Haimerl2016	ctpc	16	all	age	NA	55.9	NA	yr	16
+Haimerl2016	ctpc	16	all	sex	M	NA	NA	NA	13
+Haimerl2016	ctpc	16	all	sex	F	NA	NA	NA	3
+Haimerl2016	ctpc	16	all	height	NA	174.0	8.0	cm	16
+Haimerl2016	ctpc	16	all	weight	NA	75.3	12.5	kg	16
+Haimerl2016	ctpc	16	all	healthy	N	NA	NA	NA	16
+Haimerl2016	ctpc	16	all	disease	liver cirrhosis	NA	NA	NA	16

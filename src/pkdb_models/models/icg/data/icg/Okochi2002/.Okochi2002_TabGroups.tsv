@@ -1,0 +1,9 @@
+study	name	group_count	parent	measurement	choice	mean	unit	se	count
+Okochi2002	all	22	NA	species	homo sapiens	NA	NA	NA	22
+Okochi2002	all	22	NA	age	NA	53.0	yr	2.9	22
+Okochi2002	all	22	NA	healthy	N	NA	NA	NA	22
+Okochi2002	all	22	NA	sex	NR	NA	NA	NA	22
+Okochi2002	cirrhotic	11	all	disease	liver cirrhosis	NA	NA	NA	11
+Okochi2002	cirrhotic	11	all	age	NA	49.5	yr	4.6	11
+Okochi2002	noncirrhotic	11	all	disease	non-cirrhotic liver disease	NA	NA	NA	11
+Okochi2002	noncirrhotic	11	all	age	NA	56.6	yr	3.5	11

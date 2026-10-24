@@ -1,0 +1,5 @@
+study	name	substance	measurement_type	choice	time	time_unit	route	form	value	unit	application
+Marigold1981	Meal	na	metabolic challenge	mixed meal	-100	min	oral	NR	NA	NA	single dose
+Marigold1981	gly	glycocholic acid	dosing	NA	0	min	iv	solution	5.0	microCi	single dose
+Marigold1981	icg	indocyanine green	dosing	NA	0	min	iv	solution	0.25	mg/kg	single dose
+Marigold1981	evans	evans blue	dosing	NA	0	min	iv	solution	25.0	mg	single dose

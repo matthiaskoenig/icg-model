@@ -1,0 +1,25 @@
+study	subject	intervention	tissue	substance	measurement	value	unit
+Kawasaki1988	I6	AP	blood	antipyrine	clearance	0.09383408	ml/min/kg
+Kawasaki1988	I7	AP	blood	antipyrine	clearance	0.15033633	ml/min/kg
+Kawasaki1988	I8	AP	blood	antipyrine	clearance	0.2633408	ml/min/kg
+Kawasaki1988	I9	AP	blood	antipyrine	clearance	0.24215247	ml/min/kg
+Kawasaki1988	I10	AP	blood	antipyrine	clearance	0.22802691	ml/min/kg
+Kawasaki1988	I11	AP	blood	antipyrine	clearance	0.23004484	ml/min/kg
+Kawasaki1988	I26	AP	blood	antipyrine	clearance	0.37634528	ml/min/kg
+Kawasaki1988	I1	AP	blood	antipyrine	clearance	0.47320628	ml/min/kg
+Kawasaki1988	I2	AP	blood	antipyrine	clearance	0.30975336	ml/min/kg
+Kawasaki1988	I3	AP	blood	antipyrine	clearance	0.40257847	ml/min/kg
+Kawasaki1988	I4	AP	blood	antipyrine	clearance	0.5408072	ml/min/kg
+Kawasaki1988	I5	AP	blood	antipyrine	clearance	0.5539238	ml/min/kg
+Kawasaki1988	I6	ICG	blood	indocyanine green	clearance	3.141593	ml/min/kg
+Kawasaki1988	I7	ICG	blood	indocyanine green	clearance	3.2743363	ml/min/kg
+Kawasaki1988	I8	ICG	blood	indocyanine green	clearance	4.7345133	ml/min/kg
+Kawasaki1988	I9	ICG	blood	indocyanine green	clearance	5.2654867	ml/min/kg
+Kawasaki1988	I10	ICG	blood	indocyanine green	clearance	9.911505	ml/min/kg
+Kawasaki1988	I11	ICG	blood	indocyanine green	clearance	12.9646015	ml/min/kg
+Kawasaki1988	I26	ICG	blood	indocyanine green	clearance	11.637168	ml/min/kg
+Kawasaki1988	I1	ICG	blood	indocyanine green	clearance	19.734512	ml/min/kg
+Kawasaki1988	I2	ICG	blood	indocyanine green	clearance	29.955751	ml/min/kg
+Kawasaki1988	I3	ICG	blood	indocyanine green	clearance	42.566372	ml/min/kg
+Kawasaki1988	I4	ICG	blood	indocyanine green	clearance	55.17699	ml/min/kg
+Kawasaki1988	I5	ICG	blood	indocyanine green	clearance	61.946903	ml/min/kg

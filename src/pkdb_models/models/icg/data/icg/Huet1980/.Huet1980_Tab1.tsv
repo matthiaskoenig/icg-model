@@ -1,0 +1,76 @@
+study	individual	intervention	measurement_type	tissue	substance	value	unit
+Huet1980	I1	Lidiv, Lidor	kel	plasma	lidocaine	0.0054	1/min
+Huet1980	I2	Lidiv, Lidor	kel	plasma	lidocaine	0.0098	1/min
+Huet1980	I3	Lidiv, Lidor	kel	plasma	lidocaine	0.0066	1/min
+Huet1980	I4	Lidiv, Lidor	kel	plasma	lidocaine	0.0055	1/min
+Huet1980	I5	Lidiv, Lidor	kel	plasma	lidocaine	0.0128	1/min
+Huet1980	I6	Lidiv, Lidor	kel	plasma	lidocaine	0.0076	1/min
+Huet1980	I7	Lidiv, Lidor	kel	plasma	lidocaine	0.0075	1/min
+Huet1980	I8	Lidiv, Lidor	kel	plasma	lidocaine	0.0108	1/min
+Huet1980	I9	Lidiv, Lidor	kel	plasma	lidocaine	0.0066	1/min
+Huet1980	I10	Lidiv, Lidor	kel	plasma	lidocaine	0.0061	1/min
+Huet1980	I11	Lidiv, Lidor	kel	plasma	lidocaine	0.0059	1/min
+Huet1980	I12	Lidiv, Lidor	kel	plasma	lidocaine	0.0075	1/min
+Huet1980	I13	Lidiv, Lidor	kel	plasma	lidocaine	0.0117	1/min
+Huet1980	I14	Lidiv, Lidor	kel	plasma	lidocaine	0.0065	1/min
+Huet1980	I15	Lidiv, Lidor	kel	plasma	lidocaine	0.0074	1/min
+Huet1980	I1	Lidiv, Lidor	thalf	plasma	lidocaine	127.0	min
+Huet1980	I2	Lidiv, Lidor	thalf	plasma	lidocaine	70.0	min
+Huet1980	I3	Lidiv, Lidor	thalf	plasma	lidocaine	105.0	min
+Huet1980	I4	Lidiv, Lidor	thalf	plasma	lidocaine	125.0	min
+Huet1980	I5	Lidiv, Lidor	thalf	plasma	lidocaine	54.0	min
+Huet1980	I6	Lidiv, Lidor	thalf	plasma	lidocaine	91.0	min
+Huet1980	I7	Lidiv, Lidor	thalf	plasma	lidocaine	92.0	min
+Huet1980	I8	Lidiv, Lidor	thalf	plasma	lidocaine	64.0	min
+Huet1980	I9	Lidiv, Lidor	thalf	plasma	lidocaine	105.0	min
+Huet1980	I10	Lidiv, Lidor	thalf	plasma	lidocaine	113.0	min
+Huet1980	I11	Lidiv, Lidor	thalf	plasma	lidocaine	116.0	min
+Huet1980	I12	Lidiv, Lidor	thalf	plasma	lidocaine	93.0	min
+Huet1980	I13	Lidiv, Lidor	thalf	plasma	lidocaine	62.0	min
+Huet1980	I14	Lidiv, Lidor	thalf	plasma	lidocaine	106.0	min
+Huet1980	I15	Lidiv, Lidor	thalf	plasma	lidocaine	93.0	min
+Huet1980	I1	Lidiv, Lidor	vd	plasma	lidocaine	1.92	l/kg
+Huet1980	I2	Lidiv, Lidor	vd	plasma	lidocaine	1.53	l/kg
+Huet1980	I3	Lidiv, Lidor	vd	plasma	lidocaine	2.26	l/kg
+Huet1980	I4	Lidiv, Lidor	vd	plasma	lidocaine	1.82	l/kg
+Huet1980	I5	Lidiv, Lidor	vd	plasma	lidocaine	1.31	l/kg
+Huet1980	I6	Lidiv, Lidor	vd	plasma	lidocaine	2.04	l/kg
+Huet1980	I7	Lidiv, Lidor	vd	plasma	lidocaine	1.64	l/kg
+Huet1980	I8	Lidiv, Lidor	vd	plasma	lidocaine	1.65	l/kg
+Huet1980	I9	Lidiv, Lidor	vd	plasma	lidocaine	2.44	l/kg
+Huet1980	I10	Lidiv, Lidor	vd	plasma	lidocaine	3.16	l/kg
+Huet1980	I11	Lidiv, Lidor	vd	plasma	lidocaine	3.13	l/kg
+Huet1980	I12	Lidiv, Lidor	vd	plasma	lidocaine	2.55	l/kg
+Huet1980	I13	Lidiv, Lidor	vd	plasma	lidocaine	1.31	l/kg
+Huet1980	I14	Lidiv, Lidor	vd	plasma	lidocaine	3.2	l/kg
+Huet1980	I15	Lidiv, Lidor	vd	plasma	lidocaine	4.3	l/kg
+Huet1980	I1	Lidiv	auc_inf	plasma	lidocaine	106.8	microg/ml*min
+Huet1980	I2	Lidiv	auc_inf	plasma	lidocaine	84.4	microg/ml*min
+Huet1980	I3	Lidiv	auc_inf	plasma	lidocaine	86.5	microg/ml*min
+Huet1980	I4	Lidiv	auc_inf	plasma	lidocaine	158.7	microg/ml*min
+Huet1980	I5	Lidiv	auc_inf	plasma	lidocaine	82.9	microg/ml*min
+Huet1980	I6	Lidiv	auc_inf	plasma	lidocaine	92.3	microg/ml*min
+Huet1980	I7	Lidiv	auc_inf	plasma	lidocaine	114.4	microg/ml*min
+Huet1980	I8	Lidiv	auc_inf	plasma	lidocaine	84.3	microg/ml*min
+Huet1980	I9	Lidiv	auc_inf	plasma	lidocaine	88.4	microg/ml*min
+Huet1980	I10	Lidiv	auc_inf	plasma	lidocaine	97.5	microg/ml*min
+Huet1980	I11	Lidiv	auc_inf	plasma	lidocaine	87.2	microg/ml*min
+Huet1980	I12	Lidiv	auc_inf	plasma	lidocaine	81.5	microg/ml*min
+Huet1980	I13	Lidiv	auc_inf	plasma	lidocaine	48.1	microg/ml*min
+Huet1980	I14	Lidiv	auc_inf	plasma	lidocaine	83.6	microg/ml*min
+Huet1980	I15	Lidiv	auc_inf	plasma	lidocaine	60.6	microg/ml*min
+Huet1980	I1	Lidor	auc_inf	plasma	lidocaine	64.1	microg/ml*min
+Huet1980	I2	Lidor	auc_inf	plasma	lidocaine	40.3	microg/ml*min
+Huet1980	I3	Lidor	auc_inf	plasma	lidocaine	34.9	microg/ml*min
+Huet1980	I4	Lidor	auc_inf	plasma	lidocaine	68.1	microg/ml*min
+Huet1980	I5	Lidor	auc_inf	plasma	lidocaine	32.1	microg/ml*min
+Huet1980	I6	Lidor	auc_inf	plasma	lidocaine	30.7	microg/ml*min
+Huet1980	I7	Lidor	auc_inf	plasma	lidocaine	12.4	microg/ml*min
+Huet1980	I8	Lidor	auc_inf	plasma	lidocaine	17.8	microg/ml*min
+Huet1980	I9	Lidor	auc_inf	plasma	lidocaine	0.0	microg/ml*min
+Huet1980	I10	Lidor	auc_inf	plasma	lidocaine	43.1	microg/ml*min
+Huet1980	I11	Lidor	auc_inf	plasma	lidocaine	41.7	microg/ml*min
+Huet1980	I12	Lidor	auc_inf	plasma	lidocaine	18.8	microg/ml*min
+Huet1980	I13	Lidor	auc_inf	plasma	lidocaine	28.5	microg/ml*min
+Huet1980	I14	Lidor	auc_inf	plasma	lidocaine	0.0	microg/ml*min
+Huet1980	I15	Lidor	auc_inf	plasma	lidocaine	5.5	microg/ml*min

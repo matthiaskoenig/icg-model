@@ -1,0 +1,81 @@
+study	subject	measurement	tissue	intervention	value	unit	label
+Grundmann1992	1	hbf	blood	ICG1	0.7602951	l/min	Fig3 hbf
+Grundmann1992	2	hbf	blood	ICG1	0.83901423	l/min	Fig3 hbf
+Grundmann1992	3	hbf	blood	ICG1	1.1178615	l/min	Fig3 hbf
+Grundmann1992	4	hbf	blood	ICG1	1.1466306	l/min	Fig3 hbf
+Grundmann1992	5	hbf	blood	ICG1	1.6182679	l/min	Fig3 hbf
+Grundmann1992	6	hbf	blood	ICG1	1.4503982	l/min	Fig3 hbf
+Grundmann1992	7	hbf	blood	ICG1	1.4290298	l/min	Fig3 hbf
+Grundmann1992	8	hbf	blood	ICG1	1.3005588	l/min	Fig3 hbf
+Grundmann1992	9	hbf	blood	ICG1	1.15412	l/min	Fig3 hbf
+Grundmann1992	10	hbf	blood	ICG1	1.2899084	l/min	Fig3 hbf
+Grundmann1992	11	hbf	blood	ICG1	0.8433739	l/min	Fig3 hbf
+Grundmann1992	12	hbf	blood	ICG1	1.2935281	l/min	Fig3 hbf
+Grundmann1992	13	hbf	blood	ICG1	1.1543233	l/min	Fig3 hbf
+Grundmann1992	14	hbf	blood	ICG1	1.2079189	l/min	Fig3 hbf
+Grundmann1992	15	hbf	blood	ICG1	1.7831434	l/min	Fig3 hbf
+Grundmann1992	16	hbf	blood	ICG1	1.2760555	l/min	Fig3 hbf
+Grundmann1992	17	hbf	blood	ICG1	1.8476708	l/min	Fig3 hbf
+Grundmann1992	18	hbf	blood	ICG1	1.3939856	l/min	Fig3 hbf
+Grundmann1992	19	hbf	blood	ICG1	1.6190861	l/min	Fig3 hbf
+Grundmann1992	20	hbf	blood	ICG1	1.2797115	l/min	Fig3 hbf
+Grundmann1992	21	hbf	blood	ICG1	1.6192738	l/min	Fig3 hbf
+Grundmann1992	22	hbf	blood	ICG1	0.9977606	l/min	Fig3 hbf
+Grundmann1992	23	hbf	blood	ICG1	1.6230236	l/min	Fig3 hbf
+Grundmann1992	24	hbf	blood	ICG1	1.194363	l/min	Fig3 hbf
+Grundmann1992	25	hbf	blood	ICG1	0.93005663	l/min	Fig3 hbf
+Grundmann1992	26	hbf	blood	ICG1	1.212336	l/min	Fig3 hbf
+Grundmann1992	27	hbf	blood	ICG1	1.2016596	l/min	Fig3 hbf
+Grundmann1992	28	hbf	blood	ICG1	1.5660795	l/min	Fig3 hbf
+Grundmann1992	29	hbf	blood	ICG1	0.980163	l/min	Fig3 hbf
+Grundmann1992	30	hbf	blood	ICG1	1.1052907	l/min	Fig3 hbf
+Grundmann1992	31	hbf	blood	ICG1	2.1199667	l/min	Fig3 hbf
+Grundmann1992	32	hbf	blood	ICG1	1.1767601	l/min	Fig3 hbf
+Grundmann1992	33	hbf	blood	ICG1	1.5664495	l/min	Fig3 hbf
+Grundmann1992	34	hbf	blood	ICG1	1.1734532	l/min	Fig3 hbf
+Grundmann1992	35	hbf	blood	ICG1	0.95597756	l/min	Fig3 hbf
+Grundmann1992	36	hbf	blood	ICG1	0.7559224	l/min	Fig3 hbf
+Grundmann1992	37	hbf	blood	ICG1	1.7885402	l/min	Fig3 hbf
+Grundmann1992	38	hbf	blood	ICG1	1.4533533	l/min	Fig3 hbf
+Grundmann1992	39	hbf	blood	ICG1	1.9076065	l/min	Fig3 hbf
+Grundmann1992	40	hbf	blood	ICG1	1.8012127	l/min	Fig3 hbf
+Grundmann1992	1	cardiac output	blood	ICG1	4.302958	l/min	Fig3 cardiac output
+Grundmann1992	2	cardiac output	blood	ICG1	4.4816527	l/min	Fig3 cardiac output
+Grundmann1992	3	cardiac output	blood	ICG1	4.745294	l/min	Fig3 cardiac output
+Grundmann1992	4	cardiac output	blood	ICG1	5.02529	l/min	Fig3 cardiac output
+Grundmann1992	5	cardiac output	blood	ICG1	5.0860333	l/min	Fig3 cardiac output
+Grundmann1992	6	cardiac output	blood	ICG1	5.1565886	l/min	Fig3 cardiac output
+Grundmann1992	7	cardiac output	blood	ICG1	5.257799	l/min	Fig3 cardiac output
+Grundmann1992	8	cardiac output	blood	ICG1	5.476053	l/min	Fig3 cardiac output
+Grundmann1992	9	cardiac output	blood	ICG1	5.53876	l/min	Fig3 cardiac output
+Grundmann1992	10	cardiac output	blood	ICG1	5.57723	l/min	Fig3 cardiac output
+Grundmann1992	11	cardiac output	blood	ICG1	5.6564503	l/min	Fig3 cardiac output
+Grundmann1992	12	cardiac output	blood	ICG1	5.64724	l/min	Fig3 cardiac output
+Grundmann1992	13	cardiac output	blood	ICG1	5.8421874	l/min	Fig3 cardiac output
+Grundmann1992	14	cardiac output	blood	ICG1	5.8497977	l/min	Fig3 cardiac output
+Grundmann1992	15	cardiac output	blood	ICG1	5.879091	l/min	Fig3 cardiac output
+Grundmann1992	16	cardiac output	blood	ICG1	6.230811	l/min	Fig3 cardiac output
+Grundmann1992	17	cardiac output	blood	ICG1	6.2056546	l/min	Fig3 cardiac output
+Grundmann1992	18	cardiac output	blood	ICG1	6.2771177	l/min	Fig3 cardiac output
+Grundmann1992	19	cardiac output	blood	ICG1	6.3075237	l/min	Fig3 cardiac output
+Grundmann1992	20	cardiac output	blood	ICG1	6.3552833	l/min	Fig3 cardiac output
+Grundmann1992	21	cardiac output	blood	ICG1	6.5876107	l/min	Fig3 cardiac output
+Grundmann1992	22	cardiac output	blood	ICG1	6.7918706	l/min	Fig3 cardiac output
+Grundmann1992	23	cardiac output	blood	ICG1	6.8521256	l/min	Fig3 cardiac output
+Grundmann1992	24	cardiac output	blood	ICG1	6.9468503	l/min	Fig3 cardiac output
+Grundmann1992	25	cardiac output	blood	ICG1	7.0566125	l/min	Fig3 cardiac output
+Grundmann1992	26	cardiac output	blood	ICG1	7.1101775	l/min	Fig3 cardiac output
+Grundmann1992	27	cardiac output	blood	ICG1	7.172453	l/min	Fig3 cardiac output
+Grundmann1992	28	cardiac output	blood	ICG1	7.1790757	l/min	Fig3 cardiac output
+Grundmann1992	29	cardiac output	blood	ICG1	7.188717	l/min	Fig3 cardiac output
+Grundmann1992	30	cardiac output	blood	ICG1	7.312803	l/min	Fig3 cardiac output
+Grundmann1992	31	cardiac output	blood	ICG1	7.356261	l/min	Fig3 cardiac output
+Grundmann1992	32	cardiac output	blood	ICG1	7.3359165	l/min	Fig3 cardiac output
+Grundmann1992	33	cardiac output	blood	ICG1	7.731469	l/min	Fig3 cardiac output
+Grundmann1992	34	cardiac output	blood	ICG1	7.7327175	l/min	Fig3 cardiac output
+Grundmann1992	35	cardiac output	blood	ICG1	8.418067	l/min	Fig3 cardiac output
+Grundmann1992	36	cardiac output	blood	ICG1	8.442043	l/min	Fig3 cardiac output
+Grundmann1992	37	cardiac output	blood	ICG1	8.602147	l/min	Fig3 cardiac output
+Grundmann1992	38	cardiac output	blood	ICG1	9.567958	l/min	Fig3 cardiac output
+Grundmann1992	39	cardiac output	blood	ICG1	10.344536	l/min	Fig3 cardiac output
+Grundmann1992	40	cardiac output	blood	ICG1	11.519685	l/min	Fig3 cardiac output

@@ -1,0 +1,19 @@
+study	individual	intervention	measurement_type	tissue	substance	time	time_unit	value	unit
+Burns1991	Control 1	Exp2 Bolus1 ICG	clearance	plasma	indocyanine green	20	min	716	ml/min
+Burns1991	Control 2	Exp2 Bolus1 ICG	clearance	plasma	indocyanine green	20	min	1639	ml/min
+Burns1991	Control 3	Exp2 Bolus1 ICG	clearance	plasma	indocyanine green	20	min	392	ml/min
+Burns1991	Control 4	Exp2 Bolus1 ICG	clearance	plasma	indocyanine green	20	min	526	ml/min
+Burns1991	Control 5	Exp2 Bolus1 ICG	clearance	plasma	indocyanine green	20	min	748	ml/min
+Burns1991	Control 6	Exp2 Bolus1 ICG	clearance	plasma	indocyanine green	20	min	724	ml/min
+Burns1991	Control 1	Exp2 Bolus1 ICG	clearance	plasma	indocyanine green	60	min	718	ml/min
+Burns1991	Control 2	Exp2 Bolus1 ICG	clearance	plasma	indocyanine green	60	min	1555	ml/min
+Burns1991	Control 3	Exp2 Bolus1 ICG	clearance	plasma	indocyanine green	60	min	378	ml/min
+Burns1991	Control 4	Exp2 Bolus1 ICG	clearance	plasma	indocyanine green	60	min	513	ml/min
+Burns1991	Control 5	Exp2 Bolus1 ICG	clearance	plasma	indocyanine green	60	min	722	ml/min
+Burns1991	Control 6	Exp2 Bolus1 ICG	clearance	plasma	indocyanine green	60	min	677	ml/min
+Burns1991	Control 1	Exp2 Bolus1 ICG	clearance	plasma	indocyanine green	180	min	707	ml/min
+Burns1991	Control 2	Exp2 Bolus1 ICG	clearance	plasma	indocyanine green	498	min	1315	ml/min
+Burns1991	Control 3	Exp2 Bolus1 ICG	clearance	plasma	indocyanine green	600	min	350	ml/min
+Burns1991	Control 4	Exp2 Bolus1 ICG	clearance	plasma	indocyanine green	300	min	487	ml/min
+Burns1991	Control 5	Exp2 Bolus1 ICG	clearance	plasma	indocyanine green	240	min	695	ml/min
+Burns1991	Control 6	Exp2 Bolus1 ICG	clearance	plasma	indocyanine green	186	min	655	ml/min

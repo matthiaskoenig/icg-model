@@ -1,0 +1,6 @@
+# the results of the simulations, fits and analyses, regenerated
+/results/
+# the COMBINE archives, created by the factory
+*.omex
+# the results of the fits of the former layout
+/results_fit/

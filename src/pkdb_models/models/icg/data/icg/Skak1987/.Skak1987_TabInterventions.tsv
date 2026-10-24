@@ -1,0 +1,3 @@
+study	name	substance	measurement	time	time_unit	route	form	value	unit	application
+Skak1987	ICG_inf	indocyanine green	dosing	0	min	iv	solution	0.16	mg/min	constant infusion
+Skak1987	ICG	indocyanine green	dosing	0	min	iv	solution	0.5	mg/kg	single dose

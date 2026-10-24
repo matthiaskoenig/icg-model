@@ -1,0 +1,12 @@
+study	group	intervention	measurement	tissue	substance	mean	sd	unit
+Moeller2018	Cirrhosis	NA	concentration_ss	blood	haemoglobin	7.7	1.4	mmole/l
+Moeller2018	Cirrhosis	NA	concentration_ss	plasma	creatinine	82.0	30.0	micromole/l
+Moeller2018	Cirrhosis	NA	concentration_ss	plasma	sodium	137.0	4.0	mmole/l
+Moeller2018	Cirrhosis	NA	concentration_ss	plasma	albumin	31.0	7.0	g/l
+Moeller2018	Cirrhosis	NA	concentration_ss	plasma	bilirubin	24.0	22.0	micromole/l
+Moeller2018	Cirrhosis	NA	inr	plasma	NA	1.3	0.29	NA
+Moeller2018	Cirrhosis	ICG	clearance	plasma	indocyanine green	258.0	181.0	ml/min
+Moeller2018	Cirrhosis	NA	MAP	blood	NA	92.0	14.0	mmHg
+Moeller2018	Cirrhosis	NA	heart rate	blood	NA	74.0	14.0	1/min
+Moeller2018	Cirrhosis	NA	hbf	liver	NA	1.5	0.6	l/min
+Moeller2018	Cirrhosis	NA	cardiac output	blood	NA	6.5	1.9	l/min

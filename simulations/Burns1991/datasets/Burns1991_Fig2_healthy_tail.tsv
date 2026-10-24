@@ -1,0 +1,10 @@
+study	individual	count	measurement_type	substance	tissue	intervention	time	time_unit	value	value_unit	count_unit
+Burns1991	healthy representative	1	concentration	indocyanine green	plasma	Exp2 Bolus1 ICG	75	min	3.287392243672239e-05	mole/meter^3	dimensionless
+Burns1991	healthy representative	1	concentration	indocyanine green	plasma	Exp2 Bolus1 ICG	90	min	2.786495899885431e-05	mole/meter^3	dimensionless
+Burns1991	healthy representative	1	concentration	indocyanine green	plasma	Exp2 Bolus1 ICG	150	min	2.051421346253694e-05	mole/meter^3	dimensionless
+Burns1991	healthy representative	1	concentration	indocyanine green	plasma	Exp2 Bolus1 ICG	180	min	1.736687491135889e-05	mole/meter^3	dimensionless
+Burns1991	healthy representative	1	concentration	indocyanine green	plasma	Exp2 Bolus1 ICG	240	min	1.3278704753775116e-05	mole/meter^3	dimensionless
+Burns1991	healthy representative	1	concentration	indocyanine green	plasma	Exp2 Bolus1 ICG	300	min	1.2114304320841977e-05	mole/meter^3	dimensionless
+Burns1991	healthy representative	1	concentration	indocyanine green	plasma	Exp2 Bolus1 ICG	360	min	1.2056148140793933e-05	mole/meter^3	dimensionless
+Burns1991	healthy representative	1	concentration	indocyanine green	plasma	Exp2 Bolus1 ICG	480	min	1.1665831123480643e-05	mole/meter^3	dimensionless
+Burns1991	healthy representative	1	concentration	indocyanine green	plasma	Exp2 Bolus1 ICG	600	min	1.15916380887068e-05	mole/meter^3	dimensionless

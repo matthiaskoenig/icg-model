@@ -1,0 +1,5 @@
+study	name	time	time_unit	route	application	measurement_type	form	substance	value	unit
+Jost1987	caff_12am	0	hr	oral	single dose	dosing	solution	caffeine	140.0	mg
+Jost1987	caff_4pm	4	hr	oral	single dose	dosing	solution	caffeine	140.0	mg
+Jost1987	icg	-4	hr	iv	single dose	dosing	solution	indocyanine green	0.5	mg/kg
+Jost1987	gala	-4	hr	iv	single dose	dosing	solution	galactose	0.5	mg/kg

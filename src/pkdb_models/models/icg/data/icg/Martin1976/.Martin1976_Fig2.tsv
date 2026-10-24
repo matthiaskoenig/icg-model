@@ -1,0 +1,17 @@
+study	group	intervention	measurement	substance	tissue	mean	se	unit
+Martin1976	ICGControls	ICG0.5	rd	indocyanine green	plasma	0.10071942	NA	mg/min/kg
+Martin1976	ICGControls	ICG2.0	rd	indocyanine green	plasma	0.38369304	0.01079136	mg/min/kg
+Martin1976	ICGControls	ICG3.5	rd	indocyanine green	plasma	0.61750597	0.02577937	mg/min/kg
+Martin1976	ICGControls	ICG5.0	rd	indocyanine green	plasma	0.88968825	0.02278179	mg/min/kg
+Martin1976	GS1	ICG0.5	rd	indocyanine green	plasma	0.10911271	NA	mg/min/kg
+Martin1976	GS1	ICG2.0	rd	indocyanine green	plasma	0.4088729	0.01558754	mg/min/kg
+Martin1976	GS1	ICG3.5	rd	indocyanine green	plasma	0.646283	0.0473620600000001	mg/min/kg
+Martin1976	GS1	ICG5.0	rd	indocyanine green	plasma	0.9328537	0.0467626	mg/min/kg
+Martin1976	GS2	ICG0.5	rd	indocyanine green	plasma	0.09832134	NA	mg/min/kg
+Martin1976	GS2	ICG2.0	rd	indocyanine green	plasma	0.35731414	0.0239808	mg/min/kg
+Martin1976	GS2	ICG3.5	rd	indocyanine green	plasma	0.5311751	0.0281775000000001	mg/min/kg
+Martin1976	GS2	ICG5.0	rd	indocyanine green	plasma	0.793765	0.0707434299999999	mg/min/kg
+Martin1976	GS3	ICG0.5	rd	indocyanine green	plasma	0.08273381	NA	mg/min/kg
+Martin1976	GS3	ICG2.0	rd	indocyanine green	plasma	0.31534773	0.01678657	mg/min/kg
+Martin1976	GS3	ICG3.5	rd	indocyanine green	plasma	0.42206234	0.0503597	mg/min/kg
+Martin1976	GS3	ICG5.0	rd	indocyanine green	plasma	0.45923263	0.06834533	mg/min/kg

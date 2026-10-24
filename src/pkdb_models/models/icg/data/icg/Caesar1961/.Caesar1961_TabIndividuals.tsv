@@ -1,0 +1,115 @@
+study	name	group	measurement	choice	value	unit
+Caesar1961	Control1	Controls	body surface area	NA	1.78	m^2
+Caesar1961	Control2	Controls	body surface area	NA	1.74	m^2
+Caesar1961	Control3	Controls	body surface area	NA	1.63	m^2
+Caesar1961	Control4	Controls	body surface area	NA	1.56	m^2
+Caesar1961	Control5	Controls	body surface area	NA	1.63	m^2
+Caesar1961	Control6	Controls	body surface area	NA	1.8	m^2
+Caesar1961	Control7	Controls	body surface area	NA	1.86	m^2
+Caesar1961	Control8	Controls	body surface area	NA	2.0	m^2
+Caesar1961	Control9	Controls	body surface area	NA	1.72	m^2
+Caesar1961	Control10	Controls	body surface area	NA	1.82	m^2
+Caesar1961	Cirrhosis11	Cirrhosis	body surface area	NA	1.86	m^2
+Caesar1961	Cirrhosis12	Cirrhosis	body surface area	NA	1.88	m^2
+Caesar1961	Cirrhosis13	Cirrhosis	body surface area	NA	1.85	m^2
+Caesar1961	Cirrhosis14	Cirrhosis	body surface area	NA	1.5	m^2
+Caesar1961	Cirrhosis15	Cirrhosis	body surface area	NA	1.86	m^2
+Caesar1961	Cirrhosis16	Cirrhosis	body surface area	NA	1.71	m^2
+Caesar1961	Cirrhosis17	Cirrhosis	body surface area	NA	1.74	m^2
+Caesar1961	Cirrhosis18	Cirrhosis	body surface area	NA	1.61	m^2
+Caesar1961	Cirrhosis19	Cirrhosis	body surface area	NA	2.0	m^2
+Caesar1961	Cirrhosis20	Cirrhosis	body surface area	NA	1.75	m^2
+Caesar1961	Cirrhosis21	Cirrhosis	body surface area	NA	1.92	m^2
+Caesar1961	Cirrhosis22	Cirrhosis	body surface area	NA	1.54	m^2
+Caesar1961	Cirrhosis23	Cirrhosis	body surface area	NA	1.49	m^2
+Caesar1961	Cirrhosis24	Cirrhosis	body surface area	NA	1.74	m^2
+Caesar1961	Cirrhosis25	Cirrhosis	body surface area	NA	1.38	m^2
+Caesar1961	Cirrhosis26	Cirrhosis	body surface area	NA	1.79	m^2
+Caesar1961	Cirrhosis27	Cirrhosis	body surface area	NA	1.66	m^2
+Caesar1961	PVB28	Portalveinblock	body surface area	NA	1.65	m^2
+Caesar1961	PVB29	Portalveinblock	body surface area	NA	1.42	m^2
+Caesar1961	PVB30	Portalveinblock	body surface area	NA	1.78	m^2
+Caesar1961	PVB31	Portalveinblock	body surface area	NA	1.66	m^2
+Caesar1961	Misc32	Misc	body surface area	NA	1.9	m^2
+Caesar1961	Misc33	Misc	body surface area	NA	1.68	m^2
+Caesar1961	Misc34	Misc	body surface area	NA	1.5	m^2
+Caesar1961	Misc35	Misc	body surface area	NA	1.76	m^2
+Caesar1961	Misc36	Misc	body surface area	NA	1.72	m^2
+Caesar1961	Misc37	Misc	body surface area	NA	1.28	m^2
+Caesar1961	Misc38	Misc	body surface area	NA	1.46	m^2
+Caesar1961	Control1	Controls	sex	M	NA	NA
+Caesar1961	Control2	Controls	sex	M	NA	NA
+Caesar1961	Control3	Controls	sex	F	NA	NA
+Caesar1961	Control4	Controls	sex	F	NA	NA
+Caesar1961	Control5	Controls	sex	M	NA	NA
+Caesar1961	Control6	Controls	sex	M	NA	NA
+Caesar1961	Control7	Controls	sex	M	NA	NA
+Caesar1961	Control8	Controls	sex	M	NA	NA
+Caesar1961	Control9	Controls	sex	M	NA	NA
+Caesar1961	Control10	Controls	sex	M	NA	NA
+Caesar1961	Cirrhosis11	Cirrhosis	sex	M	NA	NA
+Caesar1961	Cirrhosis12	Cirrhosis	sex	M	NA	NA
+Caesar1961	Cirrhosis13	Cirrhosis	sex	M	NA	NA
+Caesar1961	Cirrhosis14	Cirrhosis	sex	M	NA	NA
+Caesar1961	Cirrhosis15	Cirrhosis	sex	M	NA	NA
+Caesar1961	Cirrhosis16	Cirrhosis	sex	F	NA	NA
+Caesar1961	Cirrhosis17	Cirrhosis	sex	M	NA	NA
+Caesar1961	Cirrhosis18	Cirrhosis	sex	F	NA	NA
+Caesar1961	Cirrhosis19	Cirrhosis	sex	M	NA	NA
+Caesar1961	Cirrhosis20	Cirrhosis	sex	M	NA	NA
+Caesar1961	Cirrhosis21	Cirrhosis	sex	F	NA	NA
+Caesar1961	Cirrhosis22	Cirrhosis	sex	M	NA	NA
+Caesar1961	Cirrhosis23	Cirrhosis	sex	F	NA	NA
+Caesar1961	Cirrhosis24	Cirrhosis	sex	M	NA	NA
+Caesar1961	Cirrhosis25	Cirrhosis	sex	F	NA	NA
+Caesar1961	Cirrhosis26	Cirrhosis	sex	M	NA	NA
+Caesar1961	Cirrhosis27	Cirrhosis	sex	F	NA	NA
+Caesar1961	PVB28	Portalveinblock	sex	F	NA	NA
+Caesar1961	PVB29	Portalveinblock	sex	F	NA	NA
+Caesar1961	PVB30	Portalveinblock	sex	M	NA	NA
+Caesar1961	PVB31	Portalveinblock	sex	F	NA	NA
+Caesar1961	Misc32	Misc	sex	M	NA	NA
+Caesar1961	Misc33	Misc	sex	M	NA	NA
+Caesar1961	Misc34	Misc	sex	F	NA	NA
+Caesar1961	Misc35	Misc	sex	M	NA	NA
+Caesar1961	Misc36	Misc	sex	M	NA	NA
+Caesar1961	Misc37	Misc	sex	F	NA	NA
+Caesar1961	Misc38	Misc	sex	M	NA	NA
+Caesar1961	Control1	Controls	age	NA	26.0	yr
+Caesar1961	Control2	Controls	age	NA	42.0	yr
+Caesar1961	Control3	Controls	age	NA	50.0	yr
+Caesar1961	Control4	Controls	age	NA	45.0	yr
+Caesar1961	Control5	Controls	age	NA	30.0	yr
+Caesar1961	Control6	Controls	age	NA	52.0	yr
+Caesar1961	Control7	Controls	age	NA	30.0	yr
+Caesar1961	Control8	Controls	age	NA	56.0	yr
+Caesar1961	Control9	Controls	age	NA	30.0	yr
+Caesar1961	Control10	Controls	age	NA	30.0	yr
+Caesar1961	Cirrhosis11	Cirrhosis	age	NA	58.0	yr
+Caesar1961	Cirrhosis12	Cirrhosis	age	NA	72.0	yr
+Caesar1961	Cirrhosis13	Cirrhosis	age	NA	59.0	yr
+Caesar1961	Cirrhosis14	Cirrhosis	age	NA	59.0	yr
+Caesar1961	Cirrhosis15	Cirrhosis	age	NA	54.0	yr
+Caesar1961	Cirrhosis16	Cirrhosis	age	NA	32.0	yr
+Caesar1961	Cirrhosis17	Cirrhosis	age	NA	60.0	yr
+Caesar1961	Cirrhosis18	Cirrhosis	age	NA	32.0	yr
+Caesar1961	Cirrhosis19	Cirrhosis	age	NA	42.0	yr
+Caesar1961	Cirrhosis20	Cirrhosis	age	NA	53.0	yr
+Caesar1961	Cirrhosis21	Cirrhosis	age	NA	50.0	yr
+Caesar1961	Cirrhosis22	Cirrhosis	age	NA	67.0	yr
+Caesar1961	Cirrhosis23	Cirrhosis	age	NA	32.0	yr
+Caesar1961	Cirrhosis24	Cirrhosis	age	NA	16.0	yr
+Caesar1961	Cirrhosis25	Cirrhosis	age	NA	73.0	yr
+Caesar1961	Cirrhosis26	Cirrhosis	age	NA	59.0	yr
+Caesar1961	Cirrhosis27	Cirrhosis	age	NA	50.0	yr
+Caesar1961	PVB28	Portalveinblock	age	NA	50.0	yr
+Caesar1961	PVB29	Portalveinblock	age	NA	50.0	yr
+Caesar1961	PVB30	Portalveinblock	age	NA	61.0	yr
+Caesar1961	PVB31	Portalveinblock	age	NA	43.0	yr
+Caesar1961	Misc32	Misc	age	NA	30.0	yr
+Caesar1961	Misc33	Misc	age	NA	60.0	yr
+Caesar1961	Misc34	Misc	age	NA	48.0	yr
+Caesar1961	Misc35	Misc	age	NA	55.0	yr
+Caesar1961	Misc36	Misc	age	NA	51.0	yr
+Caesar1961	Misc37	Misc	age	NA	31.0	yr
+Caesar1961	Misc38	Misc	age	NA	55.0	yr

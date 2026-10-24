@@ -1,0 +1,22 @@
+study	group	measurement_type	substance	tissue	intervention	mean	sem	unit
+Gadano1997	T4 Controls	cardiac index	NA	NA	MEP, Fib/Con Inf1, Fib/Con Inf2	3.2	0.1	l/(m²min)
+Gadano1997	T4 Controls	mean arterial pressure	NA	NA	MEP, Fib/Con Inf1, Fib/Con Inf2	90.0	2.0	mmHg
+Gadano1997	T4 Controls	systemic vascular resistance	NA	NA	MEP, Fib/Con Inf1, Fib/Con Inf2	1203.0	46.0	dyn.s/cm⁵
+Gadano1997	T4 Controls	wedged hepatic venous pressure	NA	NA	MEP, Fib/Con Inf1, Fib/Con Inf2	8.7	0.4	mmHg
+Gadano1997	T4 Controls	free hepatic venous pressure	NA	NA	MEP, Fib/Con Inf1, Fib/Con Inf2	5.5	0.4	mmHg
+Gadano1997	T4 Controls	hepatic venous pressure gradient	NA	NA	MEP, Fib/Con Inf1, Fib/Con Inf2	3.2	0.2	mmHg
+Gadano1997	T4 Controls	blood flow	NA	Azygos	MEP, Fib/Con Inf1, Fib/Con Inf2	0.17	0.03	l/min
+Gadano1997	T4 Hepatic Fibrosis	cardiac index	NA	NA	MEP, Fib/Con Inf1, Fib/Con Inf2	3.4	0.1	l/(m²min)
+Gadano1997	T4 Hepatic Fibrosis	mean arterial pressure	NA	NA	MEP, Fib/Con Inf1, Fib/Con Inf2	90.0	2.0	mmHg
+Gadano1997	T4 Hepatic Fibrosis	systemic vascular resistance	NA	NA	MEP, Fib/Con Inf1, Fib/Con Inf2	1284.0	71.0	dyn.s/cm⁵
+Gadano1997	T4 Hepatic Fibrosis	wedged hepatic venous pressure	NA	NA	MEP, Fib/Con Inf1, Fib/Con Inf2	14.0	1.0	mmHg
+Gadano1997	T4 Hepatic Fibrosis	free hepatic venous pressure	NA	NA	MEP, Fib/Con Inf1, Fib/Con Inf2	5.3	0.6	mmHg
+Gadano1997	T4 Hepatic Fibrosis	hepatic venous pressure gradient	NA	NA	MEP, Fib/Con Inf1, Fib/Con Inf2	8.1	0.9	mmHg
+Gadano1997	T4 Hepatic Fibrosis	blood flow	NA	Azygos	MEP, Fib/Con Inf1, Fib/Con Inf2	0.43	0.05	l/min
+Gadano1997	T4 Cirrhosis	cardiac index	NA	NA	MEP, Cir Inf1, Cir Inf2	3.9	0.1	l/(m²min)
+Gadano1997	T4 Cirrhosis	mean arterial pressure	NA	NA	MEP, Cir Inf1, Cir Inf2	86.0	1.0	mmHg
+Gadano1997	T4 Cirrhosis	systemic vascular resistance	NA	NA	MEP, Cir Inf1, Cir Inf2	1022.0	18.0	dyn.s/cm⁵
+Gadano1997	T4 Cirrhosis	wedged hepatic venous pressure	NA	NA	MEP, Cir Inf1, Cir Inf2	26.0	0.4	mmHg
+Gadano1997	T4 Cirrhosis	free hepatic venous pressure	NA	NA	MEP, Cir Inf1, Cir Inf2	8.6	0.2	mmHg
+Gadano1997	T4 Cirrhosis	hepatic venous pressure gradient	NA	NA	MEP, Cir Inf1, Cir Inf2	17.4	0.3	mmHg
+Gadano1997	T4 Cirrhosis	blood flow	NA	Azygos	MEP, Cir Inf1, Cir Inf2	0.53	0.02	l/min

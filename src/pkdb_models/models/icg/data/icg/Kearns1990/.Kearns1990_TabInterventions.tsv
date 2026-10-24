@@ -1,0 +1,4 @@
+study	name	substance	measurement_type	time	time_unit	route	form	value	unit	application
+Kearns1990	ICG	indocyanine green	dosing	0	min	iv	solution	0.5	mg/kg	single dose
+Kearns1990	Lor	lorazepam	dosing	0	min	iv	solution	0.03	mg/kg	single dose
+Kearns1990	AP	antipyrine	dosing	0	min	iv	solution	10.0	mg/kg	single dose

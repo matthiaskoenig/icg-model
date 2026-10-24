@@ -1,0 +1,7 @@
+study	name	group_count	parent	measurement	choice	mean	min	max	sd	unit	count
+Chijiiwa2000	all	14.0	NA	species	homo sapiens	NA	NA	NA	NA	NA	14.0
+Chijiiwa2000	all	14.0	NA	age	NA	63.5	43.0	74.0	10.2	yr	14.0
+Chijiiwa2000	all	14.0	NA	sex	M	NA	NA	NA	NA	NA	10.0
+Chijiiwa2000	all	14.0	NA	sex	F	NA	NA	NA	NA	NA	4.0
+Chijiiwa2000	all	14.0	NA	healthy	N	NA	NA	NA	NA	NA	14.0
+Chijiiwa2000	all	14.0	NA	disease	biliary obstruction	NA	NA	NA	NA	NA	14.0

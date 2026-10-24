@@ -1,0 +1,15 @@
+study	individual	measurement	substance	tissue	intervention	value	unit	group	label
+Skak1987	H1	hbf	NA	liver	ICG_inf	1.11	l/min	healthy	Tab3_hbf_cl
+Skak1987	H2	hbf	NA	liver	ICG_inf	0.47	l/min	healthy	Tab3_hbf_cl
+Skak1987	H3	hbf	NA	liver	ICG_inf	0.49	l/min	healthy	Tab3_hbf_cl
+Skak1987	H4	hbf	NA	liver	ICG_inf	0.36	l/min	healthy	Tab3_hbf_cl
+Skak1987	H5	hbf	NA	liver	ICG_inf	0.5	l/min	healthy	Tab3_hbf_cl
+Skak1987	Ld1	hbf	NA	liver	ICG_inf	0.4	l/min	liver disease	Tab3_hbf_cl
+Skak1987	Ld2	hbf	NA	liver	ICG_inf	0.61	l/min	liver disease	Tab3_hbf_cl
+Skak1987	H1	clearance	indocyanine green	plasma	ICG	0.53	l/min	healthy	Tab3_hbf_cl
+Skak1987	H2	clearance	indocyanine green	plasma	ICG	0.43	l/min	healthy	Tab3_hbf_cl
+Skak1987	H3	clearance	indocyanine green	plasma	ICG	0.56	l/min	healthy	Tab3_hbf_cl
+Skak1987	H4	clearance	indocyanine green	plasma	ICG	0.42	l/min	healthy	Tab3_hbf_cl
+Skak1987	H5	clearance	indocyanine green	plasma	ICG	0.24	l/min	healthy	Tab3_hbf_cl
+Skak1987	Ld1	clearance	indocyanine green	plasma	ICG	0.19	l/min	liver disease	Tab3_hbf_cl
+Skak1987	Ld2	clearance	indocyanine green	plasma	ICG	0.33	l/min	liver disease	Tab3_hbf_cl

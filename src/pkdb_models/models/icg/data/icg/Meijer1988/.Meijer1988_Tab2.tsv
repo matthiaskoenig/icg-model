@@ -1,0 +1,13 @@
+study	group	intervention	measurement_type	tissue	substance	time	time_unit	mean	se	unit
+Meijer1988	ICG0.5	0.5icg	clearance	plasma	indocyanine green	NA	NA	262.0	51.0	ml/min
+Meijer1988	ICG0.5	0.5icg	maximum excretion rate	bile duct	indocyanine green	NA	NA	8.6	1.3	micromol/(0.5*hr)
+Meijer1988	ICG0.5	0.5icg	thalf	plasma	indocyanine green	NA	NA	3.28	0.4	min
+Meijer1988	ICG0.5	0.5icg	recovery	bile duct	indocyanine green	18.0	hr	88.5	12.1	percent
+Meijer1988	ICG1.0	1.0icg	clearance	plasma	indocyanine green	NA	NA	287.0	41.0	ml/min
+Meijer1988	ICG1.0	1.0icg	maximum excretion rate	bile duct	indocyanine green	NA	NA	13.5	2.8	micromol/(0.5*hr)
+Meijer1988	ICG1.0	1.0icg	thalf	plasma	indocyanine green	NA	NA	3.42	1.15	min
+Meijer1988	ICG1.0	1.0icg	recovery	bile duct	indocyanine green	18.0	hr	75.6	8.5	percent
+Meijer1988	ICG2.0	2.0icg	clearance	plasma	indocyanine green	NA	NA	321.0	63.0	ml/min
+Meijer1988	ICG2.0	2.0icg	maximum excretion rate	bile duct	indocyanine green	NA	NA	12.3	2.9	micromol/(0.5*hr)
+Meijer1988	ICG2.0	2.0icg	thalf	plasma	indocyanine green	NA	NA	4.4	0.85	min
+Meijer1988	ICG2.0	2.0icg	recovery	bile duct	indocyanine green	18.0	hr	80.8	5.5	percent

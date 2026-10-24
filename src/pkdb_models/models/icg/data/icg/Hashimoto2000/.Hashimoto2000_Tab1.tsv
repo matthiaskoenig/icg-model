@@ -1,0 +1,7 @@
+study	group	interventions	measurement	tissue	substance	mean	sd	unit	label
+Hashimoto2000	controls	NA	liver volume	liver	NA	1354.0	381.0	ml	Tab1pk
+Hashimoto2000	controls	ICG	kel	plasma	indocyanine green	0.189	0.024	1/min	Tab1pk
+Hashimoto2000	controls	ICG	retention ratio	plasma	indocyanine green	6.0	3.0	percent	Tab1pk
+Hashimoto2000	cirrhosis	NA	liver volume	liver	NA	1046.0	191.0	ml	Tab1pk
+Hashimoto2000	cirrhosis	ICG	kel	plasma	indocyanine green	0.119	0.044	1/min	Tab1pk
+Hashimoto2000	cirrhosis	ICG	retention ratio	plasma	indocyanine green	24.0	19.0	percent	Tab1pk

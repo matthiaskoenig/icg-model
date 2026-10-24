@@ -1,0 +1,47 @@
+study	individual	intervention	measurement	substance	tissue	time	time_unit	value	unit	group
+Cherrik1960	AW	ICG0.5	thalf	indocyanine green	plasma	NA	NA	3.0	min	Controls
+Cherrik1960	JW	ICG0.5	thalf	indocyanine green	plasma	NA	NA	3.9	min	Controls
+Cherrik1960	BO	ICG0.5	thalf	indocyanine green	plasma	NA	NA	4.1	min	Controls
+Cherrik1960	FW	ICG0.5	thalf	indocyanine green	plasma	NA	NA	4.2	min	Controls
+Cherrik1960	EE	ICG0.5	thalf	indocyanine green	plasma	NA	NA	2.5	min	Controls
+Cherrik1960	JT	ICG0.5	thalf	indocyanine green	plasma	NA	NA	3.1	min	Controls
+Cherrik1960	JM	ICG0.5	thalf	indocyanine green	plasma	NA	NA	4.2	min	Controls
+Cherrik1960	CF	ICG0.5	thalf	indocyanine green	plasma	NA	NA	3.0	min	Controls
+Cherrik1960	CW	ICG0.5	thalf	indocyanine green	plasma	NA	NA	2.7	min	Controls
+Cherrik1960	JL	ICG0.5	thalf	indocyanine green	plasma	NA	NA	110.0	min	Cirrhosis
+Cherrik1960	JS	ICG0.5	thalf	indocyanine green	plasma	NA	NA	14.4	min	Cirrhosis
+Cherrik1960	BB	ICG0.5	thalf	indocyanine green	plasma	NA	NA	13.3	min	Cirrhosis
+Cherrik1960	AB	ICG0.5	thalf	indocyanine green	plasma	NA	NA	46.8	min	Cirrhosis
+Cherrik1960	ZM	ICG0.5	thalf	indocyanine green	plasma	NA	NA	3.3	min	Cirrhosis
+Cherrik1960	EC	ICG0.5	thalf	indocyanine green	plasma	NA	NA	4.1	min	Cirrhosis
+Cherrik1960	JM	ICG0.5	thalf	indocyanine green	plasma	NA	NA	10.0	min	Cirrhosis
+Cherrik1960	MS	ICG0.5	thalf	indocyanine green	plasma	NA	NA	44.8	min	Cirrhosis
+Cherrik1960	DG	ICG0.5	thalf	indocyanine green	plasma	NA	NA	20.4	min	Cirrhosis
+Cherrik1960	JC	ICG0.5	thalf	indocyanine green	plasma	NA	NA	23.6	min	Cirrhosis
+Cherrik1960	MM	ICG0.5	thalf	indocyanine green	plasma	NA	NA	4.4	min	Cirrhosis
+Cherrik1960	AV	ICG0.5	thalf	indocyanine green	plasma	NA	NA	4.3	min	Cirrhosis
+Cherrik1960	BM	ICG0.5	thalf	indocyanine green	plasma	NA	NA	3.7	min	Cirrhosis
+Cherrik1960	RR	ICG0.5	thalf	indocyanine green	plasma	NA	NA	3.9	min	Cirrhosis
+Cherrik1960	AW	ICG0.5	retention ratio	indocyanine green	plasma	20.0	min	2.5	percent	Controls
+Cherrik1960	JW	ICG0.5	retention ratio	indocyanine green	plasma	20.0	min	4.5	percent	Controls
+Cherrik1960	BO	ICG0.5	retention ratio	indocyanine green	plasma	20.0	min	4.9	percent	Controls
+Cherrik1960	FW	ICG0.5	retention ratio	indocyanine green	plasma	20.0	min	4.5	percent	Controls
+Cherrik1960	EE	ICG0.5	retention ratio	indocyanine green	plasma	20.0	min	4.2	percent	Controls
+Cherrik1960	JT	ICG0.5	retention ratio	indocyanine green	plasma	20.0	min	2.2	percent	Controls
+Cherrik1960	JM	ICG0.5	retention ratio	indocyanine green	plasma	20.0	min	4.7	percent	Controls
+Cherrik1960	CF	ICG0.5	retention ratio	indocyanine green	plasma	20.0	min	3.4	percent	Controls
+Cherrik1960	CW	ICG0.5	retention ratio	indocyanine green	plasma	20.0	min	3.7	percent	Controls
+Cherrik1960	JL	ICG0.5	retention ratio	indocyanine green	plasma	20.0	min	77.4	percent	Cirrhosis
+Cherrik1960	JS	ICG0.5	retention ratio	indocyanine green	plasma	20.0	min	38.2	percent	Cirrhosis
+Cherrik1960	BB	ICG0.5	retention ratio	indocyanine green	plasma	20.0	min	34.9	percent	Cirrhosis
+Cherrik1960	AB	ICG0.5	retention ratio	indocyanine green	plasma	20.0	min	70.9	percent	Cirrhosis
+Cherrik1960	ZM	ICG0.5	retention ratio	indocyanine green	plasma	20.0	min	4.2	percent	Cirrhosis
+Cherrik1960	EC	ICG0.5	retention ratio	indocyanine green	plasma	20.0	min	5.7	percent	Cirrhosis
+Cherrik1960	JM	ICG0.5	retention ratio	indocyanine green	plasma	20.0	min	24.6	percent	Cirrhosis
+Cherrik1960	MS	ICG0.5	retention ratio	indocyanine green	plasma	20.0	min	72.5	percent	Cirrhosis
+Cherrik1960	DG	ICG0.5	retention ratio	indocyanine green	plasma	20.0	min	50.6	percent	Cirrhosis
+Cherrik1960	JC	ICG0.5	retention ratio	indocyanine green	plasma	20.0	min	55.4	percent	Cirrhosis
+Cherrik1960	MM	ICG0.5	retention ratio	indocyanine green	plasma	20.0	min	7.7	percent	Cirrhosis
+Cherrik1960	AV	ICG0.5	retention ratio	indocyanine green	plasma	20.0	min	5.7	percent	Cirrhosis
+Cherrik1960	BM	ICG0.5	retention ratio	indocyanine green	plasma	20.0	min	5.0	percent	Cirrhosis
+Cherrik1960	RR	ICG0.5	retention ratio	indocyanine green	plasma	20.0	min	4.4	percent	Cirrhosis

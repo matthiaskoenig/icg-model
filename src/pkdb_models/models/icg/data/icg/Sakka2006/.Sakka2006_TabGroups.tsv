@@ -1,0 +1,6 @@
+study	name	group_count	parent	measurement	choice	mean	sd	min	max	unit	count
+Sakka2006	all	209	NA	species	homo sapiens	NA	NA	NA	NA	NA	209
+Sakka2006	all	209	NA	sex	M	NA	NA	NA	NA	NA	139
+Sakka2006	all	209	NA	sex	F	NA	NA	NA	NA	NA	70
+Sakka2006	all	209	NA	healthy	N	NA	NA	NA	NA	NA	209
+Sakka2006	all	209	NA	age	NA	53.0	19.0	10.0	88.0	yr	209

@@ -1,0 +1,3 @@
+study	name	substance	measurement_type	choice	time	time_unit	route	form	value	unit	application	comments
+SwineLeipzig2014	hepatectomy	NA	liver operation	hepatectomy	0	min	NR	NR	NA	NA	NR	NR
+SwineLeipzig2014	ICG	indocyanine green	multiple_dosing	NA	na	min	iv	solution	10.0	mg	single dose	Gegeben wurden 2ml:  1 ml der gebrauchsfertigen Injektionslösung enthält 5 mg Indocyaningrün, Mononatriumsalz.[https://medikamio.com/de-de/medikamente/icg-pulsion/pil]

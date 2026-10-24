@@ -1,0 +1,8 @@
+study	subject	intervention	measurement	tissue	substance	value	group	label	value_unit
+Caesar1961	Cirrhosis11	ICG_inf	concentration_ss	plasma	bilirubin	1.0	Cirrhosis	Tab3	mg/dl
+Caesar1961	Cirrhosis19	ICG_inf	concentration_ss	plasma	bilirubin	1.0	Cirrhosis	Tab3	mg/dl
+Caesar1961	Cirrhosis17	ICG_inf	concentration_ss	plasma	bilirubin	0.5	Cirrhosis	Tab3	mg/dl
+Caesar1961	Cirrhosis21	ICG_inf	concentration_ss	plasma	bilirubin	0.6	Cirrhosis	Tab3	mg/dl
+Caesar1961	Cirrhosis20	ICG_inf	concentration_ss	plasma	bilirubin	2.7	Cirrhosis	Tab3	mg/dl
+Caesar1961	Cirrhosis27	ICG_inf	concentration_ss	plasma	bilirubin	2.0	Cirrhosis	Tab3	mg/dl
+Caesar1961	Cirrhosis23	ICG_inf	concentration_ss	plasma	bilirubin	0.4	Cirrhosis	Tab3	mg/dl

@@ -1,0 +1,19 @@
+study	group	intervention	measurement_type	substance	tissue	mean	sd	unit
+Grundmann1992	1.3MacIso	ICG1	cardiac output	na	blood	5.9	1.0	l/min
+Grundmann1992	1.3MacIso	ICG1	blood pressure systolic	na	blood	128.0	16.0	mmHg
+Grundmann1992	1.3MacIso	ICG1	blood pressure diastolic	na	blood	74.0	11.0	mmHg
+Grundmann1992	1.3MacIso	ICG1	MAP	na	blood	100.0	13.0	mmHg
+Grundmann1992	1.3MacIso	ICG1	heart rate	na	blood	70.0	16.0	1/min
+Grundmann1992	1.3MacIso	ICG1	vd	indocyanine green	plasma	2.64	0.27	l
+Grundmann1992	1.3MacIso	ICG1	thalf	indocyanine green	plasma	3.21	0.58	min
+Grundmann1992	1.3MacIso	ICG1	clearance	indocyanine green	plasma	748.0	156.0	ml/min
+Grundmann1992	1.3MacIso	ICG1	hbf	na	liver	1.37	0.3	l/min
+Grundmann1992	1.3MacIso	VEC, ETO, FEN, SUX, 1.3ISO, ICG2	cardiac output	na	blood	4.8	0.7	l/min
+Grundmann1992	1.3MacIso	VEC, ETO, FEN, SUX, 1.3ISO, ICG2	blood pressure systolic	na	blood	97.0	9.0	mmHg
+Grundmann1992	1.3MacIso	VEC, ETO, FEN, SUX, 1.3ISO, ICG2	blood pressure diastolic	na	blood	52.0	7.0	mmHg
+Grundmann1992	1.3MacIso	VEC, ETO, FEN, SUX, 1.3ISO, ICG2	MAP	na	blood	78.0	9.0	mmHg
+Grundmann1992	1.3MacIso	VEC, ETO, FEN, SUX, 1.3ISO, ICG2	heart rate	na	blood	68.0	9.0	1/min
+Grundmann1992	1.3MacIso	VEC, ETO, FEN, SUX, 1.3ISO, ICG2	vd	indocyanine green	plasma	3.18	0.56	l
+Grundmann1992	1.3MacIso	VEC, ETO, FEN, SUX, 1.3ISO, ICG2	thalf	indocyanine green	plasma	3.64	0.64	min
+Grundmann1992	1.3MacIso	VEC, ETO, FEN, SUX, 1.3ISO, ICG2	clearance	indocyanine green	plasma	762.0	255.0	ml/min
+Grundmann1992	1.3MacIso	VEC, ETO, FEN, SUX, 1.3ISO, ICG2	hbf	na	liver	1.4	0.51	l/min

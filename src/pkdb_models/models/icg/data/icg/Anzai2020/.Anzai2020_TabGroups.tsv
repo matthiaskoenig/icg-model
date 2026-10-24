@@ -1,0 +1,21 @@
+study	name	group_count	parent	measurement	choice	median	min	max	unit	count
+Anzai2020	all	19	NA	species	homo sapiens	NA	NA	NA	NA	19
+Anzai2020	all	19	NA	sex	M	NA	NA	NA	NA	10
+Anzai2020	all	19	NA	sex	F	NA	NA	NA	NA	9
+Anzai2020	all	19	NA	healthy	N	NA	NA	NA	NA	19
+Anzai2020	all	19	NA	disease	hepatitis	NA	NA	NA	NA	19
+Anzai2020	wildtype	13	all	age	NA	69.0	50.0	78.0	yr	13
+Anzai2020	wildtype	13	all	sex	M	NA	NA	NA	NA	6
+Anzai2020	wildtype	13	all	sex	F	NA	NA	NA	NA	7
+Anzai2020	wildtype	13	all	weight	NA	54.0	45.5	73.0	kg	13
+Anzai2020	wildtype	13	all	smoking	Y	NA	NA	NA	NA	4
+Anzai2020	wildtype	13	all	medication	Y	NA	NA	NA	NA	3
+Anzai2020	heterozygote	5	all	age	NA	65.0	49.0	73.0	yr	5
+Anzai2020	heterozygote	5	all	sex	M	NA	NA	NA	NA	2
+Anzai2020	heterozygote	5	all	sex	F	NA	NA	NA	NA	3
+Anzai2020	heterozygote	5	all	weight	NA	51.0	35.0	66.4	kg	5
+Anzai2020	heterozygote	5	all	smoking	Y	NA	NA	NA	NA	1
+Anzai2020	heterozygote	5	all	medication	Y	NA	NA	NA	NA	2
+Anzai2020	homozygote	1	all	age	NA	66.0	NA	NA	yr	1
+Anzai2020	homozygote	1	all	sex	M	NA	NA	NA	NA	1
+Anzai2020	homozygote	1	all	weight	NA	70.0	NA	NA	kg	1

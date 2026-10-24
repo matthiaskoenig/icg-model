@@ -1,0 +1,9 @@
+study	individual	count	label	measurement_type	substance	tissue	intervention	time	time_unit	value	value_unit	count_unit
+Niemann2000	I1	1	Propranolol	concentration	indocyanine green	arterial blood	PROP, ICG, APY, FEN	2.2368789	min	0.001962998045417542	mole/meter^3	dimensionless
+Niemann2000	I1	1	Propranolol	concentration	indocyanine green	arterial blood	PROP, ICG, APY, FEN	2.700418	min	0.0019148247364653554	mole/meter^3	dimensionless
+Niemann2000	I1	1	Propranolol	concentration	indocyanine green	arterial blood	PROP, ICG, APY, FEN	3.2071064	min	0.001855915319567152	mole/meter^3	dimensionless
+Niemann2000	I1	1	Propranolol	concentration	indocyanine green	arterial blood	PROP, ICG, APY, FEN	3.7249885	min	0.0016964475043129645	mole/meter^3	dimensionless
+Niemann2000	I1	1	Propranolol	concentration	indocyanine green	arterial blood	PROP, ICG, APY, FEN	4.7065954	min	0.0014737259050640428	mole/meter^3	dimensionless
+Niemann2000	I1	1	Propranolol	concentration	indocyanine green	arterial blood	PROP, ICG, APY, FEN	5.708407	min	0.001546508000414566	mole/meter^3	dimensionless
+Niemann2000	I1	1	Propranolol	concentration	indocyanine green	arterial blood	PROP, ICG, APY, FEN	7.7045517	min	0.0010724254875083736	mole/meter^3	dimensionless
+Niemann2000	I1	1	Propranolol	concentration	indocyanine green	arterial blood	PROP, ICG, APY, FEN	9.7006035	min	0.0007534243010380942	mole/meter^3	dimensionless

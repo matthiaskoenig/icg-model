@@ -1,0 +1,6 @@
+study	measurement_type	substance	tissue	group	intervention	mean	sd	unit
+Niemann2000	heart rate 	na	blood	all	PROP	50.0	8.0	1/min
+Niemann2000	vd_ss	indocyanine green	blood	all	ICG, APY, FEN	0.071	0.012	l/kg
+Niemann2000	vd_ss	indocyanine green	blood	all	PROP, ICG, APY, FEN	0.062	0.007	l/kg
+Niemann2000	clearance	indocyanine green	blood	all	ICG, APY, FEN	0.015	0.002	l/min/kg
+Niemann2000	clearance	indocyanine green	blood	all	PROP, ICG, APY, FEN	0.01	0.001	l/min/kg

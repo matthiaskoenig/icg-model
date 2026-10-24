@@ -1,0 +1,10 @@
+study	name	group_count	parent	measurement	choice	mean	unit	count
+Hashimoto2000	all	16	NA	species	homo sapiens	NA	NA	16
+Hashimoto2000	all	16	NA	sex	M	NA	NA	12
+Hashimoto2000	all	16	NA	sex	F	NA	NA	4
+Hashimoto2000	all	16	NA	age	NA	62.4	yr	16
+Hashimoto2000	all	16	NA	healthy	N	NA	NA	16
+Hashimoto2000	all	16	NA	disease	liver cirrhosis	NA	NA	9
+Hashimoto2000	all	16	NA	disease	cancer	NA	NA	16
+Hashimoto2000	controls	7	all	sex	NR	NA	NA	7
+Hashimoto2000	cirrhosis	9	all	sex	NR	NA	NA	9

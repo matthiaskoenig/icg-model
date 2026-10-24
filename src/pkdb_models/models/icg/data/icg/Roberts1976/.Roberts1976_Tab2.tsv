@@ -1,0 +1,15 @@
+study	group	intervention	measurement_type	tissue	substance	mean	se	unit
+Roberts1976	all	AP, ICG	liver volume	liver	na	1339.0	66.0	ml
+Roberts1976	all	AP, ICG	clearance	plasma	antipyrine	42.8	5.0	ml/min
+Roberts1976	all	AP, ICG	vd	plasma	antipyrine	42.1	3.4	l
+Roberts1976	all	AP, ICG	thalf	plasma	antipyrine	12.2	1.3	hr
+Roberts1976	all	AP, ICG	clearance	plasma	indocyanine green	1192.0	111.0	ml/min
+Roberts1976	all	AP, ICG	vd	plasma	indocyanine green	3.4	0.4	l
+Roberts1976	all	AP, ICG	thalf	plasma	indocyanine green	3.7	0.4	min
+Roberts1976	all	AP, ICG, P -21, P -20, P -19, P -18, P -17, P -16, P -15, P -14, P -13, P -12, P -11, P -10, P -9, P -8, P -7, P -6, P -5, P -4, P -3, P -2, P -1, P +0	liver volume	liver	na	1378.0	82.0	ml
+Roberts1976	all	AP, ICG, P -21, P -20, P -19, P -18, P -17, P -16, P -15, P -14, P -13, P -12, P -11, P -10, P -9, P -8, P -7, P -6, P -5, P -4, P -3, P -2, P -1, P +0	clearance	plasma	antipyrine	77.9	6.9	ml/min
+Roberts1976	all	AP, ICG, P -21, P -20, P -19, P -18, P -17, P -16, P -15, P -14, P -13, P -12, P -11, P -10, P -9, P -8, P -7, P -6, P -5, P -4, P -3, P -2, P -1, P +0	vd	plasma	antipyrine	42.6	2.5	l
+Roberts1976	all	AP, ICG, P -21, P -20, P -19, P -18, P -17, P -16, P -15, P -14, P -13, P -12, P -11, P -10, P -9, P -8, P -7, P -6, P -5, P -4, P -3, P -2, P -1, P +0	thalf	plasma	antipyrine	6.6	0.5	hr
+Roberts1976	all	AP, ICG, P -21, P -20, P -19, P -18, P -17, P -16, P -15, P -14, P -13, P -12, P -11, P -10, P -9, P -8, P -7, P -6, P -5, P -4, P -3, P -2, P -1, P +0	clearance	plasma	indocyanine green	1378.0	157.0	ml/min
+Roberts1976	all	AP, ICG, P -21, P -20, P -19, P -18, P -17, P -16, P -15, P -14, P -13, P -12, P -11, P -10, P -9, P -8, P -7, P -6, P -5, P -4, P -3, P -2, P -1, P +0	vd	plasma	indocyanine green	3.9	0.4	l
+Roberts1976	all	AP, ICG, P -21, P -20, P -19, P -18, P -17, P -16, P -15, P -14, P -13, P -12, P -11, P -10, P -9, P -8, P -7, P -6, P -5, P -4, P -3, P -2, P -1, P +0	thalf	plasma	indocyanine green	3.5	0.3	min

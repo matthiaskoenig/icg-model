@@ -1,0 +1,5 @@
+study	subject	intervention	measurement	tissue	substance	value	group	label	value_unit
+Caesar1961	Control6	ICG_inf	concentration_ss	plasma	indocyanine green	0.26	Controls	Tab3	mg/l
+Caesar1961	Control4	ICG_inf	concentration_ss	plasma	indocyanine green	0.32	Controls	Tab3	mg/l
+Caesar1961	Control3	ICG_inf	concentration_ss	plasma	indocyanine green	0.4	Controls	Tab3	mg/l
+Caesar1961	Control8	ICG_inf	concentration_ss	plasma	indocyanine green	0.56	Controls	Tab3	mg/l

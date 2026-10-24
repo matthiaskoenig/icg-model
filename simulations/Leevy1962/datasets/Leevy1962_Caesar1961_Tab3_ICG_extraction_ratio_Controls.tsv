@@ -1,0 +1,5 @@
+study	subject	intervention	measurement	tissue	substance	value	group	label	value_unit
+Caesar1961	Control6	ICG_inf	extraction_ratio	plasma	indocyanine green	59.0	Controls	Tab3	percent
+Caesar1961	Control4	ICG_inf	extraction_ratio	plasma	indocyanine green	68.0	Controls	Tab3	percent
+Caesar1961	Control3	ICG_inf	extraction_ratio	plasma	indocyanine green	67.0	Controls	Tab3	percent
+Caesar1961	Control8	ICG_inf	extraction_ratio	plasma	indocyanine green	53.0	Controls	Tab3	percent

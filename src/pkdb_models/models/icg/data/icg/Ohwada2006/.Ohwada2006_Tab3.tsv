@@ -1,0 +1,13 @@
+study	group	intervention	tissue	substance	measurement	mean	sd	unit	time	time_unit
+Ohwada2006	no_hepatic_failure	NA	plasma	indocyanine green	concentration_ss	3.9	0.4	g/dl	NA	NA
+Ohwada2006	no_hepatic_failure	NA	plasma	indocyanine green	concentration_ss	0.8	0.1	mg/dl	NA	NA
+Ohwada2006	no_hepatic_failure	ICG	plasma	indocyanine green	retention ratio	12.7	5.4	percent	15.0	min
+Ohwada2006	no_hepatic_failure	ICG	plasma	indocyanine green	kel	0.16	0.033	1/min	NA	NA
+Ohwada2006	no_hepatic_failure	ICG	plasma	indocyanine green	kel	0.113	0.023	1/min	NA	NA
+Ohwada2006	no_hepatic_failure	ICG	plasma	indocyanine green	kel	0.12	0.025	1/min	NA	NA
+Ohwada2006	hepatic_failure	NA	plasma	indocyanine green	concentration_ss	3.9	0.6	g/dl	NA	NA
+Ohwada2006	hepatic_failure	NA	plasma	indocyanine green	concentration_ss	0.7	0.3	mg/dl	NA	NA
+Ohwada2006	hepatic_failure	ICG	plasma	indocyanine green	retention ratio	15.9	6.2	percent	15.0	min
+Ohwada2006	hepatic_failure	ICG	plasma	indocyanine green	kel	0.129	0.029	1/min	NA	NA
+Ohwada2006	hepatic_failure	ICG	plasma	indocyanine green	kel	0.079	0.012	1/min	NA	NA
+Ohwada2006	hepatic_failure	ICG	plasma	indocyanine green	kel	0.076	0.009	1/min	NA	NA

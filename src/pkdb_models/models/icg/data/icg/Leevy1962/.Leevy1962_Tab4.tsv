@@ -1,0 +1,15 @@
+study	individual	intervention	measurement	substance	tissue	value	unit	time	time_unit	group	count
+Leevy1962	S25	ICG_Inf_1.5	concentration_ss	indocyanine green	arterial plasma	1.44	mg/dl	50	min	Controls	1
+Leevy1962	S26	ICG_Inf_1.5	concentration_ss	indocyanine green	arterial plasma	1.66	mg/dl	50	min	Controls	1
+Leevy1962	S27	ICG_Inf_1.5	concentration_ss	indocyanine green	arterial plasma	1.16	mg/dl	50	min	Controls	1
+Leevy1962	S28	ICG_Inf_1.5	concentration_ss	indocyanine green	arterial plasma	1.44	mg/dl	50	min	Controls	1
+Leevy1962	S30	ICG_Inf_1.5	concentration_ss	indocyanine green	arterial plasma	1.9	mg/dl	50	min	Cirrhosis	1
+Leevy1962	S31	ICG_Inf_1.5	concentration_ss	indocyanine green	arterial plasma	2.22	mg/dl	50	min	Cirrhosis	1
+Leevy1962	S32	ICG_Inf_1.5	concentration_ss	indocyanine green	arterial plasma	1.57	mg/dl	50	min	Cirrhosis	1
+Leevy1962	S25	ICG_Inf_1.5	extraction_ratio	indocyanine green	plasma	84.0	percent	50	min	Controls	1
+Leevy1962	S26	ICG_Inf_1.5	extraction_ratio	indocyanine green	plasma	89.0	percent	50	min	Controls	1
+Leevy1962	S27	ICG_Inf_1.5	extraction_ratio	indocyanine green	plasma	76.0	percent	50	min	Controls	1
+Leevy1962	S28	ICG_Inf_1.5	extraction_ratio	indocyanine green	plasma	70.0	percent	50	min	Controls	1
+Leevy1962	S30	ICG_Inf_1.5	extraction_ratio	indocyanine green	plasma	75.0	percent	50	min	Cirrhosis	1
+Leevy1962	S31	ICG_Inf_1.5	extraction_ratio	indocyanine green	plasma	56.0	percent	50	min	Cirrhosis	1
+Leevy1962	S32	ICG_Inf_1.5	extraction_ratio	indocyanine green	plasma	77.0	percent	50	min	Cirrhosis	1

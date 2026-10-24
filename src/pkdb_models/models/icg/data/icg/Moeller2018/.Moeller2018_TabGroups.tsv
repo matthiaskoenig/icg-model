@@ -1,0 +1,19 @@
+study	name	group_count	parent	measurement	choice	mean	sd	unit	count
+Moeller2018	all	84.0	NA	species	homo sapiens	NA	NA	NA	84.0
+Moeller2018	all	84.0	NA	sex	MF	NA	NA	NA	84.0
+Moeller2018	all	84.0	NA	healthy	Y	NA	NA	NA	16.0
+Moeller2018	all	84.0	NA	healthy	N	NA	NA	NA	68.0
+Moeller2018	Controls	16.0	all	healthy	Y	NA	NA	NA	16.0
+Moeller2018	Cirrhosis	68.0	all	disease	liver cirrhosis	NA	NA	NA	68.0
+Moeller2018	Cirrhosis	68.0	all	age	NA	60.2	9.7	yr	68.0
+Moeller2018	Cirrhosis	68.0	all	height	NA	176.0	9.0	m	68.0
+Moeller2018	Cirrhosis	68.0	all	weight	NA	79.2	18.5	kg	68.0
+Moeller2018	Cirrhosis	68.0	all	sex	M	NA	NA	NA	52.0
+Moeller2018	Cirrhosis	68.0	all	sex	F	NA	NA	NA	16.0
+Moeller2018	Cirrhosis	68.0	all	body surface area	NA	1.9	0.3	m^2	68.0
+Moeller2018	Cirrhosis	68.0	all	bmi	NA	25.4	4.7	kg/m^2	68.0
+Moeller2018	Cirrhosis	68.0	all	disease	ascites	NA	NA	NA	42.0
+Moeller2018	Cirrhosis	68.0	all	child-pugh score numeric	NA	7.1	2.2	dimensionless	68.0
+Moeller2018	Child_A	17.0	Cirrhosis	child-pugh score	child-pugh class A	NA	NA	NA	17.0
+Moeller2018	Child_B	37.0	Cirrhosis	child-pugh score	child-pugh class B	NA	NA	NA	37.0
+Moeller2018	Child_C	14.0	Cirrhosis	child-pugh score	child-pugh class C	NA	NA	NA	14.0

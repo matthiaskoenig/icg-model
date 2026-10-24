@@ -1,0 +1,3 @@
+study	name	substance	measurement_type	time	time_unit	route	value	unit	application
+Kamimori2000	Tria	triazolam	qualitative dosing	0	min	oral	0.25	mg	single dose
+Kamimori2000	ICG	indocyanine green	qualitative dosing	0	min	iv	0.5	mg/kg	single dose

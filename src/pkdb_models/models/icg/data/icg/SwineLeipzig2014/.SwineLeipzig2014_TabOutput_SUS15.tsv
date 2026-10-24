@@ -1,0 +1,70 @@
+study	subject	label	interventions	measurement_type	tissue	value	unit	time_of_day	day	time_resection	helper_t1	helper_t2	time	time_unit	comments
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	na	l/min	10:45:00	0	15:30:00	10.75	15.5	-4.75	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	na	l/min	11:15:00	0	15:30:00	11.25	15.5	-4.25	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	na	l/min	11:45:00	0	15:30:00	11.75	15.5	-3.75	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	3.95	l/min	12:15:00	0	15:30:00	12.25	15.5	-3.25	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	5.49	l/min	12:45:00	0	15:30:00	12.75	15.5	-2.75	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	4.78	l/min	13:15:00	0	15:30:00	13.25	15.5	-2.24999999999998	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	5.34	l/min	13:45:00	0	15:30:00	13.75	15.5	-1.74999999999999	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	4.64	l/min	14:15:00	0	15:30:00	14.25	15.5	-1.25	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	4.14	l/min	14:45:00	0	15:30:00	14.75	15.5	-0.749999999999982	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	5	l/min	15:15:00	0	15:30:00	15.25	15.5	-0.249999999999993	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	2.39	l/min	15:45:00	0	15:30:00	15.75	15.5	0.25	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	2.47	l/min	16:15:00	0	15:30:00	16.25	15.5	0.749999999999993	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	2.65	l/min	16:45:00	0	15:30:00	16.75	15.5	1.25000000000001	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	2.01	l/min	17:15:00	0	15:30:00	17.25	15.5	1.75	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	1.97	l/min	17:45:00	0	15:30:00	17.75	15.5	2.24999999999999	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	2.22	l/min	18:15:00	0	15:30:00	18.25	15.5	2.75000000000001	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	2.76	l/min	18:45:00	0	15:30:00	18.75	15.5	3.25	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	2.88	l/min	19:15:00	0	15:30:00	19.25	15.5	3.74999999999999	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	2.83	l/min	19:45:00	0	15:30:00	19.75	15.5	4.25000000000001	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	2.97	l/min	20:15:00	0	15:30:00	20.25	15.5	4.75	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	3.06	l/min	20:45:00	0	15:30:00	20.75	15.5	5.24999999999999	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	3.12	l/min	21:15:00	0	15:30:00	21.25	15.5	5.75000000000001	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	3.37	l/min	21:45:00	0	15:30:00	21.75	15.5	6.25	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	3.34	l/min	22:15:00	0	15:30:00	22.25	15.5	6.74999999999999	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	3.44	l/min	22:45:00	0	15:30:00	22.75	15.5	7.25000000000001	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	3.4	l/min	23:15:00	0	15:30:00	23.25	15.5	7.75	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	3.44	l/min	23:45:00	0	15:30:00	23.75	15.5	8.24999999999999	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	3.43	l/min	1900-01-01 00:15:00	0	15:30:00	24.2500000000001	15.5	8.75000000000008	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	3.21	l/min	1900-01-01 00:45:00	0	15:30:00	24.75	15.5	9.25	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	3.52	l/min	1900-01-01 01:15:00	0	15:30:00	25.2499999999999	15.5	9.74999999999992	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	3.51	l/min	1900-01-01 01:45:00	0	15:30:00	25.7500000000001	15.5	10.2500000000001	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	3.42	l/min	1900-01-01 02:15:00	0	15:30:00	26.25	15.5	10.75	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	3.43	l/min	1900-01-01 02:45:00	0	15:30:00	26.7499999999999	15.5	11.2499999999999	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	3.52	l/min	1900-01-01 03:15:00	0	15:30:00	27.2500000000001	15.5	11.7500000000001	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	3.77	l/min	1900-01-01 03:45:00	0	15:30:00	27.75	15.5	12.25	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	3.74	l/min	1900-01-01 04:15:00	0	15:30:00	28.2499999999999	15.5	12.7499999999999	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	3.71	l/min	1900-01-01 04:45:00	0	15:30:00	28.7500000000001	15.5	13.2500000000001	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	3.51	l/min	1900-01-01 05:15:00	0	15:30:00	29.25	15.5	13.75	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	3.55	l/min	1900-01-01 05:45:00	0	15:30:00	29.7499999999999	15.5	14.2499999999999	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	3.51	l/min	1900-01-01 06:15:00	0	15:30:00	30.2500000000001	15.5	14.7500000000001	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	3.45	l/min	1900-01-01 06:45:00	0	15:30:00	30.75	15.5	15.25	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	3.48	l/min	1900-01-01 07:15:00	0	15:30:00	31.2499999999999	15.5	15.7499999999999	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	3.45	l/min	1900-01-01 07:45:00	0	15:30:00	31.7500000000001	15.5	16.2500000000001	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	3.25	l/min	1900-01-01 08:15:00	0	15:30:00	32.25	15.5	16.75	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	3.4	l/min	1900-01-01 08:45:00	0	15:30:00	32.7499999999999	15.5	17.2499999999999	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	3.49	l/min	1900-01-01 09:15:00	0	15:30:00	33.2500000000001	15.5	17.7500000000001	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	3.09	l/min	1900-01-01 09:45:00	0	15:30:00	33.75	15.5	18.25	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	3.9	l/min	1900-01-01 10:15:00	0	15:30:00	34.2499999999999	15.5	18.7499999999999	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	3.16	l/min	1900-01-01 10:45:00	0	15:30:00	34.7499999999996	15.5	19.2499999999996	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	3.1	l/min	1900-01-01 11:15:00	0	15:30:00	35.2499999999995	15.5	19.7499999999995	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	2.97	l/min	1900-01-01 11:45:00	0	15:30:00	35.7499999999994	15.5	20.2499999999994	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	3.03	l/min	1900-01-01 12:15:00	0	15:30:00	36.2499999999994	15.5	20.7499999999994	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	3.04	l/min	1900-01-01 12:45:00	0	15:30:00	36.7499999999993	15.5	21.2499999999993	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	3.09	l/min	1900-01-01 13:15:00	0	15:30:00	37.2499999999992	15.5	21.7499999999992	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	3.01	l/min	1900-01-01 13:45:00	0	15:30:00	37.7499999999991	15.5	22.2499999999991	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	2.99	l/min	1900-01-01 14:15:00	0	15:30:00	38.249999999999	15.5	22.749999999999	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	3	l/min	1900-01-01 14:45:00	0	15:30:00	38.749999999999	15.5	23.249999999999	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	2.93	l/min	1900-01-01 15:15:00	0	15:30:00	39.2499999999989	15.5	23.7499999999989	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_cardiac_output	ICG, hepatectomy	cardiac output	heart	3.41	l/min	15:30:00	1	15:30:00	15.5	15.5	24.0	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_pdr	ICG, hepatectomy	pdr	plasma	26.4	precent/min	12:00:00	0	15:30:00	12.0	15.5	-3.5	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_pdr	ICG, hepatectomy	pdr	plasma	15.8	precent/min	15:30:00	0	15:30:00	15.5	15.5	0.0	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_pdr	ICG, hepatectomy	pdr	plasma	16	precent/min	21:30:00	0	15:30:00	21.5	15.5	6.0	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_pdr	ICG, hepatectomy	pdr	plasma	12.2	precent/min	03:30:00	1	15:30:00	3.5	15.5	12.0	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_pdr	ICG, hepatectomy	pdr	plasma	12.3	precent/min	15:30:00	1	15:30:00	15.5	15.5	24.0	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_r15	ICG, hepatectomy	retention ratio	plasma	1.9	percent	12:00:00	0	15:30:00	12.0	15.5	-3.5	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_r15	ICG, hepatectomy	retention ratio	plasma	9.3	percent	15:30:00	0	15:30:00	15.5	15.5	0.0	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_r15	ICG, hepatectomy	retention ratio	plasma	9.1	percent	21:30:00	0	15:30:00	21.5	15.5	6.0	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_r15	ICG, hepatectomy	retention ratio	plasma	16	percent	03:30:00	1	15:30:00	3.5	15.5	12.0	hr	HZV:PICCO
+SwineLeipzig2014	SUS15	SUS15_r15	ICG, hepatectomy	retention ratio	plasma	15.8	percent	15:30:00	1	15:30:00	15.5	15.5	24.0	hr	HZV:PICCO

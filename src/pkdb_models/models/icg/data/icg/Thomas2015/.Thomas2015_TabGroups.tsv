@@ -1,0 +1,10 @@
+study	name	group_count	parent	measurement_type	median	min	max	unit	choice	count
+Thomas2015	all	20.0	NA	species	NA	NA	NA	NA	homo sapiens	20.0
+Thomas2015	all	20.0	NA	healthy	NA	NA	NA	NA	N	20.0
+Thomas2015	all	20.0	NA	sex	NA	NA	NA	NA	M	10.0
+Thomas2015	all	20.0	NA	sex	NA	NA	NA	NA	F	10.0
+Thomas2015	all	20.0	NA	age	60.0	23.0	84.0	yr	NA	20.0
+Thomas2015	all	20.0	NA	disease	NA	NA	NA	NA	hepatocellular carcinoma	5.0
+Thomas2015	all	20.0	NA	disease	NA	NA	NA	NA	hepatitis B	2.0
+Thomas2015	all	20.0	NA	disease	NA	NA	NA	NA	hcv	1.0
+Thomas2015	all	20.0	NA	liver volume	1702.0	1290.0	3473.0	ml	NA	20.0

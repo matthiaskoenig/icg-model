@@ -1,0 +1,4 @@
+study	group	intervention	measurement	tissue	substance	mean	mean_sd	median	iqr	ctp	count	mean_unit	median_unit	count_unit
+Herold2001	Child_A	ICG	kel	plasma	indocyanine green	0.154014666586956	0.0558523039802586	0.15	0.05	A	47	1/min	1/min	dimensionless
+Herold2001	Child_B	ICG	kel	plasma	indocyanine green	0.0662350171666667	0.0246383696760378	0.07	0.04	B	24	1/min	1/min	dimensionless
+Herold2001	Child_C	ICG	kel	plasma	indocyanine green	0.0382522018571429	0.0143448636682288	0.03	0.02	C	15	1/min	1/min	dimensionless

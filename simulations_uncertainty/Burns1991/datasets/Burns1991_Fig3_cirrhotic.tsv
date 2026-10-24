@@ -1,0 +1,20 @@
+study	individual	count	measurement_type	substance	tissue	intervention	time	time_unit	value	value_unit	count_unit
+Burns1991	cirrhotic representative	1	concentration	indocyanine green	plasma	Exp2 Bolus1 ICG	0.1	hr	0.01268860643797133	mole/meter^3	dimensionless
+Burns1991	cirrhotic representative	1	concentration	indocyanine green	plasma	Exp2 Bolus1 ICG	0.21504107	hr	0.007633410714469363	mole/meter^3	dimensionless
+Burns1991	cirrhotic representative	1	concentration	indocyanine green	plasma	Exp2 Bolus1 ICG	0.2599223	hr	0.004129628291695728	mole/meter^3	dimensionless
+Burns1991	cirrhotic representative	1	concentration	indocyanine green	plasma	Exp2 Bolus1 ICG	0.46018657	hr	0.0026289834818718828	mole/meter^3	dimensionless
+Burns1991	cirrhotic representative	1	concentration	indocyanine green	plasma	Exp2 Bolus1 ICG	0.72804815	hr	0.0015619928762453804	mole/meter^3	dimensionless
+Burns1991	cirrhotic representative	1	concentration	indocyanine green	plasma	Exp2 Bolus1 ICG	1.1371641	hr	0.0008375706110984918	mole/meter^3	dimensionless
+Burns1991	cirrhotic representative	1	concentration	indocyanine green	plasma	Exp2 Bolus1 ICG	1.5188112	hr	0.0004944490842959822	mole/meter^3	dimensionless
+Burns1991	cirrhotic representative	1	concentration	indocyanine green	plasma	Exp2 Bolus1 ICG	1.879935	hr	0.00036274836333561564	mole/meter^3	dimensionless
+Burns1991	cirrhotic representative	1	concentration	indocyanine green	plasma	Exp2 Bolus1 ICG	2.558198	hr	0.00022695192155340501	mole/meter^3	dimensionless
+Burns1991	cirrhotic representative	1	concentration	indocyanine green	plasma	Exp2 Bolus1 ICG	3.2173202	hr	0.00020170645657475105	mole/meter^3	dimensionless
+Burns1991	cirrhotic representative	1	concentration	indocyanine green	plasma	Exp2 Bolus1 ICG	3.8070953	hr	0.0001621779065537843	mole/meter^3	dimensionless
+Burns1991	cirrhotic representative	1	concentration	indocyanine green	plasma	Exp2 Bolus1 ICG	4.830798	hr	0.00014772229757545284	mole/meter^3	dimensionless
+Burns1991	cirrhotic representative	1	concentration	indocyanine green	plasma	Exp2 Bolus1 ICG	5.8277555	hr	9.161191332877477e-05	mole/meter^3	dimensionless
+Burns1991	cirrhotic representative	1	concentration	indocyanine green	plasma	Exp2 Bolus1 ICG	6.623066	hr	7.807413943234823e-05	mole/meter^3	dimensionless
+Burns1991	cirrhotic representative	1	concentration	indocyanine green	plasma	Exp2 Bolus1 ICG	7.3053904	hr	7.234815128989127e-05	mole/meter^3	dimensionless
+Burns1991	cirrhotic representative	1	concentration	indocyanine green	plasma	Exp2 Bolus1 ICG	9.829152	hr	5.0329782019942494e-05	mole/meter^3	dimensionless
+Burns1991	cirrhotic representative	1	concentration	indocyanine green	plasma	Exp2 Bolus1 ICG	12.898791	hr	3.2997783525507404e-05	mole/meter^3	dimensionless
+Burns1991	cirrhotic representative	1	concentration	indocyanine green	plasma	Exp2 Bolus1 ICG	22.959015	hr	2.1785871007091893e-05	mole/meter^3	dimensionless
+Burns1991	cirrhotic representative	1	concentration	indocyanine green	plasma	Exp2 Bolus1 ICG	23.915012	hr	2.1041559906459247e-05	mole/meter^3	dimensionless

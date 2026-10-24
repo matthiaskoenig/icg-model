@@ -1,0 +1,6 @@
+study	name	parent	group_count	measurement	choice	count
+Keiding1993	all	NA	9	species	homo sapiens	9
+Keiding1993	all	NA	9	healthy	N	9
+Keiding1993	all	NA	9	disease	liver disease	9
+Keiding1993	all	NA	9	sex	M	1
+Keiding1993	all	NA	9	sex	F	8

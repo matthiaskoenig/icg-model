@@ -1,0 +1,2 @@
+study	group	count	intervention	measurement	substance	tissue	mean	mean_sd	time	time_unit	comments	mean_unit	count_unit
+Leevy1962	ER_controls	14	ICG_Inf_0.3	concentration_ss	indocyanine green	arterial plasma	0.0037421048201497316	0.0009130421232736234	50	min	no time provided assuming 50 min steady state; peripheral arterial concentration in mg%	mole/meter^3	dimensionless

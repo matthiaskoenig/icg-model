@@ -1,0 +1,7 @@
+study	group	intervention	measurement_type	tissue	substance	mean	sd	unit
+Kamimori2000	Follicular	ICG	concentration_ss	blood	progesterone	1.8	0.9	nmol/l
+Kamimori2000	Ovulatory	ICG	concentration_ss	blood	progesterone	3.3	4.0	nmol/l
+Kamimori2000	Luteal	ICG	concentration_ss	blood	progesterone	36.9	24.8	nmol/l
+Kamimori2000	Follicular	ICG	concentration_ss	blood	estradiol	70.85	64.9	pmol/l
+Kamimori2000	Ovulatory	ICG	concentration_ss	blood	estradiol	301.6	135.5	pmol/l
+Kamimori2000	Luteal	ICG	concentration_ss	blood	estradiol	388.5	218.9	pmol/l

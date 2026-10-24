@@ -1,0 +1,5 @@
+study	group	intervention	measurement	tissue	substance	mean	mean_sd	time	time_unit	ctp	count	mean_unit	count_unit
+Moeller2018	Controls	ICG	thalf	plasma	indocyanine green	3.7	0.8			Controls	16	min	dimensionless
+Moeller2018	Child_A	ICG	thalf	plasma	indocyanine green	5.6	2.7			A	17	min	dimensionless
+Moeller2018	Child_B	ICG	thalf	plasma	indocyanine green	14.7	10.9			B	37	min	dimensionless
+Moeller2018	Child_C	ICG	thalf	plasma	indocyanine green	24.6	15.3			C	14	min	dimensionless

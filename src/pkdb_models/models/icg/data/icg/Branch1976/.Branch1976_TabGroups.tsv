@@ -1,0 +1,20 @@
+study	name	group_count	parent	measurement_type	choice	count
+Branch1976	all	26	na	species	homo sapiens	26
+Branch1976	all	26	na	overnight fast	Y	26
+Branch1976	all	26	na	sex	M	18
+Branch1976	all	26	na	sex	F	8
+Branch1976	all	26	all	healthy	N	20
+Branch1976	all	26	all	healthy	Y	6
+Branch1976	control	6	all	healthy	Y	6
+Branch1976	control	6	all	sex	M	4
+Branch1976	control	6	all	sex	F	2
+Branch1976	patients	20	all	healthy	N	20
+Branch1976	patients	20	all	sex	M	14
+Branch1976	patients	20	all	sex	F	6
+Branch1976	patients	20	all	disease	liver disease	20
+Branch1976	SerAlb<3	9	all	sex	M	6
+Branch1976	SerAlb<3	9	all	sex	F	3
+Branch1976	SerAlb>3	11	all	sex	M	8
+Branch1976	SerAlb>3	11	all	sex	F	3
+Branch1976	SerAlb>3 Shunt	6	SerAlb>3	sex	NR	6
+Branch1976	SerAlb>3 NoShunt	5	SerAlb>3	sex	NR	5

@@ -1,0 +1,16 @@
+study	group	intervention	measurement	tissue	substance	mean	sd	unit	time	time_unit	ctp	count
+Moeller2018	Controls	ICG	retention ratio	plasma	indocyanine green	6.6	3.3	percent	15.0	min	Controls	16
+Moeller2018	Child_A	ICG	retention ratio	plasma	indocyanine green	14.9	11.6	percent	15.0	min	A	17
+Moeller2018	Child_B	ICG	retention ratio	plasma	indocyanine green	40.6	20.6	percent	15.0	min	B	37
+Moeller2018	Child_C	ICG	retention ratio	plasma	indocyanine green	58.2	17.5	percent	15.0	min	C	14
+Moeller2018	Controls	ICG	thalf	plasma	indocyanine green	3.7	0.8	min	NA	NA	Controls	16
+Moeller2018	Child_A	ICG	thalf	plasma	indocyanine green	5.6	2.7	min	NA	NA	A	17
+Moeller2018	Child_B	ICG	thalf	plasma	indocyanine green	14.7	10.9	min	NA	NA	B	37
+Moeller2018	Child_C	ICG	thalf	plasma	indocyanine green	24.6	15.3	min	NA	NA	C	14
+Moeller2018	Controls	ICG	kel	plasma	indocyanine green	0.21	0.08	1/min	NA	NA	Controls	16
+Moeller2018	Child_A	ICG	kel	plasma	indocyanine green	0.14	0.06	1/min	NA	NA	A	17
+Moeller2018	Child_B	ICG	kel	plasma	indocyanine green	0.08	0.09	1/min	NA	NA	B	37
+Moeller2018	Child_C	ICG	kel	plasma	indocyanine green	0.04	0.02	1/min	NA	NA	C	14
+Moeller2018	Child_A	ICG	hbf	liver	NA	1.38	0.25	l/min	NA	NA	A	17
+Moeller2018	Child_B	ICG	hbf	liver	NA	1.44	0.56	l/min	NA	NA	B	37
+Moeller2018	Child_C	ICG	hbf	liver	NA	1.59	0.83	l/min	NA	NA	C	14

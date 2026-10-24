@@ -1,0 +1,2 @@
+study	count	group	intervention	measurement	tissue	substance	mean	min	max	mean_se	mean_sd	time	time_unit	mean_unit	count_unit
+Gadano1997	356	Cirrhosis	MEP, Cir Inf1, Cir Inf2	extraction_ratio	plasma	indocyanine green	0.26	10.0	83.0	0.01	0.188679622641132	25	min	dimensionless	dimensionless

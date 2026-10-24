@@ -1,0 +1,4 @@
+study	group	intervention	measurement	tissue	substance	mean	2sd	mean_sd	label	mean_unit
+Pind2016	ctpa	icg_priming, icg_iv	clearance	plasma	indocyanine green	354.5	158.0	79.0	tab2	ml/min
+Pind2016	ctpb	icg_priming, icg_iv	clearance	plasma	indocyanine green	221.4	111.4	55.7	tab2	ml/min
+Pind2016	ctpc	icg_priming, icg_iv	clearance	plasma	indocyanine green	140.4	82.6	41.3	tab2	ml/min

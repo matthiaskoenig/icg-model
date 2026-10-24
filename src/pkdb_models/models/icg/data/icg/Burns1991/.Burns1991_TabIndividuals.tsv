@@ -1,0 +1,21 @@
+study	name	group	measurement_type	choice
+Burns1991	Chronic active	Exp 1	sex	NR
+Burns1991	Alcoholic 1	Exp 1	sex	NR
+Burns1991	Haemochromatosis	Exp 1	sex	NR
+Burns1991	Alcoholic 2	Exp 1	sex	NR
+Burns1991	Primary biliary	Exp 1	sex	NR
+Burns1991	Wilson‘s disease	Exp 1	sex	NR
+Burns1991	Control 1	Exp 2 Controls	sex	NR
+Burns1991	Control 2	Exp 2 Controls	sex	NR
+Burns1991	Control 3	Exp 2 Controls	sex	NR
+Burns1991	Control 4	Exp 2 Controls	sex	NR
+Burns1991	Control 5	Exp 2 Controls	sex	NR
+Burns1991	Control 6	Exp 2 Controls	sex	NR
+Burns1991	Patient 1	Exp 2 Patients	sex	NR
+Burns1991	Patient 2	Exp 2 Patients	sex	NR
+Burns1991	Patient 3	Exp 2 Patients	sex	NR
+Burns1991	Patient 4	Exp 2 Patients	sex	NR
+Burns1991	Patient 5	Exp 2 Patients	sex	NR
+Burns1991	Patient 6	Exp 2 Patients	sex	NR
+Burns1991	healthy representative	Exp 2 Controls	sex	NR
+Burns1991	cirrhotic representative	Exp 2 Patients	sex	NR

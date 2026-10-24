@@ -1,0 +1,18 @@
+study	individual	count	label	measurement_type	substance	tissue	intervention	value	unit	time	time_unit
+Klockowski1990	ICG_typical	1	control	concentration	indocyanine green	plasma	ICG	10.802638	microg/ml	2.0	min
+Klockowski1990	ICG_typical	1	control	concentration	indocyanine green	plasma	ICG	7.2483273	microg/ml	4.0	min
+Klockowski1990	ICG_typical	1	control	concentration	indocyanine green	plasma	ICG	4.4534316	microg/ml	6.0	min
+Klockowski1990	ICG_typical	1	control	concentration	indocyanine green	plasma	ICG	2.806049	microg/ml	8.0	min
+Klockowski1990	ICG_typical	1	control	concentration	indocyanine green	plasma	ICG	2.2454596	microg/ml	10.0	min
+Klockowski1990	ICG_typical	1	control	concentration	indocyanine green	plasma	ICG	1.3624245	microg/ml	12.0	min
+Klockowski1990	ICG_typical	1	control	concentration	indocyanine green	plasma	ICG	1.2677166	microg/ml	14.0	min
+Klockowski1990	ICG_typical	1	diltiazem	concentration	indocyanine green	plasma	ICG, D -48, D -40, D -32, D -24, D -16, D -8, D +0	10.017129	microg/ml	2.0	min
+Klockowski1990	ICG_typical	1	diltiazem	concentration	indocyanine green	plasma	ICG, D -48, D -40, D -32, D -24, D -16, D -8, D +0	6.0018625	microg/ml	4.0	min
+Klockowski1990	ICG_typical	1	diltiazem	concentration	indocyanine green	plasma	ICG, D -48, D -40, D -32, D -24, D -16, D -8, D +0	3.78144	microg/ml	6.0	min
+Klockowski1990	ICG_typical	1	diltiazem	concentration	indocyanine green	plasma	ICG, D -48, D -40, D -32, D -24, D -16, D -8, D +0	2.2093837	microg/ml	8.0	min
+Klockowski1990	ICG_typical	1	diltiazem	concentration	indocyanine green	plasma	ICG, D -48, D -40, D -32, D -24, D -16, D -8, D +0	1.5012172	microg/ml	10.0	min
+Klockowski1990	ICG_typical	1	isradipine	concentration	indocyanine green	plasma	ICG, I -48, I -36, I -24, I -12, I +0	9.40635	microg/ml	2.0	min
+Klockowski1990	ICG_typical	1	isradipine	concentration	indocyanine green	plasma	ICG, I -48, I -36, I -24, I -12, I +0	4.9074426	microg/ml	4.0	min
+Klockowski1990	ICG_typical	1	isradipine	concentration	indocyanine green	plasma	ICG, I -48, I -36, I -24, I -12, I +0	2.9034805	microg/ml	6.0	min
+Klockowski1990	ICG_typical	1	isradipine	concentration	indocyanine green	plasma	ICG, I -48, I -36, I -24, I -12, I +0	1.7396493	microg/ml	8.0	min
+Klockowski1990	ICG_typical	1	isradipine	concentration	indocyanine green	plasma	ICG, I -48, I -36, I -24, I -12, I +0	0.97870773	microg/ml	10.0	min

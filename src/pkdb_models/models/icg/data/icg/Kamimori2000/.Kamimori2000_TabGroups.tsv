@@ -1,0 +1,11 @@
+study	name	group_count	parent	measurement_type	choice	count	mean	sd	unit
+Kamimori2000	all	13	NA	species	homo sapiens	13	NA	NA	NA
+Kamimori2000	all	13	NA	sex	F	13	NA	NA	NA
+Kamimori2000	all	13	NA	healthy	Y	13	NA	NA	NA
+Kamimori2000	all	13	NA	overnight fast	Y	13	NA	NA	NA
+Kamimori2000	all	13	NA	smoking	N	13	NA	NA	NA
+Kamimori2000	all	13	NA	age	na	13	23.5	4.7	yr
+Kamimori2000	all	13	NA	weight	na	13	58.6	11.2	kg
+Kamimori2000	Follicular	13	all	menstrual status	follicular phase	13	NA	NA	NA
+Kamimori2000	Ovulatory	13	all	menstrual status	ovulatory phase	13	NA	NA	NA
+Kamimori2000	Luteal	13	all	menstrual status	luteal phase	13	NA	NA	NA

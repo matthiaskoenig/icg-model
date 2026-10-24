@@ -1,0 +1,4 @@
+study	group	count	intervention	measurement	substance	tissue	mean	mean_sd	time	time_unit	label	mean_unit	count_unit
+Soons1991	all	6	ICG_2.0	concentration_ss	indocyanine green	plasma	0.0037744415092435214	0.00042096011182467697	35	min	Fig5mean	mole/meter^3	dimensionless
+Soons1991	all	6	ICG_0.5	concentration_ss	indocyanine green	plasma	0.0009244166743562614	0.00014627437097569304	75	min	Fig5mean	mole/meter^3	dimensionless
+Soons1991	all	6	ICG_1.0	concentration_ss	indocyanine green	plasma	0.0019267942012980252	0.00013978214677022222	115	min	Fig5mean	mole/meter^3	dimensionless

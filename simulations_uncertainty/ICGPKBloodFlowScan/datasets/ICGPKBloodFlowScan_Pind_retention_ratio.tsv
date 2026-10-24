@@ -1,0 +1,4 @@
+study	group	intervention	measurement	tissue	substance	mean	2sd	mean_sd	label	mean_unit
+Pind2016	ctpa	icg_priming, icg_iv	retention ratio	plasma	indocyanine green	0.2	0.1	0.05	tab2	dimensionless
+Pind2016	ctpb	icg_priming, icg_iv	retention ratio	plasma	indocyanine green	0.4	0.1	0.05	tab2	dimensionless
+Pind2016	ctpc	icg_priming, icg_iv	retention ratio	plasma	indocyanine green	0.6	0.1	0.05	tab2	dimensionless

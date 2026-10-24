@@ -1,0 +1,105 @@
+study	individual	intervention	measurement_type	tissue	substance	value	unit	group
+Branch1976	C1	ICG	concentration_ss	plasma	albumin	4.5	g/(100*ml)	control
+Branch1976	C1	ICG	concentration_ss	plasma	bilirubin	0.6	mg/(100*ml)	control
+Branch1976	C1	AP	clearance	blood	antipyrine	45.4	ml/min	control
+Branch1976	C1	ICG	clearance	blood	indocyanine green	1324.0	ml/min	control
+Branch1976	C2	ICG	concentration_ss	plasma	albumin	4.4	g/(100*ml)	control
+Branch1976	C2	ICG	concentration_ss	plasma	bilirubin	0.9	mg/(100*ml)	control
+Branch1976	C2	AP	clearance	blood	antipyrine	30.1	ml/min	control
+Branch1976	C2	ICG	clearance	blood	indocyanine green	980.0	ml/min	control
+Branch1976	C3	ICG	concentration_ss	plasma	albumin	4.1	g/(100*ml)	control
+Branch1976	C3	ICG	concentration_ss	plasma	bilirubin	0.6	mg/(100*ml)	control
+Branch1976	C3	AP	clearance	blood	antipyrine	54.0	ml/min	control
+Branch1976	C3	ICG	clearance	blood	indocyanine green	2001.0	ml/min	control
+Branch1976	C4	ICG	concentration_ss	plasma	albumin	4.0	g/(100*ml)	control
+Branch1976	C4	ICG	concentration_ss	plasma	bilirubin	0.7	mg/(100*ml)	control
+Branch1976	C4	AP	clearance	blood	antipyrine	43.2	ml/min	control
+Branch1976	C4	ICG	clearance	blood	indocyanine green	1378.0	ml/min	control
+Branch1976	C5	ICG	concentration_ss	plasma	albumin	3.9	g/(100*ml)	control
+Branch1976	C5	ICG	concentration_ss	plasma	bilirubin	0.8	mg/(100*ml)	control
+Branch1976	C5	AP	clearance	blood	antipyrine	26.1	ml/min	control
+Branch1976	C5	ICG	clearance	blood	indocyanine green	678.0	ml/min	control
+Branch1976	C6	ICG	concentration_ss	plasma	albumin	3.7	g/(100*ml)	control
+Branch1976	C6	ICG	concentration_ss	plasma	bilirubin	0.4	mg/(100*ml)	control
+Branch1976	C6	AP	clearance	blood	antipyrine	31.3	ml/min	control
+Branch1976	C6	ICG	clearance	blood	indocyanine green	929.0	ml/min	control
+Branch1976	P1	ICG	concentration_ss	plasma	albumin	4.5	g/(100*ml)	patients
+Branch1976	P1	ICG	concentration_ss	plasma	bilirubin	0.4	mg/(100*ml)	patients
+Branch1976	P1	AP	clearance	blood	antipyrine	26.8	ml/min	patients
+Branch1976	P1	ICG	clearance	blood	indocyanine green	692.0	ml/min	patients
+Branch1976	P2	ICG	concentration_ss	plasma	albumin	4.1	g/(100*ml)	patients
+Branch1976	P2	ICG	concentration_ss	plasma	bilirubin	0.8	mg/(100*ml)	patients
+Branch1976	P2	AP	clearance	blood	antipyrine	33.6	ml/min	patients
+Branch1976	P2	ICG	clearance	blood	indocyanine green	778.0	ml/min	patients
+Branch1976	P3	ICG	concentration_ss	plasma	albumin	3.9	g/(100*ml)	patients
+Branch1976	P3	ICG	concentration_ss	plasma	bilirubin	1.5	mg/(100*ml)	patients
+Branch1976	P3	AP	clearance	blood	antipyrine	27.7	ml/min	patients
+Branch1976	P3	ICG	clearance	blood	indocyanine green	507.0	ml/min	patients
+Branch1976	P4	ICG	concentration_ss	plasma	albumin	3.9	g/(100*ml)	patients
+Branch1976	P4	ICG	concentration_ss	plasma	bilirubin	2.5	mg/(100*ml)	patients
+Branch1976	P4	AP	clearance	blood	antipyrine	20.9	ml/min	patients
+Branch1976	P4	ICG	clearance	blood	indocyanine green	814.0	ml/min	patients
+Branch1976	P5	ICG	concentration_ss	plasma	albumin	3.9	g/(100*ml)	patients
+Branch1976	P5	ICG	concentration_ss	plasma	bilirubin	2.8	mg/(100*ml)	patients
+Branch1976	P5	AP	clearance	blood	antipyrine	13.7	ml/min	patients
+Branch1976	P5	ICG	clearance	blood	indocyanine green	106.0	ml/min	patients
+Branch1976	P6	ICG	concentration_ss	plasma	albumin	3.8	g/(100*ml)	patients
+Branch1976	P6	ICG	concentration_ss	plasma	bilirubin	1.2	mg/(100*ml)	patients
+Branch1976	P6	AP	clearance	blood	antipyrine	32.6	ml/min	patients
+Branch1976	P6	ICG	clearance	blood	indocyanine green	1013.0	ml/min	patients
+Branch1976	P7	ICG	concentration_ss	plasma	albumin	3.7	g/(100*ml)	patients
+Branch1976	P7	ICG	concentration_ss	plasma	bilirubin	1.1	mg/(100*ml)	patients
+Branch1976	P7	AP	clearance	blood	antipyrine	30.6	ml/min	patients
+Branch1976	P7	ICG	clearance	blood	indocyanine green	743.0	ml/min	patients
+Branch1976	P8	ICG	concentration_ss	plasma	albumin	3.7	g/(100*ml)	patients
+Branch1976	P8	ICG	concentration_ss	plasma	bilirubin	2.6	mg/(100*ml)	patients
+Branch1976	P8	AP	clearance	blood	antipyrine	24.7	ml/min	patients
+Branch1976	P8	ICG	clearance	blood	indocyanine green	672.0	ml/min	patients
+Branch1976	P9	ICG	concentration_ss	plasma	albumin	3.3	g/(100*ml)	patients
+Branch1976	P9	ICG	concentration_ss	plasma	bilirubin	2.9	mg/(100*ml)	patients
+Branch1976	P9	AP	clearance	blood	antipyrine	22.9	ml/min	patients
+Branch1976	P9	ICG	clearance	blood	indocyanine green	163.0	ml/min	patients
+Branch1976	P10	ICG	concentration_ss	plasma	albumin	3.1	g/(100*ml)	patients
+Branch1976	P10	ICG	concentration_ss	plasma	bilirubin	1.8	mg/(100*ml)	patients
+Branch1976	P10	AP	clearance	blood	antipyrine	13.9	ml/min	patients
+Branch1976	P10	ICG	clearance	blood	indocyanine green	63.0	ml/min	patients
+Branch1976	P11	ICG	concentration_ss	plasma	albumin	3.0	g/(100*ml)	patients
+Branch1976	P11	ICG	concentration_ss	plasma	bilirubin	1.4	mg/(100*ml)	patients
+Branch1976	P11	AP	clearance	blood	antipyrine	13.7	ml/min	patients
+Branch1976	P11	ICG	clearance	blood	indocyanine green	515.0	ml/min	patients
+Branch1976	P12	ICG	concentration_ss	plasma	albumin	2.9	g/(100*ml)	patients
+Branch1976	P12	ICG	concentration_ss	plasma	bilirubin	1.8	mg/(100*ml)	patients
+Branch1976	P12	AP	clearance	blood	antipyrine	24.7	ml/min	patients
+Branch1976	P12	ICG	clearance	blood	indocyanine green	569.0	ml/min	patients
+Branch1976	P13	ICG	concentration_ss	plasma	albumin	2.9	g/(100*ml)	patients
+Branch1976	P13	ICG	concentration_ss	plasma	bilirubin	7.0	mg/(100*ml)	patients
+Branch1976	P13	AP	clearance	blood	antipyrine	12.2	ml/min	patients
+Branch1976	P13	ICG	clearance	blood	indocyanine green	145.0	ml/min	patients
+Branch1976	P14	ICG	concentration_ss	plasma	albumin	2.9	g/(100*ml)	patients
+Branch1976	P14	ICG	concentration_ss	plasma	bilirubin	10.0	mg/(100*ml)	patients
+Branch1976	P14	AP	clearance	blood	antipyrine	11.2	ml/min	patients
+Branch1976	P14	ICG	clearance	blood	indocyanine green	26.0	ml/min	patients
+Branch1976	P15	ICG	concentration_ss	plasma	albumin	2.9	g/(100*ml)	patients
+Branch1976	P15	ICG	concentration_ss	plasma	bilirubin	2.8	mg/(100*ml)	patients
+Branch1976	P15	AP	clearance	blood	antipyrine	7.5	ml/min	patients
+Branch1976	P15	ICG	clearance	blood	indocyanine green	226.0	ml/min	patients
+Branch1976	P16	ICG	concentration_ss	plasma	albumin	2.8	g/(100*ml)	patients
+Branch1976	P16	ICG	concentration_ss	plasma	bilirubin	2.6	mg/(100*ml)	patients
+Branch1976	P16	AP	clearance	blood	antipyrine	19.7	ml/min	patients
+Branch1976	P16	ICG	clearance	blood	indocyanine green	382.0	ml/min	patients
+Branch1976	P17	ICG	concentration_ss	plasma	albumin	2.8	g/(100*ml)	patients
+Branch1976	P17	ICG	concentration_ss	plasma	bilirubin	5.6	mg/(100*ml)	patients
+Branch1976	P17	AP	clearance	blood	antipyrine	5.9	ml/min	patients
+Branch1976	P17	ICG	clearance	blood	indocyanine green	105.0	ml/min	patients
+Branch1976	P18	ICG	concentration_ss	plasma	albumin	2.8	g/(100*ml)	patients
+Branch1976	P18	ICG	concentration_ss	plasma	bilirubin	5.5	mg/(100*ml)	patients
+Branch1976	P18	AP	clearance	blood	antipyrine	6.2	ml/min	patients
+Branch1976	P18	ICG	clearance	blood	indocyanine green	81.0	ml/min	patients
+Branch1976	P19	ICG	concentration_ss	plasma	albumin	2.8	g/(100*ml)	patients
+Branch1976	P19	ICG	concentration_ss	plasma	bilirubin	8.6	mg/(100*ml)	patients
+Branch1976	P19	AP	clearance	blood	antipyrine	11.2	ml/min	patients
+Branch1976	P19	ICG	clearance	blood	indocyanine green	678.0	ml/min	patients
+Branch1976	P20	ICG	concentration_ss	plasma	albumin	2.1	g/(100*ml)	patients
+Branch1976	P20	ICG	concentration_ss	plasma	bilirubin	11.5	mg/(100*ml)	patients
+Branch1976	P20	AP	clearance	blood	antipyrine	4.9	ml/min	patients
+Branch1976	P20	ICG	clearance	blood	indocyanine green	22.0	ml/min	patients

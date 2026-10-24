@@ -1,0 +1,8 @@
+study	name	group_count	parent	measurement	choice	count
+Moeller1998	all	142	NA	species	homo sapiens	142
+Moeller1998	all	142	NA	sex	MF	142
+Moeller1998	all	142	NA	healthy	N	142
+Moeller1998	all	142	NA	disease	liver cirrhosis	142
+Moeller1998	Child_A	41	all	child-pugh score	child-pugh class A	41
+Moeller1998	Child_B	57	all	child-pugh score	child-pugh class B	57
+Moeller1998	Child_C	44	all	child-pugh score	child-pugh class C	44

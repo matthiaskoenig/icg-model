@@ -1,0 +1,40 @@
+study	individual	intervention	measurement_type	tissue	substance	value	unit	group
+Kawasaki1988	I1	ICG	clearance	blood	indocyanine green	11.95	ml/min/kg	normal
+Kawasaki1988	I2	ICG	clearance	blood	indocyanine green	14.54	ml/min/kg	normal
+Kawasaki1988	I3	ICG	clearance	blood	indocyanine green	9.69	ml/min/kg	normal
+Kawasaki1988	I4	ICG	clearance	blood	indocyanine green	13.74	ml/min/kg	normal
+Kawasaki1988	I5	ICG	clearance	blood	indocyanine green	10.74	ml/min/kg	normal
+Kawasaki1988	I6	ICG	clearance	blood	indocyanine green	3.71	ml/min/kg	cirrhosis
+Kawasaki1988	I8	ICG	clearance	blood	indocyanine green	3.92	ml/min/kg	cirrhosis
+Kawasaki1988	I10	ICG	clearance	blood	indocyanine green	6.39	ml/min/kg	cirrhosis
+Kawasaki1988	I11	ICG	clearance	blood	indocyanine green	5.8	ml/min/kg	cirrhosis
+Kawasaki1988	I18	ICG	clearance	blood	indocyanine green	2.94	ml/min/kg	cirrhosis
+Kawasaki1988	I21	ICG	clearance	blood	indocyanine green	2.58	ml/min/kg	cirrhosis
+Kawasaki1988	I22	ICG	clearance	blood	indocyanine green	2.54	ml/min/kg	cirrhosis
+Kawasaki1988	I25	ICG	clearance	blood	indocyanine green	6.63	ml/min/kg	EPO
+Kawasaki1988	I1	ICG	clearance_intrinsic	blood	indocyanine green	61.83	ml/min/kg	normal
+Kawasaki1988	I2	ICG	clearance_intrinsic	blood	indocyanine green	54.51	ml/min/kg	normal
+Kawasaki1988	I3	ICG	clearance_intrinsic	blood	indocyanine green	19.55	ml/min/kg	normal
+Kawasaki1988	I4	ICG	clearance_intrinsic	blood	indocyanine green	42.78	ml/min/kg	normal
+Kawasaki1988	I5	ICG	clearance_intrinsic	blood	indocyanine green	29.92	ml/min/kg	normal
+Kawasaki1988	I6	ICG	clearance_intrinsic	blood	indocyanine green	5.28	ml/min/kg	cirrhosis
+Kawasaki1988	I8	ICG	clearance_intrinsic	blood	indocyanine green	5.35	ml/min/kg	cirrhosis
+Kawasaki1988	I10	ICG	clearance_intrinsic	blood	indocyanine green	12.59	ml/min/kg	cirrhosis
+Kawasaki1988	I11	ICG	clearance_intrinsic	blood	indocyanine green	9.92	ml/min/kg	cirrhosis
+Kawasaki1988	I18	ICG	clearance_intrinsic	blood	indocyanine green	3.39	ml/min/kg	cirrhosis
+Kawasaki1988	I21	ICG	clearance_intrinsic	blood	indocyanine green	3.44	ml/min/kg	cirrhosis
+Kawasaki1988	I22	ICG	clearance_intrinsic	blood	indocyanine green	3.38	ml/min/kg	cirrhosis
+Kawasaki1988	I25	ICG	clearance_intrinsic	blood	indocyanine green	11.98	ml/min/kg	EPO
+Kawasaki1988	I1	ICG	concentration_ss	plasma	bilirubin	0.3	mg/dl	normal
+Kawasaki1988	I2	ICG	concentration_ss	plasma	bilirubin	0.9	mg/dl	normal
+Kawasaki1988	I3	ICG	concentration_ss	plasma	bilirubin	0.8	mg/dl	normal
+Kawasaki1988	I4	ICG	concentration_ss	plasma	bilirubin	0.5	mg/dl	normal
+Kawasaki1988	I5	ICG	concentration_ss	plasma	bilirubin	0.4	mg/dl	normal
+Kawasaki1988	I6	ICG	concentration_ss	plasma	bilirubin	0.9	mg/dl	cirrhosis
+Kawasaki1988	I8	ICG	concentration_ss	plasma	bilirubin	1.1	mg/dl	cirrhosis
+Kawasaki1988	I10	ICG	concentration_ss	plasma	bilirubin	0.6	mg/dl	cirrhosis
+Kawasaki1988	I11	ICG	concentration_ss	plasma	bilirubin	1.4	mg/dl	cirrhosis
+Kawasaki1988	I18	ICG	concentration_ss	plasma	bilirubin	1.2	mg/dl	cirrhosis
+Kawasaki1988	I21	ICG	concentration_ss	plasma	bilirubin	2.2	mg/dl	cirrhosis
+Kawasaki1988	I22	ICG	concentration_ss	plasma	bilirubin	1.6	mg/dl	cirrhosis
+Kawasaki1988	I25	ICG	concentration_ss	plasma	bilirubin	0.9	mg/dl	EPO

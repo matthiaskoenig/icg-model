@@ -1,0 +1,10 @@
+study	group	measurement_type	tissue	substance	mean	sem	unit
+Gadano1997	Controls	concentration	plasma	bilirubin	14	18	micromol/l
+Gadano1997	Controls	concentration	plasma	albumin	41	8	g/l
+Gadano1997	Controls	plasma thromboplastin activity	plasma	NA	79	27	%
+Gadano1997	Hepatic Fibrosis	concentration	plasma	bilirubin	21	18	micromol/l
+Gadano1997	Hepatic Fibrosis	concentration	plasma	albumin	33	6	g/l
+Gadano1997	Hepatic Fibrosis	plasma thromboplastin activity	plasma	NA	71	18	%
+Gadano1997	Cirrhosis	concentration	plasma	bilirubin	40	50	micromol/l
+Gadano1997	Cirrhosis	concentration	plasma	albumin	32	7	g/l
+Gadano1997	Cirrhosis	plasma thromboplastin activity	plasma	NA	56	16	%

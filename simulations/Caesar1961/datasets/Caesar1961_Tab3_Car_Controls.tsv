@@ -1,0 +1,2 @@
+study	group	count	substance	intervention	measurement	tissue	mean	mean_sd	time	time_unit	mean_unit	count_unit
+Caesar1961	Controls	4	indocyanine green	ICG_inf	concentration_ss	arterial plasma	0.0013161885919147334	0.0003437519368275439	60.0	min	mole/meter^3	dimensionless

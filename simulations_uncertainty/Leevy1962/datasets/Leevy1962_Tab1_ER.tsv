@@ -1,0 +1,15 @@
+study	individual	intervention	measurement	substance	tissue	value	time	time_unit	count	comments	value_unit	count_unit
+Leevy1962	S1	ICG_Inf_0.3	extraction_ratio	indocyanine green	plasma	71.0	45.0	min	1.0	no time point reported, assuming 50 min for steady state	percent	dimensionless
+Leevy1962	S2	ICG_Inf_0.3	extraction_ratio	indocyanine green	plasma	58.0	45.0	min	1.0	no time point reported, assuming 50 min for steady state	percent	dimensionless
+Leevy1962	S3	ICG_Inf_0.3	extraction_ratio	indocyanine green	plasma	66.0	45.0	min	1.0	no time point reported, assuming 50 min for steady state	percent	dimensionless
+Leevy1962	S4	ICG_Inf_0.3	extraction_ratio	indocyanine green	plasma	73.0	45.0	min	1.0	no time point reported, assuming 50 min for steady state	percent	dimensionless
+Leevy1962	S5	ICG_Inf_0.3	extraction_ratio	indocyanine green	plasma	79.0	45.0	min	1.0	no time point reported, assuming 50 min for steady state	percent	dimensionless
+Leevy1962	S6	ICG_Inf_0.3	extraction_ratio	indocyanine green	plasma	74.0	45.0	min	1.0	no time point reported, assuming 50 min for steady state	percent	dimensionless
+Leevy1962	S7	ICG_Inf_0.3	extraction_ratio	indocyanine green	plasma	83.0	45.0	min	1.0	no time point reported, assuming 50 min for steady state	percent	dimensionless
+Leevy1962	S8	ICG_Inf_0.3	extraction_ratio	indocyanine green	plasma	70.0	45.0	min	1.0	no time point reported, assuming 50 min for steady state	percent	dimensionless
+Leevy1962	S9	ICG_Inf_0.3	extraction_ratio	indocyanine green	plasma	82.0	45.0	min	1.0	no time point reported, assuming 50 min for steady state	percent	dimensionless
+Leevy1962	S10	ICG_Inf_0.3	extraction_ratio	indocyanine green	plasma	60.0	45.0	min	1.0	no time point reported, assuming 50 min for steady state	percent	dimensionless
+Leevy1962	S11	ICG_Inf_0.3	extraction_ratio	indocyanine green	plasma	68.0	45.0	min	1.0	no time point reported, assuming 50 min for steady state	percent	dimensionless
+Leevy1962	S12	ICG_Inf_0.3	extraction_ratio	indocyanine green	plasma	64.0	45.0	min	1.0	no time point reported, assuming 50 min for steady state	percent	dimensionless
+Leevy1962	S13	ICG_Inf_0.3	extraction_ratio	indocyanine green	plasma	76.0	45.0	min	1.0	no time point reported, assuming 50 min for steady state	percent	dimensionless
+Leevy1962	S14	ICG_Inf_0.3	extraction_ratio	indocyanine green	plasma	53.0	45.0	min	1.0	no time point reported, assuming 50 min for steady state	percent	dimensionless

@@ -1,0 +1,20 @@
+study	name	group_count	parent	measurement_type	choice	count	mean	se	unit
+Huet1980	all	15	NA	species	homo sapiens	15	NA	NA	NA
+Huet1980	all	15	NA	overnight fast	Y	15	NA	NA	NA
+Huet1980	all	15	NA	sex	M	13	NA	NA	NA
+Huet1980	all	15	NA	sex	F	2	NA	NA	NA
+Huet1980	all	15	NA	medication	N	15	NA	NA	NA
+Huet1980	all	15	NA	smoking amount (cigarettes)	NA	6	20.0	NA	1/day
+Huet1980	all	15	NA	healthy	Y	9	NA	NA	NA
+Huet1980	controls	9	all	sex	M	8	NA	NA	NA
+Huet1980	controls	9	all	sex	F	1	NA	NA	NA
+Huet1980	controls	9	all	age	NA	9	29.9	1.5	yr
+Huet1980	controls	9	all	weight	NA	9	72.9	2.7	kg
+Huet1980	controls	9	all	medication	N	9	NA	NA	NA
+Huet1980	controls	9	all	smoking amount (cigarettes)	na	4	20.0	NA	1/day
+Huet1980	patients	6	all	sex	M	5	NA	NA	NA
+Huet1980	patients	6	all	sex	F	1	NA	NA	NA
+Huet1980	patients	6	all	age	NA	6	43.8	5.3	yr
+Huet1980	patients	6	all	weight	NA	6	59.5	3.0	kg
+Huet1980	patients	6	all	medication	N	6	NA	NA	NA
+Huet1980	patients	6	all	smoking amount (cigarettes)	NA	2	20.0	NA	1/day

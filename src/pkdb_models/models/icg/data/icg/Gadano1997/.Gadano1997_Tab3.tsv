@@ -1,0 +1,10 @@
+study	count	group	intervention	measurement	tissue	substance	mean	min	max	se	sd	unit	time	time_unit
+Gadano1997	59	Controls	MEP, Fib/Con Inf1, Fib/Con Inf2	hbf	liver	NA	1.35	0.51	3.5	0.07	0.537680202350803	l/min	25	min
+Gadano1997	59	Controls	MEP, Fib/Con Inf1, Fib/Con Inf2	clearance	plasma	indocyanine green	421.0	148.0	751.0	25.0	192.028643696715	ml/min	25	min
+Gadano1997	59	Controls	MEP, Fib/Con Inf1, Fib/Con Inf2	extraction_ratio	plasma	indocyanine green	56.0	27.0	81.0	2.0	15.3622914957372	percent	25	min
+Gadano1997	36	Hepatic Fibrosis	MEP, Fib/Con Inf1, Fib/Con Inf2	hbf	liver	NA	1.04	0.39	1.81	0.06	0.36	l/min	25	min
+Gadano1997	36	Hepatic Fibrosis	MEP, Fib/Con Inf1, Fib/Con Inf2	clearance	plasma	indocyanine green	276.0	90.0	558.0	22.0	132.0	ml/min	25	min
+Gadano1997	36	Hepatic Fibrosis	MEP, Fib/Con Inf1, Fib/Con Inf2	extraction_ratio	plasma	indocyanine green	42.0	12.0	69.0	3.0	18.0	percent	25	min
+Gadano1997	356	Cirrhosis	MEP, Cir Inf1, Cir Inf2	hbf	liver	NA	1.26	0.37	3.3	0.03	0.566038867923396	l/min	25	min
+Gadano1997	356	Cirrhosis	MEP, Cir Inf1, Cir Inf2	clearance	plasma	indocyanine green	182.0	62.0	852.0	5.0	94.339811320566	ml/min	25	min
+Gadano1997	356	Cirrhosis	MEP, Cir Inf1, Cir Inf2	extraction_ratio	plasma	indocyanine green	26.0	10.0	83.0	1.0	18.8679622641132	percent	25	min

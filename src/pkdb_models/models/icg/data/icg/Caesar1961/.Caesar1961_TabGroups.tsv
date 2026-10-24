@@ -1,0 +1,19 @@
+study	name	group_count	parent	measurement	choice	count
+Caesar1961	all	38	NA	species	homo sapiens	38
+Caesar1961	all	38	NA	healthy	Y	10
+Caesar1961	all	38	NA	healthy	N	28
+Caesar1961	all	38	NA	sex	MF	38
+Caesar1961	Controls	10	all	sex	M	8
+Caesar1961	Controls	10	all	sex	F	2
+Caesar1961	Controls	10	all	healthy	Y	10
+Caesar1961	Cirrhosis	17	all	sex	M	11
+Caesar1961	Cirrhosis	17	all	sex	F	6
+Caesar1961	Cirrhosis	17	all	healthy	N	17
+Caesar1961	Cirrhosis	17	all	disease	liver cirrhosis	17
+Caesar1961	Portalveinblock	4	all	sex	M	1
+Caesar1961	Portalveinblock	4	all	sex	F	3
+Caesar1961	Portalveinblock	4	all	healthy	N	4
+Caesar1961	Portalveinblock	4	all	disease	extrahepatic portal obstruction	4
+Caesar1961	Misc	7	all	sex	M	5
+Caesar1961	Misc	7	all	sex	F	2
+Caesar1961	Misc	7	all	healthy	N	7

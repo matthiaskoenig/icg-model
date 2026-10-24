@@ -1,0 +1,4 @@
+study	group	intervention	measurement_type	tissue	substance	mean	mean_se	mean_unit
+Meijer1988	ICG0.5	0.5icg	clearance	plasma	indocyanine green	262.0	51.0	ml/min
+Meijer1988	ICG1.0	1.0icg	clearance	plasma	indocyanine green	287.0	41.0	ml/min
+Meijer1988	ICG2.0	2.0icg	clearance	plasma	indocyanine green	321.0	63.0	ml/min

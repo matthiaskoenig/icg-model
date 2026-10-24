@@ -1,0 +1,25 @@
+study	individual	intervention	measurement_type	tissue	substance	value	unit
+Burns1991	Chronic active	Exp1 Bolus1 ICG, Exp1 Infusion1 ICG	extraction_ratio	plasma	indocyanine green	0.41	dimensionless
+Burns1991	Alcoholic 1	Exp1 Bolus1 ICG, Exp1 Infusion1 ICG	extraction_ratio	plasma	indocyanine green	0.23	dimensionless
+Burns1991	Haemochromatosis	Exp1 Bolus1 ICG, Exp1 Infusion1 ICG	extraction_ratio	plasma	indocyanine green	0.25	dimensionless
+Burns1991	Alcoholic 2	Exp1 Bolus1 ICG, Exp1 Infusion1 ICG	extraction_ratio	plasma	indocyanine green	0.23	dimensionless
+Burns1991	Primary biliary	Exp1 Bolus1 ICG, Exp1 Infusion1 ICG	extraction_ratio	plasma	indocyanine green	0.34	dimensionless
+Burns1991	Wilson‘s disease	Exp1 Bolus1 ICG, Exp1 Infusion1 ICG	extraction_ratio	plasma	indocyanine green	0.61	dimensionless
+Burns1991	Chronic active	Exp1 Bolus1 ICG, Exp1 Infusion1 ICG	hbf	liver	na	921.0	ml/min
+Burns1991	Alcoholic 1	Exp1 Bolus1 ICG, Exp1 Infusion1 ICG	hbf	liver	na	1815.0	ml/min
+Burns1991	Haemochromatosis	Exp1 Bolus1 ICG, Exp1 Infusion1 ICG	hbf	liver	na	960.0	ml/min
+Burns1991	Alcoholic 2	Exp1 Bolus1 ICG, Exp1 Infusion1 ICG	hbf	liver	na	2013.0	ml/min
+Burns1991	Primary biliary	Exp1 Bolus1 ICG, Exp1 Infusion1 ICG	hbf	liver	na	862.0	ml/min
+Burns1991	Wilson‘s disease	Exp1 Bolus1 ICG, Exp1 Infusion1 ICG	hbf	liver	na	573.0	ml/min
+Burns1991	Chronic active	Exp1 Bolus2 ICG	extraction_ratio	plasma	indocyanine green	0.77	dimensionless
+Burns1991	Alcoholic 1	Exp1 Bolus2 ICG	extraction_ratio	plasma	indocyanine green	0.77	dimensionless
+Burns1991	Haemochromatosis	Exp1 Bolus2 ICG	extraction_ratio	plasma	indocyanine green	0.61	dimensionless
+Burns1991	Alcoholic 2	Exp1 Bolus2 ICG	extraction_ratio	plasma	indocyanine green	0.86	dimensionless
+Burns1991	Primary biliary	Exp1 Bolus2 ICG	extraction_ratio	plasma	indocyanine green	0.82	dimensionless
+Burns1991	Wilson‘s disease	Exp1 Bolus2 ICG	extraction_ratio	plasma	indocyanine green	0.84	dimensionless
+Burns1991	Chronic active	Exp1 Bolus2 ICG	hbf	liver	na	490.0	ml/min
+Burns1991	Alcoholic 1	Exp1 Bolus2 ICG	hbf	liver	na	399.0	ml/min
+Burns1991	Haemochromatosis	Exp1 Bolus2 ICG	hbf	liver	na	224.0	ml/min
+Burns1991	Alcoholic 2	Exp1 Bolus2 ICG	hbf	liver	na	429.0	ml/min
+Burns1991	Primary biliary	Exp1 Bolus2 ICG	hbf	liver	na	248.0	ml/min
+Burns1991	Wilson‘s disease	Exp1 Bolus2 ICG	hbf	liver	na	355.0	ml/min

@@ -1,0 +1,14 @@
+study	name	group_count	parent	measurement	choice	mean	sd	min	max	unit	count
+Wakabayashi2004	all	120	NA	species	homo sapiens	NA	NA	NA	NA	NA	120
+Wakabayashi2004	all	120	NA	sex	M	NA	NA	NA	NA	NA	78
+Wakabayashi2004	all	120	NA	sex	F	NA	NA	NA	NA	NA	42
+Wakabayashi2004	all	120	NA	age	NA	63.1	NA	38.0	83.0	yr	120
+Wakabayashi2004	all	120	NA	healthy	N	NA	NA	NA	NA	NA	120
+Wakabayashi2004	all	120	NA	disease	hepatocellular carcinoma	NA	NA	NA	NA	NA	120
+Wakabayashi2004	Grade_A	82	all	child-pugh score	child-pugh class A	NA	NA	NA	NA	NA	82
+Wakabayashi2004	Grade_B	35	all	child-pugh score	child-pugh class B	NA	NA	NA	NA	NA	35
+Wakabayashi2004	Grade_C	3	all	child-pugh score	child-pugh class C	NA	NA	NA	NA	NA	3
+Wakabayashi2004	Grade_A_Survivors	68	Grade_A	child-pugh score	child-pugh class A	NA	NA	NA	NA	NA	68
+Wakabayashi2004	Grade_A_Nonsurvivors	13	Grade_A	child-pugh score	child-pugh class A	NA	NA	NA	NA	NA	13
+Wakabayashi2004	Grade_B_Survivors	26	Grade_B	child-pugh score	child-pugh class B	NA	NA	NA	NA	NA	26
+Wakabayashi2004	Grade_B_Nonsurvivors	9	Grade_B	child-pugh score	child-pugh class B	NA	NA	NA	NA	NA	9

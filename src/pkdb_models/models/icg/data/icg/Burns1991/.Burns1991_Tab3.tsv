@@ -1,0 +1,19 @@
+study	individual	intervention	measurement_type	tissue	substance	label	time	time_unit	value	unit
+Burns1991	Patient 1	Exp2 Bolus1 ICG	clearance	plasma	indocyanine green	Patient 1_clearance	20	min	236	ml/min
+Burns1991	Patient 2	Exp2 Bolus1 ICG	clearance	plasma	indocyanine green	Patient 2_clearance	20	min	138	ml/min
+Burns1991	Patient 3	Exp2 Bolus1 ICG	clearance	plasma	indocyanine green	Patient 3_clearance	20	min	136	ml/min
+Burns1991	Patient 4	Exp2 Bolus1 ICG	clearance	plasma	indocyanine green	Patient 4_clearance	20	min	336	ml/min
+Burns1991	Patient 5	Exp2 Bolus1 ICG	clearance	plasma	indocyanine green	Patient 5_clearance	20	min	180	ml/min
+Burns1991	Patient 6	Exp2 Bolus1 ICG	clearance	plasma	indocyanine green	Patient 6_clearance	20	min	356	ml/min
+Burns1991	Patient 1	Exp2 Bolus1 ICG	clearance	plasma	indocyanine green	Patient 1_clearance	60	min	186	ml/min
+Burns1991	Patient 2	Exp2 Bolus1 ICG	clearance	plasma	indocyanine green	Patient 2_clearance	60	min	121	ml/min
+Burns1991	Patient 3	Exp2 Bolus1 ICG	clearance	plasma	indocyanine green	Patient 3_clearance	60	min	150	ml/min
+Burns1991	Patient 4	Exp2 Bolus1 ICG	clearance	plasma	indocyanine green	Patient 4_clearance	60	min	288	ml/min
+Burns1991	Patient 5	Exp2 Bolus1 ICG	clearance	plasma	indocyanine green	Patient 5_clearance	60	min	171	ml/min
+Burns1991	Patient 6	Exp2 Bolus1 ICG	clearance	plasma	indocyanine green	Patient 6_clearance	60	min	310	ml/min
+Burns1991	Patient 1	Exp2 Bolus1 ICG	clearance	plasma	indocyanine green	Patient 1_clearance	2880	min	101	ml/min
+Burns1991	Patient 2	Exp2 Bolus1 ICG	clearance	plasma	indocyanine green	Patient 2_clearance	1440	min	93	ml/min
+Burns1991	Patient 3	Exp2 Bolus1 ICG	clearance	plasma	indocyanine green	Patient 3_clearance	1440	min	107	ml/min
+Burns1991	Patient 4	Exp2 Bolus1 ICG	clearance	plasma	indocyanine green	Patient 4_clearance	2880	min	94	ml/min
+Burns1991	Patient 5	Exp2 Bolus1 ICG	clearance	plasma	indocyanine green	Patient 5_clearance	360	min	157	ml/min
+Burns1991	Patient 6	Exp2 Bolus1 ICG	clearance	plasma	indocyanine green	Patient 6_clearance	1680	min	213	ml/min

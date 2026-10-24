@@ -1,0 +1,9 @@
+study	individual	count	label	measurement_type	substance	tissue	intervention	time	time_unit	value	value_unit	count_unit
+Niemann2000	I1	1	Control	concentration	indocyanine green	arterial blood	ICG, APY, FEN	2.2917325	min	0.0017122861473043872	mole/meter^3	dimensionless
+Niemann2000	I1	1	Control	concentration	indocyanine green	arterial blood	ICG, APY, FEN	2.788156	min	0.0015448155966416256	mole/meter^3	dimensionless
+Niemann2000	I1	1	Control	concentration	indocyanine green	arterial blood	ICG, APY, FEN	3.2840223	min	0.0015070316979191743	mole/meter^3	dimensionless
+Niemann2000	I1	1	Control	concentration	indocyanine green	arterial blood	ICG, APY, FEN	3.7913144	min	0.0013420766297496472	mole/meter^3	dimensionless
+Niemann2000	I1	1	Control	concentration	indocyanine green	arterial blood	ICG, APY, FEN	4.794705	min	0.0011285844804062846	mole/meter^3	dimensionless
+Niemann2000	I1	1	Control	concentration	indocyanine green	arterial blood	ICG, APY, FEN	5.775476	min	0.0011023728334574902	mole/meter^3	dimensionless
+Niemann2000	I1	1	Control	concentration	indocyanine green	arterial blood	ICG, APY, FEN	7.793683	min	0.0007116249901970217	mole/meter^3	dimensionless
+Niemann2000	I1	1	Control	concentration	indocyanine green	arterial blood	ICG, APY, FEN	9.78955	min	0.0005131435431536236	mole/meter^3	dimensionless

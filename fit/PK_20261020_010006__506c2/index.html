@@ -1,0 +1,2124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PK_20261020_010006__506c2 | sbmlsim fit report</title>
+<style>
+:root {
+  --bg: #ffffff; --bg-soft: #f6f7f9; --bg-card: #ffffff;
+  --fg: #1b1f24; --fg-soft: #5b6472; --line: #e3e6ea;
+  --accent: #3b5bdb; --training: #2f9e44; --validation: #1c7ed6; --outlier: #e8590c;
+  --excluded: #868e96;
+  --radius: 10px; --shadow: 0 1px 2px rgba(16,24,40,.06), 0 1px 3px rgba(16,24,40,.1);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14171c; --bg-soft: #1a1e24; --bg-card: #1a1e24;
+    --fg: #e6e9ee; --fg-soft: #9aa4b2; --line: #2a3038;
+    --accent: #748ffc; --training: #51cf66; --validation: #4dabf7; --outlier: #ff922b;
+    --excluded: #adb5bd;
+    --shadow: none;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+code, .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .92em; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+header.top {
+  position: sticky; top: 0; z-index: 20; background: var(--bg);
+  border-bottom: 1px solid var(--line); padding: 14px 24px 0;
+}
+.top .row { display: flex; flex-wrap: wrap; gap: 12px; align-items: baseline; }
+.top h1 { margin: 0; font-size: 20px; font-weight: 650; letter-spacing: -.01em; }
+.top .sub { color: var(--fg-soft); font-size: 13px; }
+.badges { display: flex; flex-wrap: wrap; gap: 8px; margin-left: auto; }
+.badge {
+  background: var(--bg-soft); border: 1px solid var(--line); border-radius: 999px;
+  padding: 2px 10px; font-size: 12px; color: var(--fg-soft); white-space: nowrap;
+}
+.badge b { color: var(--fg); font-weight: 600; }
+.badge.failed, .badge.failed b { color: var(--outlier); border-color: var(--outlier); }
+nav.sections { display: flex; gap: 4px; margin-top: 12px; }
+nav.sections a {
+  padding: 8px 14px; border-bottom: 2px solid transparent; color: var(--fg-soft);
+  font-size: 14px; font-weight: 550;
+}
+nav.sections a.active { color: var(--fg); border-bottom-color: var(--accent); }
+.search { display: flex; gap: 8px; align-items: center; padding: 10px 0 12px; }
+.search input {
+  flex: 1; max-width: 460px; padding: 8px 12px; font-size: 14px; color: var(--fg);
+  background: var(--bg-soft); border: 1px solid var(--line); border-radius: 8px;
+}
+.search input:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+.chip {
+  border: 1px solid var(--line); background: var(--bg-soft); color: var(--fg-soft);
+  border-radius: 999px; padding: 5px 12px; font-size: 12.5px; cursor: pointer;
+}
+.chip[aria-pressed="true"] { color: #fff; border-color: transparent; }
+.chip[data-kind="training"][aria-pressed="true"] { background: var(--training); }
+.chip[data-kind="validation"][aria-pressed="true"] { background: var(--validation); }
+.chip[data-kind="outlier"][aria-pressed="true"] { background: var(--outlier); }
+.chip[data-kind="excluded"][aria-pressed="true"] { background: var(--excluded); }
+#hits { color: var(--fg-soft); font-size: 12.5px; margin-left: auto; }
+
+main { padding: 24px; max-width: 1400px; margin: 0 auto; }
+section { margin-bottom: 44px; scroll-margin-top: 150px; }
+section > h2 {
+  font-size: 17px; font-weight: 650; margin: 0 0 4px; padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+}
+h3 { font-size: 14px; font-weight: 600; color: var(--fg-soft); margin: 26px 0 10px;
+     text-transform: uppercase; letter-spacing: .04em; }
+.card {
+  background: var(--bg-card); border: 1px solid var(--line); border-radius: var(--radius);
+  box-shadow: var(--shadow); padding: 16px; margin-bottom: 16px;
+}
+/* a heading which opens a card sits at the padding of the card */
+.card > h3:first-child { margin-top: 0; }
+.grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+        margin-bottom: 16px; }
+/* the gap of the grid is the space between its cards */
+.grid > .card { margin-bottom: 0; }
+.card.wide { grid-column: 1 / -1; }
+
+table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+/* two tables in one card, e.g. the networks and their arrays */
+table + table { margin-top: 24px; }
+th, td { text-align: left; padding: 7px 12px 7px 0; border-bottom: 1px solid var(--line); }
+th { color: var(--fg-soft); font-weight: 600; white-space: nowrap; }
+th[data-sort] { cursor: pointer; user-select: none; }
+th[data-sort]:hover { color: var(--fg); }
+th[data-sort]::after { content: " ⇅"; opacity: .35; }
+th[data-sort].asc::after { content: " ↑"; opacity: 1; }
+th[data-sort].desc::after { content: " ↓"; opacity: 1; }
+td.num, th.num { text-align: right; padding-right: 18px; font-variant-numeric: tabular-nums; }
+tbody tr:hover { background: var(--bg-soft); }
+tr.total td { font-weight: 650; border-top: 2px solid var(--line); }
+
+.kv { display: grid; grid-template-columns: max-content 1fr; gap: 4px 20px; font-size: 13.5px;
+      margin: 0; }
+.kv dt { color: var(--fg-soft); }
+.kv dd { margin: 0; word-break: break-word; white-space: pre-line; }
+
+.tag { border-radius: 999px; padding: 1px 9px; font-size: 11.5px; font-weight: 600; color: #fff; }
+.tag.training { background: var(--training); }
+.tag.validation { background: var(--validation); }
+.tag.outlier { background: var(--outlier); }
+.tag.excluded { background: var(--excluded); }
+.warn { color: var(--outlier); }
+
+/* what a value means, on the header of a column or next to a figure */
+.hint {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 14px; height: 14px; margin-left: 4px; border-radius: 50%;
+  border: 1px solid var(--line); color: var(--fg-soft);
+  font-size: 10px; font-weight: 700; line-height: 1; cursor: help;
+  position: relative; vertical-align: middle; user-select: none;
+}
+.hint:hover, .hint:focus { border-color: var(--accent); color: var(--accent); }
+.hint::after {
+  content: attr(data-tip);
+  position: absolute; bottom: calc(100% + 8px); left: 50%;
+  transform: translateX(-50%);
+  width: max-content; max-width: 320px; padding: 8px 10px;
+  border-radius: 6px; border: 1px solid var(--line);
+  background: var(--bg); color: var(--fg); box-shadow: 0 4px 16px rgb(0 0 0 / 18%);
+  font-size: 12px; font-weight: 400; line-height: 1.45; text-align: left;
+  white-space: normal; opacity: 0; visibility: hidden; transition: opacity .12s;
+  z-index: 20; pointer-events: none;
+}
+.hint:hover::after, .hint:focus::after { opacity: 1; visibility: visible; }
+/* a tooltip of the last columns would leave the page */
+td:last-child .hint::after, th:last-child .hint::after { left: auto; right: 0; transform: none; }
+/* on a phone a wide table scrolls inside its card and not the page; the
+   tooltips of its header open downwards, into the table, not above the card */
+@media (max-width: 700px) {
+  .card { overflow-x: auto; }
+  th .hint::after { bottom: auto; top: calc(100% + 8px); }
+  /* the header of a phone is not sticky, it would cover half of the screen,
+     and its rows wrap; the gutter is 16px */
+  header.top { position: static; padding: 12px 16px 0; }
+  main { padding: 16px; }
+  footer { padding: 8px 16px 24px; }
+  section { scroll-margin-top: 16px; }
+  nav.sections { overflow-x: auto; }
+  nav.sections a { padding: 8px 10px; white-space: nowrap; }
+  .search { flex-wrap: wrap; }
+  .search input { flex-basis: 100%; max-width: none; }
+}
+
+figure { margin: 0; }
+figure img {
+  width: 100%; height: auto; background: #fff; border: 1px solid var(--line);
+  border-radius: 8px; cursor: zoom-in;
+}
+figcaption { color: var(--fg-soft); font-size: 12.5px; margin-top: 6px; }
+
+.mapping { }
+.mapping header { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; margin-bottom: 10px; }
+.mapping header .name { font-weight: 650; }
+.mapping header .exp { color: var(--fg-soft); font-size: 13px; }
+.mapping .metrics { margin-left: auto; display: flex; gap: 14px; font-size: 12.5px; color: var(--fg-soft); }
+.mapping .metrics b { color: var(--fg); font-weight: 600; }
+.hidden { display: none !important; }
+.failed { color: var(--outlier); }
+.empty { color: var(--fg-soft); font-style: italic; padding: 16px 0; }
+
+pre.code {
+  margin: 0; padding: 14px 16px; overflow-x: auto; max-height: 70vh;
+  background: var(--bg-soft); border: 1px solid var(--line); border-radius: 8px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12.5px; line-height: 1.5; tab-size: 4;
+}
+#lightbox {
+  position: fixed; inset: 0; background: rgba(8,10,14,.86); z-index: 50;
+  display: none; align-items: center; justify-content: center; padding: 24px; cursor: zoom-out;
+}
+#lightbox.open { display: flex; }
+#lightbox img { max-width: 100%; max-height: 100%; background: #fff; border-radius: 8px; }
+footer { color: var(--fg-soft); font-size: 12.5px; padding: 8px 24px 32px; max-width: 1400px; margin: 0 auto; }
+</style>
+<style>
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+/* the groupings of the evaluation, one shown at a time */
+.grouping-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; }
+.grouping-tab {
+  border: 1px solid var(--line); background: var(--bg-soft); color: var(--fg-soft);
+  border-radius: 999px; padding: 5px 12px; font-size: 12.5px; cursor: pointer;
+}
+.grouping-tab.active { background: var(--accent); border-color: transparent; color: #fff; }
+.grouping-panel { display: none; }
+.grouping-panel.active { display: block; }
+.warn.card { border-color: var(--outlier); }
+/* a long id of a fit mapping breaks, its table stays in its card */
+.wrap { overflow-wrap: anywhere; min-width: 12em; }
+
+/* the report document: a text to read, numbered tables, equations, figures;
+   its card has the width of the other cards, its lines a width to read */
+.document { padding: 24px 32px; line-height: 1.6; overflow-x: auto; }
+.document > * { max-width: 960px; }
+.document .doc-head { display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: baseline; margin-bottom: 12px; }
+.document .doc-title { margin: 0; font-size: 19px; font-weight: 650; letter-spacing: -.01em; }
+.document .downloads { margin-left: auto; color: var(--fg-soft); font-size: 13px; }
+.document section { margin-bottom: 28px; }
+.document section section { margin-bottom: 18px; }
+.document h3 { margin: 24px 0 8px; color: var(--fg); font-size: 15.5px; font-weight: 650;
+               text-transform: none; letter-spacing: 0; }
+.document h4 { margin: 18px 0 6px; font-size: 14.5px; font-weight: 600; }
+.document p { margin: 8px 0; }
+.document table { width: auto; min-width: 60%; margin: 18px 0; }
+.document caption { caption-side: top; text-align: left; color: var(--fg-soft);
+                    font-size: 13px; line-height: 1.5; padding-bottom: 8px; }
+.document th, .document td { padding: 5px 16px 5px 0; }
+.document .equation { display: flex; gap: 16px; align-items: center; margin: 14px 0; overflow-x: auto; }
+.document .equation math { flex: 1; }
+.document .eqno { color: var(--fg-soft); }
+.document figure { margin: 20px 0; }
+.document figure img { width: auto; max-width: 100%; }
+.document #references ol { margin: 0; padding-left: 1.8em; font-size: 13.5px; }
+.document #references li { margin-bottom: 4px; }
+@media (max-width: 700px) {
+  .document { padding: 16px; }
+  .document .downloads { margin-left: 0; }
+}
+</style>
+</head>
+<body data-items="mappings">
+
+<header class="top">
+  <div class="row">
+    <h1>PK_20261020_010006__506c2</h1>
+    <span class="sub">PK</span>
+    <div class="badges">
+<span class="badge">mappings <b>34</b></span><span class="badge">parameters <b>5</b></span><span class="badge">cost <b>14.0966</b></span><span class="badge">runs <b>3</b></span><span class="badge">identifiable <b>4/5</b></span>    </div>
+  </div>
+  <nav class="sections">
+    <a href="#report" data-tab="report" class="active">Report</a>
+    <a href="#mappings" data-tab="mappings">Fit mappings</a>
+  </nav>
+  <div class="search">
+    <input id="search" type="search" placeholder="Search parameters, mappings, metrics …" autocomplete="off">
+    <button class="chip" data-kind="training" aria-pressed="true">training</button>
+    <button class="chip" data-kind="validation" aria-pressed="true">validation</button>
+    <button class="chip" data-kind="outlier" aria-pressed="true">outlier</button>
+    <span id="hits"></span>
+  </div>
+</header>
+
+<main>
+<div id="report" class="tab-panel active" data-panel="report">
+<article class="card document">
+  <header class="doc-head">
+    <p class="doc-title">Indocyanine green PBPK model: fit PK</p>
+<span class="downloads"><a href="report.pdf">PDF</a> · <a href="report.typ">Typst</a> · <a href="report.tex">LaTeX</a> · <a href="report_standalone.tex">LaTeX document</a> · <a href="references.bib">BibTeX</a></span>  </header>
+  <section>
+<h2>Methods: Indocyanine green PBPK model: fit PK</h2>
+<section>
+<h3>Parameters and data</h3>
+<p>5 parameters were optimized: Vmax for icg import (<code>LI__ICGIM_Vmax</code>), rate of the icg reflux into plasma (<code>LI__ICGEX_k</code>), Vmax bile export icg (<code>LI__ICGLI2CA_Vmax</code>), Km bile export icg (<code>LI__ICGLI2CA_Km</code>) and rate of the icg bile transport (<code>LI__ICGLI2BI_k</code>).</p>
+<p>A fit mapping is a curve of a study, the data and the observable of the model it is compared with. The fit has 20 fit mappings of training data with 93 data points, whose residuals enter the objective; 11 fit mappings of validation data with 48 data points, which were simulated and evaluated with the fitted parameters but not fitted; and 3 fit mappings of outliers with 32 data points, data the fit dropped as not usable, which were evaluated like the validation data so that the decision to drop them can be checked. The fit was set up and run with sbmlsim [<a href="#ref-Koenig2026_sbmlsim">1</a>].</p>
+</section>
+<section>
+<h3>Objective function</h3>
+<p>The parameters were estimated by minimizing the objective function</p>
+<div class="equation"><math display="block"><mrow><mi>F</mi><mo stretchy="false">&#x00028;</mo><mover><mrow><mi>p</mi></mrow><mo stretchy="true">&#x02192;</mo></mover><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><munder><mo>&#x02211;</mo><mrow><mi>k</mi></mrow></munder><munder><mo>&#x02211;</mo><mrow><mi>i</mi></mrow></munder><mi>&#x003C1;</mi><mrow><mo stretchy="true" fence="true" form="prefix">&#x00028;</mo><msub><mi>w</mi><mrow><mi>i</mi><mo>&#x0002C;</mo><mi>k</mi></mrow></msub><mspace width="0.167em" /><msub><mi>r</mi><mrow><mi>i</mi><mo>&#x0002C;</mo><mi>k</mi></mrow></msub><mo stretchy="false">&#x00028;</mo><mover><mrow><mi>p</mi></mrow><mo stretchy="true">&#x02192;</mo></mover><msup><mo stretchy="false">&#x00029;</mo><mn>2</mn></msup><mo stretchy="true" fence="true" form="postfix">&#x00029;</mo></mrow></mrow></math><span class="eqno">(1)</span></div>
+<p>where <math display="inline"><mrow><mi>k</mi></mrow></math> runs over the fit mappings of the training data and <math display="inline"><mrow><mi>i</mi></mrow></math> over their data points, <math display="inline"><mrow><msub><mi>r</mi><mrow><mi>i</mi><mo>&#x0002C;</mo><mi>k</mi></mrow></msub></mrow></math> is the residual, <math display="inline"><mrow><msub><mi>w</mi><mrow><mi>i</mi><mo>&#x0002C;</mo><mi>k</mi></mrow></msub><mo>&#x0003D;</mo><msub><mi>w</mi><mi>k</mi></msub><mspace width="0.167em" /><msubsup><mi>w</mi><mrow><mi>i</mi><mo>&#x0002C;</mo><mi>k</mi></mrow><mrow><mi>p</mi></mrow></msubsup></mrow></math> the weight of the data point and <math display="inline"><mrow><mi>&#x003C1;</mi></mrow></math> the loss function, applied to the squared weighted residual <math display="inline"><mrow><mi>z</mi><mo>&#x0003D;</mo><msub><mi>w</mi><mrow><mi>i</mi><mo>&#x0002C;</mo><mi>k</mi></mrow></msub><mspace width="0.167em" /><msubsup><mi>r</mi><mrow><mi>i</mi><mo>&#x0002C;</mo><mi>k</mi></mrow><mn>2</mn></msubsup></mrow></math>. The loss function is linear, <math display="inline"><mrow><mi>&#x003C1;</mi><mo stretchy="false">&#x00028;</mo><mi>z</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><mi>z</mi></mrow></math>, i.e. a standard least squares problem.</p>
+<p>The residuals are normalized by the mean <math display="inline"><mrow><msub><mover><mrow><mi>y</mi></mrow><mo accent="true">&#x02015;</mo></mover><mi>k</mi></msub></mrow></math> of the data of their curve, which makes curves of different quantities and magnitudes comparable:</p>
+<div class="equation"><math display="block"><mrow><msub><mi>r</mi><mrow><mi>i</mi><mo>&#x0002C;</mo><mi>k</mi></mrow></msub><mo>&#x0003D;</mo><mfrac><mrow><msub><mi>y</mi><mrow><mi>i</mi><mo>&#x0002C;</mo><mi>k</mi></mrow></msub><mo>&#x02212;</mo><msub><mi>f</mi><mi>k</mi></msub><mo stretchy="false">&#x00028;</mo><msub><mi>x</mi><mrow><mi>i</mi><mo>&#x0002C;</mo><mi>k</mi></mrow></msub><mo>&#x0002C;</mo><mover><mrow><mi>p</mi></mrow><mo stretchy="true">&#x02192;</mo></mover><mo stretchy="false">&#x00029;</mo></mrow><mrow><msub><mover><mrow><mi>y</mi></mrow><mo accent="true">&#x02015;</mo></mover><mi>k</mi></msub></mrow></mfrac></mrow></math><span class="eqno">(2)</span></div>
+<p>The weight of curve <math display="inline"><mrow><mi>k</mi></mrow></math> is <math display="inline"><mrow><msub><mi>w</mi><mi>k</mi></msub><mo>&#x0003D;</mo><msub><mi>n</mi><mi>k</mi></msub><mo>&#x0002F;</mo><msub><mi>N</mi><mi>k</mi></msub></mrow></math>, the weight <math display="inline"><mrow><msub><mi>n</mi><mi>k</mi></msub></mrow></math> of its fit mapping (the weight its fit mapping collection assigns, 1 by default, or, for a collection which uses the weights of its mappings, the weight of the mapping, by default the number of subjects of its data) divided by the number <math display="inline"><mrow><msub><mi>N</mi><mi>k</mi></msub></mrow></math> of its data points.</p>
+<p>A data point is weighted with the inverse of its coefficient of variation, <math display="inline"><mrow><msubsup><mi>w</mi><mrow><mi>i</mi><mo>&#x0002C;</mo><mi>k</mi></mrow><mrow><mi>p</mi></mrow></msubsup><mo>&#x0003D;</mo><mo stretchy="false">&#x0007C;</mo><msub><mi>y</mi><mrow><mi>i</mi><mo>&#x0002C;</mo><mi>k</mi></mrow></msub><mo stretchy="false">&#x0007C;</mo><mo>&#x0002F;</mo><msub><mi>&#x003C3;</mi><mrow><mi>i</mi><mo>&#x0002C;</mo><mi>k</mi></mrow></msub></mrow></math>, with <math display="inline"><mrow><msub><mi>&#x003C3;</mi><mrow><mi>i</mi><mo>&#x0002C;</mo><mi>k</mi></mrow></msub></mrow></math> the standard deviation of the data point, or its standard error for data without a standard deviation. An error of zero is missing, a missing error of a curve with errors is replaced by the largest error of the curve, and the data points of a curve without errors have the weight <math display="inline"><mrow><msubsup><mi>w</mi><mrow><mi>i</mi><mo>&#x0002C;</mo><mi>k</mi></mrow><mrow><mi>p</mi></mrow></msubsup><mo>&#x0003D;</mo><mn>2</mn></mrow></math>, the weight of a coefficient of variation of 0.5.</p>
+</section>
+<section>
+<h3>Optimization</h3>
+<p>The optimizer searched the parameters in log10 space within their bounds; bounds, values and intervals are given in the units of the fit parameters, the units of the table of the parameters.</p>
+<p>The objective was minimized in 3 runs with differential evolution [<a href="#ref-Storn1997">2</a>] of SciPy [<a href="#ref-Virtanen2020">3</a>] within the bounds of the parameters, with the strategy <code>best1bin</code>, a population of 15 times the number of parameters, at most 1000 generations, the relative tolerance 0.01 of convergence, the recombination constant 0.7 and a mutation dithered between 0.5 and 1. The initial population of a run was drawn by latin hypercube sampling [<a href="#ref-McKay1979">4</a>], with a seed of every run derived from the seed 1234 of the fit. The best member of the final population was polished with the L-BFGS-B method of SciPy.</p>
+<p>The convergence of the runs was assessed from the traces of their cost and the waterfall plot of their final costs, and the parameter set with the lowest cost was used.</p>
+<p>The models were simulated with libRoadRunner [<a href="#ref-Welsh2023">5</a>] and its integrator CVODE [<a href="#ref-Hindmarsh2005">6</a>] with the relative tolerance <math display="inline"><mrow><msup><mn>10</mn><mrow><mo>&#x02212;</mo><mn>7</mn></mrow></msup></mrow></math> and the absolute tolerances <math display="inline"><mrow><msup><mn>10</mn><mrow><mo>&#x02212;</mo><mn>12</mn></mrow></msup></mrow></math> of an amount, <math display="inline"><mrow><msup><mn>10</mn><mrow><mo>&#x02212;</mo><mn>12</mn></mrow></msup></mrow></math> of a concentration and <math display="inline"><mrow><msup><mn>10</mn><mrow><mo>&#x02212;</mo><mn>6</mn></mrow></msup></mrow></math> of the other states, which for a species in a concentration is multiplied by the initial volume of its compartment. It ran with the variable step size of libRoadRunner, i.e. with an output at every step of the integrator. A data point at the time of a change after the start of a simulation, e.g. a dose or the reset of a collection, was compared with the state before the change, except the first data point of a curve with data at later times, which starts a collection and was compared with the state after the change.</p>
+</section>
+<section>
+<h3>Goodness of fit</h3>
+<p>The goodness of fit is given per kind of data (training data, validation data and outliers) by metrics over its <math display="inline"><mrow><mi>n</mi></mrow></math> data points with the residuals <math display="inline"><mrow><msub><mi>e</mi><mi>i</mi></msub><mo>&#x0003D;</mo><msub><mi>y</mi><mi>i</mi></msub><mo>&#x02212;</mo><mi>f</mi><mo stretchy="false">&#x00028;</mo><msub><mi>x</mi><mi>i</mi></msub><mo>&#x0002C;</mo><mover accent="true"><mrow><mover><mrow><mi>p</mi></mrow><mo stretchy="true">&#x02192;</mo></mover></mrow><mo>&#x0005E;</mo></mover><mo stretchy="false">&#x00029;</mo></mrow></math> at the fitted parameters <math display="inline"><mrow><mover accent="true"><mrow><mover><mrow><mi>p</mi></mrow><mo stretchy="true">&#x02192;</mo></mover></mrow><mo>&#x0005E;</mo></mover></mrow></math>, the mean squared error, its root and the root mean squared error normalized by the mean <math display="inline"><mrow><msub><mover><mrow><mi>y</mi></mrow><mo accent="true">&#x02015;</mo></mover><mrow><mi>k</mi><mo stretchy="false">&#x00028;</mo><mi>i</mi><mo stretchy="false">&#x00029;</mo></mrow></msub></mrow></math> of the data of the curve of a point:</p>
+<div class="equation"><math display="block"><mrow><mrow><mi mathvariant="normal">M</mi><mi mathvariant="normal">S</mi><mi mathvariant="normal">E</mi></mrow><mo>&#x0003D;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mi>n</mi></mrow></mfrac><munderover><mo>&#x02211;</mo><mrow><mi>i</mi><mo>&#x0003D;</mo><mn>1</mn></mrow><mrow><mi>n</mi></mrow></munderover><msubsup><mi>e</mi><mi>i</mi><mn>2</mn></msubsup><mo>&#x0002C;</mo><mspace width="1em" /><mrow><mi mathvariant="normal">R</mi><mi mathvariant="normal">M</mi><mi mathvariant="normal">S</mi><mi mathvariant="normal">E</mi></mrow><mo>&#x0003D;</mo><msqrt><mrow><mrow><mi mathvariant="normal">M</mi><mi mathvariant="normal">S</mi><mi mathvariant="normal">E</mi></mrow></mrow></msqrt><mo>&#x0002C;</mo><mspace width="1em" /><mrow><mi mathvariant="normal">N</mi><mi mathvariant="normal">R</mi><mi mathvariant="normal">M</mi><mi mathvariant="normal">S</mi><mi mathvariant="normal">E</mi></mrow><mo>&#x0003D;</mo><msqrt><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mi>n</mi></mrow></mfrac><msubsup><mo>&#x02211;</mo><mrow><mi>i</mi><mo>&#x0003D;</mo><mn>1</mn></mrow><mrow><mi>n</mi></mrow></msubsup><msup><mrow><mo stretchy="true" fence="true" form="prefix">&#x00028;</mo><mfrac><mrow><msub><mi>e</mi><mi>i</mi></msub></mrow><mrow><msub><mover><mrow><mi>y</mi></mrow><mo accent="true">&#x02015;</mo></mover><mrow><mi>k</mi><mo stretchy="false">&#x00028;</mo><mi>i</mi><mo stretchy="false">&#x00029;</mo></mrow></msub></mrow></mfrac><mo stretchy="true" fence="true" form="postfix">&#x00029;</mo></mrow><mn>2</mn></msup></mrow></msqrt></mrow></math><span class="eqno">(3)</span></div>
+<p>The root mean square of the residuals of the objective, i.e. what the fit minimizes, and the coefficient of determination:</p>
+<div class="equation"><math display="block"><mrow><msub><mrow><mi mathvariant="normal">R</mi><mi mathvariant="normal">M</mi><mi mathvariant="normal">S</mi><mi mathvariant="normal">E</mi></mrow><mi>w</mi></msub><mo>&#x0003D;</mo><msqrt><mrow><mfrac><mrow><mn>1</mn></mrow><mrow><mi>n</mi></mrow></mfrac><msubsup><mo>&#x02211;</mo><mrow><mi>i</mi><mo>&#x0003D;</mo><mn>1</mn></mrow><mrow><mi>n</mi></mrow></msubsup><mi>&#x003C1;</mi><mrow><mo stretchy="true" fence="true" form="prefix">&#x00028;</mo><msub><mi>w</mi><mi>i</mi></msub><mspace width="0.167em" /><msubsup><mi>r</mi><mi>i</mi><mn>2</mn></msubsup><mo stretchy="true" fence="true" form="postfix">&#x00029;</mo></mrow></mrow></msqrt><mo>&#x0002C;</mo><mspace width="1em" /><msup><mi>R</mi><mn>2</mn></msup><mo>&#x0003D;</mo><mn>1</mn><mo>&#x02212;</mo><mfrac><mrow><msub><mo>&#x02211;</mo><mrow><mi>i</mi></mrow></msub><msubsup><mi>e</mi><mi>i</mi><mn>2</mn></msubsup></mrow><mrow><msub><mo>&#x02211;</mo><mrow><mi>i</mi></mrow></msub><msup><mrow><mo stretchy="true" fence="true" form="prefix">&#x00028;</mo><msub><mi>y</mi><mi>i</mi></msub><mo>&#x02212;</mo><mover><mrow><mi>y</mi></mrow><mo accent="true">&#x02015;</mo></mover><mo stretchy="true" fence="true" form="postfix">&#x00029;</mo></mrow><mn>2</mn></msup></mrow></mfrac></mrow></math><span class="eqno">(4)</span></div>
+<p>The predictions of a non-linear model are no linear regression of the data, so <math display="inline"><mrow><msup><mi>R</mi><mn>2</mn></msup></mrow></math> can be negative: the prediction is worse than the mean of the data. The information criteria of Akaike [<a href="#ref-Akaike1974">7</a>] and Schwarz [<a href="#ref-Schwarz1978">8</a>] with the number <math display="inline"><mrow><msub><mi>n</mi><mi>p</mi></msub></mrow></math> of fitted parameters are those of a least squares fit with normally distributed residuals, up to an additive constant, so only differences between models fitted to the same data are meaningful:</p>
+<div class="equation"><math display="block"><mrow><mrow><mi mathvariant="normal">A</mi><mi mathvariant="normal">I</mi><mi mathvariant="normal">C</mi></mrow><mo>&#x0003D;</mo><mi>n</mi><mi>ln</mi><mo stretchy="false">&#x00028;</mo><mrow><mi mathvariant="normal">M</mi><mi mathvariant="normal">S</mi><mi mathvariant="normal">E</mi></mrow><mo stretchy="false">&#x00029;</mo><mo>&#x0002B;</mo><mn>2</mn><msub><mi>n</mi><mi>p</mi></msub><mo>&#x0002C;</mo><mspace width="1em" /><mrow><mi mathvariant="normal">B</mi><mi mathvariant="normal">I</mi><mi mathvariant="normal">C</mi></mrow><mo>&#x0003D;</mo><mi>n</mi><mi>ln</mi><mo stretchy="false">&#x00028;</mo><mrow><mi mathvariant="normal">M</mi><mi mathvariant="normal">S</mi><mi mathvariant="normal">E</mi></mrow><mo stretchy="false">&#x00029;</mo><mo>&#x0002B;</mo><msub><mi>n</mi><mi>p</mi></msub><mi>ln</mi><mo stretchy="false">&#x00028;</mo><mi>n</mi><mo stretchy="false">&#x00029;</mo></mrow></math><span class="eqno">(5)</span></div>
+<p>The percentage of the data points whose prediction <math display="inline"><mrow><msub><mi>f</mi><mi>i</mi></msub><mo>&#x0003D;</mo><mi>f</mi><mo stretchy="false">&#x00028;</mo><msub><mi>x</mi><mi>i</mi></msub><mo>&#x0002C;</mo><mover accent="true"><mrow><mover><mrow><mi>p</mi></mrow><mo stretchy="true">&#x02192;</mo></mover></mrow><mo>&#x0005E;</mo></mover><mo stretchy="false">&#x00029;</mo></mrow></math> lies within twofold of the data is taken over the <math display="inline"><mrow><msub><mi>n</mi><mo>&#x0002B;</mo></msub></mrow></math> data points with positive data <math display="inline"><mrow><msub><mi>y</mi><mi>i</mi></msub><mo>&#x0003E;</mo><mn>0</mn></mrow></math> and a positive prediction <math display="inline"><mrow><msub><mi>f</mi><mi>i</mi></msub><mo>&#x0003E;</mo><mn>0</mn></mrow></math>; the others have no ratio and are not counted, and a kind of data without such a point has no percentage:</p>
+<div class="equation"><math display="block"><mrow><msub><mi>P</mi><mn>2</mn></msub><mo>&#x0003D;</mo><mfrac><mrow><mn>100</mn></mrow><mrow><msub><mi>n</mi><mo>&#x0002B;</mo></msub></mrow></mfrac><mrow><mo stretchy="true" fence="true" form="prefix">&#x0007C;</mo><mrow><mo stretchy="true" fence="true" form="prefix">&#x0007B;</mo><mi>i</mi><mi>:</mi><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mo>&#x02264;</mo><mfrac><mrow><msub><mi>f</mi><mi>i</mi></msub></mrow><mrow><msub><mi>y</mi><mi>i</mi></msub></mrow></mfrac><mo>&#x02264;</mo><mn>2</mn><mo stretchy="true" fence="true" form="postfix">&#x0007D;</mo></mrow><mo stretchy="true" fence="true" form="postfix">&#x0007C;</mo></mrow></mrow></math><span class="eqno">(6)</span></div>
+<p>The goodness of fit plot shows the predictions against the data on logarithmic axes, with the lines of twofold <math display="inline"><mrow><mi>f</mi><mo>&#x0003D;</mo><mn>2</mn><mi>y</mi></mrow></math> and <math display="inline"><mrow><mi>f</mi><mo>&#x0003D;</mo><mi>y</mi><mo>&#x0002F;</mo><mn>2</mn></mrow></math>. The Bland-Altman plot [<a href="#ref-Bland1986">9</a>] shows the ratio of prediction and data as <math display="inline"><mrow><msub><mi>d</mi><mi>i</mi></msub><mo>&#x0003D;</mo><msub><mi>log</mi><mrow><mn>10</mn></mrow></msub><mo stretchy="false">&#x00028;</mo><msub><mi>f</mi><mi>i</mi></msub><mo>&#x0002F;</mo><msub><mi>y</mi><mi>i</mi></msub><mo stretchy="false">&#x00029;</mo></mrow></math> against the geometric mean <math display="inline"><mrow><msqrt><mrow><msub><mi>f</mi><mi>i</mi></msub><mspace width="0.167em" /><msub><mi>y</mi><mi>i</mi></msub></mrow></msqrt></mrow></math> for the data points with positive values, with the bias <math display="inline"><mrow><mover><mrow><mi>d</mi></mrow><mo accent="true">&#x02015;</mo></mover></mrow></math> and the limits of agreement <math display="inline"><mrow><mover><mrow><mi>d</mi></mrow><mo accent="true">&#x02015;</mo></mover><mi>&#x000B1;</mi><mn>1.96</mn><mspace width="0.167em" /><msub><mi>s</mi><mi>d</mi></msub></mrow></math>, with the sample standard deviation <math display="inline"><mrow><msub><mi>s</mi><mi>d</mi></msub></mrow></math> of <math display="inline"><mrow><msub><mi>d</mi><mi>i</mi></msub></mrow></math>, of the training data; they are read as the fold factors <math display="inline"><mrow><msup><mn>10</mn><mrow><mover><mrow><mi>d</mi></mrow><mo accent="true">&#x02015;</mo></mover></mrow></msup></mrow></math> and <math display="inline"><mrow><msup><mn>10</mn><mrow><mover><mrow><mi>d</mi></mrow><mo accent="true">&#x02015;</mo></mover><mi>&#x000B1;</mi><mn>1.96</mn><mspace width="0.167em" /><msub><mi>s</mi><mi>d</mi></msub></mrow></msup></mrow></math>.</p>
+</section>
+<section>
+<h3>Identifiability</h3>
+<p>The identifiability of the parameters was analysed with the profile likelihood [<a href="#ref-Raue2009">10</a>, <a href="#ref-Kreutz2013">11</a>]. The profile of a parameter is the lowest objective with the parameter fixed:</p>
+<div class="equation"><math display="block"><mrow><mrow><mi mathvariant="normal">P</mi><mi mathvariant="normal">L</mi></mrow><mo stretchy="false">&#x00028;</mo><msub><mi>p</mi><mi>j</mi></msub><mo stretchy="false">&#x00029;</mo><mo>&#x0003D;</mo><msub><mo>min</mo><mrow><msub><mi>p</mi><mrow><mi>l</mi><mo>&#x02260;</mo><mi>j</mi></mrow></msub></mrow></msub><mi>F</mi><mo stretchy="false">&#x00028;</mo><mover><mrow><mi>p</mi></mrow><mo stretchy="true">&#x02192;</mo></mover><mo stretchy="false">&#x00029;</mo></mrow></math><span class="eqno">(7)</span></div>
+<p>At every point of a scan the other parameters were re-optimized from the previous point with the least squares optimizer of SciPy with the relative step 0.05. A scan ran from the optimum in both directions in the space of the optimizer, with steps in decades of the parameter, starting at 0.1. A step which raised the objective by more than 0.2 of the distance between the objective at the optimum and the threshold was reduced by the factor 2 and repeated, down to 0.01, and the step after one which raised it by less than that divided by the factor was enlarged by the factor, up to 1. A scan stopped at the threshold, at the bound of the parameter, at a point which failed or after 50 points.</p>
+<p>The confidence intervals are the values at which the profile crosses the threshold of the likelihood ratio test</p>
+<div class="equation"><math display="block"><mrow><msub><mi>F</mi><mrow><mrow><mi mathvariant="normal">t</mi><mi mathvariant="normal">h</mi><mi mathvariant="normal">r</mi></mrow></mrow></msub><mo>&#x0003D;</mo><msub><mi>F</mi><mrow><mo>min</mo></mrow></msub><mo>&#x0002B;</mo><mfrac><mrow><msubsup><mi>&#x003C7;</mi><mrow><mi>&#x003B1;</mi></mrow><mn>2</mn></msubsup><mo stretchy="false">&#x00028;</mo><mrow><mi mathvariant="normal">d</mi><mi mathvariant="normal">f</mi></mrow><mo stretchy="false">&#x00029;</mo></mrow><mrow><mn>2</mn></mrow></mfrac></mrow></math><span class="eqno">(8)</span></div>
+<p>with <math display="inline"><mrow><msub><mi>F</mi><mrow><mo>min</mo></mrow></msub></mrow></math> the lowest objective of the fit and of all profiles and <math display="inline"><mrow><msubsup><mi>&#x003C7;</mi><mrow><mi>&#x003B1;</mi></mrow><mn>2</mn></msubsup><mo stretchy="false">&#x00028;</mo><mrow><mi mathvariant="normal">d</mi><mi mathvariant="normal">f</mi></mrow><mo stretchy="false">&#x00029;</mo></mrow></math> the quantile of the <math display="inline"><mrow><msup><mi>&#x003C7;</mi><mn>2</mn></msup></mrow></math> distribution at the confidence level <math display="inline"><mrow><mi>&#x003B1;</mi><mo>&#x0003D;</mo><mn>0.95</mn></mrow></math> with df = 1 degrees of freedom, i.e. 1.92 above the lowest objective. The threshold has this confidence level if <math display="inline"><mrow><mi>F</mi></mrow></math> is the negative log-likelihood of the data up to a constant, i.e. if the weighted residuals are independent and normally distributed with unit variance; otherwise the level is approximate. A crossing is interpolated between two points of the profile, on the logarithm of a parameter on a logarithmic scale. A parameter is identifiable if its profile reaches the threshold within the scan on both sides of the optimum, i.e. its confidence interval is finite; practically non-identifiable towards the lower bound if its profile reaches the threshold above the optimum but not below it within the scan, which ends at the lower bound or after 50 points; practically non-identifiable towards the upper bound if its profile reaches the threshold below the optimum but not above it within the scan, which ends at the upper bound or after 50 points; practically non-identifiable if its profile reaches the threshold on neither side within the scans, which end at the bounds or after 50 points, and is not flat; and structurally non-identifiable if its profile is flat on both sides. A side of a profile is flat if it rises by less than 0.05 of the distance between the lowest objective and the threshold, and a profile with a point which failed or did not converge is not classified. The profile likelihood is preferred over the intervals of the Fisher information, its intervals are invariant under a transformation of the parameters and can be asymmetric [<a href="#ref-Wieland2021">12</a>].</p>
+<p>The Fisher information is the local alternative to the profiles: it is the Gauss-Newton approximation of the curvature of the objective at the optimum, from the Jacobian <math display="inline"><mrow><mi>J</mi></mrow></math> of the weighted residuals of the training data with respect to the parameters <math display="inline"><mrow><mover><mrow><mi>p</mi></mrow><mo stretchy="true">&#x02192;</mo></mover></mrow></math> in the space of the optimizer, computed by central finite differences with the step <math display="inline"><mrow><msub><mi>h</mi><mi>j</mi></msub><mo>&#x0003D;</mo><mi>&#x003F5;</mi><mo>max</mo><mo stretchy="false">&#x00028;</mo><mo stretchy="false">&#x0007C;</mo><msub><mi>p</mi><mi>j</mi></msub><mo stretchy="false">&#x0007C;</mo><mo>&#x0002C;</mo><mn>1</mn><mo stretchy="false">&#x00029;</mo><mo>&#x0002C;</mo><mtext>&#x000A0;</mtext><mi>&#x003F5;</mi><mo>&#x0003D;</mo><msup><mn>10</mn><mrow><mo>&#x02212;</mo><mn>6</mn></mrow></msup></mrow></math> of the parameter <math display="inline"><mrow><msub><mi>p</mi><mi>j</mi></msub></mrow></math>:</p>
+<div class="equation"><math display="block"><mrow><mi>I</mi><mo>&#x0003D;</mo><msup><mi>J</mi><mo>&#x022A4;</mo></msup><mi>J</mi><mo>&#x0002C;</mo><mspace width="1em" /><mrow><mi mathvariant="normal">c</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">v</mi></mrow><mo>&#x0003D;</mo><msup><mi>&#x003C3;</mi><mn>2</mn></msup><msup><mi>I</mi><mrow><mo>&#x02212;</mo><mn>1</mn></mrow></msup><mo>&#x0002C;</mo><mspace width="1em" /><msup><mi>&#x003C3;</mi><mn>2</mn></msup><mo>&#x0003D;</mo><mfrac><mrow><mn>2</mn><mi>F</mi></mrow><mrow><mi>n</mi><mo>&#x02212;</mo><msub><mi>n</mi><mi>p</mi></msub></mrow></mfrac></mrow></math><span class="eqno">(9)</span></div>
+<p>with the number <math display="inline"><mrow><mi>n</mi></mrow></math> of data points of the training data and the number <math display="inline"><mrow><msub><mi>n</mi><mi>p</mi></msub></mrow></math> of parameters. The information has rank 5 of 5, the number of its eigenvalues above <math display="inline"><mrow><msup><mn>10</mn><mrow><mo>&#x02212;</mo><mn>8</mn></mrow></msup></mrow></math> of the largest one, and the condition number 363; the covariance of an information of a lower rank is computed with the pseudo-inverse. The Wald intervals are <math display="inline"><mrow><msub><mover accent="true"><mrow><mi>p</mi></mrow><mo>&#x0005E;</mo></mover><mi>j</mi></msub><mi>&#x000B1;</mi><msub><mi>t</mi><mrow><mo stretchy="false">&#x00028;</mo><mn>1</mn><mo>&#x0002B;</mo><mi>&#x003B1;</mi><mo stretchy="false">&#x00029;</mo><mo>&#x0002F;</mo><mn>2</mn><mo>&#x0002C;</mo><mspace width="0.167em" /><mi>n</mi><mo>&#x02212;</mo><msub><mi>n</mi><mi>p</mi></msub></mrow></msub><mspace width="0.167em" /><msub><mrow><mi mathvariant="normal">S</mi><mi mathvariant="normal">E</mi></mrow><mi>j</mi></msub></mrow></math> with the standard errors <math display="inline"><mrow><msub><mrow><mi mathvariant="normal">S</mi><mi mathvariant="normal">E</mi></mrow><mi>j</mi></msub><mo>&#x0003D;</mo><msqrt><mrow><msub><mrow><mi mathvariant="normal">c</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">v</mi></mrow><mrow><mi>j</mi><mi>j</mi></mrow></msub></mrow></msqrt></mrow></math> at the confidence level <math display="inline"><mrow><mi>&#x003B1;</mi><mo>&#x0003D;</mo><mn>0.95</mn></mrow></math>, transformed back into the units of the fit parameters.</p>
+</section>
+<section>
+<h3>Provenance</h3>
+<p>The fit PK_20261020_010006__506c2 was run on 2026-10-19 23:00:07 UTC with sbmlsim 0.10.0 [<a href="#ref-Koenig2026_sbmlsim">1</a>], libRoadRunner 2.10.0 [<a href="#ref-Welsh2023">5</a>], SciPy 1.18.1 [<a href="#ref-Virtanen2020">3</a>], NumPy 2.5.3 [<a href="#ref-Harris2020">13</a>] and Python 3.14.4 (seed 1234). The models and data were those of commit <code>4dd2aa394d4f4f06a355551073bdbe13a71be564</code> of <code>/home/mkoenig/git/pkdb_models-icg</code>; their SHA-256 checksums are listed in <a href="#tab:checksums:PK_20261020_010006__506c2">Table 1</a>.</p>
+<table id="tab:checksums:PK_20261020_010006__506c2">
+<caption>Table 1. SHA-256 checksums of the models and data of the fit PK_20261020_010006__506c2, their first 12 characters; the full checksums are in the provenance of the result (optimization_result.json).</caption>
+<thead><tr><th style="text-align: left">File</th><th style="text-align: left">SHA-256</th></tr></thead>
+<tbody>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Andersen1999/.Andersen1999_Fig1.tsv</code></td><td style="text-align: left"><code>6762cf169ea5...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Andersen1999/.Andersen1999_Tab1.tsv</code></td><td style="text-align: left"><code>a4bea45bb9b4...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Andersen1999/.Andersen1999_TabIndividuals.tsv</code></td><td style="text-align: left"><code>514825eb8996...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Anzai2020/.Anzai2020_Fig1.tsv</code></td><td style="text-align: left"><code>994695505b93...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Anzai2020/.Anzai2020_Tab2.tsv</code></td><td style="text-align: left"><code>d4f5b409b49c...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Anzai2020/.Anzai2020_TabGroups.tsv</code></td><td style="text-align: left"><code>dc40c4b87b65...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Anzai2020/.Anzai2020_TabIndividuals.tsv</code></td><td style="text-align: left"><code>fd3df536623a...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Anzai2020/.Anzai2020_TabInterventions.tsv</code></td><td style="text-align: left"><code>6f3426b2ee51...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Branch1976/.Branch1976_Fig1.tsv</code></td><td style="text-align: left"><code>729676de40de...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Branch1976/.Branch1976_Fig1A.tsv</code></td><td style="text-align: left"><code>435d1b03db8d...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Branch1976/.Branch1976_Fig1B.tsv</code></td><td style="text-align: left"><code>925147948a06...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Branch1976/.Branch1976_Tab1.tsv</code></td><td style="text-align: left"><code>19d1cf1e3fa7...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Branch1976/.Branch1976_Tab2.tsv</code></td><td style="text-align: left"><code>ff832c0af835...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Branch1976/.Branch1976_TabGroups.tsv</code></td><td style="text-align: left"><code>1dd4943601d9...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Branch1976/.Branch1976_TabIndividuals.tsv</code></td><td style="text-align: left"><code>6b71094422eb...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Branch1976/.Branch1976_TabInterventions.tsv</code></td><td style="text-align: left"><code>ba54a4aebfe9...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Burns1991/.Burns1991_Fig1.tsv</code></td><td style="text-align: left"><code>f5da854fe778...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Burns1991/.Burns1991_Fig2.tsv</code></td><td style="text-align: left"><code>f6bea0a7a1fd...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Burns1991/.Burns1991_Fig3.tsv</code></td><td style="text-align: left"><code>0e386fe3fa35...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Burns1991/.Burns1991_Tab1.tsv</code></td><td style="text-align: left"><code>66f1cd84a40c...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Burns1991/.Burns1991_Tab2.tsv</code></td><td style="text-align: left"><code>2c2ce603d796...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Burns1991/.Burns1991_Tab3.tsv</code></td><td style="text-align: left"><code>03436a221c0a...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Burns1991/.Burns1991_TabIndividuals.tsv</code></td><td style="text-align: left"><code>2f298d47590e...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Caesar1961/.Caesar1961_Fig5.tsv</code></td><td style="text-align: left"><code>baa02e0be8d3...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Caesar1961/.Caesar1961_Tab1.tsv</code></td><td style="text-align: left"><code>22717ff46767...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Caesar1961/.Caesar1961_Tab2.tsv</code></td><td style="text-align: left"><code>b8e99cdea8cd...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Caesar1961/.Caesar1961_Tab3.tsv</code></td><td style="text-align: left"><code>b34f8241a2cb...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Caesar1961/.Caesar1961_Tab3Mean.tsv</code></td><td style="text-align: left"><code>15b47bf080bc...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Caesar1961/.Caesar1961_TabGroups.tsv</code></td><td style="text-align: left"><code>43b669f48eaf...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Caesar1961/.Caesar1961_TabIndividuals.tsv</code></td><td style="text-align: left"><code>80593f8e805d...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Caesar1961/.Caesar1961_TabInterventions.tsv</code></td><td style="text-align: left"><code>fc4e897fd2c8...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Cherrik1960/.Cherrik1960_Tab1.tsv</code></td><td style="text-align: left"><code>b4d16a6e3d31...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Cherrik1960/.Cherrik1960_Tab2.tsv</code></td><td style="text-align: left"><code>83dc7a3f7b5c...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Cherrik1960/.Cherrik1960_Tab7.tsv</code></td><td style="text-align: left"><code>7ea9729fcae0...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Cherrik1960/.Cherrik1960_TabGroups.tsv</code></td><td style="text-align: left"><code>00e959cc2bd2...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Cherrik1960/.Cherrik1960_TabIndividuals.tsv</code></td><td style="text-align: left"><code>c7ced0d6c64d...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Cherrik1960/.Cherrik1960_TabInterventions.tsv</code></td><td style="text-align: left"><code>5a9676a23214...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Chijiiwa2000/.Chijiiwa2000_Fig1.tsv</code></td><td style="text-align: left"><code>fec94462fa1b...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Chijiiwa2000/.Chijiiwa2000_Tab1.tsv</code></td><td style="text-align: left"><code>f5a33689ba25...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Chijiiwa2000/.Chijiiwa2000_TabGroups.tsv</code></td><td style="text-align: left"><code>708ef37d39b0...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Chijiiwa2000/.Chijiiwa2000_TabInterventions.tsv</code></td><td style="text-align: left"><code>f5c174f34d98...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/DOnofrio2014/.DOnofrio2014_Tab1.tsv</code></td><td style="text-align: left"><code>8c48805383bc...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/DOnofrio2014/.DOnofrio2014_TabGroups.tsv</code></td><td style="text-align: left"><code>924cfa0ad818...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/DOnofrio2014/.DOnofrio2014_TabIndividuals.tsv</code></td><td style="text-align: left"><code>210c29c38519...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/DOnofrio2014/.DOnofrio2014_TabInterventions.tsv</code></td><td style="text-align: left"><code>3010892043f6...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Figg1995/.Figg1995_Fig1.tsv</code></td><td style="text-align: left"><code>30a99d3dbef2...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Figg1995/.Figg1995_Fig1mean.tsv</code></td><td style="text-align: left"><code>650080fdcb11...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Figg1995/.Figg1995_Tab3.tsv</code></td><td style="text-align: left"><code>ab978d171470...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Figg1995/.Figg1995_TabGroups.tsv</code></td><td style="text-align: left"><code>3294e23730be...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Figg1995/.Figg1995_TabIndividuals.tsv</code></td><td style="text-align: left"><code>cda57b4dfa9d...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Figg1995/.Figg1995_TabInterventions.tsv</code></td><td style="text-align: left"><code>088996c0bc34...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Gadano1997/.Gadano1997_Fig1.tsv</code></td><td style="text-align: left"><code>b67eaaab1668...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Gadano1997/.Gadano1997_Tab1.tsv</code></td><td style="text-align: left"><code>664a2a9d4c67...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Gadano1997/.Gadano1997_Tab3.tsv</code></td><td style="text-align: left"><code>f272b71bed0b...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Gadano1997/.Gadano1997_Tab4.tsv</code></td><td style="text-align: left"><code>be2bdead7111...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Gadano1997/.Gadano1997_TabIndividuals.tsv</code></td><td style="text-align: left"><code>ca68d8939040...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Gelman1984/.Gelman1984_Fig1.tsv</code></td><td style="text-align: left"><code>ca038492515e...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Gelman1984/.Gelman1984_Tab1.tsv</code></td><td style="text-align: left"><code>13a704bed967...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Gelman1984/.Gelman1984_Tab3.tsv</code></td><td style="text-align: left"><code>22f8bdf54258...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Gelman1984/.Gelman1984_Tab4.tsv</code></td><td style="text-align: left"><code>2ec283dd0571...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Gelman1984/.Gelman1984_TabGroups.tsv</code></td><td style="text-align: left"><code>823684f968c1...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Gelman1984/.Gelman1984_TabInterventions.tsv</code></td><td style="text-align: left"><code>a165644a7ad1...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Geneve1990/.Geneve1990_Fig1.tsv</code></td><td style="text-align: left"><code>9c8c025c1d2a...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Geneve1990/.Geneve1990_Fig2.tsv</code></td><td style="text-align: left"><code>1c5d53fb9c37...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Geneve1990/.Geneve1990_Tab1.tsv</code></td><td style="text-align: left"><code>7ee2f7038575...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Geneve1990/.Geneve1990_TabIndividuals.tsv</code></td><td style="text-align: left"><code>d8e613f276d4...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Grainger1983/.Grainger1983_Tab1.tsv</code></td><td style="text-align: left"><code>f3c135e63bb1...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Grainger1983/.Grainger1983_Tab1Mean.tsv</code></td><td style="text-align: left"><code>83ebc891be86...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Grainger1983/.Grainger1983_TabIndividuals.tsv</code></td><td style="text-align: left"><code>6ab82802adfb...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Grainger1983/.Grainger1983_TabInterventions.tsv</code></td><td style="text-align: left"><code>efaa6d1ec5f1...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Grundmann1992/.Grundmann1992_Fig2.tsv</code></td><td style="text-align: left"><code>06ac63549272...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Grundmann1992/.Grundmann1992_Fig2A.tsv</code></td><td style="text-align: left"><code>0dd516761304...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Grundmann1992/.Grundmann1992_Fig2B.tsv</code></td><td style="text-align: left"><code>563ed4f5b767...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Grundmann1992/.Grundmann1992_Fig3.tsv</code></td><td style="text-align: left"><code>ab608b305512...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Grundmann1992/.Grundmann1992_Fig4.tsv</code></td><td style="text-align: left"><code>58670e827607...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Grundmann1992/.Grundmann1992_Tab1.tsv</code></td><td style="text-align: left"><code>f591e25f04bc...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Grundmann1992/.Grundmann1992_Tab2.tsv</code></td><td style="text-align: left"><code>8e9cb3d95f2e...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Grundmann1992/.Grundmann1992_Tab2A.tsv</code></td><td style="text-align: left"><code>06ac63549272...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Grundmann1992/.Grundmann1992_Tab2B.tsv</code></td><td style="text-align: left"><code>27c4e382efda...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Grundmann1992/.Grundmann1992_Tab3.tsv</code></td><td style="text-align: left"><code>5d8561a4a445...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Grundmann1992/.Grundmann1992_Tab4.tsv</code></td><td style="text-align: left"><code>bf0cfb277d44...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Grundmann1992/.Grundmann1992_Tab5.tsv</code></td><td style="text-align: left"><code>0cf11371f288...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Grundmann1992/.Grundmann1992_TabIndividuals.tsv</code></td><td style="text-align: left"><code>067d203930ed...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Haimerl2016/.Haimerl2016_Tab1.tsv</code></td><td style="text-align: left"><code>6514bd235053...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Haimerl2016/.Haimerl2016_TabGroups.tsv</code></td><td style="text-align: left"><code>44fc47ac3b0f...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Haimerl2016/.Haimerl2016_TabInterventions.tsv</code></td><td style="text-align: left"><code>390b5598acf4...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Hashimoto2000/.Hashimoto2000_Tab1.tsv</code></td><td style="text-align: left"><code>11f69037fadf...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Hashimoto2000/.Hashimoto2000_TabGroups.tsv</code></td><td style="text-align: left"><code>b90580f5e46b...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Hashimoto2000/.Hashimoto2000_TabInterventions.tsv</code></td><td style="text-align: left"><code>5200b90e2b8d...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Herold2001/.Herold2001_Fig1.tsv</code></td><td style="text-align: left"><code>cf8a53015748...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Herold2001/.Herold2001_Fig1mean.tsv</code></td><td style="text-align: left"><code>9f6a0edf439b...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Herold2001/.Herold2001_TabGroups.tsv</code></td><td style="text-align: left"><code>1aadfa594bec...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Herold2001/.Herold2001_TabIndividuals.tsv</code></td><td style="text-align: left"><code>ea8ca732e2f2...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Herold2001/.Herold2001_TabInterventions.tsv</code></td><td style="text-align: left"><code>bd9fb5fe47f8...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Huet1980/.Huet1980_Fig1.tsv</code></td><td style="text-align: left"><code>dc52a24b0326...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Huet1980/.Huet1980_Tab1.tsv</code></td><td style="text-align: left"><code>8f400e638612...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Huet1980/.Huet1980_Tab1Mean.tsv</code></td><td style="text-align: left"><code>b5cca9a83111...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Huet1980/.Huet1980_Tab2.tsv</code></td><td style="text-align: left"><code>cc39c119e37a...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Huet1980/.Huet1980_Tab2Mean.tsv</code></td><td style="text-align: left"><code>8f58018cf0e5...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Huet1980/.Huet1980_Tab3.tsv</code></td><td style="text-align: left"><code>390031cb59d5...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Huet1980/.Huet1980_Tab3Mean.tsv</code></td><td style="text-align: left"><code>b196cb64096b...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Huet1980/.Huet1980_TabGroups.tsv</code></td><td style="text-align: left"><code>de130c299b68...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Huet1980/.Huet1980_TabIndividuals.tsv</code></td><td style="text-align: left"><code>fa717760178d...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Huet1980/.Huet1980_TabInterventions.tsv</code></td><td style="text-align: left"><code>33bc4c56d52e...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Huet1983/.Huet1983_Fig3.tsv</code></td><td style="text-align: left"><code>d76d81f57aba...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Huet1983/.Huet1983_Fig3A.tsv</code></td><td style="text-align: left"><code>75d5b0f1bec0...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Huet1983/.Huet1983_Fig3B.tsv</code></td><td style="text-align: left"><code>9c23d7194e2c...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Huet1983/.Huet1983_Tab1.tsv</code></td><td style="text-align: left"><code>21446a5d5b80...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Huet1983/.Huet1983_TabGroups.tsv</code></td><td style="text-align: left"><code>6d3f40d12da6...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Huet1983/.Huet1983_TabIndividuals.tsv</code></td><td style="text-align: left"><code>5abb69542dce...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Huet1983/.Huet1983_TabInterventions.tsv</code></td><td style="text-align: left"><code>64ca9da1dda1...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Jost1987/.Jost1987_TabInterventions.tsv</code></td><td style="text-align: left"><code>c4cb90e66c9a...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Kagawa2017/.Kagawa2017_Tab1.tsv</code></td><td style="text-align: left"><code>204f63924de8...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Kagawa2017/.Kagawa2017_TabGroups.tsv</code></td><td style="text-align: left"><code>1c80312021c4...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Kagawa2017/.Kagawa2017_TabIndividuals.tsv</code></td><td style="text-align: left"><code>d7f4da1a7e13...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Kagawa2017/.Kagawa2017_TabInterventions.tsv</code></td><td style="text-align: left"><code>74dc530655ba...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Kamimori2000/.Kamimori2000_Fig1.tsv</code></td><td style="text-align: left"><code>d76815daace1...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Kamimori2000/.Kamimori2000_Fig2.tsv</code></td><td style="text-align: left"><code>120e2879d40e...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Kamimori2000/.Kamimori2000_Fig2A.tsv</code></td><td style="text-align: left"><code>54de4119201f...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Kamimori2000/.Kamimori2000_Tab1.tsv</code></td><td style="text-align: left"><code>f3c80281cc02...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Kamimori2000/.Kamimori2000_Tab1A.tsv</code></td><td style="text-align: left"><code>f1b69f1a983f...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Kamimori2000/.Kamimori2000_Tab2.tsv</code></td><td style="text-align: left"><code>0464ff592afc...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Kamimori2000/.Kamimori2000_Tab3.tsv</code></td><td style="text-align: left"><code>6835d0e726fd...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Kamimori2000/.Kamimori2000_TabGroups.tsv</code></td><td style="text-align: left"><code>5f5cb1061c93...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Kamimori2000/.Kamimori2000_TabIndividuals.tsv</code></td><td style="text-align: left"><code>ea8842cf7101...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Kamimori2000/.Kamimori2000_TabInterventions.tsv</code></td><td style="text-align: left"><code>9b2009555408...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Kanstrup1987/.Kanstrup1987_Fig1.tsv</code></td><td style="text-align: left"><code>f4f3381b8350...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Kawasaki1988/.Kawasaki1988_Fig1.tsv</code></td><td style="text-align: left"><code>2f7dabc01154...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Kawasaki1988/.Kawasaki1988_Fig2.tsv</code></td><td style="text-align: left"><code>1328bb34300d...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Kawasaki1988/.Kawasaki1988_Tab2.tsv</code></td><td style="text-align: left"><code>8673bf1b09cd...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Kawasaki1988/.Kawasaki1988_Tab3.tsv</code></td><td style="text-align: left"><code>fbfc0c3bc1eb...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Kawasaki1988/.Kawasaki1988_TabGroups.tsv</code></td><td style="text-align: left"><code>dc78aa0a63bb...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Kawasaki1988/.Kawasaki1988_TabIndividuals.tsv</code></td><td style="text-align: left"><code>6ca4781ef02a...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Kawasaki1988/.Kawasaki1988_TabInterventions.tsv</code></td><td style="text-align: left"><code>1b207fcaa77f...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Kawasaki1991/.Kawasaki1991_Fig2.tsv</code></td><td style="text-align: left"><code>a911b123f6d6...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Kearns1990/.Kearns1990_Tab2.tsv</code></td><td style="text-align: left"><code>ec8bba744f93...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Kearns1990/.Kearns1990_TabGroups.tsv</code></td><td style="text-align: left"><code>07338d76cc2c...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Kearns1990/.Kearns1990_TabIndividuals.tsv</code></td><td style="text-align: left"><code>d91bd507d085...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Kearns1990/.Kearns1990_TabInterventions.tsv</code></td><td style="text-align: left"><code>4a6e14d781fb...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Keiding1993/.Keiding1993_Fig1.tsv</code></td><td style="text-align: left"><code>bb928a26a477...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Keiding1993/.Keiding1993_Fig2.tsv</code></td><td style="text-align: left"><code>9b08773ca4ee...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Keiding1993/.Keiding1993_TabGroups.tsv</code></td><td style="text-align: left"><code>6be39a433a99...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Keiding1993/.Keiding1993_TabIndividuals.tsv</code></td><td style="text-align: left"><code>1d64557722ba...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Keiding1993/.Keiding1993_TabInterventions.tsv</code></td><td style="text-align: left"><code>bf13f21ee0f7...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Klockowski1990/.Klockowski1990_Fig1.tsv</code></td><td style="text-align: left"><code>ca038492515e...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Klockowski1990/.Klockowski1990_Fig3.tsv</code></td><td style="text-align: left"><code>21a9a5729282...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Klockowski1990/.Klockowski1990_Fig4.tsv</code></td><td style="text-align: left"><code>8c6fefb89b29...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Klockowski1990/.Klockowski1990_Tab1.tsv</code></td><td style="text-align: left"><code>ba9833befcef...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Klockowski1990/.Klockowski1990_Tab2.tsv</code></td><td style="text-align: left"><code>e52403cf6605...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Klockowski1990/.Klockowski1990_Tab3.tsv</code></td><td style="text-align: left"><code>22f8bdf54258...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Klockowski1990/.Klockowski1990_Tab4.tsv</code></td><td style="text-align: left"><code>2ec283dd0571...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Klockowski1990/.Klockowski1990_TabGroups.tsv</code></td><td style="text-align: left"><code>710ce1492086...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Klockowski1990/.Klockowski1990_TabIndividuals.tsv</code></td><td style="text-align: left"><code>f0ae9356a332...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Klockowski1990/.Klockowski1990_TabInterventions.tsv</code></td><td style="text-align: left"><code>ff79dea121ef...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Leevy1962/.Leevy1962_Fig1.tsv</code></td><td style="text-align: left"><code>eec127e41756...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Leevy1962/.Leevy1962_Tab1.tsv</code></td><td style="text-align: left"><code>26776a18f575...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Leevy1962/.Leevy1962_Tab1Mean.tsv</code></td><td style="text-align: left"><code>e378e30d5e02...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Leevy1962/.Leevy1962_Tab2.tsv</code></td><td style="text-align: left"><code>4032dfa2c8bc...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Leevy1962/.Leevy1962_Tab4.tsv</code></td><td style="text-align: left"><code>d76677006866...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Leevy1962/.Leevy1962_Tab6.tsv</code></td><td style="text-align: left"><code>e589e2d922bc...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Leevy1962/.Leevy1962_Tab9.tsv</code></td><td style="text-align: left"><code>8fa4cf806d04...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Leevy1962/.Leevy1962_TabGroups.tsv</code></td><td style="text-align: left"><code>7b89380e2175...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Leevy1962/.Leevy1962_TabIndividuals.tsv</code></td><td style="text-align: left"><code>1bb9c446bca3...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Leevy1962/.Leevy1962_TabInterventions.tsv</code></td><td style="text-align: left"><code>ffcf02a74cad...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Leevy1967/.Leevy1967_Fig2.tsv</code></td><td style="text-align: left"><code>70a57471bea1...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Leevy1967/.Leevy1967_Fig6.tsv</code></td><td style="text-align: left"><code>152fb8a8d565...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Leevy1967/.Leevy1967_TabGroups.tsv</code></td><td style="text-align: left"><code>ac435f73743f...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Leevy1967/.Leevy1967_TabIndividuals.tsv</code></td><td style="text-align: left"><code>a23de12c2c71...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Leevy1967/.Leevy1967_TabInterventions.tsv</code></td><td style="text-align: left"><code>f1ebea2a11d6...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Ma2008/.Ma2008_Fig1.tsv</code></td><td style="text-align: left"><code>8ed890d2cf9b...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Ma2008/.Ma2008_Fig1Mean.tsv</code></td><td style="text-align: left"><code>a35167c0d933...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Ma2008/.Ma2008_Tab1.tsv</code></td><td style="text-align: left"><code>8ed890d2cf9b...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Ma2008/.Ma2008_TabGroups.tsv</code></td><td style="text-align: left"><code>fa08ce3b7067...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Ma2008/.Ma2008_TabIndividuals.tsv</code></td><td style="text-align: left"><code>13a5737695f4...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Ma2008/.Ma2008_TabInterventions.tsv</code></td><td style="text-align: left"><code>08f1250d3739...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Marigold1981/.Marigold1981_Fig1.tsv</code></td><td style="text-align: left"><code>0f84cac92b8c...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Marigold1981/.Marigold1981_Fig2.tsv</code></td><td style="text-align: left"><code>152f8cf0307b...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Marigold1981/.Marigold1981_Fig3.tsv</code></td><td style="text-align: left"><code>fa26eca14bcf...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Marigold1981/.Marigold1981_TabGroups.tsv</code></td><td style="text-align: left"><code>94cc6e6252e9...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Marigold1981/.Marigold1981_TabIndividuals.tsv</code></td><td style="text-align: left"><code>9e7e2b7ddc0c...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Marigold1981/.Marigold1981_TabInterventions.tsv</code></td><td style="text-align: left"><code>62d6c59f5bd3...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Martin1975/.Martin1975_Fig1.tsv</code></td><td style="text-align: left"><code>80c172481e19...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Martin1975/.Martin1975_Fig2.tsv</code></td><td style="text-align: left"><code>7213dd3567e9...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Martin1975/.Martin1975_Tab1.tsv</code></td><td style="text-align: left"><code>3f54cddfa88e...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Martin1975/.Martin1975_TabGroups.tsv</code></td><td style="text-align: left"><code>26de14869f8c...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Martin1975/.Martin1975_TabIndividuals.tsv</code></td><td style="text-align: left"><code>4b5114f5c5fb...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Martin1975/.Martin1975_TabInterventions.tsv</code></td><td style="text-align: left"><code>12d27fc03d3e...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Martin1976/.Martin1976_Fig2.tsv</code></td><td style="text-align: left"><code>6197f6349310...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Martin1976/.Martin1976_Tab2.tsv</code></td><td style="text-align: left"><code>06864fd756fc...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Martin1976/.Martin1976_TabGroups.tsv</code></td><td style="text-align: left"><code>9dc8fd46e366...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Martin1976/.Martin1976_TabIndividuals.tsv</code></td><td style="text-align: left"><code>fa1c17e506d8...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Martin1976/.Martin1976_TabInterventions.tsv</code></td><td style="text-align: left"><code>a40e8e99f587...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Meijer1988/.Meijer1988_Fig2.tsv</code></td><td style="text-align: left"><code>dddffb9d494e...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Meijer1988/.Meijer1988_Fig3.tsv</code></td><td style="text-align: left"><code>b21d0b1c6c81...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Meijer1988/.Meijer1988_Fig4.tsv</code></td><td style="text-align: left"><code>4f5dc948fb46...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Meijer1988/.Meijer1988_Tab1.tsv</code></td><td style="text-align: left"><code>6750a9601a9e...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Meijer1988/.Meijer1988_Tab2.tsv</code></td><td style="text-align: left"><code>5c9e83588041...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Meijer1988/.Meijer1988_TabGroups.tsv</code></td><td style="text-align: left"><code>2d555c969968...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Meijer1988/.Meijer1988_TabIndividuals.tsv</code></td><td style="text-align: left"><code>d5a5e9450a66...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Meijer1988/.Meijer1988_TabInterventions.tsv</code></td><td style="text-align: left"><code>a6ae7d8216bd...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Moeller1998/.Moeller1998_Tab2.tsv</code></td><td style="text-align: left"><code>b2659d741ac9...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Moeller1998/.Moeller1998_TabGroups.tsv</code></td><td style="text-align: left"><code>44aed78dcdcc...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Moeller1998/.Moeller1998_TabInterventions.tsv</code></td><td style="text-align: left"><code>422c922f69d8...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Moeller2018/.Moeller2018_Fig1.tsv</code></td><td style="text-align: left"><code>c05da558c1b7...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Moeller2018/.Moeller2018_Fig2.tsv</code></td><td style="text-align: left"><code>b5b200b24ffd...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Moeller2018/.Moeller2018_Tab1.tsv</code></td><td style="text-align: left"><code>ca9dc3a52b52...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Moeller2018/.Moeller2018_Tab2.tsv</code></td><td style="text-align: left"><code>4faa5dd4c153...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Moeller2018/.Moeller2018_TabGroups.tsv</code></td><td style="text-align: left"><code>010fcd6aaadc...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Moeller2018/.Moeller2018_TabIndividuals.tsv</code></td><td style="text-align: left"><code>45b5037c7023...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Moeller2018/.Moeller2018_TabInterventions.tsv</code></td><td style="text-align: left"><code>43d22da22eeb...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Niemann2000/.Niemann2000_Fig2.tsv</code></td><td style="text-align: left"><code>158082ef5c69...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Niemann2000/.Niemann2000_Fig2B.tsv</code></td><td style="text-align: left"><code>121d0ce1668c...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Niemann2000/.Niemann2000_Tab1.tsv</code></td><td style="text-align: left"><code>be5b514a6238...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Niemann2000/.Niemann2000_Tab2.tsv</code></td><td style="text-align: left"><code>fa07890a1256...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Ohwada2006/.Ohwada2006_Fig1.tsv</code></td><td style="text-align: left"><code>d1a4f5c4f9b3...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Ohwada2006/.Ohwada2006_Tab3.tsv</code></td><td style="text-align: left"><code>5fa31b34a72e...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Ohwada2006/.Ohwada2006_TabGroups.tsv</code></td><td style="text-align: left"><code>58e2399ef1ab...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Ohwada2006/.Ohwada2006_TabIndividuals.tsv</code></td><td style="text-align: left"><code>f03ff8bf6a9b...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Ohwada2006/.Ohwada2006_TabInterventions.tsv</code></td><td style="text-align: left"><code>85f390fa2b64...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Okochi2002/.Okochi2002_Fig1.tsv</code></td><td style="text-align: left"><code>b9ee2ce75456...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Okochi2002/.Okochi2002_Fig2.tsv</code></td><td style="text-align: left"><code>ebe5bd24a583...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Okochi2002/.Okochi2002_Tab1.tsv</code></td><td style="text-align: left"><code>bba8d7c8d6f8...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Okochi2002/.Okochi2002_TabGroups.tsv</code></td><td style="text-align: left"><code>6e0a023e9c92...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Okochi2002/.Okochi2002_TabIndividuals.tsv</code></td><td style="text-align: left"><code>f28fc06baacb...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Okochi2002/.Okochi2002_TabInterventions.tsv</code></td><td style="text-align: left"><code>1d559c33dc40...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Ott1993/.Ott1993_Fig3.tsv</code></td><td style="text-align: left"><code>6e550c6f632a...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Peng2015/.Peng2015_Fig5.tsv</code></td><td style="text-align: left"><code>0155c6397e81...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Pind2016/.Pind2016_Tab2.tsv</code></td><td style="text-align: left"><code>bfd48d712f13...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Pind2016/.Pind2016_TabGroups.tsv</code></td><td style="text-align: left"><code>57b614077721...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Pind2016/.Pind2016_TabInterventions.tsv</code></td><td style="text-align: left"><code>c158f3664b7f...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Roberts1976/.Roberts1976_Fig1.tsv</code></td><td style="text-align: left"><code>ca038492515e...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Roberts1976/.Roberts1976_Fig1A.tsv</code></td><td style="text-align: left"><code>9fe09839574e...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Roberts1976/.Roberts1976_Fig1B.tsv</code></td><td style="text-align: left"><code>43d0a79b22bb...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Roberts1976/.Roberts1976_Fig2A.tsv</code></td><td style="text-align: left"><code>8544f842268c...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Roberts1976/.Roberts1976_Fig2B.tsv</code></td><td style="text-align: left"><code>caecd77a6c5a...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Roberts1976/.Roberts1976_Tab1.tsv</code></td><td style="text-align: left"><code>e0601c5442a6...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Roberts1976/.Roberts1976_Tab1A.tsv</code></td><td style="text-align: left"><code>89fb30c17896...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Roberts1976/.Roberts1976_Tab2.tsv</code></td><td style="text-align: left"><code>9f476780893b...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Roberts1976/.Roberts1976_Tab3.tsv</code></td><td style="text-align: left"><code>22f8bdf54258...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Roberts1976/.Roberts1976_Tab4.tsv</code></td><td style="text-align: left"><code>2ec283dd0571...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Roberts1976/.Roberts1976_TabData.tsv</code></td><td style="text-align: left"><code>f5842d93dc58...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Roberts1976/.Roberts1976_TabGroups.tsv</code></td><td style="text-align: left"><code>530fd1aa4e01...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Roberts1976/.Roberts1976_TabIndividuals.tsv</code></td><td style="text-align: left"><code>280da886670e...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Roberts1976/.Roberts1976_TabInterventions.tsv</code></td><td style="text-align: left"><code>66288d7aef75...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Sakka2006/.Sakka2006_Fig1.tsv</code></td><td style="text-align: left"><code>f94a2b6797c7...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Sakka2006/.Sakka2006_TabGroups.tsv</code></td><td style="text-align: left"><code>b014a30f035d...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Sakka2006/.Sakka2006_TabIndividuals.tsv</code></td><td style="text-align: left"><code>a947f854f9f0...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Sakka2006/.Sakka2006_TabInterventions.tsv</code></td><td style="text-align: left"><code>570980a55ede...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Seyama2009/.Seyama2009_Fig3.tsv</code></td><td style="text-align: left"><code>b099b5e2005c...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Seyama2009/.Seyama2009_TabGroups.tsv</code></td><td style="text-align: left"><code>904d45b6c7c9...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Seyama2009/.Seyama2009_TabIndividuals.tsv</code></td><td style="text-align: left"><code>2c0b302b752d...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Seyama2009/.Seyama2009_TabInterventions.tsv</code></td><td style="text-align: left"><code>03d463396e72...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Skak1987/.Skak1987_Fig1.tsv</code></td><td style="text-align: left"><code>fa1c8104220f...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Skak1987/.Skak1987_Fig2.tsv</code></td><td style="text-align: left"><code>306af84364eb...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Skak1987/.Skak1987_Tab3.tsv</code></td><td style="text-align: left"><code>9377149ac302...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Skak1987/.Skak1987_TabGroups.tsv</code></td><td style="text-align: left"><code>971d6ca90ce9...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Skak1987/.Skak1987_TabIndividuals.tsv</code></td><td style="text-align: left"><code>ffe2d145620e...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Skak1987/.Skak1987_TabInterventions.tsv</code></td><td style="text-align: left"><code>d9c57e0bdc2b...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Soons1991/.Soons1991_Fig5.tsv</code></td><td style="text-align: left"><code>b9d806392721...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Soons1991/.Soons1991_Fig5mean.tsv</code></td><td style="text-align: left"><code>94b2be6db26f...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Soons1991/.Soons1991_Tab3.tsv</code></td><td style="text-align: left"><code>c624dad27a3e...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Soons1991/.Soons1991_Tab3mean.tsv</code></td><td style="text-align: left"><code>1931dacd163c...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Soons1991/.Soons1991_TabGroups.tsv</code></td><td style="text-align: left"><code>a0a4ace94bef...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Soons1991/.Soons1991_TabIndividuals.tsv</code></td><td style="text-align: left"><code>4a13447c3362...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Soons1991/.Soons1991_TabInterventions.tsv</code></td><td style="text-align: left"><code>b47313368248...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Stockmann2009/.Stockmann2009_Fig3.tsv</code></td><td style="text-align: left"><code>0e429bf3b134...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Stockmann2009/.Stockmann2009_Tab1.tsv</code></td><td style="text-align: left"><code>850d7e55d0ea...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Stockmann2009/.Stockmann2009_TabGroups.tsv</code></td><td style="text-align: left"><code>687a897dc8c5...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Stockmann2009/.Stockmann2009_TabIndividuals.tsv</code></td><td style="text-align: left"><code>ec8517d7b92f...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Stockmann2009/.Stockmann2009_TabInterventions.tsv</code></td><td style="text-align: left"><code>90d82ed5d838...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Sunagawa2021/.Sunagawa2021_Fig2.tsv</code></td><td style="text-align: left"><code>6e6747843c38...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Sunagawa2021/.Sunagawa2021_TabGroups.tsv</code></td><td style="text-align: left"><code>19ae110aa799...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Sunagawa2021/.Sunagawa2021_TabIndividuals.tsv</code></td><td style="text-align: left"><code>ea24039025e5...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Sunagawa2021/.Sunagawa2021_TabInterventions.tsv</code></td><td style="text-align: left"><code>3c4a72405480...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/SwineLeipzig2014/.SwineLeipzig2014_TabGroups.tsv</code></td><td style="text-align: left"><code>d31279891dc2...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/SwineLeipzig2014/.SwineLeipzig2014_TabIndividuals.tsv</code></td><td style="text-align: left"><code>8485d14a65fd...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/SwineLeipzig2014/.SwineLeipzig2014_TabInterventions.tsv</code></td><td style="text-align: left"><code>1c5582f61c22...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/SwineLeipzig2014/.SwineLeipzig2014_TabOutput_SUS05.tsv</code></td><td style="text-align: left"><code>68b71c1532b5...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/SwineLeipzig2014/.SwineLeipzig2014_TabOutput_SUS07.tsv</code></td><td style="text-align: left"><code>8d5f1384e19d...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/SwineLeipzig2014/.SwineLeipzig2014_TabOutput_SUS08.tsv</code></td><td style="text-align: left"><code>3b4dcee0506b...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/SwineLeipzig2014/.SwineLeipzig2014_TabOutput_SUS09.tsv</code></td><td style="text-align: left"><code>09ceef31f6aa...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/SwineLeipzig2014/.SwineLeipzig2014_TabOutput_SUS10.tsv</code></td><td style="text-align: left"><code>04385d298243...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/SwineLeipzig2014/.SwineLeipzig2014_TabOutput_SUS11.tsv</code></td><td style="text-align: left"><code>3c6ff127d4cf...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/SwineLeipzig2014/.SwineLeipzig2014_TabOutput_SUS12.tsv</code></td><td style="text-align: left"><code>16192008b610...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/SwineLeipzig2014/.SwineLeipzig2014_TabOutput_SUS14.tsv</code></td><td style="text-align: left"><code>a4367133d418...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/SwineLeipzig2014/.SwineLeipzig2014_TabOutput_SUS15.tsv</code></td><td style="text-align: left"><code>ef5e0f544288...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/SwineLeipzig2014/.SwineLeipzig2014_TabOutput_SUS16.tsv</code></td><td style="text-align: left"><code>d9ac2674c846...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/SwineLeipzig2014/.SwineLeipzig2014_TabOutput_SUS18.tsv</code></td><td style="text-align: left"><code>cdc669d280ca...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/SwineLeipzig2014/.SwineLeipzig2014_TabOutput_SUS20.tsv</code></td><td style="text-align: left"><code>966f8697b6c2...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/SwineLeipzig2014/.SwineLeipzig2014_TabOutput_SUS21.tsv</code></td><td style="text-align: left"><code>ae56ff554b0e...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/SwineLeipzig2014/.SwineLeipzig2014_TabOutput_SUS23.tsv</code></td><td style="text-align: left"><code>bd87ff6e6cc4...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/SwineLeipzig2014/.SwineLeipzig2014_TabOutput_SUS24.tsv</code></td><td style="text-align: left"><code>445592c41358...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Thomas2015/.Thomas2015_Fig3.tsv</code></td><td style="text-align: left"><code>55bf0a6955a0...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Thomas2015/.Thomas2015_TabGroups.tsv</code></td><td style="text-align: left"><code>f570bae399ee...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Thomas2015/.Thomas2015_TabIndividuals.tsv</code></td><td style="text-align: left"><code>20323a496518...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Thomas2015/.Thomas2015_TabInterventions.tsv</code></td><td style="text-align: left"><code>4060d171fbf9...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Wakabayashi2004/.Wakabayashi2004_Fig5.tsv</code></td><td style="text-align: left"><code>a9995d22530c...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Wakabayashi2004/.Wakabayashi2004_Tab3.tsv</code></td><td style="text-align: left"><code>fc19d13e9ed1...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Wakabayashi2004/.Wakabayashi2004_TabGroups.tsv</code></td><td style="text-align: left"><code>85383250ee7a...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Wakabayashi2004/.Wakabayashi2004_TabIndividuals.tsv</code></td><td style="text-align: left"><code>717baf3033af...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Wakabayashi2004/.Wakabayashi2004_TabInterventions.tsv</code></td><td style="text-align: left"><code>b0ed14928f01...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Wood1979/.Wood1979_Fig1.tsv</code></td><td style="text-align: left"><code>69ba6b55effa...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Wood1979/.Wood1979_Fig2.tsv</code></td><td style="text-align: left"><code>ce353325a102...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/data/icg/Wood1979/.Wood1979_TabIndividuals.tsv</code></td><td style="text-align: left"><code>8257124f0141...</code></td></tr>
+<tr><td style="text-align: left"><code>pkdb_models/models/icg/models/output/models/icg_body_flat.xml</code></td><td style="text-align: left"><code>2b119f565afc...</code></td></tr>
+</tbody>
+</table>
+</section>
+</section>
+<section>
+<h2>Results: Indocyanine green PBPK model: fit PK</h2>
+<section>
+<h3>Parameters</h3>
+<table id="tab:parameters:PK_20261020_010006__506c2">
+<caption>Table 2. Parameters of the fit PK_20261020_010006__506c2, the parameter set PK_20261020_010006__506c2_0, cost 14.1, with their bounds in the optimization. The 95% confidence intervals are those of the profile likelihood, LB and UB an interval which is open towards the lower or the upper bound, and the Wald intervals of the Fisher information for a parameter without a profile. Identifiable is the classification of the profile: yes, no (LB) or no (UB) if the profile does not reach the threshold towards the lower or the upper bound, no if it reaches it on neither side, structural if it is flat.</caption>
+<thead><tr><th style="text-align: left">Parameter</th><th style="text-align: left">Description</th><th style="text-align: right">Value [95% CI]</th><th style="text-align: left">Unit</th><th style="text-align: right">Bounds</th><th style="text-align: left">Identifiable</th></tr></thead>
+<tbody>
+<tr><td style="text-align: left"><code>LI__ICGIM_Vmax</code></td><td style="text-align: left">Vmax for icg import</td><td style="text-align: right">0.0982 [0.0545, 0.586]</td><td style="text-align: left">mmol/min/l</td><td style="text-align: right">[0.001, 10]</td><td style="text-align: left">yes</td></tr>
+<tr><td style="text-align: left"><code>LI__ICGEX_k</code></td><td style="text-align: left">rate of the icg reflux into plasma</td><td style="text-align: right">0.0375 [0.0117, 0.231]</td><td style="text-align: left">1/min</td><td style="text-align: right">[0.0001, 0.5]</td><td style="text-align: left">yes</td></tr>
+<tr><td style="text-align: left"><code>LI__ICGLI2CA_Vmax</code></td><td style="text-align: left">Vmax bile export icg</td><td style="text-align: right">0.000649 [0.000234, 0.0024]</td><td style="text-align: left">mmol/min/l</td><td style="text-align: right">[1e-05, 0.01]</td><td style="text-align: left">yes</td></tr>
+<tr><td style="text-align: left"><code>LI__ICGLI2CA_Km</code></td><td style="text-align: left">Km bile export icg</td><td style="text-align: right">0.00639 [LB, 0.0724]</td><td style="text-align: left">mmol/l</td><td style="text-align: right">[0.001, 1]</td><td style="text-align: left">no (LB)</td></tr>
+<tr><td style="text-align: left"><code>LI__ICGLI2BI_k</code></td><td style="text-align: left">rate of the icg bile transport</td><td style="text-align: right">0.00578 [0.00284, 0.039]</td><td style="text-align: left">1/min</td><td style="text-align: right">[0.001, 1]</td><td style="text-align: left">yes</td></tr>
+</tbody>
+</table>
+</section>
+<section>
+<h3>Data</h3>
+<table id="tab:data:PK_20261020_010006__506c2">
+<caption>Table 3. Data of the fit PK_20261020_010006__506c2: the number of fit mappings and, in parentheses, of data points per study and kind. The training data enters the cost, the validation data and the outliers are evaluated only.</caption>
+<thead><tr><th style="text-align: left">Study</th><th style="text-align: right">Training</th><th style="text-align: right">Validation</th><th style="text-align: right">Outlier</th><th style="text-align: right">Total</th></tr></thead>
+<tbody>
+<tr><td style="text-align: left">Andersen1999</td><td style="text-align: right">1 (6)</td><td style="text-align: right">-</td><td style="text-align: right">-</td><td style="text-align: right">1 (6)</td></tr>
+<tr><td style="text-align: left">Burns1991</td><td style="text-align: right">1 (6)</td><td style="text-align: right">1 (9)</td><td style="text-align: right">-</td><td style="text-align: right">2 (15)</td></tr>
+<tr><td style="text-align: left">Caesar1961</td><td style="text-align: right">3 (3)</td><td style="text-align: right">-</td><td style="text-align: right">-</td><td style="text-align: right">3 (3)</td></tr>
+<tr><td style="text-align: left">Chijiiwa2000</td><td style="text-align: right">-</td><td style="text-align: right">1 (5)</td><td style="text-align: right">-</td><td style="text-align: right">1 (5)</td></tr>
+<tr><td style="text-align: left">Gadano1997</td><td style="text-align: right">-</td><td style="text-align: right">2 (2)</td><td style="text-align: right">-</td><td style="text-align: right">2 (2)</td></tr>
+<tr><td style="text-align: left">Grainger1983</td><td style="text-align: right">1 (5)</td><td style="text-align: right">-</td><td style="text-align: right">-</td><td style="text-align: right">1 (5)</td></tr>
+<tr><td style="text-align: left">Grundmann1992</td><td style="text-align: right">1 (7)</td><td style="text-align: right">-</td><td style="text-align: right">-</td><td style="text-align: right">1 (7)</td></tr>
+<tr><td style="text-align: left">Kamimori2000</td><td style="text-align: right">1 (3)</td><td style="text-align: right">-</td><td style="text-align: right">-</td><td style="text-align: right">1 (3)</td></tr>
+<tr><td style="text-align: left">Klockowski1990</td><td style="text-align: right">1 (7)</td><td style="text-align: right">2 (10)</td><td style="text-align: right">-</td><td style="text-align: right">3 (17)</td></tr>
+<tr><td style="text-align: left">Leevy1962</td><td style="text-align: right">1 (1)</td><td style="text-align: right">3 (6)</td><td style="text-align: right">3 (32)</td><td style="text-align: right">7 (39)</td></tr>
+<tr><td style="text-align: left">Meijer1988</td><td style="text-align: right">9 (52)</td><td style="text-align: right">-</td><td style="text-align: right">-</td><td style="text-align: right">9 (52)</td></tr>
+<tr><td style="text-align: left">Niemann2000</td><td style="text-align: right">-</td><td style="text-align: right">2 (16)</td><td style="text-align: right">-</td><td style="text-align: right">2 (16)</td></tr>
+<tr><td style="text-align: left">Soons1991</td><td style="text-align: right">1 (3)</td><td style="text-align: right">-</td><td style="text-align: right">-</td><td style="text-align: right">1 (3)</td></tr>
+<tr><td style="text-align: left">Total</td><td style="text-align: right">20 (93)</td><td style="text-align: right">11 (48)</td><td style="text-align: right">3 (32)</td><td style="text-align: right">34 (173)</td></tr>
+</tbody>
+</table>
+</section>
+<section>
+<h3>Goodness of fit</h3>
+<table id="tab:metrics:PK_20261020_010006__506c2">
+<caption>Table 4. Goodness of fit of the fit PK_20261020_010006__506c2 per kind of data, the parameter set PK_20261020_010006__506c2_0. The cost is defined on the training data only, 2-fold is the percentage of the data points with a positive value and prediction whose prediction is within twofold of the data.</caption>
+<thead><tr><th style="text-align: left">Kind</th><th style="text-align: right">n</th><th style="text-align: right">cost</th><th style="text-align: right">MSE</th><th style="text-align: right">RMSE</th><th style="text-align: right">NRMSE</th><th style="text-align: right">RMSE_w</th><th style="text-align: right">R²</th><th style="text-align: right">2-fold [%]</th><th style="text-align: right">AIC</th><th style="text-align: right">BIC</th></tr></thead>
+<tbody>
+<tr><td style="text-align: left">training</td><td style="text-align: right">93</td><td style="text-align: right">14.1</td><td style="text-align: right">0.000174</td><td style="text-align: right">0.0132</td><td style="text-align: right">0.352</td><td style="text-align: right">0.551</td><td style="text-align: right">0.995</td><td style="text-align: right">82.8</td><td style="text-align: right">-795.2</td><td style="text-align: right">-782.5</td></tr>
+<tr><td style="text-align: left">validation</td><td style="text-align: right">48</td><td style="text-align: right">-</td><td style="text-align: right">0.00124</td><td style="text-align: right">0.0352</td><td style="text-align: right">0.584</td><td style="text-align: right">1.04</td><td style="text-align: right">0.981</td><td style="text-align: right">82.6</td><td style="text-align: right">-311.2</td><td style="text-align: right">-301.8</td></tr>
+<tr><td style="text-align: left">outlier</td><td style="text-align: right">32</td><td style="text-align: right">-</td><td style="text-align: right">2.76e-07</td><td style="text-align: right">0.000525</td><td style="text-align: right">0.347</td><td style="text-align: right">0.919</td><td style="text-align: right">0.221</td><td style="text-align: right">96.9</td><td style="text-align: right">-473.3</td><td style="text-align: right">-466.0</td></tr>
+</tbody>
+</table>
+</section>
+<section>
+<h3>Figures</h3>
+<figure id="fig:traces:PK_20261020_010006__506c2"><img src="plots/traces.svg" alt="Figure 1"><figcaption>Figure 1. Cost of the optimizers over their steps, fit PK_20261020_010006__506c2. The cost of every optimization run over its steps. Runs which end at the same cost found the same optimum; a run which stops much higher is stuck in a local minimum.</figcaption></figure>
+<figure id="fig:waterfall:PK_20261020_010006__506c2"><img src="plots/waterfall.svg" alt="Figure 2"><figcaption>Figure 2. Cost of the optimization runs, ordered, fit PK_20261020_010006__506c2. The final cost of the runs, ordered. A flat plateau at the left is the global optimum found repeatedly, which is the evidence that the multistart converged; steps to the right are local minima.</figcaption></figure>
+<figure id="fig:goodness_of_fit:PK_20261020_010006__506c2"><img src="plots/goodness_of_fit.svg" alt="Figure 3"><figcaption>Figure 3. Prediction against the measured data points, per kind of fit mapping, with the agreement of the training data, the lines of twofold and the metrics of the panel, fit PK_20261020_010006__506c2. Within twofold of the data are 77 of the 93 training data points (82.8%), 38 of the 46 validation data points (82.6%) and 31 of the 32 outlier data points (96.9%); only the data points with a positive value and prediction are counted. Prediction against measurement, one point per data point, with a panel per kind of fit mapping. The points scatter around the diagonal when the model describes the data; a systematic deviation from it is a systematic error of the model. The band is the agreement of the training data, i.e. the same band the Bland-Altman plot draws, here as lines parallel to the diagonal. The dark red dotted lines are twofold, prediction = 2 x measurement and prediction = measurement / 2; the caption states the points between them of every kind. A point which is zero or negative is not drawn on the logarithmic axes and not counted, the title of a panel then states the points drawn of all. The validation panel shows how the fit describes data it was not fitted on, the outlier panel the data the fit dropped. The box of a panel carries its R², its normalized RMSE, the RMSE of the residuals of the cost, its fold errors GMFE and AFE and the percentages of its points within twofold and within two standard deviations of the data.</figcaption></figure>
+<figure id="fig:bland_altman:PK_20261020_010006__506c2"><img src="plots/bland_altman.svg" alt="Figure 4"><figcaption>Figure 4. Agreement of prediction and measurement as a ratio, per kind of fit mapping, with the agreement of the training data and the agreement of the panel, fit PK_20261020_010006__506c2. The ratio of prediction and measurement over the geometric mean of the two, i.e. the goodness of fit with the diagonal turned into the horizontal. The band is the same, the bias and the limits of agreement <code>bias ± 1.96 SD</code> of the training data as fold factors. A bias away from 1 is a systematic over- or underprediction, wide limits are a large scatter, and a trend over the mean is a model which describes the large or the small values better. The box of a panel carries the bias and the SD of its own points as fold factors and the share of them inside the limits of agreement of the training data.</figcaption></figure>
+<figure id="fig:profiles:PK_20261020_010006__506c2"><img src="plots/profiles.svg" alt="Figure 5"><figcaption>Figure 5. Profile likelihood of every parameter: the cost with the parameter fixed and the other parameters optimized, the threshold of the confidence level and the confidence interval, fit PK_20261020_010006__506c2. One profile per parameter. A profile which crosses the dashed threshold on both sides gives a finite confidence interval; one which stays below it up to a bound is practically non-identifiable; a flat profile is structurally non-identifiable, the parameter is compensated by the others.</figcaption></figure>
+</section>
+<section>
+<h3>Provenance</h3>
+<table id="tab:provenance:PK_20261020_010006__506c2">
+<caption>Table 5. Provenance of the fit PK_20261020_010006__506c2: the versions it ran with and the revision of its models and data; the SHA-256 checksums of the models and data are listed in <a href="#tab:checksums:PK_20261020_010006__506c2">Table 1</a>.</caption>
+<thead><tr><th style="text-align: left">Item</th><th style="text-align: left">Value</th></tr></thead>
+<tbody>
+<tr><td style="text-align: left">Fit</td><td style="text-align: left"><code>PK_20261020_010006__506c2</code></td></tr>
+<tr><td style="text-align: left">Created</td><td style="text-align: left">2026-10-19 23:00:07 UTC</td></tr>
+<tr><td style="text-align: left">Seed</td><td style="text-align: left">1234</td></tr>
+<tr><td style="text-align: left">Python</td><td style="text-align: left">3.14.4</td></tr>
+<tr><td style="text-align: left">sbmlsim</td><td style="text-align: left">0.10.0</td></tr>
+<tr><td style="text-align: left">libRoadRunner</td><td style="text-align: left">2.10.0</td></tr>
+<tr><td style="text-align: left">SciPy</td><td style="text-align: left">1.18.1</td></tr>
+<tr><td style="text-align: left">NumPy</td><td style="text-align: left">2.5.3</td></tr>
+<tr><td style="text-align: left">Repository</td><td style="text-align: left"><code>/home/mkoenig/git/pkdb_models-icg</code></td></tr>
+<tr><td style="text-align: left">Commit</td><td style="text-align: left"><code>4dd2aa394d4f4f06a355551073bdbe13a71be564</code></td></tr>
+<tr><td style="text-align: left">Uncommitted changes</td><td style="text-align: left">no</td></tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="references">
+<h2>References</h2>
+<ol>
+<li id="ref-Koenig2026_sbmlsim">König M (2026). sbmlsim: SBML simulation made easy. Zenodo Version 0.10.0. doi:10.5281/zenodo.3597770.</li>
+<li id="ref-Storn1997">Storn R, Price K (1997). Differential evolution - a simple and efficient heuristic for global optimization over continuous spaces. Journal of Global Optimization 11:341-359. doi:10.1023/A:1008202821328.</li>
+<li id="ref-Virtanen2020">Virtanen P, Gommers R, Oliphant TE, Haberland M, Reddy T, Cournapeau D, et al. (2020). SciPy 1.0: fundamental algorithms for scientific computing in Python. Nature Methods 17:261-272. doi:10.1038/s41592-019-0686-2.</li>
+<li id="ref-McKay1979">McKay MD, Beckman RJ, Conover WJ (1979). A comparison of three methods for selecting values of input variables in the analysis of output from a computer code. Technometrics 21(2):239-245. doi:10.2307/1268522.</li>
+<li id="ref-Welsh2023">Welsh C, Xu J, Smith L, König M, Choi K, Sauro HM (2023). libRoadRunner 2.0: a high performance SBML simulation and analysis library. Bioinformatics 39(1):btac770. doi:10.1093/bioinformatics/btac770.</li>
+<li id="ref-Hindmarsh2005">Hindmarsh AC, Brown PN, Grant KE, Lee SL, Serban R, Shumaker DE, Woodward CS (2005). SUNDIALS: suite of nonlinear and differential/algebraic equation solvers. ACM Transactions on Mathematical Software 31(3):363-396. doi:10.1145/1089014.1089020.</li>
+<li id="ref-Akaike1974">Akaike H (1974). A new look at the statistical model identification. IEEE Transactions on Automatic Control 19(6):716-723. doi:10.1109/TAC.1974.1100705.</li>
+<li id="ref-Schwarz1978">Schwarz G (1978). Estimating the dimension of a model. The Annals of Statistics 6(2):461-464. doi:10.1214/aos/1176344136.</li>
+<li id="ref-Bland1986">Bland JM, Altman DG (1986). Statistical methods for assessing agreement between two methods of clinical measurement. The Lancet 327(8476):307-310. doi:10.1016/S0140-6736(86)90837-8.</li>
+<li id="ref-Raue2009">Raue A, Kreutz C, Maiwald T, Bachmann J, Schilling M, Klingmüller U, Timmer J (2009). Structural and practical identifiability analysis of partially observed dynamical models by exploiting the profile likelihood. Bioinformatics 25(15):1923-1929. doi:10.1093/bioinformatics/btp358.</li>
+<li id="ref-Kreutz2013">Kreutz C, Raue A, Kaschek D, Timmer J (2013). Profile likelihood in systems biology. The FEBS Journal 280(11):2564-2571. doi:10.1111/febs.12276.</li>
+<li id="ref-Wieland2021">Wieland FG, Hauber AL, Rosenblatt M, Tönsing C, Timmer J (2021). On structural and practical identifiability. Current Opinion in Systems Biology 25:60-69. doi:10.1016/j.coisb.2021.03.005.</li>
+<li id="ref-Harris2020">Harris CR, Millman KJ, van der Walt SJ, Gommers R, Virtanen P, Cournapeau D, et al. (2020). Array programming with NumPy. Nature 585:357-362. doi:10.1038/s41586-020-2649-2.</li>
+</ol>
+</section>
+</article>
+
+<section id="overview">
+  <h2>Overview</h2>
+
+  <h3>Fit</h3>
+  <div class="card">
+    <dl class="kv">
+      <dt>problem</dt><dd class="mono">PK</dd>
+      <dt>parameter sets</dt><dd class="mono">PK_20261020_010006__506c2_0</dd>
+      <dt>fit mappings</dt><dd class="mono">20 training, 11 validation, 3 outlier</dd>
+      <dt>experiments</dt><dd class="mono">Andersen1999, Burns1991, Caesar1961, Chijiiwa2000, Gadano1997, Grainger1983, Grundmann1992, Kamimori2000, Klockowski1990, Leevy1962, Meijer1988, Niemann2000, Soons1991</dd>
+      <dt>base path</dt><dd class="mono">/home/mkoenig/git/icg-model/src/pkdb_models/models/icg</dd>
+      <dt>data path</dt><dd class="mono">/home/mkoenig/git/icg-model/src/pkdb_models/models/icg/data/icg</dd>
+      <dt>optimization</dt><dd class="mono">3 runs</dd>
+    </dl>
+  </div>
+
+  <h3>Parameters</h3>
+  <div class="card">
+    <table data-filter="row">
+      <thead><tr>
+        <th data-sort="text">parameter</th>
+<th class="num" data-sort="num">PK_20261020_010006__506c2_0</th>        <th class="num" data-sort="num">lower</th><th class="num" data-sort="num">upper</th>
+        <th data-sort="text">unit</th>
+      </tr></thead>
+      <tbody>
+      <tr>
+        <td class="mono">LI__ICGIM_Vmax</td>
+<td class="num mono">0.09819</td>        <td class="num mono">0.001</td><td class="num mono">10</td>
+        <td>mmole/min/l</td>
+      </tr>
+      <tr>
+        <td class="mono">LI__ICGEX_k</td>
+<td class="num mono">0.037544</td>        <td class="num mono">0.0001</td><td class="num mono">0.5</td>
+        <td>1/min</td>
+      </tr>
+      <tr>
+        <td class="mono">LI__ICGLI2CA_Vmax</td>
+<td class="num mono">0.00064949</td>        <td class="num mono">1e-05</td><td class="num mono">0.01</td>
+        <td>mmole/min/l</td>
+      </tr>
+      <tr>
+        <td class="mono">LI__ICGLI2CA_Km</td>
+<td class="num mono">0.0063872</td>        <td class="num mono">0.001</td><td class="num mono">1</td>
+        <td>mM</td>
+      </tr>
+      <tr>
+        <td class="mono">LI__ICGLI2BI_k</td>
+<td class="num mono">0.0057822</td>        <td class="num mono">0.001</td><td class="num mono">1</td>
+        <td>1/min</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Settings</h3>
+  <div class="card">
+    <table data-filter="row">
+      <thead><tr><th data-sort="text">setting</th><th data-sort="text">value</th></tr></thead>
+      <tbody>
+      <tr><td>residual</td><td class="mono">NORMALIZED</td></tr>
+      <tr><td>parameter scale</td><td class="mono">LOG10</td></tr>
+      <tr><td>loss function</td><td class="mono">LINEAR</td></tr>
+      <tr><td>weighting curves</td><td class="mono">[&#39;MAPPING&#39;, &#39;POINTS&#39;]</td></tr>
+      <tr><td>weighting points</td><td class="mono">ERROR_WEIGHTING</td></tr>
+      <tr><td>variable step size</td><td class="mono">True</td></tr>
+      <tr><td>relative tolerance</td><td class="mono">1e-07</td></tr>
+      <tr><td>absolute tolerance</td><td class="mono">amount 1.0e-12, concentration 1.0e-12, other 1.0e-06</td></tr>
+      <tr><td>initial time step</td><td class="mono">0.0</td></tr>
+      <tr><td>data at change</td><td class="mono">before</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Data</h3>
+  <div class="card">
+    <table>
+      <thead><tr>
+        <th data-sort="text">experiment</th>
+<th class="num" data-sort="num">training</th><th class="num" data-sort="num">validation</th><th class="num" data-sort="num">outlier</th>        <th class="num" data-sort="num">mappings</th>
+      </tr></thead>
+      <tbody>
+      <tr><td>Andersen1999</td>
+<td class="num">1</td><td class="num">0</td><td class="num">0</td>        <td class="num">1</td></tr>
+      <tr><td>Burns1991</td>
+<td class="num">1</td><td class="num">1</td><td class="num">0</td>        <td class="num">2</td></tr>
+      <tr><td>Caesar1961</td>
+<td class="num">3</td><td class="num">0</td><td class="num">0</td>        <td class="num">3</td></tr>
+      <tr><td>Chijiiwa2000</td>
+<td class="num">0</td><td class="num">1</td><td class="num">0</td>        <td class="num">1</td></tr>
+      <tr><td>Gadano1997</td>
+<td class="num">0</td><td class="num">2</td><td class="num">0</td>        <td class="num">2</td></tr>
+      <tr><td>Grainger1983</td>
+<td class="num">1</td><td class="num">0</td><td class="num">0</td>        <td class="num">1</td></tr>
+      <tr><td>Grundmann1992</td>
+<td class="num">1</td><td class="num">0</td><td class="num">0</td>        <td class="num">1</td></tr>
+      <tr><td>Kamimori2000</td>
+<td class="num">1</td><td class="num">0</td><td class="num">0</td>        <td class="num">1</td></tr>
+      <tr><td>Klockowski1990</td>
+<td class="num">1</td><td class="num">2</td><td class="num">0</td>        <td class="num">3</td></tr>
+      <tr><td>Leevy1962</td>
+<td class="num">1</td><td class="num">3</td><td class="num">3</td>        <td class="num">7</td></tr>
+      <tr><td>Meijer1988</td>
+<td class="num">9</td><td class="num">0</td><td class="num">0</td>        <td class="num">9</td></tr>
+      <tr><td>Niemann2000</td>
+<td class="num">0</td><td class="num">2</td><td class="num">0</td>        <td class="num">2</td></tr>
+      <tr><td>Soons1991</td>
+<td class="num">1</td><td class="num">0</td><td class="num">0</td>        <td class="num">1</td></tr>
+      </tbody>
+      <tfoot><tr class="total"><td>total</td>
+<td class="num">20</td><td class="num">11</td><td class="num">3</td>        <td class="num">34</td></tr></tfoot>
+    </table>
+  </div>
+</section>
+
+<section id="results">
+  <h2>Results</h2>
+
+  <h3>Metrics</h3>
+  <div class="card">
+    <table data-filter="row">
+      <thead><tr>        <th class=""
+            data-sort="text">parameter_set</th>
+        <th class=""
+            data-sort="text">kind</th>
+        <th class="num"
+            data-sort="num">n<span class="hint" tabindex="0" data-tip="Number of data points which enter the value.">?</span></th>
+        <th class="num"
+            data-sort="num">k<span class="hint" tabindex="0" data-tip="Number of parameters the fit adjusts.">?</span></th>
+        <th class="num"
+            data-sort="num">cost<span class="hint" tabindex="0" data-tip="The objective the optimization minimizes, 0.5 * sum of the squared weighted residuals. It is defined on the training data, so it is not reported for the validation data.">?</span></th>
+        <th class="num"
+            data-sort="num">MSE<span class="hint" tabindex="0" data-tip="Mean squared error of the data and the prediction, unweighted, so the fit mappings with the largest values dominate it.">?</span></th>
+        <th class="num"
+            data-sort="num">RMSE<span class="hint" tabindex="0" data-tip="Root mean squared error, the square root of the MSE, in the unit of the data.">?</span></th>
+        <th class="num"
+            data-sort="num">NRMSE<span class="hint" tabindex="0" data-tip="Root mean square of the residuals normalized by the mean of their fit mapping, so every curve counts the same whatever its magnitude; the RMSE of the small curves is small even when they are missed by a factor.">?</span></th>
+        <th class="num"
+            data-sort="num">RMSE_w<span class="hint" tabindex="0" data-tip="Root mean square of the residuals of the cost, i.e. the residuals of the residual type, weighted and with the loss function applied; the cost of the training data is 0.5 * n * RMSE_w². A parameter set can have a larger RMSE and smaller weighted residuals than another one.">?</span></th>
+        <th class="num"
+            data-sort="num">R2<span class="hint" tabindex="0" data-tip="Coefficient of determination, 1 - SSE/SST. The prediction of a non-linear model is not a linear regression, so this is not the square of a correlation and is negative when the prediction is worse than the mean of the data.">?</span></th>
+        <th class="num"
+            data-sort="num">2-fold [%]<span class="hint" tabindex="0" data-tip="Percentage of the data points whose prediction lies within twofold of the data, 0.5 &lt;= prediction/data &lt;= 2. Only the data points with a positive value and prediction have a ratio and are counted; - if no point has one.">?</span></th>
+        <th class="num"
+            data-sort="num">AIC<span class="hint" tabindex="0" data-tip="Akaike information criterion, n*ln(MSE) + 2*k, up to a constant. Only differences between models fitted on the same data are meaningful; the smaller one is preferred.">?</span></th>
+        <th class="num"
+            data-sort="num">BIC<span class="hint" tabindex="0" data-tip="Bayesian information criterion, n*ln(MSE) + k*ln(n), up to the same constant as the AIC. It charges a parameter more than the AIC from eight data points on, so it prefers the smaller model.">?</span></th>
+        <th class="num"
+            data-sort="num">GMFE</th>
+        <th class="num"
+            data-sort="num">AFE</th>
+        <th class="num"
+            data-sort="num">1.25-fold [%]<span class="hint" tabindex="0" data-tip="Percentage of the data points with a ratio whose prediction lies within 1.25-fold of the data.">?</span></th>
+        <th class="num"
+            data-sort="num">1.5-fold [%]<span class="hint" tabindex="0" data-tip="Percentage of the data points with a ratio whose prediction lies within 1.5-fold of the data.">?</span></th>
+        <th class="num"
+            data-sort="num">1 SD [%]<span class="hint" tabindex="0" data-tip="Percentage of the data points with a standard deviation whose prediction lies within one standard deviation of the data; - if no point has one.">?</span></th>
+        <th class="num"
+            data-sort="num">2 SD [%]<span class="hint" tabindex="0" data-tip="Percentage of the data points with a standard deviation whose prediction lies within two standard deviations of the data; - if no point has one.">?</span></th>
+</tr></thead>
+      <tbody>
+      <tr><td class="">PK_20261020_010006__506c2_0</td><td class="">training</td><td class="num mono">93</td><td class="num mono">5</td><td class="num mono">14.0966</td><td class="num mono">0.000173794</td><td class="num mono">0.0131831</td><td class="num mono">0.351638</td><td class="num mono">0.550593</td><td class="num mono">0.995246</td><td class="num mono">82.8</td><td class="num mono">-795.161</td><td class="num mono">-782.498</td><td class="num mono">1.52714</td><td class="num mono">1.07167</td><td class="num mono">39.8</td><td class="num mono">67.7</td><td class="num mono">60.0</td><td class="num mono">80.0</td></tr>
+      <tr><td class="">PK_20261020_010006__506c2_0</td><td class="">validation</td><td class="num mono">48</td><td class="num mono">5</td><td class="num mono">-</td><td class="num mono">0.00124122</td><td class="num mono">0.0352309</td><td class="num mono">0.584337</td><td class="num mono">1.04375</td><td class="num mono">0.980642</td><td class="num mono">82.6</td><td class="num mono">-311.2</td><td class="num mono">-301.844</td><td class="num mono">5.85079</td><td class="num mono">0.255199</td><td class="num mono">43.5</td><td class="num mono">82.6</td><td class="num mono">71.4</td><td class="num mono">71.4</td></tr>
+      <tr><td class="">PK_20261020_010006__506c2_0</td><td class="">outlier</td><td class="num mono">32</td><td class="num mono">5</td><td class="num mono">-</td><td class="num mono">2.75634e-07</td><td class="num mono">0.000525008</td><td class="num mono">0.347235</td><td class="num mono">0.918521</td><td class="num mono">0.221311</td><td class="num mono">96.9</td><td class="num mono">-473.334</td><td class="num mono">-466.006</td><td class="num mono">1.28812</td><td class="num mono">1.1504</td><td class="num mono">43.8</td><td class="num mono">81.2</td><td class="num mono">0.0</td><td class="num mono">0.0</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Optimization runs</h3>
+  <div class="grid">
+    <div class="card"><figure>
+      <img loading="lazy" src="plots/traces.svg" alt="Cost of the optimizers over their steps">
+      <figcaption>Cost of the optimizers over their steps<span class="hint" tabindex="0" data-tip="The cost of every optimization run over its steps. Runs which end at the same cost found the same optimum; a run which stops much higher is stuck in a local minimum.">?</span></figcaption>
+    </figure></div>
+    <div class="card"><figure>
+      <img loading="lazy" src="plots/waterfall.svg" alt="Cost of the optimization runs, ordered">
+      <figcaption>Cost of the optimization runs, ordered<span class="hint" tabindex="0" data-tip="The final cost of the runs, ordered. A flat plateau at the left is the global optimum found repeatedly, which is the evidence that the multistart converged; steps to the right are local minima.">?</span></figcaption>
+    </figure></div>
+  </div>
+
+  <h3>Predictions and costs</h3>
+  <div class="grid">
+    <div class="card wide"><figure>
+      <img loading="lazy" src="plots/goodness_of_fit.svg" alt="Prediction against the measured data points, per kind of fit mapping, with the agreement of the training data, the lines of twofold and the metrics of the panel. Within twofold of the data are 77 of the 93 training data points (82.8%), 38 of the 46 validation data points (82.6%) and 31 of the 32 outlier data points (96.9%); only the data points with a positive value and prediction are counted">
+      <figcaption>Prediction against the measured data points, per kind of fit mapping, with the agreement of the training data, the lines of twofold and the metrics of the panel. Within twofold of the data are 77 of the 93 training data points (82.8%), 38 of the 46 validation data points (82.6%) and 31 of the 32 outlier data points (96.9%); only the data points with a positive value and prediction are counted<span class="hint" tabindex="0" data-tip="Prediction against measurement, one point per data point, with a panel per kind of fit mapping. The points scatter around the diagonal when the model describes the data; a systematic deviation from it is a systematic error of the model. The band is the agreement of the training data, i.e. the same band the Bland-Altman plot draws, here as lines parallel to the diagonal. The dark red dotted lines are twofold, prediction = 2 x measurement and prediction = measurement / 2; the caption states the points between them of every kind. A point which is zero or negative is not drawn on the logarithmic axes and not counted, the title of a panel then states the points drawn of all. The validation panel shows how the fit describes data it was not fitted on, the outlier panel the data the fit dropped. The box of a panel carries its R², its normalized RMSE, the RMSE of the residuals of the cost, its fold errors GMFE and AFE and the percentages of its points within twofold and within two standard deviations of the data.">?</span></figcaption>
+    </figure></div>
+    <div class="card wide"><figure>
+      <img loading="lazy" src="plots/bland_altman.svg" alt="Agreement of prediction and measurement as a ratio, per kind of fit mapping, with the agreement of the training data and the agreement of the panel">
+      <figcaption>Agreement of prediction and measurement as a ratio, per kind of fit mapping, with the agreement of the training data and the agreement of the panel<span class="hint" tabindex="0" data-tip="The ratio of prediction and measurement over the geometric mean of the two, i.e. the goodness of fit with the diagonal turned into the horizontal. The band is the same, the bias and the limits of agreement `bias ± 1.96 SD` of the training data as fold factors. A bias away from 1 is a systematic over- or underprediction, wide limits are a large scatter, and a trend over the mean is a model which describes the large or the small values better. The box of a panel carries the bias and the SD of its own points as fold factors and the share of them inside the limits of agreement of the training data.">?</span></figcaption>
+    </figure></div>
+  </div>
+
+  <h3>Optimization runs (3)</h3>
+  <div class="card">
+    <table data-filter="row">
+      <thead><tr>        <th class="" data-sort="text">run</th>
+        <th class="num" data-sort="num">success</th>
+        <th class="num" data-sort="num">duration</th>
+        <th class="num" data-sort="num">cost</th>
+</tr></thead>
+      <tbody>
+<tr><td class="">0</td><td class="num mono">True</td><td class="num mono">47.11</td><td class="num mono">14.0966</td></tr><tr><td class="">2</td><td class="num mono">True</td><td class="num mono">43.08</td><td class="num mono">14.0966</td></tr><tr><td class="">1</td><td class="num mono">True</td><td class="num mono">30.21</td><td class="num mono">14.0967</td></tr>      </tbody>
+    </table>
+  </div>
+</section>
+
+
+<!-- the local analysis and the profiles are one section under one heading -->
+<section id="identifiability">
+  <h2>Identifiability</h2>
+  <h3>Fisher information</h3>
+  <p>The curvature of the cost at the parameters, <code>FIM = J'J</code> with the jacobian of the weighted residuals, from which the standard errors and the correlations of the parameters follow. It is a local statement: the intervals are exact for a cost which is a quadratic around the optimum and approximate for a non-linear model, where the profile likelihood is the one to trust. The errors and the intervals are computed in the space the optimizer searches, so an interval on a logarithmic scale is not symmetric around the value.</p>
+  <div class="grid">
+    <div class="card wide">
+      <h3>Analysis</h3>
+      <dl class="kv">
+<dt>parameter set</dt><dd class="mono">PK_20261020_010006__506c2_0</dd><dt>parameter scale</dt><dd class="mono">LOG10</dd><dt>data points</dt><dd class="mono">93</dd><dt>rank</dt><dd class="mono">5 of 5</dd><dt>condition number</dt><dd class="mono">363.4</dd><dt>confidence level</dt><dd class="mono">95%</dd>        <dt>eigenvalues<span class="hint" tabindex="0" data-tip="Eigenvalues of the Fisher information, largest first. A small eigenvalue is a combination of parameters the data does not determine; a spread over orders of magnitude is a sloppy model.">?</span></dt>
+        <dd class="mono">579.8, 218, 31.29, 10.99, 1.595</dd>
+      </dl>
+    </div>
+    <!-- the table of seven columns needs the width of the page -->
+    <div class="card wide">
+      <h3>Parameters</h3>
+      <table data-filter="row">
+        <thead><tr>          <th data-sort="text">parameter</th>
+          <th class="num" data-sort="num">value<span class="hint" tabindex="0" data-tip="Value of the parameter in the unit of its fit parameter, the unit of the table of the parameters.">?</span></th>
+          <th class="num" data-sort="num">se<span class="hint" tabindex="0" data-tip="Standard error of the parameter, the square root of the diagonal of the covariance, in the space the optimizer searches.">?</span></th>
+          <th class="num" data-sort="num">cv<span class="hint" tabindex="0" data-tip="The standard error relative to the value, in percent: the coefficient of variation of the parameter in the units of the model (to first order, also for a parameter searched as a logarithm).">?</span></th>
+          <th class="num" data-sort="num">ci_lower<span class="hint" tabindex="0" data-tip="Lower bound of the confidence interval.">?</span></th>
+          <th class="num" data-sort="num">ci_upper<span class="hint" tabindex="0" data-tip="Upper bound of the confidence interval.">?</span></th>
+          <th data-sort="text">unit</th>
+</tr></thead>
+        <tbody>
+        <tr><td>LI__ICGIM_Vmax</td><td class="num mono">0.09819</td><td class="num mono">0.10948</td><td class="num mono">25.208</td><td class="num mono">0.059499</td><td class="num mono">0.16204</td><td>mmole/min/l</td></tr>
+        <tr><td>LI__ICGEX_k</td><td class="num mono">0.037544</td><td class="num mono">0.15309</td><td class="num mono">35.251</td><td class="num mono">0.018634</td><td class="num mono">0.075644</td><td>1/min</td></tr>
+        <tr><td>LI__ICGLI2CA_Vmax</td><td class="num mono">0.00064949</td><td class="num mono">0.096301</td><td class="num mono">22.174</td><td class="num mono">0.00041802</td><td class="num mono">0.0010091</td><td>mmole/min/l</td></tr>
+        <tr><td>LI__ICGLI2CA_Km</td><td class="num mono">0.0063872</td><td class="num mono">0.43748</td><td class="num mono">100.73</td><td class="num mono">0.00086281</td><td class="num mono">0.047283</td><td>mM</td></tr>
+        <tr><td>LI__ICGLI2BI_k</td><td class="num mono">0.0057822</td><td class="num mono">0.078362</td><td class="num mono">18.044</td><td class="num mono">0.0040399</td><td class="num mono">0.008276</td><td>1/min</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Correlation<span class="hint" tabindex="0" data-tip="Correlation of the parameters from the covariance. A pair at plus or minus one is a pair the data only determines together, i.e. the fit trades one against the other.">?</span></h3>
+    <table>
+      <thead><tr><th></th><th class="num">LI__ICGIM_Vmax</th><th class="num">LI__ICGEX_k</th><th class="num">LI__ICGLI2CA_Vmax</th><th class="num">LI__ICGLI2CA_Km</th><th class="num">LI__ICGLI2BI_k</th></tr></thead>
+      <tbody>
+      <tr><td>LI__ICGIM_Vmax</td><td class="num mono">1.000</td><td class="num mono">0.887</td><td class="num mono">0.179</td><td class="num mono">0.420</td><td class="num mono">0.147</td></tr>
+      <tr><td>LI__ICGEX_k</td><td class="num mono">0.887</td><td class="num mono">1.000</td><td class="num mono">0.322</td><td class="num mono">0.285</td><td class="num mono">-0.113</td></tr>
+      <tr><td>LI__ICGLI2CA_Vmax</td><td class="num mono">0.179</td><td class="num mono">0.322</td><td class="num mono">1.000</td><td class="num mono">0.705</td><td class="num mono">-0.521</td></tr>
+      <tr><td>LI__ICGLI2CA_Km</td><td class="num mono">0.420</td><td class="num mono">0.285</td><td class="num mono">0.705</td><td class="num mono">1.000</td><td class="num mono">0.029</td></tr>
+      <tr><td>LI__ICGLI2BI_k</td><td class="num mono">0.147</td><td class="num mono">-0.113</td><td class="num mono">-0.521</td><td class="num mono">0.029</td><td class="num mono">1.000</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <style>
+    .tag.identifiable { background: var(--training); }
+    .tag.non_identifiable_lower, .tag.non_identifiable_upper { background: var(--outlier); }
+    .tag.non_identifiable { background: #c92a2a; }
+    .tag.structural { background: #862e9c; }
+  </style>
+  <h3>Profile likelihood</h3>
+  <p>Profile likelihood of the parameters: every parameter is fixed at values around the optimum and the other parameters are optimized again. A parameter is identifiable if its profile crosses the threshold of the confidence level on both sides of the optimum, i.e., its confidence interval is finite; practically non-identifiable if the profile stays below the threshold up to a bound of the parameter; structurally non-identifiable if the profile is flat. An open side of an interval is shown as the bound of the parameter.</p>
+  <div class="grid">
+    <div class="card wide">
+      <h3>Analysis</h3>
+      <dl class="kv">
+<dt>parameter set</dt><dd class="mono">PK_20261020_010006__506c2_0</dd><dt>cost</dt><dd class="mono">14.0966</dd><dt>minimal cost</dt><dd class="mono">14.0966</dd><dt>confidence level</dt><dd class="mono">95%</dd><dt>degrees of freedom</dt><dd class="mono">1</dd><dt>threshold</dt><dd class="mono">16.0173</dd><dt>reoptimize</dt><dd class="mono">True</dd><dt>duration</dt><dd class="mono">20.9 s</dd>      </dl>
+    </div>
+    <!-- the table of seven columns needs the width of the page -->
+    <div class="card wide">
+      <h3>Parameters</h3>
+      <table data-filter="row">
+        <thead><tr>
+          <th data-sort="text">parameter</th><th class="num" data-sort="num">value</th>
+          <th class="num" data-sort="num">ci lower</th><th class="num" data-sort="num">ci upper</th>
+          <th data-sort="text">unit</th><th data-sort="text">identifiability</th>
+          <th class="num" data-sort="num">points</th>
+        </tr></thead>
+        <tbody>
+        <tr>
+          <td class="mono">LI__ICGIM_Vmax</td><td class="num mono">0.09819</td>
+          <td class="num mono">0.05451</td><td class="num mono">0.586</td>
+          <td>mmole/min/l</td>
+          <td><span class="tag identifiability identifiable">identifiable</span></td>
+          <td class="num mono">17</td>
+        </tr>
+        <tr>
+          <td class="mono">LI__ICGEX_k</td><td class="num mono">0.037544</td>
+          <td class="num mono">0.01174</td><td class="num mono">0.2314</td>
+          <td>1/min</td>
+          <td><span class="tag identifiability identifiable">identifiable</span></td>
+          <td class="num mono">16</td>
+        </tr>
+        <tr>
+          <td class="mono">LI__ICGLI2CA_Vmax</td><td class="num mono">0.00064949</td>
+          <td class="num mono">0.000234</td><td class="num mono">0.002398</td>
+          <td>mmole/min/l</td>
+          <td><span class="tag identifiability identifiable">identifiable</span></td>
+          <td class="num mono">21</td>
+        </tr>
+        <tr>
+          <td class="mono">LI__ICGLI2CA_Km</td><td class="num mono">0.0063872</td>
+          <td class="num mono">&lt; 0.001</td><td class="num mono">0.07235</td>
+          <td>mM</td>
+          <td><span class="tag identifiability non_identifiable_lower">non-identifiable (lower)</span></td>
+          <td class="num mono">14</td>
+        </tr>
+        <tr>
+          <td class="mono">LI__ICGLI2BI_k</td><td class="num mono">0.0057822</td>
+          <td class="num mono">0.002843</td><td class="num mono">0.03903</td>
+          <td>1/min</td>
+          <td><span class="tag identifiability identifiable">identifiable</span></td>
+          <td class="num mono">21</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="card wide"><figure>
+      <img loading="lazy" src="plots/profiles.svg" alt="Profile likelihood of every parameter: the cost with the parameter fixed and the other parameters optimized, the threshold of the confidence level and the confidence interval">
+      <figcaption>Profile likelihood of every parameter: the cost with the parameter fixed and the other parameters optimized, the threshold of the confidence level and the confidence interval<span class="hint" tabindex="0" data-tip="One profile per parameter. A profile which crosses the dashed threshold on both sides gives a finite confidence interval; one which stays below it up to a bound is practically non-identifiable; a flat profile is structurally non-identifiable, the parameter is compensated by the others.">?</span></figcaption>
+    </figure></div>
+  </div>
+  <h3>Profiles</h3>
+  <div class="grid">
+    <div class="card"><figure>
+      <img loading="lazy" src="plots/profile_LI__ICGIM_Vmax.svg" alt="Profile of &#39;LI__ICGIM_Vmax&#39; and the paths of the other parameters along it">
+      <figcaption>Profile of &#39;LI__ICGIM_Vmax&#39; and the paths of the other parameters along it</figcaption>
+    </figure></div>
+    <div class="card"><figure>
+      <img loading="lazy" src="plots/profile_LI__ICGEX_k.svg" alt="Profile of &#39;LI__ICGEX_k&#39; and the paths of the other parameters along it">
+      <figcaption>Profile of &#39;LI__ICGEX_k&#39; and the paths of the other parameters along it</figcaption>
+    </figure></div>
+    <div class="card"><figure>
+      <img loading="lazy" src="plots/profile_LI__ICGLI2CA_Vmax.svg" alt="Profile of &#39;LI__ICGLI2CA_Vmax&#39; and the paths of the other parameters along it">
+      <figcaption>Profile of &#39;LI__ICGLI2CA_Vmax&#39; and the paths of the other parameters along it</figcaption>
+    </figure></div>
+    <div class="card"><figure>
+      <img loading="lazy" src="plots/profile_LI__ICGLI2CA_Km.svg" alt="Profile of &#39;LI__ICGLI2CA_Km&#39; and the paths of the other parameters along it">
+      <figcaption>Profile of &#39;LI__ICGLI2CA_Km&#39; and the paths of the other parameters along it</figcaption>
+    </figure></div>
+    <div class="card"><figure>
+      <img loading="lazy" src="plots/profile_LI__ICGLI2BI_k.svg" alt="Profile of &#39;LI__ICGLI2BI_k&#39; and the paths of the other parameters along it">
+      <figcaption>Profile of &#39;LI__ICGLI2BI_k&#39; and the paths of the other parameters along it</figcaption>
+    </figure></div>
+  </div>
+</section>
+</div>
+
+<section id="mappings" class="tab-panel" data-panel="mappings">
+  <h2>Fit mappings (34)</h2>
+
+  <h3>Cost, weight and residuals of the fit mappings</h3>
+  <div class="grid">
+    <div class="card"><figure>
+      <img loading="lazy" src="plots/cost_bar.svg" alt="Cost and weight of every fit mapping">
+      <figcaption>Cost and weight of every fit mapping<span class="hint" tabindex="0" data-tip="How much every fit mapping contributes to the cost, with its weight. A mapping which dominates the cost dominates the fit.">?</span></figcaption>
+    </figure></div>
+    <div class="card"><figure>
+      <img loading="lazy" src="plots/residual_boxplot.svg" alt="Distribution of the squared weighted residuals">
+      <figcaption>Distribution of the squared weighted residuals<span class="hint" tabindex="0" data-tip="The distribution of the squared weighted residuals per mapping. A mapping whose box sits far above the others is the one the model describes worst.">?</span></figcaption>
+    </figure></div>
+  </div>
+
+  <h3>Metrics of the fit mappings</h3>
+  <div class="card">
+    <table data-filter="row">
+      <thead><tr>        <th class=""
+            data-sort="text">parameter set</th>
+        <th class=""
+            data-sort="text">experiment</th>
+        <th class=""
+            data-sort="text">mapping</th>
+        <th class=""
+            data-sort="text">kind</th>
+        <th class="num"
+            data-sort="num">n<span class="hint" tabindex="0" data-tip="Number of data points which enter the value.">?</span></th>
+        <th class="num"
+            data-sort="num">MSE<span class="hint" tabindex="0" data-tip="Mean squared error of the data and the prediction, unweighted, so the fit mappings with the largest values dominate it.">?</span></th>
+        <th class="num"
+            data-sort="num">RMSE<span class="hint" tabindex="0" data-tip="Root mean squared error, the square root of the MSE, in the unit of the data.">?</span></th>
+        <th class="num"
+            data-sort="num">NRMSE<span class="hint" tabindex="0" data-tip="Root mean square of the residuals normalized by the mean of their fit mapping, so every curve counts the same whatever its magnitude; the RMSE of the small curves is small even when they are missed by a factor.">?</span></th>
+        <th class="num"
+            data-sort="num">RMSE_w<span class="hint" tabindex="0" data-tip="Root mean square of the residuals of the cost, i.e. the residuals of the residual type, weighted and with the loss function applied; the cost of the training data is 0.5 * n * RMSE_w². A parameter set can have a larger RMSE and smaller weighted residuals than another one.">?</span></th>
+        <th class="num"
+            data-sort="num">R2<span class="hint" tabindex="0" data-tip="Coefficient of determination, 1 - SSE/SST. The prediction of a non-linear model is not a linear regression, so this is not the square of a correlation and is negative when the prediction is worse than the mean of the data.">?</span></th>
+        <th class="num"
+            data-sort="num">2-fold [%]<span class="hint" tabindex="0" data-tip="Percentage of the data points whose prediction lies within twofold of the data, 0.5 &lt;= prediction/data &lt;= 2. Only the data points with a positive value and prediction have a ratio and are counted; - if no point has one.">?</span></th>
+</tr></thead>
+      <tbody>
+      <tr data-kind="training">
+        <td>PK_20261020_010006__506c2_0</td><td>Andersen1999</td>
+        <td class="mono wrap">fm_Cve_icg_individual</td>
+        <td><span class="tag training">training</span></td>
+        <td class="num">6</td>
+        <td class="num mono">5.329e-07</td><td class="num mono">0.00073</td>
+        <td class="num mono">0.3048</td><td class="num mono">0.176</td>
+        <td class="num mono">0.9114</td><td class="num mono">100.0</td>
+      </tr>
+      <tr data-kind="training">
+        <td>PK_20261020_010006__506c2_0</td><td>Burns1991</td>
+        <td class="mono wrap">fm_Cve_icg_individual</td>
+        <td><span class="tag training">training</span></td>
+        <td class="num">6</td>
+        <td class="num mono">9.835e-07</td><td class="num mono">0.0009917</td>
+        <td class="num mono">0.3646</td><td class="num mono">0.2105</td>
+        <td class="num mono">0.9372</td><td class="num mono">33.3</td>
+      </tr>
+      <tr data-kind="validation">
+        <td>PK_20261020_010006__506c2_0</td><td>Burns1991</td>
+        <td class="mono wrap">fm_Cve_icg_individual_tail</td>
+        <td><span class="tag validation">validation</span></td>
+        <td class="num">9</td>
+        <td class="num mono">1.93e-10</td><td class="num mono">1.389e-05</td>
+        <td class="num mono">0.7847</td><td class="num mono">0.3699</td>
+        <td class="num mono">-2.488</td><td class="num mono">14.3</td>
+      </tr>
+      <tr data-kind="training">
+        <td>PK_20261020_010006__506c2_0</td><td>Caesar1961</td>
+        <td class="mono wrap">fm_er_icg</td>
+        <td><span class="tag training">training</span></td>
+        <td class="num">1</td>
+        <td class="num mono">0.0006925</td><td class="num mono">0.02632</td>
+        <td class="num mono">0.04245</td><td class="num mono">0.2511</td>
+        <td class="num mono">-</td><td class="num mono">100.0</td>
+      </tr>
+      <tr data-kind="training">
+        <td>PK_20261020_010006__506c2_0</td><td>Caesar1961</td>
+        <td class="mono wrap">fm_Chv_icg</td>
+        <td><span class="tag training">training</span></td>
+        <td class="num">1</td>
+        <td class="num mono">3.311e-11</td><td class="num mono">5.754e-06</td>
+        <td class="num mono">0.01158</td><td class="num mono">0.03986</td>
+        <td class="num mono">-</td><td class="num mono">100.0</td>
+      </tr>
+      <tr data-kind="training">
+        <td>PK_20261020_010006__506c2_0</td><td>Caesar1961</td>
+        <td class="mono wrap">fm_Car_icg</td>
+        <td><span class="tag training">training</span></td>
+        <td class="num">1</td>
+        <td class="num mono">1.097e-08</td><td class="num mono">0.0001047</td>
+        <td class="num mono">0.07956</td><td class="num mono">0.3114</td>
+        <td class="num mono">-</td><td class="num mono">100.0</td>
+      </tr>
+      <tr data-kind="validation">
+        <td>PK_20261020_010006__506c2_0</td><td>Chijiiwa2000</td>
+        <td class="mono wrap">fm_LI__ICGLI2BI</td>
+        <td><span class="tag validation">validation</span></td>
+        <td class="num">5</td>
+        <td class="num mono">6.344e-09</td><td class="num mono">7.965e-05</td>
+        <td class="num mono">1.268</td><td class="num mono">2.162</td>
+        <td class="num mono">-6.557</td><td class="num mono">60.0</td>
+      </tr>
+      <tr data-kind="validation">
+        <td>PK_20261020_010006__506c2_0</td><td>Gadano1997</td>
+        <td class="mono wrap">fm_er_hepatitis</td>
+        <td><span class="tag validation">validation</span></td>
+        <td class="num">1</td>
+        <td class="num mono">0.02325</td><td class="num mono">0.1525</td>
+        <td class="num mono">0.2723</td><td class="num mono">3.993</td>
+        <td class="num mono">-</td><td class="num mono">100.0</td>
+      </tr>
+      <tr data-kind="validation">
+        <td>PK_20261020_010006__506c2_0</td><td>Gadano1997</td>
+        <td class="mono wrap">fm_cl_hepatitis</td>
+        <td><span class="tag validation">validation</span></td>
+        <td class="num">1</td>
+        <td class="num mono">0.015</td><td class="num mono">0.1225</td>
+        <td class="num mono">0.2909</td><td class="num mono">3.309</td>
+        <td class="num mono">-</td><td class="num mono">100.0</td>
+      </tr>
+      <tr data-kind="training">
+        <td>PK_20261020_010006__506c2_0</td><td>Grainger1983</td>
+        <td class="mono wrap">fm_er</td>
+        <td><span class="tag training">training</span></td>
+        <td class="num">5</td>
+        <td class="num mono">0.002857</td><td class="num mono">0.05345</td>
+        <td class="num mono">0.07107</td><td class="num mono">0.04495</td>
+        <td class="num mono">-0.3128</td><td class="num mono">100.0</td>
+      </tr>
+      <tr data-kind="training">
+        <td>PK_20261020_010006__506c2_0</td><td>Grundmann1992</td>
+        <td class="mono wrap">fm_Cve_icg1</td>
+        <td><span class="tag training">training</span></td>
+        <td class="num">7</td>
+        <td class="num mono">9.701e-08</td><td class="num mono">0.0003115</td>
+        <td class="num mono">0.1139</td><td class="num mono">0.06089</td>
+        <td class="num mono">0.9766</td><td class="num mono">100.0</td>
+      </tr>
+      <tr data-kind="training">
+        <td>PK_20261020_010006__506c2_0</td><td>Kamimori2000</td>
+        <td class="mono wrap">fm_Cve_icg_Lut</td>
+        <td><span class="tag training">training</span></td>
+        <td class="num">3</td>
+        <td class="num mono">5.48e-07</td><td class="num mono">0.0007403</td>
+        <td class="num mono">0.2354</td><td class="num mono">0.9088</td>
+        <td class="num mono">0.9195</td><td class="num mono">100.0</td>
+      </tr>
+      <tr data-kind="training">
+        <td>PK_20261020_010006__506c2_0</td><td>Klockowski1990</td>
+        <td class="mono wrap">fm_Cve_icg</td>
+        <td><span class="tag training">training</span></td>
+        <td class="num">7</td>
+        <td class="num mono">3.496e-06</td><td class="num mono">0.00187</td>
+        <td class="num mono">0.336</td><td class="num mono">0.1796</td>
+        <td class="num mono">0.8047</td><td class="num mono">100.0</td>
+      </tr>
+      <tr data-kind="validation">
+        <td>PK_20261020_010006__506c2_0</td><td>Klockowski1990</td>
+        <td class="mono wrap">fm_Cve_icg_isradipine</td>
+        <td><span class="tag validation">validation</span></td>
+        <td class="num">5</td>
+        <td class="num mono">1.521e-06</td><td class="num mono">0.001233</td>
+        <td class="num mono">0.2397</td><td class="num mono">0.1516</td>
+        <td class="num mono">0.8996</td><td class="num mono">100.0</td>
+      </tr>
+      <tr data-kind="validation">
+        <td>PK_20261020_010006__506c2_0</td><td>Klockowski1990</td>
+        <td class="mono wrap">fm_Cve_icg_diltiazem</td>
+        <td><span class="tag validation">validation</span></td>
+        <td class="num">5</td>
+        <td class="num mono">2.906e-06</td><td class="num mono">0.001705</td>
+        <td class="num mono">0.2809</td><td class="num mono">0.1777</td>
+        <td class="num mono">0.8153</td><td class="num mono">100.0</td>
+      </tr>
+      <tr data-kind="training">
+        <td>PK_20261020_010006__506c2_0</td><td>Leevy1962</td>
+        <td class="mono wrap">fm_er_icg</td>
+        <td><span class="tag training">training</span></td>
+        <td class="num">1</td>
+        <td class="num mono">0.001067</td><td class="num mono">0.03267</td>
+        <td class="num mono">0.0468</td><td class="num mono">0.4978</td>
+        <td class="num mono">-</td><td class="num mono">100.0</td>
+      </tr>
+      <tr data-kind="validation">
+        <td>PK_20261020_010006__506c2_0</td><td>Leevy1962</td>
+        <td class="mono wrap">fm_er_0p15_icg</td>
+        <td><span class="tag validation">validation</span></td>
+        <td class="num">2</td>
+        <td class="num mono">0.002578</td><td class="num mono">0.05077</td>
+        <td class="num mono">0.07062</td><td class="num mono">0.07062</td>
+        <td class="num mono">-2.065</td><td class="num mono">100.0</td>
+      </tr>
+      <tr data-kind="validation">
+        <td>PK_20261020_010006__506c2_0</td><td>Leevy1962</td>
+        <td class="mono wrap">fm_er_0p25_icg</td>
+        <td><span class="tag validation">validation</span></td>
+        <td class="num">2</td>
+        <td class="num mono">0.002981</td><td class="num mono">0.0546</td>
+        <td class="num mono">0.07525</td><td class="num mono">0.07525</td>
+        <td class="num mono">-0.4398</td><td class="num mono">100.0</td>
+      </tr>
+      <tr data-kind="validation">
+        <td>PK_20261020_010006__506c2_0</td><td>Leevy1962</td>
+        <td class="mono wrap">fm_er_0p5_icg</td>
+        <td><span class="tag validation">validation</span></td>
+        <td class="num">2</td>
+        <td class="num mono">0.005092</td><td class="num mono">0.07136</td>
+        <td class="num mono">0.0963</td><td class="num mono">0.0963</td>
+        <td class="num mono">-0.0101</td><td class="num mono">100.0</td>
+      </tr>
+      <tr data-kind="outlier">
+        <td>PK_20261020_010006__506c2_0</td><td>Leevy1962</td>
+        <td class="mono wrap">fm_Car_icg_tab1</td>
+        <td><span class="tag outlier">outlier</span></td>
+        <td class="num">1</td>
+        <td class="num mono">6.491e-06</td><td class="num mono">0.002548</td>
+        <td class="num mono">0.6808</td><td class="num mono">5.157</td>
+        <td class="num mono">-</td><td class="num mono">0.0</td>
+      </tr>
+      <tr data-kind="outlier">
+        <td>PK_20261020_010006__506c2_0</td><td>Leevy1962</td>
+        <td class="mono wrap">fm_Chv_icg_fig1</td>
+        <td><span class="tag outlier">outlier</span></td>
+        <td class="num">14</td>
+        <td class="num mono">5.578e-10</td><td class="num mono">2.362e-05</td>
+        <td class="num mono">0.0678</td><td class="num mono">0.02563</td>
+        <td class="num mono">-0.5701</td><td class="num mono">100.0</td>
+      </tr>
+      <tr data-kind="outlier">
+        <td>PK_20261020_010006__506c2_0</td><td>Leevy1962</td>
+        <td class="mono wrap">fm_Car_icg_fig1</td>
+        <td><span class="tag outlier">outlier</span></td>
+        <td class="num">17</td>
+        <td class="num mono">1.366e-07</td><td class="num mono">0.0003695</td>
+        <td class="num mono">0.4426</td><td class="num mono">0.1518</td>
+        <td class="num mono">-71.05</td><td class="num mono">100.0</td>
+      </tr>
+      <tr data-kind="training">
+        <td>PK_20261020_010006__506c2_0</td><td>Meijer1988</td>
+        <td class="mono wrap">fm_Cve_icg_0p5</td>
+        <td><span class="tag training">training</span></td>
+        <td class="num">7</td>
+        <td class="num mono">2.21e-06</td><td class="num mono">0.001487</td>
+        <td class="num mono">0.2758</td><td class="num mono">0.3611</td>
+        <td class="num mono">0.8019</td><td class="num mono">85.7</td>
+      </tr>
+      <tr data-kind="training">
+        <td>PK_20261020_010006__506c2_0</td><td>Meijer1988</td>
+        <td class="mono wrap">fm_Cve_icg_0p5_secondary</td>
+        <td><span class="tag training">training</span></td>
+        <td class="num">3</td>
+        <td class="num mono">2.336e-07</td><td class="num mono">0.0004833</td>
+        <td class="num mono">0.6919</td><td class="num mono">1.384</td>
+        <td class="num mono">-22.2</td><td class="num mono">0.0</td>
+      </tr>
+      <tr data-kind="training">
+        <td>PK_20261020_010006__506c2_0</td><td>Meijer1988</td>
+        <td class="mono wrap">fm_LI__ICGLI2BI_0p5</td>
+        <td><span class="tag training">training</span></td>
+        <td class="num">6</td>
+        <td class="num mono">2.267e-09</td><td class="num mono">4.761e-05</td>
+        <td class="num mono">0.4458</td><td class="num mono">0.6304</td>
+        <td class="num mono">0.7266</td><td class="num mono">66.7</td>
+      </tr>
+      <tr data-kind="training">
+        <td>PK_20261020_010006__506c2_0</td><td>Meijer1988</td>
+        <td class="mono wrap">fm_Cve_icg_1p0</td>
+        <td><span class="tag training">training</span></td>
+        <td class="num">6</td>
+        <td class="num mono">6.415e-06</td><td class="num mono">0.002533</td>
+        <td class="num mono">0.3247</td><td class="num mono">0.4191</td>
+        <td class="num mono">0.8226</td><td class="num mono">100.0</td>
+      </tr>
+      <tr data-kind="training">
+        <td>PK_20261020_010006__506c2_0</td><td>Meijer1988</td>
+        <td class="mono wrap">fm_Cve_icg_1p0_secondary</td>
+        <td><span class="tag training">training</span></td>
+        <td class="num">4</td>
+        <td class="num mono">9.167e-08</td><td class="num mono">0.0003028</td>
+        <td class="num mono">0.3557</td><td class="num mono">0.5624</td>
+        <td class="num mono">-0.6449</td><td class="num mono">100.0</td>
+      </tr>
+      <tr data-kind="training">
+        <td>PK_20261020_010006__506c2_0</td><td>Meijer1988</td>
+        <td class="mono wrap">fm_LI__ICGLI2BI_1p0</td>
+        <td><span class="tag training">training</span></td>
+        <td class="num">8</td>
+        <td class="num mono">4.736e-09</td><td class="num mono">6.882e-05</td>
+        <td class="num mono">0.4809</td><td class="num mono">0.5376</td>
+        <td class="num mono">0.7652</td><td class="num mono">50.0</td>
+      </tr>
+      <tr data-kind="training">
+        <td>PK_20261020_010006__506c2_0</td><td>Meijer1988</td>
+        <td class="mono wrap">fm_Cve_icg_2p0</td>
+        <td><span class="tag training">training</span></td>
+        <td class="num">7</td>
+        <td class="num mono">3.757e-06</td><td class="num mono">0.001938</td>
+        <td class="num mono">0.1076</td><td class="num mono">0.115</td>
+        <td class="num mono">0.9744</td><td class="num mono">100.0</td>
+      </tr>
+      <tr data-kind="training">
+        <td>PK_20261020_010006__506c2_0</td><td>Meijer1988</td>
+        <td class="mono wrap">fm_Cve_icg_2p0_secondary</td>
+        <td><span class="tag training">training</span></td>
+        <td class="num">4</td>
+        <td class="num mono">4.39e-08</td><td class="num mono">0.0002095</td>
+        <td class="num mono">0.1281</td><td class="num mono">0.1812</td>
+        <td class="num mono">0.4809</td><td class="num mono">100.0</td>
+      </tr>
+      <tr data-kind="training">
+        <td>PK_20261020_010006__506c2_0</td><td>Meijer1988</td>
+        <td class="mono wrap">fm_LI__ICGLI2BI_2p0</td>
+        <td><span class="tag training">training</span></td>
+        <td class="num">7</td>
+        <td class="num mono">1.238e-08</td><td class="num mono">0.0001113</td>
+        <td class="num mono">0.5815</td><td class="num mono">0.6217</td>
+        <td class="num mono">0.2548</td><td class="num mono">71.4</td>
+      </tr>
+      <tr data-kind="validation">
+        <td>PK_20261020_010006__506c2_0</td><td>Niemann2000</td>
+        <td class="mono wrap">fm_Car_icg_individual</td>
+        <td><span class="tag validation">validation</span></td>
+        <td class="num">8</td>
+        <td class="num mono">1.916e-07</td><td class="num mono">0.0004377</td>
+        <td class="num mono">0.3662</td><td class="num mono">0.1831</td>
+        <td class="num mono">-0.2556</td><td class="num mono">100.0</td>
+      </tr>
+      <tr data-kind="validation">
+        <td>PK_20261020_010006__506c2_0</td><td>Niemann2000</td>
+        <td class="mono wrap">fm_Car_icg_individual_propranolol</td>
+        <td><span class="tag validation">validation</span></td>
+        <td class="num">8</td>
+        <td class="num mono">2.514e-07</td><td class="num mono">0.0005014</td>
+        <td class="num mono">0.3267</td><td class="num mono">0.1634</td>
+        <td class="num mono">-0.5649</td><td class="num mono">100.0</td>
+      </tr>
+      <tr data-kind="training">
+        <td>PK_20261020_010006__506c2_0</td><td>Soons1991</td>
+        <td class="mono wrap">fm_Cve_icg_mean</td>
+        <td><span class="tag training">training</span></td>
+        <td class="num">3</td>
+        <td class="num mono">6.471e-07</td><td class="num mono">0.0008045</td>
+        <td class="num mono">0.3642</td><td class="num mono">1.632</td>
+        <td class="num mono">0.5356</td><td class="num mono">100.0</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Data and simulation of the fit mappings</h3>
+  <div class="card mapping" data-kind="training" data-filter="card">
+    <header>
+      <span class="name mono">fm_Cve_icg_individual</span>
+      <span class="exp">Andersen1999 · [Cve_icg]</span>
+      <span class="tag training">training</span>
+      <span class="metrics">
+<span>n <b>6</b></span><span>RMSE <b>0.00073</b></span><span>R² <b>0.9114</b></span><span>2-fold <b>100.0%</b></span><span>GMFE <b>1.45</b></span>      </span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="plots/Andersen1999_fm_Cve_icg_individual.svg" alt="Data, simulation and agreement">
+        <figcaption>Data, simulation and agreement</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-kind="training" data-filter="card">
+    <header>
+      <span class="name mono">fm_Cve_icg_individual</span>
+      <span class="exp">Burns1991 · [Cve_icg]</span>
+      <span class="tag training">training</span>
+      <span class="metrics">
+<span>n <b>6</b></span><span>RMSE <b>0.0009917</b></span><span>R² <b>0.9372</b></span><span>2-fold <b>33.3%</b></span><span>GMFE <b>2.42</b></span>      </span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="plots/Burns1991_fm_Cve_icg_individual.svg" alt="Data, simulation and agreement">
+        <figcaption>Data, simulation and agreement</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-kind="validation" data-filter="card">
+    <header>
+      <span class="name mono">fm_Cve_icg_individual_tail</span>
+      <span class="exp">Burns1991 · [Cve_icg]</span>
+      <span class="tag validation">validation</span>
+      <span class="metrics">
+<span>n <b>9</b></span><span>RMSE <b>1.389e-05</b></span><span>R² <b>-2.488</b></span><span>2-fold <b>14.3%</b></span><span>GMFE <b>2.51e+04</b></span>      </span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="plots/Burns1991_fm_Cve_icg_individual_tail.svg" alt="Data, simulation and agreement">
+        <figcaption>Data, simulation and agreement</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-kind="training" data-filter="card">
+    <header>
+      <span class="name mono">fm_er_icg</span>
+      <span class="exp">Caesar1961 · ER_icg</span>
+      <span class="tag training">training</span>
+      <span class="metrics">
+<span>n <b>1</b></span><span>RMSE <b>0.02632</b></span><span>R² <b>-</b></span><span>2-fold <b>100.0%</b></span><span>GMFE <b>1.04</b></span>      </span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="plots/Caesar1961_fm_er_icg.svg" alt="Data, simulation and agreement">
+        <figcaption>Data, simulation and agreement</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-kind="training" data-filter="card">
+    <header>
+      <span class="name mono">fm_Chv_icg</span>
+      <span class="exp">Caesar1961 · [Chv_icg]</span>
+      <span class="tag training">training</span>
+      <span class="metrics">
+<span>n <b>1</b></span><span>RMSE <b>5.754e-06</b></span><span>R² <b>-</b></span><span>2-fold <b>100.0%</b></span><span>GMFE <b>1.01</b></span>      </span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="plots/Caesar1961_fm_Chv_icg.svg" alt="Data, simulation and agreement">
+        <figcaption>Data, simulation and agreement</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-kind="training" data-filter="card">
+    <header>
+      <span class="name mono">fm_Car_icg</span>
+      <span class="exp">Caesar1961 · [Car_icg]</span>
+      <span class="tag training">training</span>
+      <span class="metrics">
+<span>n <b>1</b></span><span>RMSE <b>0.0001047</b></span><span>R² <b>-</b></span><span>2-fold <b>100.0%</b></span><span>GMFE <b>1.08</b></span>      </span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="plots/Caesar1961_fm_Car_icg.svg" alt="Data, simulation and agreement">
+        <figcaption>Data, simulation and agreement</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-kind="validation" data-filter="card">
+    <header>
+      <span class="name mono">fm_LI__ICGLI2BI</span>
+      <span class="exp">Chijiiwa2000 · LI__ICGLI2BI</span>
+      <span class="tag validation">validation</span>
+      <span class="metrics">
+<span>n <b>5</b></span><span>RMSE <b>7.965e-05</b></span><span>R² <b>-6.557</b></span><span>2-fold <b>60.0%</b></span><span>GMFE <b>2.27</b></span>      </span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="plots/Chijiiwa2000_fm_LI__ICGLI2BI.svg" alt="Data, simulation and agreement">
+        <figcaption>Data, simulation and agreement</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-kind="validation" data-filter="card">
+    <header>
+      <span class="name mono">fm_er_hepatitis</span>
+      <span class="exp">Gadano1997 · ER_icg</span>
+      <span class="tag validation">validation</span>
+      <span class="metrics">
+<span>n <b>1</b></span><span>RMSE <b>0.1525</b></span><span>R² <b>-</b></span><span>2-fold <b>100.0%</b></span><span>GMFE <b>1.27</b></span>      </span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="plots/Gadano1997_fm_er_hepatitis.svg" alt="Data, simulation and agreement">
+        <figcaption>Data, simulation and agreement</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-kind="validation" data-filter="card">
+    <header>
+      <span class="name mono">fm_cl_hepatitis</span>
+      <span class="exp">Gadano1997 · CLinfusion_icg</span>
+      <span class="tag validation">validation</span>
+      <span class="metrics">
+<span>n <b>1</b></span><span>RMSE <b>0.1225</b></span><span>R² <b>-</b></span><span>2-fold <b>100.0%</b></span><span>GMFE <b>1.29</b></span>      </span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="plots/Gadano1997_fm_cl_hepatitis.svg" alt="Data, simulation and agreement">
+        <figcaption>Data, simulation and agreement</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-kind="training" data-filter="card">
+    <header>
+      <span class="name mono">fm_er</span>
+      <span class="exp">Grainger1983 · ER_icg</span>
+      <span class="tag training">training</span>
+      <span class="metrics">
+<span>n <b>5</b></span><span>RMSE <b>0.05345</b></span><span>R² <b>-0.3128</b></span><span>2-fold <b>100.0%</b></span><span>GMFE <b>1.07</b></span>      </span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="plots/Grainger1983_fm_er.svg" alt="Data, simulation and agreement">
+        <figcaption>Data, simulation and agreement</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-kind="training" data-filter="card">
+    <header>
+      <span class="name mono">fm_Cve_icg1</span>
+      <span class="exp">Grundmann1992 · [Cve_icg]</span>
+      <span class="tag training">training</span>
+      <span class="metrics">
+<span>n <b>7</b></span><span>RMSE <b>0.0003115</b></span><span>R² <b>0.9766</b></span><span>2-fold <b>100.0%</b></span><span>GMFE <b>1.08</b></span>      </span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="plots/Grundmann1992_fm_Cve_icg1.svg" alt="Data, simulation and agreement">
+        <figcaption>Data, simulation and agreement</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-kind="training" data-filter="card">
+    <header>
+      <span class="name mono">fm_Cve_icg_Lut</span>
+      <span class="exp">Kamimori2000 · [Cve_icg]</span>
+      <span class="tag training">training</span>
+      <span class="metrics">
+<span>n <b>3</b></span><span>RMSE <b>0.0007403</b></span><span>R² <b>0.9195</b></span><span>2-fold <b>100.0%</b></span><span>GMFE <b>1.25</b></span>      </span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="plots/Kamimori2000_fm_Cve_icg_Lut.svg" alt="Data, simulation and agreement">
+        <figcaption>Data, simulation and agreement</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-kind="training" data-filter="card">
+    <header>
+      <span class="name mono">fm_Cve_icg</span>
+      <span class="exp">Klockowski1990 · [Cve_icg]</span>
+      <span class="tag training">training</span>
+      <span class="metrics">
+<span>n <b>7</b></span><span>RMSE <b>0.00187</b></span><span>R² <b>0.8047</b></span><span>2-fold <b>100.0%</b></span><span>GMFE <b>1.31</b></span>      </span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="plots/Klockowski1990_fm_Cve_icg.svg" alt="Data, simulation and agreement">
+        <figcaption>Data, simulation and agreement</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-kind="validation" data-filter="card">
+    <header>
+      <span class="name mono">fm_Cve_icg_isradipine</span>
+      <span class="exp">Klockowski1990 · [Cve_icg]</span>
+      <span class="tag validation">validation</span>
+      <span class="metrics">
+<span>n <b>5</b></span><span>RMSE <b>0.001233</b></span><span>R² <b>0.8996</b></span><span>2-fold <b>100.0%</b></span><span>GMFE <b>1.15</b></span>      </span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="plots/Klockowski1990_fm_Cve_icg_isradipine.svg" alt="Data, simulation and agreement">
+        <figcaption>Data, simulation and agreement</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-kind="validation" data-filter="card">
+    <header>
+      <span class="name mono">fm_Cve_icg_diltiazem</span>
+      <span class="exp">Klockowski1990 · [Cve_icg]</span>
+      <span class="tag validation">validation</span>
+      <span class="metrics">
+<span>n <b>5</b></span><span>RMSE <b>0.001705</b></span><span>R² <b>0.8153</b></span><span>2-fold <b>100.0%</b></span><span>GMFE <b>1.2</b></span>      </span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="plots/Klockowski1990_fm_Cve_icg_diltiazem.svg" alt="Data, simulation and agreement">
+        <figcaption>Data, simulation and agreement</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-kind="training" data-filter="card">
+    <header>
+      <span class="name mono">fm_er_icg</span>
+      <span class="exp">Leevy1962 · ER_icg</span>
+      <span class="tag training">training</span>
+      <span class="metrics">
+<span>n <b>1</b></span><span>RMSE <b>0.03267</b></span><span>R² <b>-</b></span><span>2-fold <b>100.0%</b></span><span>GMFE <b>1.05</b></span>      </span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="plots/Leevy1962_fm_er_icg.svg" alt="Data, simulation and agreement">
+        <figcaption>Data, simulation and agreement</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-kind="validation" data-filter="card">
+    <header>
+      <span class="name mono">fm_er_0p15_icg</span>
+      <span class="exp">Leevy1962 · ER_icg</span>
+      <span class="tag validation">validation</span>
+      <span class="metrics">
+<span>n <b>2</b></span><span>RMSE <b>0.05077</b></span><span>R² <b>-2.065</b></span><span>2-fold <b>100.0%</b></span><span>GMFE <b>1.06</b></span>      </span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="plots/Leevy1962_fm_er_0p15_icg.svg" alt="Data, simulation and agreement">
+        <figcaption>Data, simulation and agreement</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-kind="validation" data-filter="card">
+    <header>
+      <span class="name mono">fm_er_0p25_icg</span>
+      <span class="exp">Leevy1962 · ER_icg</span>
+      <span class="tag validation">validation</span>
+      <span class="metrics">
+<span>n <b>2</b></span><span>RMSE <b>0.0546</b></span><span>R² <b>-0.4398</b></span><span>2-fold <b>100.0%</b></span><span>GMFE <b>1.06</b></span>      </span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="plots/Leevy1962_fm_er_0p25_icg.svg" alt="Data, simulation and agreement">
+        <figcaption>Data, simulation and agreement</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-kind="validation" data-filter="card">
+    <header>
+      <span class="name mono">fm_er_0p5_icg</span>
+      <span class="exp">Leevy1962 · ER_icg</span>
+      <span class="tag validation">validation</span>
+      <span class="metrics">
+<span>n <b>2</b></span><span>RMSE <b>0.07136</b></span><span>R² <b>-0.0101</b></span><span>2-fold <b>100.0%</b></span><span>GMFE <b>1.1</b></span>      </span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="plots/Leevy1962_fm_er_0p5_icg.svg" alt="Data, simulation and agreement">
+        <figcaption>Data, simulation and agreement</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-kind="outlier" data-filter="card">
+    <header>
+      <span class="name mono">fm_Car_icg_tab1</span>
+      <span class="exp">Leevy1962 · [Car_icg]</span>
+      <span class="tag outlier">outlier</span>
+      <span class="metrics">
+<span>n <b>1</b></span><span>RMSE <b>0.002548</b></span><span>R² <b>-</b></span><span>2-fold <b>0.0%</b></span><span>GMFE <b>3.13</b></span>      </span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="plots/Leevy1962_fm_Car_icg_tab1.svg" alt="Data, simulation and agreement">
+        <figcaption>Data, simulation and agreement</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-kind="outlier" data-filter="card">
+    <header>
+      <span class="name mono">fm_Chv_icg_fig1</span>
+      <span class="exp">Leevy1962 · [Chv_icg]</span>
+      <span class="tag outlier">outlier</span>
+      <span class="metrics">
+<span>n <b>14</b></span><span>RMSE <b>2.362e-05</b></span><span>R² <b>-0.5701</b></span><span>2-fold <b>100.0%</b></span><span>GMFE <b>1.05</b></span>      </span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="plots/Leevy1962_fm_Chv_icg_fig1.svg" alt="Data, simulation and agreement">
+        <figcaption>Data, simulation and agreement</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-kind="outlier" data-filter="card">
+    <header>
+      <span class="name mono">fm_Car_icg_fig1</span>
+      <span class="exp">Leevy1962 · [Car_icg]</span>
+      <span class="tag outlier">outlier</span>
+      <span class="metrics">
+<span>n <b>17</b></span><span>RMSE <b>0.0003695</b></span><span>R² <b>-71.05</b></span><span>2-fold <b>100.0%</b></span><span>GMFE <b>1.44</b></span>      </span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="plots/Leevy1962_fm_Car_icg_fig1.svg" alt="Data, simulation and agreement">
+        <figcaption>Data, simulation and agreement</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-kind="training" data-filter="card">
+    <header>
+      <span class="name mono">fm_Cve_icg_0p5</span>
+      <span class="exp">Meijer1988 · [Cve_icg]</span>
+      <span class="tag training">training</span>
+      <span class="metrics">
+<span>n <b>7</b></span><span>RMSE <b>0.001487</b></span><span>R² <b>0.8019</b></span><span>2-fold <b>85.7%</b></span><span>GMFE <b>1.57</b></span>      </span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="plots/Meijer1988_fm_Cve_icg_0p5.svg" alt="Data, simulation and agreement">
+        <figcaption>Data, simulation and agreement</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-kind="training" data-filter="card">
+    <header>
+      <span class="name mono">fm_Cve_icg_0p5_secondary</span>
+      <span class="exp">Meijer1988 · [Cve_icg]</span>
+      <span class="tag training">training</span>
+      <span class="metrics">
+<span>n <b>3</b></span><span>RMSE <b>0.0004833</b></span><span>R² <b>-22.2</b></span><span>2-fold <b>0.0%</b></span><span>GMFE <b>3.32</b></span>      </span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="plots/Meijer1988_fm_Cve_icg_0p5_secondary.svg" alt="Data, simulation and agreement">
+        <figcaption>Data, simulation and agreement</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-kind="training" data-filter="card">
+    <header>
+      <span class="name mono">fm_LI__ICGLI2BI_0p5</span>
+      <span class="exp">Meijer1988 · LI__ICGLI2BI</span>
+      <span class="tag training">training</span>
+      <span class="metrics">
+<span>n <b>6</b></span><span>RMSE <b>4.761e-05</b></span><span>R² <b>0.7266</b></span><span>2-fold <b>66.7%</b></span><span>GMFE <b>2.03</b></span>      </span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="plots/Meijer1988_fm_LI__ICGLI2BI_0p5.svg" alt="Data, simulation and agreement">
+        <figcaption>Data, simulation and agreement</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-kind="training" data-filter="card">
+    <header>
+      <span class="name mono">fm_Cve_icg_1p0</span>
+      <span class="exp">Meijer1988 · [Cve_icg]</span>
+      <span class="tag training">training</span>
+      <span class="metrics">
+<span>n <b>6</b></span><span>RMSE <b>0.002533</b></span><span>R² <b>0.8226</b></span><span>2-fold <b>100.0%</b></span><span>GMFE <b>1.28</b></span>      </span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="plots/Meijer1988_fm_Cve_icg_1p0.svg" alt="Data, simulation and agreement">
+        <figcaption>Data, simulation and agreement</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-kind="training" data-filter="card">
+    <header>
+      <span class="name mono">fm_Cve_icg_1p0_secondary</span>
+      <span class="exp">Meijer1988 · [Cve_icg]</span>
+      <span class="tag training">training</span>
+      <span class="metrics">
+<span>n <b>4</b></span><span>RMSE <b>0.0003028</b></span><span>R² <b>-0.6449</b></span><span>2-fold <b>100.0%</b></span><span>GMFE <b>1.43</b></span>      </span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="plots/Meijer1988_fm_Cve_icg_1p0_secondary.svg" alt="Data, simulation and agreement">
+        <figcaption>Data, simulation and agreement</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-kind="training" data-filter="card">
+    <header>
+      <span class="name mono">fm_LI__ICGLI2BI_1p0</span>
+      <span class="exp">Meijer1988 · LI__ICGLI2BI</span>
+      <span class="tag training">training</span>
+      <span class="metrics">
+<span>n <b>8</b></span><span>RMSE <b>6.882e-05</b></span><span>R² <b>0.7652</b></span><span>2-fold <b>50.0%</b></span><span>GMFE <b>2.23</b></span>      </span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="plots/Meijer1988_fm_LI__ICGLI2BI_1p0.svg" alt="Data, simulation and agreement">
+        <figcaption>Data, simulation and agreement</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-kind="training" data-filter="card">
+    <header>
+      <span class="name mono">fm_Cve_icg_2p0</span>
+      <span class="exp">Meijer1988 · [Cve_icg]</span>
+      <span class="tag training">training</span>
+      <span class="metrics">
+<span>n <b>7</b></span><span>RMSE <b>0.001938</b></span><span>R² <b>0.9744</b></span><span>2-fold <b>100.0%</b></span><span>GMFE <b>1.21</b></span>      </span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="plots/Meijer1988_fm_Cve_icg_2p0.svg" alt="Data, simulation and agreement">
+        <figcaption>Data, simulation and agreement</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-kind="training" data-filter="card">
+    <header>
+      <span class="name mono">fm_Cve_icg_2p0_secondary</span>
+      <span class="exp">Meijer1988 · [Cve_icg]</span>
+      <span class="tag training">training</span>
+      <span class="metrics">
+<span>n <b>4</b></span><span>RMSE <b>0.0002095</b></span><span>R² <b>0.4809</b></span><span>2-fold <b>100.0%</b></span><span>GMFE <b>1.1</b></span>      </span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="plots/Meijer1988_fm_Cve_icg_2p0_secondary.svg" alt="Data, simulation and agreement">
+        <figcaption>Data, simulation and agreement</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-kind="training" data-filter="card">
+    <header>
+      <span class="name mono">fm_LI__ICGLI2BI_2p0</span>
+      <span class="exp">Meijer1988 · LI__ICGLI2BI</span>
+      <span class="tag training">training</span>
+      <span class="metrics">
+<span>n <b>7</b></span><span>RMSE <b>0.0001113</b></span><span>R² <b>0.2548</b></span><span>2-fold <b>71.4%</b></span><span>GMFE <b>2.04</b></span>      </span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="plots/Meijer1988_fm_LI__ICGLI2BI_2p0.svg" alt="Data, simulation and agreement">
+        <figcaption>Data, simulation and agreement</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-kind="validation" data-filter="card">
+    <header>
+      <span class="name mono">fm_Car_icg_individual</span>
+      <span class="exp">Niemann2000 · [Car_icg]</span>
+      <span class="tag validation">validation</span>
+      <span class="metrics">
+<span>n <b>8</b></span><span>RMSE <b>0.0004377</b></span><span>R² <b>-0.2556</b></span><span>2-fold <b>100.0%</b></span><span>GMFE <b>1.26</b></span>      </span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="plots/Niemann2000_fm_Car_icg_individual.svg" alt="Data, simulation and agreement">
+        <figcaption>Data, simulation and agreement</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-kind="validation" data-filter="card">
+    <header>
+      <span class="name mono">fm_Car_icg_individual_propranolol</span>
+      <span class="exp">Niemann2000 · [Car_icg]</span>
+      <span class="tag validation">validation</span>
+      <span class="metrics">
+<span>n <b>8</b></span><span>RMSE <b>0.0005014</b></span><span>R² <b>-0.5649</b></span><span>2-fold <b>100.0%</b></span><span>GMFE <b>1.26</b></span>      </span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="plots/Niemann2000_fm_Car_icg_individual_propranolol.svg" alt="Data, simulation and agreement">
+        <figcaption>Data, simulation and agreement</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-kind="training" data-filter="card">
+    <header>
+      <span class="name mono">fm_Cve_icg_mean</span>
+      <span class="exp">Soons1991 · [Cve_icg]</span>
+      <span class="tag training">training</span>
+      <span class="metrics">
+<span>n <b>3</b></span><span>RMSE <b>0.0008045</b></span><span>R² <b>0.5356</b></span><span>2-fold <b>100.0%</b></span><span>GMFE <b>1.47</b></span>      </span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="plots/Soons1991_fm_Cve_icg_mean.svg" alt="Data, simulation and agreement">
+        <figcaption>Data, simulation and agreement</figcaption>
+      </figure>
+    </div>
+  </div>
+  <p class="empty hidden" data-empty>No fit mapping matches the search.</p>
+</section>
+
+<script>
+(function () {
+  "use strict";
+  // ---- the tabs: a link with data-tab shows the panel of that name ------
+  const tabs = Array.from(document.querySelectorAll("nav.sections a[data-tab]"));
+  const panels = Array.from(document.querySelectorAll(".tab-panel"));
+  function show(name) {
+    for (const tab of tabs) tab.classList.toggle("active", tab.dataset.tab === name);
+    for (const panel of panels) panel.classList.toggle("active", panel.dataset.panel === name);
+  }
+  // the tab of the element an address names, e.g. a table of the report
+  function tabOf(hash) {
+    const target = hash.length > 1 ? document.getElementById(decodeURIComponent(hash.slice(1))) : null;
+    const panel = target ? target.closest(".tab-panel") : null;
+    return panel ? panel.dataset.panel : null;
+  }
+  for (const tab of tabs) {
+    tab.addEventListener("click", (event) => {
+      event.preventDefault();
+      show(tab.dataset.tab);
+      history.replaceState(null, "", "#" + tab.dataset.tab);
+      window.scrollTo(0, 0);
+    });
+  }
+  window.addEventListener("hashchange", () => {
+    const name = tabOf(location.hash);
+    if (name) show(name);
+  });
+  show(tabOf(location.hash) || "report");
+
+  // ---- the groupings of the evaluation: a button shows its grouping -----
+  const groupingTabs = Array.from(document.querySelectorAll(".grouping-tab"));
+  const groupingPanels = Array.from(document.querySelectorAll(".grouping-panel"));
+  for (const tab of groupingTabs) {
+    tab.addEventListener("click", () => {
+      for (const other of groupingTabs) {
+        const active = other === tab;
+        other.classList.toggle("active", active);
+        other.setAttribute("aria-pressed", active ? "true" : "false");
+      }
+      for (const panel of groupingPanels) {
+        panel.classList.toggle("active", panel.dataset.grouping === tab.dataset.grouping);
+      }
+    });
+  }
+})();
+</script>
+</main>
+
+<footer>
+<a href="report.txt">report.txt</a> · <a href="parameters.json">parameters.json</a> · <a href="metrics.tsv">metrics.tsv</a> · <a href="metrics_mappings.tsv">metrics_mappings.tsv</a> · <a href="metrics_observables.tsv">metrics_observables.tsv</a> · <a href="datapoints.tsv">datapoints.tsv</a> · <a href="optimization_result.json">optimization_result.json</a> · <a href="fisher.tsv">fisher.tsv</a> · <a href="identifiability.json">identifiability.json</a> · <a href="identifiability.tsv">identifiability.tsv</a><br>created by sbmlsim 0.13.0 on 2026-10-24 11:51</footer>
+
+<div id="lightbox"><img alt=""></div>
+
+<script>
+(function () {
+  "use strict";
+
+  // ---- search and the filter chips ------------------------------------
+  const search = document.getElementById("search");
+  const hits = document.getElementById("hits");
+  const chips = Array.from(document.querySelectorAll(".chip"));
+  const cards = Array.from(document.querySelectorAll('[data-filter="card"]'));
+  const rows = Array.from(document.querySelectorAll('table[data-filter="row"] tbody tr'));
+  const empty = document.querySelector("[data-empty]");
+  const itemLabel = document.body.dataset.items || "items";
+
+  const haystack = new Map();
+  for (const node of [...cards, ...rows]) {
+    haystack.set(node, node.textContent.toLowerCase());
+  }
+
+  function activeKinds() {
+    return new Set(chips.filter((c) => c.getAttribute("aria-pressed") === "true")
+                        .map((c) => c.dataset.kind));
+  }
+
+  function matches(node, query, kinds) {
+    const kind = node.dataset.kind;
+    if (kind && !kinds.has(kind)) return false;
+    return !query || haystack.get(node).includes(query);
+  }
+
+  function apply() {
+    const query = search.value.trim().toLowerCase();
+    const kinds = activeKinds();
+    let shownCards = 0;
+    for (const node of cards) {
+      const show = matches(node, query, kinds);
+      node.classList.toggle("hidden", !show);
+      if (show) shownCards += 1;
+    }
+    for (const node of rows) {
+      node.classList.toggle("hidden", !matches(node, query, kinds));
+    }
+    if (empty) empty.classList.toggle("hidden", shownCards > 0 || cards.length === 0);
+    const filtering = Boolean(query) || (chips.length > 0 && kinds.size < chips.length);
+    hits.textContent = filtering
+      ? shownCards + " / " + cards.length + " " + itemLabel
+      : "";
+  }
+
+  search.addEventListener("input", apply);
+  for (const chip of chips) {
+    chip.addEventListener("click", () => {
+      chip.setAttribute("aria-pressed", chip.getAttribute("aria-pressed") === "true" ? "false" : "true");
+      apply();
+    });
+  }
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "/" && document.activeElement !== search) {
+      event.preventDefault();
+      search.focus();
+    } else if (event.key === "Escape") {
+      if (document.activeElement === search && search.value) { search.value = ""; apply(); }
+      closeLightbox();
+    }
+  });
+
+  // ---- sortable tables -------------------------------------------------
+  function cellValue(row, index, kind) {
+    const text = row.cells[index] ? row.cells[index].textContent.trim() : "";
+    if (kind !== "num") return text.toLowerCase();
+    // the AIC of a perfect fit is -inf, a cell without a value sorts last
+    if (text === "-inf") return Number.NEGATIVE_INFINITY;
+    const value = parseFloat(text);
+    return Number.isNaN(value) ? Number.POSITIVE_INFINITY : value;
+  }
+
+  for (const table of document.querySelectorAll("table")) {
+    const headers = Array.from(table.querySelectorAll("th[data-sort]"));
+    headers.forEach((th, index) => {
+      th.addEventListener("click", () => {
+        const body = table.tBodies[0];
+        if (!body) return;
+        const kind = th.dataset.sort;
+        const descending = th.classList.contains("asc");
+        for (const other of headers) other.classList.remove("asc", "desc");
+        th.classList.add(descending ? "desc" : "asc");
+        const sorted = Array.from(body.rows).sort((a, b) => {
+          const left = cellValue(a, index, kind);
+          const right = cellValue(b, index, kind);
+          if (left < right) return descending ? 1 : -1;
+          if (left > right) return descending ? -1 : 1;
+          return 0;
+        });
+        for (const row of sorted) body.appendChild(row);
+      });
+    });
+  }
+
+  // ---- the section the page is scrolled to -----------------------------
+  // a tab (data-tab) is not a section, its page marks the tab which is shown
+  const links = Array.from(document.querySelectorAll("nav.sections a:not([data-tab])"));
+  const sections = links.map((link) => document.querySelector(link.getAttribute("href")));
+  function scrollspy() {
+    let current = 0;
+    sections.forEach((section, index) => {
+      if (section && section.getBoundingClientRect().top < 200) current = index;
+    });
+    links.forEach((link, index) => link.classList.toggle("active", index === current));
+  }
+  window.addEventListener("scroll", scrollspy, { passive: true });
+  scrollspy();
+
+  // ---- click a figure to enlarge it ------------------------------------
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImage = lightbox.querySelector("img");
+  function closeLightbox() { lightbox.classList.remove("open"); lightboxImage.src = ""; }
+  for (const image of document.querySelectorAll("figure img")) {
+    image.addEventListener("click", () => {
+      lightboxImage.src = image.getAttribute("src");
+      lightbox.classList.add("open");
+    });
+  }
+  lightbox.addEventListener("click", closeLightbox);
+
+  apply();
+})();
+</script>
+</body>
+</html>

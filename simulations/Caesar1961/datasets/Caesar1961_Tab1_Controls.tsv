@@ -1,0 +1,11 @@
+subject	group	kel	kel_unit	r20	r20_unit	bilirubin	bilirubin_unit
+Control1	Controls	0.308	1/min	1.0	percent	0.7	mg/dl
+Control2	Controls	0.267	1/min	3.7	percent	0.8	mg/dl
+Control3	Controls	0.231	1/min	1.4	percent	0.6	mg/dl
+Control4	Controls	0.212	1/min	2.1	percent	0.7	mg/dl
+Control5	Controls	0.204	1/min	5.0	percent	0.8	mg/dl
+Control6	Controls	0.193	1/min	3.0	percent	0.5	mg/dl
+Control7	Controls	0.193	1/min	4.4	percent	0.6	mg/dl
+Control8	Controls	0.165	1/min	3.0	percent	0.5	mg/dl
+Control9	Controls	0.164	1/min	4.0	percent	0.5	mg/dl
+Control10	Controls	0.128	1/min	3.5	percent	0.6	mg/dl

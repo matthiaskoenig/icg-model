@@ -1,0 +1,19 @@
+study	subject	intervention	measurement	substance	tissue	value	unit	label	time	time_unit
+Soons1991	S1_A	ICG_0.5	concentration_ss	indocyanine green	plasma	0.5828261	microg/ml	Fig5	75	min
+Soons1991	S2_A	ICG_0.5	concentration_ss	indocyanine green	plasma	0.5945816	microg/ml	Fig5	75	min
+Soons1991	S3_A	ICG_0.5	concentration_ss	indocyanine green	plasma	0.70751524	microg/ml	Fig5	75	min
+Soons1991	S4_A	ICG_0.5	concentration_ss	indocyanine green	plasma	0.73118263	microg/ml	Fig5	75	min
+Soons1991	S5_A	ICG_0.5	concentration_ss	indocyanine green	plasma	0.83214855	microg/ml	Fig5	75	min
+Soons1991	S6_A	ICG_0.5	concentration_ss	indocyanine green	plasma	0.8500889	microg/ml	Fig5	75	min
+Soons1991	S1_B	ICG_1.0	concentration_ss	indocyanine green	plasma	1.3704364	microg/ml	Fig5	115	min
+Soons1991	S2_B	ICG_1.0	concentration_ss	indocyanine green	plasma	1.4060826	microg/ml	Fig5	115	min
+Soons1991	S3_B	ICG_1.0	concentration_ss	indocyanine green	plasma	1.4714917	microg/ml	Fig5	115	min
+Soons1991	S4_B	ICG_1.0	concentration_ss	indocyanine green	plasma	1.4891976	microg/ml	Fig5	115	min
+Soons1991	S5_B	ICG_1.0	concentration_ss	indocyanine green	plasma	1.5486339	microg/ml	Fig5	115	min
+Soons1991	S6_B	ICG_1.0	concentration_ss	indocyanine green	plasma	1.6733454	microg/ml	Fig5	115	min
+Soons1991	S1_C	ICG_2.0	concentration_ss	indocyanine green	plasma	2.5419831	microg/ml	Fig5	35	min
+Soons1991	S2_C	ICG_2.0	concentration_ss	indocyanine green	plasma	2.6548162	microg/ml	Fig5	35	min
+Soons1991	S3_C	ICG_2.0	concentration_ss	indocyanine green	plasma	2.844881	microg/ml	Fig5	35	min
+Soons1991	S4_C	ICG_2.0	concentration_ss	indocyanine green	plasma	2.8864663	microg/ml	Fig5	35	min
+Soons1991	S5_C	ICG_2.0	concentration_ss	indocyanine green	plasma	3.254684	microg/ml	Fig5	35	min
+Soons1991	S6_C	ICG_2.0	concentration_ss	indocyanine green	plasma	3.3675282	microg/ml	Fig5	35	min

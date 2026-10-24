@@ -1,0 +1,36 @@
+study	subject	count	measurement	intervention	tissue	substance	time	time_unit	value	unit	label	comment
+Keiding1993	S1	1	concentration	ICG	blood	albumin	90	min	602.934	micromol/l	Fig1_alb	NA
+Keiding1993	S1	1	concentration	ICG	blood	albumin	95.01742	min	579.3966	micromol/l	Fig1_alb	NA
+Keiding1993	S1	1	concentration	ICG	blood	albumin	100.1742	min	595.32794	micromol/l	Fig1_alb	NA
+Keiding1993	S1	1	concentration	ICG	blood	albumin	104.9129	min	566.5273	micromol/l	Fig1_alb	NA
+Keiding1993	S1	1	concentration	ICG	blood	albumin	109.9303	min	582.46405	micromol/l	Fig1_alb	NA
+Keiding1993	S1	1	concentration	ICG	blood	albumin	136.6899	min	404.29886	micromol/l	Fig1_alb	NA
+Keiding1993	S1	1	concentration	ICG	blood	albumin	141.7073	min	409.70374	micromol/l	Fig1_alb	NA
+Keiding1993	S1	1	concentration	ICG	blood	albumin	146.7247	min	370.3875	micromol/l	Fig1_alb	NA
+Keiding1993	S1	1	concentration	ICG	blood	albumin	151.6028	min	412.635	micromol/l	Fig1_alb	NA
+Keiding1993	S1	1	concentration	ICG	blood	albumin	156.7596	min	383.82892	micromol/l	Fig1_alb	NA
+Keiding1993	S1	1	concentration	ICG	arterial plasma	indocyanine green	90	min	0.33288893	micromol/l	Fig1_ar	NA
+Keiding1993	S1	1	concentration	ICG	arterial plasma	indocyanine green	94.82932	min	0.33142644	micromol/l	Fig1_ar	NA
+Keiding1993	S1	1	concentration	ICG	arterial plasma	indocyanine green	99.86476	min	0.32666487	micromol/l	Fig1_ar	NA
+Keiding1993	S1	1	concentration	ICG	arterial plasma	indocyanine green	104.7572	min	0.34166384	micromol/l	Fig1_ar	NA
+Keiding1993	S1	1	concentration	ICG	arterial plasma	indocyanine green	109.7919	min	0.34350044	micromol/l	Fig1_ar	NA
+Keiding1993	S1	1	concentration	ICG	arterial plasma	indocyanine green	136.6633	min	0.25228897	micromol/l	Fig1_ar	after macrodex infusion
+Keiding1993	S1	1	concentration	ICG	arterial plasma	indocyanine green	141.8378	min	0.2557649	micromol/l	Fig1_ar	after macrodex infusion
+Keiding1993	S1	1	concentration	ICG	arterial plasma	indocyanine green	146.7312	min	0.26253995	micromol/l	Fig1_ar	after macrodex infusion
+Keiding1993	S1	1	concentration	ICG	arterial plasma	indocyanine green	151.6256	min	0.26765525	micromol/l	Fig1_ar	after macrodex infusion
+Keiding1993	S1	1	concentration	ICG	arterial plasma	indocyanine green	156.7999	min	0.26948506	micromol/l	Fig1_ar	after macrodex infusion
+Keiding1993	S1	1	concentration	ICG	hepatic vein	indocyanine green	90	min	0.23575947	micromol/l	Fig1_hv	NA
+Keiding1993	S1	1	concentration	ICG	hepatic vein	indocyanine green	94.84814	min	0.23594314	micromol/l	Fig1_hv	NA
+Keiding1993	S1	1	concentration	ICG	hepatic vein	indocyanine green	99.74323	min	0.2361268	micromol/l	Fig1_hv	NA
+Keiding1993	S1	1	concentration	ICG	hepatic vein	indocyanine green	104.7767	min	0.24454118	micromol/l	Fig1_hv	NA
+Keiding1993	S1	1	concentration	ICG	hepatic vein	indocyanine green	109.8117	min	0.24307871	micromol/l	Fig1_hv	NA
+Keiding1993	S1	1	concentration	ICG	hepatic vein	indocyanine green	136.6826	min	0.15516631	micromol/l	Fig1_hv	after macrodex infusion
+Keiding1993	S1	1	concentration	ICG	hepatic vein	indocyanine green	141.5752	min	0.16851915	micromol/l	Fig1_hv	after macrodex infusion
+Keiding1993	S1	1	concentration	ICG	hepatic vein	indocyanine green	146.752	min	0.15882593	micromol/l	Fig1_hv	after macrodex infusion
+Keiding1993	S1	1	concentration	ICG	hepatic vein	indocyanine green	151.7857	min	0.16559418	micromol/l	Fig1_hv	after macrodex infusion
+Keiding1993	S1	1	concentration	ICG	hepatic vein	indocyanine green	156.6793	min	0.17071627	micromol/l	Fig1_hv	after macrodex infusion
+Keiding1993	S1	1	extraction_ratio	ICG	liver	indocyanine green	90	min	0.291777380521485	dimensionless	Fig1_er	NA
+Keiding1993	S1	1	extraction_ratio	ICG	liver	indocyanine green	94.82932	min	0.288098016561382	dimensionless	Fig1_er	NA
+Keiding1993	S1	1	extraction_ratio	ICG	liver	indocyanine green	99.86476	min	0.277158881516705	dimensionless	Fig1_er	NA
+Keiding1993	S1	1	extraction_ratio	ICG	liver	indocyanine green	104.7572	min	0.284263795665353	dimensionless	Fig1_er	NA
+Keiding1993	S1	1	extraction_ratio	ICG	liver	indocyanine green	109.7919	min	0.292348184473941	dimensionless	Fig1_er	NA

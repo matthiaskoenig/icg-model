@@ -1,0 +1,5 @@
+study	name	group_count	parent	measurement	choice	count
+Kagawa2017	all	4	NA	species	homo sapiens	4
+Kagawa2017	all	4	NA	sex	F	3
+Kagawa2017	all	4	NA	sex	M	1
+Kagawa2017	all	4	NA	healthy	N	4

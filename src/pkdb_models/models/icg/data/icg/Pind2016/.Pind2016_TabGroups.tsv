@@ -1,0 +1,21 @@
+study	name	group_count	parent	measurement	choice	mean	2sd	sd	unit	count
+Pind2016	all	325	NA	sex	M	NA	NA	NA	NA	225
+Pind2016	all	325	NA	sex	F	NA	NA	NA	NA	100
+Pind2016	all	325	NA	species	homo sapiens	NA	NA	NA	NA	325
+Pind2016	all	325	NA	healthy	N	NA	NA	NA	NA	325
+Pind2016	all	325	NA	disease	liver cirrhosis	NA	NA	NA	NA	325
+Pind2016	ctpa	83	all	height	NA	172.0	9.0	4.5	cm	83
+Pind2016	ctpa	83	all	weight	NA	73.3	16.0	8.0	kg	83
+Pind2016	ctpa	83	all	sex	M	NA	NA	NA	NA	56
+Pind2016	ctpa	83	all	sex	F	NA	NA	NA	NA	27
+Pind2016	ctpa	83	all	age	NA	54.7	11.8	5.9	yr	83
+Pind2016	ctpb	140	all	height	NA	170.0	8.0	4.0	cm	140
+Pind2016	ctpb	140	all	weight	NA	69.8	15.3	7.65	kg	140
+Pind2016	ctpb	140	all	sex	M	NA	NA	NA	NA	90
+Pind2016	ctpb	140	all	sex	F	NA	NA	NA	NA	50
+Pind2016	ctpb	140	all	age	NA	55.8	9.1	4.55	yr	140
+Pind2016	ctpc	102	all	height	NA	172.0	8.0	4.0	cm	102
+Pind2016	ctpc	102	all	weight	NA	73.1	14.2	7.1	kg	102
+Pind2016	ctpc	102	all	sex	M	NA	NA	NA	NA	79
+Pind2016	ctpc	102	all	sex	F	NA	NA	NA	NA	23
+Pind2016	ctpc	102	all	age	NA	54.4	9.4	4.7	yr	102

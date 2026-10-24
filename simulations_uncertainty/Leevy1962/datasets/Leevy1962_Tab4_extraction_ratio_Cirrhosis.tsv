@@ -1,0 +1,4 @@
+study	individual	intervention	measurement	substance	tissue	value	time	time_unit	group	count	value_unit	count_unit
+Leevy1962	S30	ICG_Inf_1.5	extraction_ratio	indocyanine green	plasma	0.75	50	min	Cirrhosis	1	dimensionless	dimensionless
+Leevy1962	S31	ICG_Inf_1.5	extraction_ratio	indocyanine green	plasma	0.56	50	min	Cirrhosis	1	dimensionless	dimensionless
+Leevy1962	S32	ICG_Inf_1.5	extraction_ratio	indocyanine green	plasma	0.77	50	min	Cirrhosis	1	dimensionless	dimensionless

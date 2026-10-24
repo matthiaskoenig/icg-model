@@ -1,0 +1,21 @@
+study	subject	tissue	intervention	measurement	substance	value	unit	label
+Roberts1976	ICG1	liver	ICG	organ volume	na	940.6615	ml	Fig1B liver vol
+Roberts1976	ICG2	liver	ICG	organ volume	na	1133.2684	ml	Fig1B liver vol
+Roberts1976	ICG3	liver	ICG	organ volume	na	1206.2257	ml	Fig1B liver vol
+Roberts1976	ICG4	liver	ICG	organ volume	na	1378.4047	ml	Fig1B liver vol
+Roberts1976	ICG5	liver	ICG	organ volume	na	1384.2412	ml	Fig1B liver vol
+Roberts1976	ICG6	liver	ICG	organ volume	na	1384.2412	ml	Fig1B liver vol
+Roberts1976	ICG7	liver	ICG	organ volume	na	1448.4436	ml	Fig1B liver vol
+Roberts1976	ICG8	liver	ICG	organ volume	na	1477.6265	ml	Fig1B liver vol
+Roberts1976	ICG9	liver	ICG	organ volume	na	1588.5214	ml	Fig1B liver vol
+Roberts1976	ICG10	liver	ICG	organ volume	na	1661.4786	ml	Fig1B liver vol
+Roberts1976	ICG1	plasma	ICG	clearance	indocyanine green	710.62616	ml/min	Fig1B ICG Cl
+Roberts1976	ICG2	plasma	ICG	clearance	indocyanine green	1037.9507	ml/min	Fig1B ICG Cl
+Roberts1976	ICG3	plasma	ICG	clearance	indocyanine green	1339.6584	ml/min	Fig1B ICG Cl
+Roberts1976	ICG4	plasma	ICG	clearance	indocyanine green	659.39276	ml/min	Fig1B ICG Cl
+Roberts1976	ICG5	plasma	ICG	clearance	indocyanine green	1382.3529	ml/min	Fig1B ICG Cl
+Roberts1976	ICG6	plasma	ICG	clearance	indocyanine green	1675.5219	ml/min	Fig1B ICG Cl
+Roberts1976	ICG7	plasma	ICG	clearance	indocyanine green	1533.2068	ml/min	Fig1B ICG Cl
+Roberts1976	ICG8	plasma	ICG	clearance	indocyanine green	1573.055	ml/min	Fig1B ICG Cl
+Roberts1976	ICG9	plasma	ICG	clearance	indocyanine green	1166.0342	ml/min	Fig1B ICG Cl
+Roberts1976	ICG10	plasma	ICG	clearance	indocyanine green	969.63947	ml/min	Fig1B ICG Cl

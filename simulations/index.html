@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simulation experiments | sbmlsim</title>
+<style>
+:root {
+  --bg: #ffffff; --bg-soft: #f6f7f9; --bg-card: #ffffff;
+  --fg: #1b1f24; --fg-soft: #5b6472; --line: #e3e6ea;
+  --accent: #3b5bdb; --training: #2f9e44; --validation: #1c7ed6; --outlier: #e8590c;
+  --excluded: #868e96;
+  --radius: 10px; --shadow: 0 1px 2px rgba(16,24,40,.06), 0 1px 3px rgba(16,24,40,.1);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14171c; --bg-soft: #1a1e24; --bg-card: #1a1e24;
+    --fg: #e6e9ee; --fg-soft: #9aa4b2; --line: #2a3038;
+    --accent: #748ffc; --training: #51cf66; --validation: #4dabf7; --outlier: #ff922b;
+    --excluded: #adb5bd;
+    --shadow: none;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+code, .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .92em; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+header.top {
+  position: sticky; top: 0; z-index: 20; background: var(--bg);
+  border-bottom: 1px solid var(--line); padding: 14px 24px 0;
+}
+.top .row { display: flex; flex-wrap: wrap; gap: 12px; align-items: baseline; }
+.top h1 { margin: 0; font-size: 20px; font-weight: 650; letter-spacing: -.01em; }
+.top .sub { color: var(--fg-soft); font-size: 13px; }
+.badges { display: flex; flex-wrap: wrap; gap: 8px; margin-left: auto; }
+.badge {
+  background: var(--bg-soft); border: 1px solid var(--line); border-radius: 999px;
+  padding: 2px 10px; font-size: 12px; color: var(--fg-soft); white-space: nowrap;
+}
+.badge b { color: var(--fg); font-weight: 600; }
+.badge.failed, .badge.failed b { color: var(--outlier); border-color: var(--outlier); }
+nav.sections { display: flex; gap: 4px; margin-top: 12px; }
+nav.sections a {
+  padding: 8px 14px; border-bottom: 2px solid transparent; color: var(--fg-soft);
+  font-size: 14px; font-weight: 550;
+}
+nav.sections a.active { color: var(--fg); border-bottom-color: var(--accent); }
+.search { display: flex; gap: 8px; align-items: center; padding: 10px 0 12px; }
+.search input {
+  flex: 1; max-width: 460px; padding: 8px 12px; font-size: 14px; color: var(--fg);
+  background: var(--bg-soft); border: 1px solid var(--line); border-radius: 8px;
+}
+.search input:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+.chip {
+  border: 1px solid var(--line); background: var(--bg-soft); color: var(--fg-soft);
+  border-radius: 999px; padding: 5px 12px; font-size: 12.5px; cursor: pointer;
+}
+.chip[aria-pressed="true"] { color: #fff; border-color: transparent; }
+.chip[data-kind="training"][aria-pressed="true"] { background: var(--training); }
+.chip[data-kind="validation"][aria-pressed="true"] { background: var(--validation); }
+.chip[data-kind="outlier"][aria-pressed="true"] { background: var(--outlier); }
+.chip[data-kind="excluded"][aria-pressed="true"] { background: var(--excluded); }
+#hits { color: var(--fg-soft); font-size: 12.5px; margin-left: auto; }
+
+main { padding: 24px; max-width: 1400px; margin: 0 auto; }
+section { margin-bottom: 44px; scroll-margin-top: 150px; }
+section > h2 {
+  font-size: 17px; font-weight: 650; margin: 0 0 4px; padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+}
+h3 { font-size: 14px; font-weight: 600; color: var(--fg-soft); margin: 26px 0 10px;
+     text-transform: uppercase; letter-spacing: .04em; }
+.card {
+  background: var(--bg-card); border: 1px solid var(--line); border-radius: var(--radius);
+  box-shadow: var(--shadow); padding: 16px; margin-bottom: 16px;
+}
+/* a heading which opens a card sits at the padding of the card */
+.card > h3:first-child { margin-top: 0; }
+.grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+        margin-bottom: 16px; }
+/* the gap of the grid is the space between its cards */
+.grid > .card { margin-bottom: 0; }
+.card.wide { grid-column: 1 / -1; }
+
+table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+/* two tables in one card, e.g. the networks and their arrays */
+table + table { margin-top: 24px; }
+th, td { text-align: left; padding: 7px 12px 7px 0; border-bottom: 1px solid var(--line); }
+th { color: var(--fg-soft); font-weight: 600; white-space: nowrap; }
+th[data-sort] { cursor: pointer; user-select: none; }
+th[data-sort]:hover { color: var(--fg); }
+th[data-sort]::after { content: " ⇅"; opacity: .35; }
+th[data-sort].asc::after { content: " ↑"; opacity: 1; }
+th[data-sort].desc::after { content: " ↓"; opacity: 1; }
+td.num, th.num { text-align: right; padding-right: 18px; font-variant-numeric: tabular-nums; }
+tbody tr:hover { background: var(--bg-soft); }
+tr.total td { font-weight: 650; border-top: 2px solid var(--line); }
+
+.kv { display: grid; grid-template-columns: max-content 1fr; gap: 4px 20px; font-size: 13.5px;
+      margin: 0; }
+.kv dt { color: var(--fg-soft); }
+.kv dd { margin: 0; word-break: break-word; white-space: pre-line; }
+
+.tag { border-radius: 999px; padding: 1px 9px; font-size: 11.5px; font-weight: 600; color: #fff; }
+.tag.training { background: var(--training); }
+.tag.validation { background: var(--validation); }
+.tag.outlier { background: var(--outlier); }
+.tag.excluded { background: var(--excluded); }
+.warn { color: var(--outlier); }
+
+/* what a value means, on the header of a column or next to a figure */
+.hint {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 14px; height: 14px; margin-left: 4px; border-radius: 50%;
+  border: 1px solid var(--line); color: var(--fg-soft);
+  font-size: 10px; font-weight: 700; line-height: 1; cursor: help;
+  position: relative; vertical-align: middle; user-select: none;
+}
+.hint:hover, .hint:focus { border-color: var(--accent); color: var(--accent); }
+.hint::after {
+  content: attr(data-tip);
+  position: absolute; bottom: calc(100% + 8px); left: 50%;
+  transform: translateX(-50%);
+  width: max-content; max-width: 320px; padding: 8px 10px;
+  border-radius: 6px; border: 1px solid var(--line);
+  background: var(--bg); color: var(--fg); box-shadow: 0 4px 16px rgb(0 0 0 / 18%);
+  font-size: 12px; font-weight: 400; line-height: 1.45; text-align: left;
+  white-space: normal; opacity: 0; visibility: hidden; transition: opacity .12s;
+  z-index: 20; pointer-events: none;
+}
+.hint:hover::after, .hint:focus::after { opacity: 1; visibility: visible; }
+/* a tooltip of the last columns would leave the page */
+td:last-child .hint::after, th:last-child .hint::after { left: auto; right: 0; transform: none; }
+/* on a phone a wide table scrolls inside its card and not the page; the
+   tooltips of its header open downwards, into the table, not above the card */
+@media (max-width: 700px) {
+  .card { overflow-x: auto; }
+  th .hint::after { bottom: auto; top: calc(100% + 8px); }
+  /* the header of a phone is not sticky, it would cover half of the screen,
+     and its rows wrap; the gutter is 16px */
+  header.top { position: static; padding: 12px 16px 0; }
+  main { padding: 16px; }
+  footer { padding: 8px 16px 24px; }
+  section { scroll-margin-top: 16px; }
+  nav.sections { overflow-x: auto; }
+  nav.sections a { padding: 8px 10px; white-space: nowrap; }
+  .search { flex-wrap: wrap; }
+  .search input { flex-basis: 100%; max-width: none; }
+}
+
+figure { margin: 0; }
+figure img {
+  width: 100%; height: auto; background: #fff; border: 1px solid var(--line);
+  border-radius: 8px; cursor: zoom-in;
+}
+figcaption { color: var(--fg-soft); font-size: 12.5px; margin-top: 6px; }
+
+.mapping { }
+.mapping header { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; margin-bottom: 10px; }
+.mapping header .name { font-weight: 650; }
+.mapping header .exp { color: var(--fg-soft); font-size: 13px; }
+.mapping .metrics { margin-left: auto; display: flex; gap: 14px; font-size: 12.5px; color: var(--fg-soft); }
+.mapping .metrics b { color: var(--fg); font-weight: 600; }
+.hidden { display: none !important; }
+.failed { color: var(--outlier); }
+.empty { color: var(--fg-soft); font-style: italic; padding: 16px 0; }
+
+pre.code {
+  margin: 0; padding: 14px 16px; overflow-x: auto; max-height: 70vh;
+  background: var(--bg-soft); border: 1px solid var(--line); border-radius: 8px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12.5px; line-height: 1.5; tab-size: 4;
+}
+#lightbox {
+  position: fixed; inset: 0; background: rgba(8,10,14,.86); z-index: 50;
+  display: none; align-items: center; justify-content: center; padding: 24px; cursor: zoom-out;
+}
+#lightbox.open { display: flex; }
+#lightbox img { max-width: 100%; max-height: 100%; background: #fff; border-radius: 8px; }
+footer { color: var(--fg-soft); font-size: 12.5px; padding: 8px 24px 32px; max-width: 1400px; margin: 0 auto; }
+</style>
+<style>
+  /* the figures of an experiment are thumbnails of one height, a click opens
+     a figure in full size */
+  #experiments figure img { height: 220px; object-fit: contain; }
+  #experiments figure a.interactive { display: flex; align-items: center; justify-content: center; height: 220px; border: 1px dashed var(--line); border-radius: 8px; }
+  .chip[data-kind="passed"][aria-pressed="true"] { background: var(--training); }
+  .chip[data-kind="failed"][aria-pressed="true"] { background: var(--outlier); }
+</style>
+</head>
+<body data-items="experiments">
+
+<header class="top">
+  <div class="row">
+    <h1>Simulation experiments</h1>
+    <span class="sub">40 experiment(s)</span>
+    <div class="badges">
+<span class="badge">experiments <b>40</b></span>
+    </div>
+  </div>
+  <nav class="sections">
+<a href="#experiments">Experiments</a>
+  </nav>
+  <div class="search">
+    <input id="search" type="search" placeholder="Search experiments and figures …" autocomplete="off">
+    <span id="hits"></span>
+  </div>
+</header>
+
+<main>
+
+<section id="experiments">
+  <h2>Experiments (40)</h2>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name"><a href="Andersen1999/Andersen1999.html">Andersen1999</a></span>
+      <span class="exp">1 figure(s) · 1 model(s)</span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="Andersen1999/Andersen1999_fig1.svg" alt="fig1">
+        <figcaption>fig1</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name"><a href="Branch1976/Branch1976.html">Branch1976</a></span>
+      <span class="exp">1 figure(s) · 1 model(s)</span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="Branch1976/Branch1976_fig_cl_vs_bil.svg" alt="fig_cl_vs_bil">
+        <figcaption>fig_cl_vs_bil</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name"><a href="Burns1991/Burns1991.html">Burns1991</a></span>
+      <span class="exp">2 figure(s) · 1 model(s)</span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="Burns1991/Burns1991_fig_timecourse.svg" alt="fig_timecourse">
+        <figcaption>fig_timecourse</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="Burns1991/Burns1991_fig_infusion_vs_bolus.svg" alt="fig_infusion_vs_bolus">
+        <figcaption>fig_infusion_vs_bolus</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name"><a href="Caesar1961/Caesar1961.html">Caesar1961</a></span>
+      <span class="exp">4 figure(s) · 1 model(s)</span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="Caesar1961/Caesar1961_fig_infusion.svg" alt="fig_infusion">
+        <figcaption>fig_infusion</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="Caesar1961/Caesar1961_fig_kel_vs_r20.svg" alt="fig_kel_vs_r20">
+        <figcaption>fig_kel_vs_r20</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="Caesar1961/Caesar1961_fig_kel_vs_bilirubin.svg" alt="fig_kel_vs_bilirubin">
+        <figcaption>fig_kel_vs_bilirubin</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="Caesar1961/Caesar1961_fig_icgr20_vs_bilirubin.svg" alt="fig_icgr20_vs_bilirubin">
+        <figcaption>fig_icgr20_vs_bilirubin</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name"><a href="Cherrik1960/Cherrik1960.html">Cherrik1960</a></span>
+      <span class="exp">1 figure(s) · 1 model(s)</span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="Cherrik1960/Cherrik1960_fig_thalf_vs_r20.svg" alt="fig_thalf_vs_r20">
+        <figcaption>fig_thalf_vs_r20</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name"><a href="Chijiiwa2000/Chijiiwa2000.html">Chijiiwa2000</a></span>
+      <span class="exp">1 figure(s) · 1 model(s)</span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="Chijiiwa2000/Chijiiwa2000_fig1.svg" alt="fig1">
+        <figcaption>fig1</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name"><a href="DOnofrio2014/DOnofrio2014.html">DOnofrio2014</a></span>
+      <span class="exp">1 figure(s) · 1 model(s)</span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="DOnofrio2014/DOnofrio2014_fig_icgr15.svg" alt="fig_icgr15">
+        <figcaption>fig_icgr15</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name"><a href="Gadano1997/Gadano1997.html">Gadano1997</a></span>
+      <span class="exp">2 figure(s) · 1 model(s)</span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="Gadano1997/Gadano1997_fig_icg.svg" alt="fig_icg">
+        <figcaption>fig_icg</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="Gadano1997/Gadano1997_fig_1.svg" alt="fig_1">
+        <figcaption>fig_1</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name"><a href="Grainger1983/Grainger1983.html">Grainger1983</a></span>
+      <span class="exp">1 figure(s) · 1 model(s)</span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="Grainger1983/Grainger1983_fig1.svg" alt="fig1">
+        <figcaption>fig1</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name"><a href="Grundmann1992/Grundmann1992.html">Grundmann1992</a></span>
+      <span class="exp">3 figure(s) · 1 model(s)</span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="Grundmann1992/Grundmann1992_fig1.svg" alt="fig1">
+        <figcaption>fig1</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="Grundmann1992/Grundmann1992_fig_cl.svg" alt="fig_cl">
+        <figcaption>fig_cl</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="Grundmann1992/Grundmann1992_fig_thalf.svg" alt="fig_thalf">
+        <figcaption>fig_thalf</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name"><a href="Huet1983/Huet1983.html">Huet1983</a></span>
+      <span class="exp">1 figure(s) · 1 model(s)</span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="Huet1983/Huet1983_fig_cl.svg" alt="fig_cl">
+        <figcaption>fig_cl</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name"><a href="Kamimori2000/Kamimori2000.html">Kamimori2000</a></span>
+      <span class="exp">1 figure(s) · 1 model(s)</span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="Kamimori2000/Kamimori2000_fig1.svg" alt="fig1">
+        <figcaption>fig1</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name"><a href="Kanstrup1987/Kanstrup1987.html">Kanstrup1987</a></span>
+      <span class="exp">1 figure(s) · 1 model(s)</span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="Kanstrup1987/Kanstrup1987_fig_1.svg" alt="fig_1">
+        <figcaption>fig_1</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name"><a href="Kawasaki1988/Kawasaki1988.html">Kawasaki1988</a></span>
+      <span class="exp">1 figure(s) · 1 model(s)</span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="Kawasaki1988/Kawasaki1988_fig_cl_blood_perkg.svg" alt="fig_cl_blood_perkg">
+        <figcaption>fig_cl_blood_perkg</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name"><a href="Keiding1993/Keiding1993.html">Keiding1993</a></span>
+      <span class="exp">2 figure(s) · 1 model(s)</span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="Keiding1993/Keiding1993_fig_hv_ar.svg" alt="fig_hv_ar">
+        <figcaption>fig_hv_ar</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="Keiding1993/Keiding1993_fig_er.svg" alt="fig_er">
+        <figcaption>fig_er</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name"><a href="Klockowski1990/Klockowski1990.html">Klockowski1990</a></span>
+      <span class="exp">2 figure(s) · 1 model(s)</span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="Klockowski1990/Klockowski1990_fig3.svg" alt="fig3">
+        <figcaption>fig3</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="Klockowski1990/Klockowski1990_fig_pk.svg" alt="fig_pk">
+        <figcaption>fig_pk</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name"><a href="Leevy1962/Leevy1962.html">Leevy1962</a></span>
+      <span class="exp">7 figure(s) · 1 model(s)</span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="Leevy1962/Leevy1962_fig_dose.svg" alt="fig_dose">
+        <figcaption>fig_dose</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="Leevy1962/Leevy1962_fig_icg03car.svg" alt="fig_icg03car">
+        <figcaption>fig_icg03car</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="Leevy1962/Leevy1962_fig_icg03er.svg" alt="fig_icg03er">
+        <figcaption>fig_icg03er</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="Leevy1962/Leevy1962_fig_icg15ar.svg" alt="fig_icg15ar">
+        <figcaption>fig_icg15ar</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="Leevy1962/Leevy1962_fig_icg15er.svg" alt="fig_icg15er">
+        <figcaption>fig_icg15er</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="Leevy1962/Leevy1962_fig_hbf.svg" alt="fig_hbf">
+        <figcaption>fig_hbf</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="Leevy1962/Leevy1962_fig_bil.svg" alt="fig_bil">
+        <figcaption>fig_bil</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name"><a href="Leevy1967/Leevy1967.html">Leevy1967</a></span>
+      <span class="exp">1 figure(s) · 1 model(s)</span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="Leevy1967/Leevy1967_fig_icgpdr.svg" alt="fig_icgpdr">
+        <figcaption>fig_icgpdr</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name"><a href="Martin1975/Martin1975.html">Martin1975</a></span>
+      <span class="exp">2 figure(s) · 1 model(s)</span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="Martin1975/Martin1975_fig_kel.svg" alt="fig_kel">
+        <figcaption>fig_kel</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="Martin1975/Martin1975_fig_cl.svg" alt="fig_cl">
+        <figcaption>fig_cl</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name"><a href="Martin1976/Martin1976.html">Martin1976</a></span>
+      <span class="exp">1 figure(s) · 1 model(s)</span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="Martin1976/Martin1976_fig_kel.svg" alt="fig_kel">
+        <figcaption>fig_kel</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name"><a href="Meijer1988/Meijer1988.html">Meijer1988</a></span>
+      <span class="exp">3 figure(s) · 1 model(s)</span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="Meijer1988/Meijer1988_fig_plasma.svg" alt="fig_plasma">
+        <figcaption>fig_plasma</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="Meijer1988/Meijer1988_fig_bile.svg" alt="fig_bile">
+        <figcaption>fig_bile</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="Meijer1988/Meijer1988_fig_pk.svg" alt="fig_pk">
+        <figcaption>fig_pk</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name"><a href="Niemann2000/Niemann2000.html">Niemann2000</a></span>
+      <span class="exp">1 figure(s) · 1 model(s)</span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="Niemann2000/Niemann2000_fig2b.svg" alt="fig2b">
+        <figcaption>fig2b</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name"><a href="Sakka2006/Sakka2006.html">Sakka2006</a></span>
+      <span class="exp">1 figure(s) · 1 model(s)</span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="Sakka2006/Sakka2006_fig_icgpdr_vs_clearance.svg" alt="fig_icgpdr_vs_clearance">
+        <figcaption>fig_icgpdr_vs_clearance</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name"><a href="Soons1991/Soons1991.html">Soons1991</a></span>
+      <span class="exp">2 figure(s) · 1 model(s)</span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="Soons1991/Soons1991_fig1.svg" alt="fig1">
+        <figcaption>fig1</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="Soons1991/Soons1991_fig_tab3_blood_clearance.svg" alt="fig_tab3_blood_clearance">
+        <figcaption>fig_tab3_blood_clearance</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name"><a href="Kawasaki1991/Kawasaki1991.html">Kawasaki1991</a></span>
+      <span class="exp">1 figure(s) · 1 model(s)</span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="Kawasaki1991/Kawasaki1991_fig_hist.svg" alt="fig_hist">
+        <figcaption>fig_hist</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name"><a href="Ohwada2006/Ohwada2006.html">Ohwada2006</a></span>
+      <span class="exp">2 figure(s) · 1 model(s)</span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="Ohwada2006/Ohwada2006_fig1.svg" alt="fig1">
+        <figcaption>fig1</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="Ohwada2006/Ohwada2006_fig1_bfvariation.svg" alt="fig1_bfvariation">
+        <figcaption>fig1_bfvariation</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name"><a href="Thomas2015/Thomas2015.html">Thomas2015</a></span>
+      <span class="exp">5 figure(s) · 1 model(s)</span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="Thomas2015/Thomas2015_fig_Thomas_Stockmann.svg" alt="fig_Thomas_Stockmann">
+        <figcaption>fig_Thomas_Stockmann</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="Thomas2015/Thomas2015_fig3b.svg" alt="fig3b">
+        <figcaption>fig3b</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="Thomas2015/Thomas2015_fig_Thomas_Stockmann_bfvar.svg" alt="fig_Thomas_Stockmann_bfvar">
+        <figcaption>fig_Thomas_Stockmann_bfvar</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="Thomas2015/Thomas2015_fig3b_bfvar.svg" alt="fig3b_bfvar">
+        <figcaption>fig3b_bfvar</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="Thomas2015/Thomas2015_fig_Thomas_pre_vs_post.svg" alt="fig_Thomas_pre_vs_post">
+        <figcaption>fig_Thomas_pre_vs_post</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name"><a href="DoseDependencyExperiment/DoseDependencyExperiment.html">DoseDependencyExperiment</a></span>
+      <span class="exp">1 figure(s) · 1 model(s)</span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="DoseDependencyExperiment/DoseDependencyExperiment_Fig_application_IV.svg" alt="Fig_application_IV">
+        <figcaption>Fig_application_IV</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name"><a href="ICGPKcorrelation/ICGPKcorrelation.html">ICGPKcorrelation</a></span>
+      <span class="exp">6 figure(s) · 1 model(s)</span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="ICGPKcorrelation/ICGPKcorrelation_fig_icgpdr_vs_thalf_kel.svg" alt="fig_icgpdr_vs_thalf_kel">
+        <figcaption>fig_icgpdr_vs_thalf_kel</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ICGPKcorrelation/ICGPKcorrelation_fig_icgpdr_vs_cl_kel.svg" alt="fig_icgpdr_vs_cl_kel">
+        <figcaption>fig_icgpdr_vs_cl_kel</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ICGPKcorrelation/ICGPKcorrelation_fig_icgpdr_vs_icgr15.svg" alt="fig_icgpdr_vs_icgr15">
+        <figcaption>fig_icgpdr_vs_icgr15</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ICGPKcorrelation/ICGPKcorrelation_fig_thalf_kel_vs_cl_kel.svg" alt="fig_thalf_kel_vs_cl_kel">
+        <figcaption>fig_thalf_kel_vs_cl_kel</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ICGPKcorrelation/ICGPKcorrelation_fig_thalf_kel_vs_icgr15.svg" alt="fig_thalf_kel_vs_icgr15">
+        <figcaption>fig_thalf_kel_vs_icgr15</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ICGPKcorrelation/ICGPKcorrelation_fig_cl_kel_vs_icgr15.svg" alt="fig_cl_kel_vs_icgr15">
+        <figcaption>fig_cl_kel_vs_icgr15</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name"><a href="ReferenceTimecourse/ReferenceTimecourse.html">ReferenceTimecourse</a></span>
+      <span class="exp">10 figure(s) · 1 model(s)</span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="ReferenceTimecourse/ReferenceTimecourse_icg_iv_plot1.svg" alt="icg_iv_plot1">
+        <figcaption>icg_iv_plot1</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ReferenceTimecourse/ReferenceTimecourse_icg_iv_plot2.svg" alt="icg_iv_plot2">
+        <figcaption>icg_iv_plot2</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ReferenceTimecourse/ReferenceTimecourse_icg_iv_plot3.svg" alt="icg_iv_plot3">
+        <figcaption>icg_iv_plot3</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ReferenceTimecourse/ReferenceTimecourse_icg_iv_plot4.svg" alt="icg_iv_plot4">
+        <figcaption>icg_iv_plot4</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ReferenceTimecourse/ReferenceTimecourse_icg_iv_plot5.svg" alt="icg_iv_plot5">
+        <figcaption>icg_iv_plot5</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ReferenceTimecourse/ReferenceTimecourse_icg_inf_plot1.svg" alt="icg_inf_plot1">
+        <figcaption>icg_inf_plot1</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ReferenceTimecourse/ReferenceTimecourse_icg_inf_plot2.svg" alt="icg_inf_plot2">
+        <figcaption>icg_inf_plot2</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ReferenceTimecourse/ReferenceTimecourse_icg_inf_plot3.svg" alt="icg_inf_plot3">
+        <figcaption>icg_inf_plot3</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ReferenceTimecourse/ReferenceTimecourse_icg_inf_plot4.svg" alt="icg_inf_plot4">
+        <figcaption>icg_inf_plot4</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ReferenceTimecourse/ReferenceTimecourse_icg_inf_plot5.svg" alt="icg_inf_plot5">
+        <figcaption>icg_inf_plot5</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name"><a href="CTPscoremapping/CTPscoremapping.html">CTPscoremapping</a></span>
+      <span class="exp">5 figure(s) · 1 model(s)</span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="CTPscoremapping/CTPscoremapping_fig_thalf_kel.svg" alt="fig_thalf_kel">
+        <figcaption>fig_thalf_kel</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="CTPscoremapping/CTPscoremapping_fig_kel.svg" alt="fig_kel">
+        <figcaption>fig_kel</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="CTPscoremapping/CTPscoremapping_fig_icgr15.svg" alt="fig_icgr15">
+        <figcaption>fig_icgr15</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="CTPscoremapping/CTPscoremapping_fig_cl_kel.svg" alt="fig_cl_kel">
+        <figcaption>fig_cl_kel</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="CTPscoremapping/CTPscoremapping_fig_mapping.svg" alt="fig_mapping">
+        <figcaption>fig_mapping</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name"><a href="ICGPKBilirubinScan/ICGPKBilirubinScan.html">ICGPKBilirubinScan</a></span>
+      <span class="exp">4 figure(s) · 1 model(s)</span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="ICGPKBilirubinScan/ICGPKBilirubinScan_fig_bil_cirthalf_kel.svg" alt="fig_bil_cirthalf_kel">
+        <figcaption>fig_bil_cirthalf_kel</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ICGPKBilirubinScan/ICGPKBilirubinScan_fig_bil_circl_kel.svg" alt="fig_bil_circl_kel">
+        <figcaption>fig_bil_circl_kel</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ICGPKBilirubinScan/ICGPKBilirubinScan_fig_bil_ciricgpdr.svg" alt="fig_bil_ciricgpdr">
+        <figcaption>fig_bil_ciricgpdr</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ICGPKBilirubinScan/ICGPKBilirubinScan_fig_bil_ciricgr15.svg" alt="fig_bil_ciricgr15">
+        <figcaption>fig_bil_ciricgr15</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name"><a href="ICGPKBloodFlowScan/ICGPKBloodFlowScan.html">ICGPKBloodFlowScan</a></span>
+      <span class="exp">8 figure(s) · 1 model(s)</span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="ICGPKBloodFlowScan/ICGPKBloodFlowScan_fig_bf_cirthalf_kel.svg" alt="fig_bf_cirthalf_kel">
+        <figcaption>fig_bf_cirthalf_kel</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ICGPKBloodFlowScan/ICGPKBloodFlowScan_fig_bf_circl_kel.svg" alt="fig_bf_circl_kel">
+        <figcaption>fig_bf_circl_kel</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ICGPKBloodFlowScan/ICGPKBloodFlowScan_fig_bf_ciricgpdr.svg" alt="fig_bf_ciricgpdr">
+        <figcaption>fig_bf_ciricgpdr</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ICGPKBloodFlowScan/ICGPKBloodFlowScan_fig_bf_ciricgr15.svg" alt="fig_bf_ciricgr15">
+        <figcaption>fig_bf_ciricgr15</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ICGPKBloodFlowScan/ICGPKBloodFlowScan_fig_co_cirthalf_kel.svg" alt="fig_co_cirthalf_kel">
+        <figcaption>fig_co_cirthalf_kel</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ICGPKBloodFlowScan/ICGPKBloodFlowScan_fig_co_circl_kel.svg" alt="fig_co_circl_kel">
+        <figcaption>fig_co_circl_kel</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ICGPKBloodFlowScan/ICGPKBloodFlowScan_fig_co_ciricgpdr.svg" alt="fig_co_ciricgpdr">
+        <figcaption>fig_co_ciricgpdr</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ICGPKBloodFlowScan/ICGPKBloodFlowScan_fig_co_ciricgr15.svg" alt="fig_co_ciricgr15">
+        <figcaption>fig_co_ciricgr15</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name"><a href="ICGPKBodyweightScan/ICGPKBodyweightScan.html">ICGPKBodyweightScan</a></span>
+      <span class="exp">4 figure(s) · 1 model(s)</span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="ICGPKBodyweightScan/ICGPKBodyweightScan_fig_thalf_kel.svg" alt="fig_thalf_kel">
+        <figcaption>fig_thalf_kel</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ICGPKBodyweightScan/ICGPKBodyweightScan_fig_cl_kel.svg" alt="fig_cl_kel">
+        <figcaption>fig_cl_kel</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ICGPKBodyweightScan/ICGPKBodyweightScan_fig_icgpdr.svg" alt="fig_icgpdr">
+        <figcaption>fig_icgpdr</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ICGPKBodyweightScan/ICGPKBodyweightScan_fig_icgr15.svg" alt="fig_icgr15">
+        <figcaption>fig_icgr15</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name"><a href="ICGPKCirrhosisScan/ICGPKCirrhosisScan.html">ICGPKCirrhosisScan</a></span>
+      <span class="exp">4 figure(s) · 1 model(s)</span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="ICGPKCirrhosisScan/ICGPKCirrhosisScan_fig_thalf_kel.svg" alt="fig_thalf_kel">
+        <figcaption>fig_thalf_kel</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ICGPKCirrhosisScan/ICGPKCirrhosisScan_fig_cl_kel.svg" alt="fig_cl_kel">
+        <figcaption>fig_cl_kel</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ICGPKCirrhosisScan/ICGPKCirrhosisScan_fig_icgpdr.svg" alt="fig_icgpdr">
+        <figcaption>fig_icgpdr</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ICGPKCirrhosisScan/ICGPKCirrhosisScan_fig_icgr15.svg" alt="fig_icgr15">
+        <figcaption>fig_icgr15</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name"><a href="ICGPKDoseScan/ICGPKDoseScan.html">ICGPKDoseScan</a></span>
+      <span class="exp">4 figure(s) · 1 model(s)</span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="ICGPKDoseScan/ICGPKDoseScan_fig_dose_cirthalf_kel.svg" alt="fig_dose_cirthalf_kel">
+        <figcaption>fig_dose_cirthalf_kel</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ICGPKDoseScan/ICGPKDoseScan_fig_dose_circl_kel.svg" alt="fig_dose_circl_kel">
+        <figcaption>fig_dose_circl_kel</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ICGPKDoseScan/ICGPKDoseScan_fig_dose_ciricgpdr.svg" alt="fig_dose_ciricgpdr">
+        <figcaption>fig_dose_ciricgpdr</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ICGPKDoseScan/ICGPKDoseScan_fig_dose_ciricgr15.svg" alt="fig_dose_ciricgr15">
+        <figcaption>fig_dose_ciricgr15</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name"><a href="ICGPKHepatectomyScan/ICGPKHepatectomyScan.html">ICGPKHepatectomyScan</a></span>
+      <span class="exp">4 figure(s) · 1 model(s)</span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="ICGPKHepatectomyScan/ICGPKHepatectomyScan_fig_thalf_kel.svg" alt="fig_thalf_kel">
+        <figcaption>fig_thalf_kel</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ICGPKHepatectomyScan/ICGPKHepatectomyScan_fig_cl_kel.svg" alt="fig_cl_kel">
+        <figcaption>fig_cl_kel</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ICGPKHepatectomyScan/ICGPKHepatectomyScan_fig_icgpdr.svg" alt="fig_icgpdr">
+        <figcaption>fig_icgpdr</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ICGPKHepatectomyScan/ICGPKHepatectomyScan_fig_icgr15.svg" alt="fig_icgr15">
+        <figcaption>fig_icgr15</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name"><a href="ICGPKLiverVolumeScan/ICGPKLiverVolumeScan.html">ICGPKLiverVolumeScan</a></span>
+      <span class="exp">4 figure(s) · 1 model(s)</span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="ICGPKLiverVolumeScan/ICGPKLiverVolumeScan_fig_thalf_kel.svg" alt="fig_thalf_kel">
+        <figcaption>fig_thalf_kel</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ICGPKLiverVolumeScan/ICGPKLiverVolumeScan_fig_cl_kel.svg" alt="fig_cl_kel">
+        <figcaption>fig_cl_kel</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ICGPKLiverVolumeScan/ICGPKLiverVolumeScan_fig_icgpdr.svg" alt="fig_icgpdr">
+        <figcaption>fig_icgpdr</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ICGPKLiverVolumeScan/ICGPKLiverVolumeScan_fig_icgr15.svg" alt="fig_icgr15">
+        <figcaption>fig_icgr15</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name"><a href="ICGPKOatp1b3Scan/ICGPKOatp1b3Scan.html">ICGPKOatp1b3Scan</a></span>
+      <span class="exp">4 figure(s) · 1 model(s)</span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="ICGPKOatp1b3Scan/ICGPKOatp1b3Scan_fig_thalf_kel.svg" alt="fig_thalf_kel">
+        <figcaption>fig_thalf_kel</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ICGPKOatp1b3Scan/ICGPKOatp1b3Scan_fig_cl_kel.svg" alt="fig_cl_kel">
+        <figcaption>fig_cl_kel</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ICGPKOatp1b3Scan/ICGPKOatp1b3Scan_fig_icgpdr.svg" alt="fig_icgpdr">
+        <figcaption>fig_icgpdr</figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="ICGPKOatp1b3Scan/ICGPKOatp1b3Scan_fig_icgr15.svg" alt="fig_icgr15">
+        <figcaption>fig_icgr15</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name"><a href="ClassificationData/ClassificationData.html">ClassificationData</a></span>
+      <span class="exp">1 figure(s) · 1 model(s)</span>
+    </header>
+    <div class="grid">
+      <figure>
+        <img loading="lazy" src="ClassificationData/ClassificationData_fig_icgr15.svg" alt="fig_icgr15">
+        <figcaption>fig_icgr15</figcaption>
+      </figure>
+    </div>
+  </div>
+  <p class="empty hidden" data-empty>No experiment matches the search.</p>
+</section>
+
+</main>
+
+<footer>
+<br>created by sbmlsim 0.13.0</footer>
+
+<div id="lightbox"><img alt=""></div>
+
+<script>
+(function () {
+  "use strict";
+
+  // ---- search and the filter chips ------------------------------------
+  const search = document.getElementById("search");
+  const hits = document.getElementById("hits");
+  const chips = Array.from(document.querySelectorAll(".chip"));
+  const cards = Array.from(document.querySelectorAll('[data-filter="card"]'));
+  const rows = Array.from(document.querySelectorAll('table[data-filter="row"] tbody tr'));
+  const empty = document.querySelector("[data-empty]");
+  const itemLabel = document.body.dataset.items || "items";
+
+  const haystack = new Map();
+  for (const node of [...cards, ...rows]) {
+    haystack.set(node, node.textContent.toLowerCase());
+  }
+
+  function activeKinds() {
+    return new Set(chips.filter((c) => c.getAttribute("aria-pressed") === "true")
+                        .map((c) => c.dataset.kind));
+  }
+
+  function matches(node, query, kinds) {
+    const kind = node.dataset.kind;
+    if (kind && !kinds.has(kind)) return false;
+    return !query || haystack.get(node).includes(query);
+  }
+
+  function apply() {
+    const query = search.value.trim().toLowerCase();
+    const kinds = activeKinds();
+    let shownCards = 0;
+    for (const node of cards) {
+      const show = matches(node, query, kinds);
+      node.classList.toggle("hidden", !show);
+      if (show) shownCards += 1;
+    }
+    for (const node of rows) {
+      node.classList.toggle("hidden", !matches(node, query, kinds));
+    }
+    if (empty) empty.classList.toggle("hidden", shownCards > 0 || cards.length === 0);
+    const filtering = Boolean(query) || (chips.length > 0 && kinds.size < chips.length);
+    hits.textContent = filtering
+      ? shownCards + " / " + cards.length + " " + itemLabel
+      : "";
+  }
+
+  search.addEventListener("input", apply);
+  for (const chip of chips) {
+    chip.addEventListener("click", () => {
+      chip.setAttribute("aria-pressed", chip.getAttribute("aria-pressed") === "true" ? "false" : "true");
+      apply();
+    });
+  }
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "/" && document.activeElement !== search) {
+      event.preventDefault();
+      search.focus();
+    } else if (event.key === "Escape") {
+      if (document.activeElement === search && search.value) { search.value = ""; apply(); }
+      closeLightbox();
+    }
+  });
+
+  // ---- sortable tables -------------------------------------------------
+  function cellValue(row, index, kind) {
+    const text = row.cells[index] ? row.cells[index].textContent.trim() : "";
+    if (kind !== "num") return text.toLowerCase();
+    // the AIC of a perfect fit is -inf, a cell without a value sorts last
+    if (text === "-inf") return Number.NEGATIVE_INFINITY;
+    const value = parseFloat(text);
+    return Number.isNaN(value) ? Number.POSITIVE_INFINITY : value;
+  }
+
+  for (const table of document.querySelectorAll("table")) {
+    const headers = Array.from(table.querySelectorAll("th[data-sort]"));
+    headers.forEach((th, index) => {
+      th.addEventListener("click", () => {
+        const body = table.tBodies[0];
+        if (!body) return;
+        const kind = th.dataset.sort;
+        const descending = th.classList.contains("asc");
+        for (const other of headers) other.classList.remove("asc", "desc");
+        th.classList.add(descending ? "desc" : "asc");
+        const sorted = Array.from(body.rows).sort((a, b) => {
+          const left = cellValue(a, index, kind);
+          const right = cellValue(b, index, kind);
+          if (left < right) return descending ? 1 : -1;
+          if (left > right) return descending ? -1 : 1;
+          return 0;
+        });
+        for (const row of sorted) body.appendChild(row);
+      });
+    });
+  }
+
+  // ---- the section the page is scrolled to -----------------------------
+  // a tab (data-tab) is not a section, its page marks the tab which is shown
+  const links = Array.from(document.querySelectorAll("nav.sections a:not([data-tab])"));
+  const sections = links.map((link) => document.querySelector(link.getAttribute("href")));
+  function scrollspy() {
+    let current = 0;
+    sections.forEach((section, index) => {
+      if (section && section.getBoundingClientRect().top < 200) current = index;
+    });
+    links.forEach((link, index) => link.classList.toggle("active", index === current));
+  }
+  window.addEventListener("scroll", scrollspy, { passive: true });
+  scrollspy();
+
+  // ---- click a figure to enlarge it ------------------------------------
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImage = lightbox.querySelector("img");
+  function closeLightbox() { lightbox.classList.remove("open"); lightboxImage.src = ""; }
+  for (const image of document.querySelectorAll("figure img")) {
+    image.addEventListener("click", () => {
+      lightboxImage.src = image.getAttribute("src");
+      lightbox.classList.add("open");
+    });
+  }
+  lightbox.addEventListener("click", closeLightbox);
+
+  apply();
+})();
+</script>
+</body>
+</html>

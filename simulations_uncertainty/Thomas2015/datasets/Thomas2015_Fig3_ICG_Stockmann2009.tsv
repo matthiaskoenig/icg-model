@@ -1,0 +1,24 @@
+study	subject	intervention	tissue	substance	x_measurement	y_measurement	x	x_unit	y	y_unit	y_label	x_label
+Stockmann2009	S1	ICG, hepatectomy	liver	indocyanine green	fractional pdr	fractional liver remnant volume	28.314482	percent	27.193892	percent	remnant_liver	remnant_icgpdr
+Stockmann2009	S2	ICG, hepatectomy	liver	indocyanine green	fractional pdr	fractional liver remnant volume	33.359993	percent	41.79667	percent	remnant_liver	remnant_icgpdr
+Stockmann2009	S3	ICG, hepatectomy	liver	indocyanine green	fractional pdr	fractional liver remnant volume	33.67962	percent	34.278484	percent	remnant_liver	remnant_icgpdr
+Stockmann2009	S4	ICG, hepatectomy	liver	indocyanine green	fractional pdr	fractional liver remnant volume	36.87029	percent	41.08247	percent	remnant_liver	remnant_icgpdr
+Stockmann2009	S5	ICG, hepatectomy	liver	indocyanine green	fractional pdr	fractional liver remnant volume	41.192936	percent	28.310377	percent	remnant_liver	remnant_icgpdr
+Stockmann2009	S6	ICG, hepatectomy	liver	indocyanine green	fractional pdr	fractional liver remnant volume	43.412144	percent	51.28596	percent	remnant_liver	remnant_icgpdr
+Stockmann2009	S7	ICG, hepatectomy	liver	indocyanine green	fractional pdr	fractional liver remnant volume	45.769775	percent	59.651417	percent	remnant_liver	remnant_icgpdr
+Stockmann2009	S8	ICG, hepatectomy	liver	indocyanine green	fractional pdr	fractional liver remnant volume	45.746006	percent	47.594707	percent	remnant_liver	remnant_icgpdr
+Stockmann2009	S9	ICG, hepatectomy	liver	indocyanine green	fractional pdr	fractional liver remnant volume	46.734806	percent	40.217415	percent	remnant_liver	remnant_icgpdr
+Stockmann2009	S10	ICG, hepatectomy	liver	indocyanine green	fractional pdr	fractional liver remnant volume	48.26023	percent	50.569866	percent	remnant_liver	remnant_icgpdr
+Stockmann2009	S11	ICG, hepatectomy	liver	indocyanine green	fractional pdr	fractional liver remnant volume	48.63215	percent	69.57644	percent	remnant_liver	remnant_icgpdr
+Stockmann2009	S12	ICG, hepatectomy	liver	indocyanine green	fractional pdr	fractional liver remnant volume	49.766922	percent	51.418793	percent	remnant_liver	remnant_icgpdr
+Stockmann2009	S13	ICG, hepatectomy	liver	indocyanine green	fractional pdr	fractional liver remnant volume	52.230255	percent	28.57841	percent	remnant_liver	remnant_icgpdr
+Stockmann2009	S14	ICG, hepatectomy	liver	indocyanine green	fractional pdr	fractional liver remnant volume	54.92121	percent	36.376015	percent	remnant_liver	remnant_icgpdr
+Stockmann2009	S15	ICG, hepatectomy	liver	indocyanine green	fractional pdr	fractional liver remnant volume	55.768795	percent	42.19042	percent	remnant_liver	remnant_icgpdr
+Stockmann2009	S16	ICG, hepatectomy	liver	indocyanine green	fractional pdr	fractional liver remnant volume	60.63422	percent	50.268627	percent	remnant_liver	remnant_icgpdr
+Stockmann2009	S17	ICG, hepatectomy	liver	indocyanine green	fractional pdr	fractional liver remnant volume	70.1559	percent	45.148735	percent	remnant_liver	remnant_icgpdr
+Stockmann2009	S18	ICG, hepatectomy	liver	indocyanine green	fractional pdr	fractional liver remnant volume	76.65665	percent	34.50121	percent	remnant_liver	remnant_icgpdr
+Stockmann2009	S19	ICG, hepatectomy	liver	indocyanine green	fractional pdr	fractional liver remnant volume	76.42706	percent	87.69305	percent	remnant_liver	remnant_icgpdr
+Stockmann2009	S20	ICG, hepatectomy	liver	indocyanine green	fractional pdr	fractional liver remnant volume	88.7194	percent	45.97347	percent	remnant_liver	remnant_icgpdr
+Stockmann2009	S21	ICG, hepatectomy	liver	indocyanine green	fractional pdr	fractional liver remnant volume	87.973885	percent	91.93199	percent	remnant_liver	remnant_icgpdr
+Stockmann2009	S22	ICG, hepatectomy	liver	indocyanine green	fractional pdr	fractional liver remnant volume	88.762184	percent	67.675545	percent	remnant_liver	remnant_icgpdr
+Stockmann2009	S23	ICG, hepatectomy	liver	indocyanine green	fractional pdr	fractional liver remnant volume	110.82647	percent	62.963394	percent	remnant_liver	remnant_icgpdr

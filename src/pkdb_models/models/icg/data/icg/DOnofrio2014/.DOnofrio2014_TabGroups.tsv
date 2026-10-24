@@ -1,0 +1,8 @@
+study	name	group_count	parent	measurement_type	choice	count	mean	min	max	sd	unit
+DOnofrio2014	all	31	NA	sex	M	21	NA	NA	NA	NA	NA
+DOnofrio2014	all	31	NA	sex	F	10	NA	NA	NA	NA	NA
+DOnofrio2014	all	31	NA	species	homo sapiens	31	NA	NA	NA	NA	NA
+DOnofrio2014	all	31	NA	overnight fast	Y	31	NA	NA	NA	NA	NA
+DOnofrio2014	all	31	NA	healthy	N	31	NA	NA	NA	NA	NA
+DOnofrio2014	all	31	NA	disease	cancer	31	NA	NA	NA	NA	NA
+DOnofrio2014	all	31	NA	age	NA	31	66.0	39.0	82.0	11.0	yr

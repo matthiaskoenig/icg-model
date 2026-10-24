@@ -1,0 +1,10 @@
+study	group	measurement	tissue	intervention	substance	mean	se	unit
+Gadano1997	Controls	concentration_ss	plasma	MEP	bilirubin	14	18	micromol/l
+Gadano1997	Controls	concentration_ss	plasma	MEP	albumin	41	8	g/l
+Gadano1997	Controls	plasma thromboplastin activity	plasma	MEP	NA	79	27	percent
+Gadano1997	Hepatic Fibrosis	concentration_ss	plasma	MEP	bilirubin	21	18	micromol/l
+Gadano1997	Hepatic Fibrosis	concentration_ss	plasma	MEP	albumin	33	6	g/l
+Gadano1997	Hepatic Fibrosis	plasma thromboplastin activity	plasma	MEP	NA	71	18	percent
+Gadano1997	Cirrhosis	concentration_ss	plasma	MEP	bilirubin	40	50	micromol/l
+Gadano1997	Cirrhosis	concentration_ss	plasma	MEP	albumin	32	7	g/l
+Gadano1997	Cirrhosis	plasma thromboplastin activity	plasma	MEP	NA	56	16	percent

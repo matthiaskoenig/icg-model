@@ -1,0 +1,8 @@
+study	name	substance	measurement	time	time_unit	route	form	value	unit	application
+Leevy1967	ICG0.5	indocyanine green	dosing	0	min	iv	solution	0.5	mg/kg	single dose
+Leevy1967	ICG1.0	indocyanine green	dosing	0	min	iv	solution	1.0	mg/kg	single dose
+Leevy1967	ICG1.5	indocyanine green	dosing	0	min	iv	solution	1.5	mg/kg	single dose
+Leevy1967	ICG2.0	indocyanine green	dosing	0	min	iv	solution	2.0	mg/kg	single dose
+Leevy1967	ICG3.5	indocyanine green	dosing	0	min	iv	solution	3.5	mg/kg	single dose
+Leevy1967	ICG5.0	indocyanine green	dosing	0	min	iv	solution	5.0	mg/kg	single dose
+Leevy1967	ICG6.0	indocyanine green	dosing	0	min	iv	solution	6.0	mg/kg	single dose

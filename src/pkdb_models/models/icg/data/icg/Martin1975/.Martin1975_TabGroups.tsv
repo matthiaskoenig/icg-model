@@ -1,0 +1,13 @@
+study	name	group_count	parent	measurement_type	choice	count	min	max	unit
+Martin1975	all	51	na	species	homo sapiens	51	na	na	na
+Martin1975	all	51	na	healthy	Y	51	na	na	na
+Martin1975	all	51	na	sex	M	18	na	na	na
+Martin1975	all	51	na	sex	F	33	na	na	na
+Martin1975	all	51	na	age	na	51	18	19	yr
+Martin1975	all	51	na	medication	N	51	na	na	na
+Martin1975	additional	19	all	sex	M	9	na	na	na
+Martin1975	additional	19	all	sex	F	10	na	na	na
+Martin1975	allWomen	33	all	sex	F	33	na	na	na
+Martin1975	allMen	18	all	sex	M	18	na	na	na
+Martin1975	additionalWomen	10	additional	sex	F	10	na	na	na
+Martin1975	additionalMen	9	additional	sex	M	9	na	na	na

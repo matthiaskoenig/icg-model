@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   x="0px"
+   y="0px"
+   width="649.20331"
+   height="82.132187"
+   viewBox="0 0 649.20333 82.132186"
+   id="svg236"
+   sodipodi:docname="icg_liver_metabolism.svg"
+   inkscape:export-filename="/home/adrian/git/pkdb_models/pkdb_models/models/icg/models/figures/icg_liver_metabolism.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300"
+   inkscape:version="1.1 (ce6663b3b7, 2021-05-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs240" />
+  <sodipodi:namedview
+     id="namedview238"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="1.397351"
+     inkscape:cx="319.17535"
+     inkscape:cy="117.00711"
+     inkscape:window-width="1848"
+     inkscape:window-height="1016"
+     inkscape:window-x="1992"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g974" />
+  <title
+     id="title2" />
+  <desc
+     id="desc4">Creator: FreeHEP Graphics2D Driver Producer: org.freehep.graphicsio.svg.SVGGraphics2D Revision Source:  Date: Wednesday, February 24, 2021 at 4:15:59 PM Central European Standard Time</desc>
+  <g
+     stroke-dashoffset="0"
+     stroke-linejoin="miter"
+     stroke-dasharray="none"
+     stroke-width="1"
+     stroke-linecap="square"
+     stroke-miterlimit="10"
+     id="g234"
+     transform="translate(-338.04337,-256.18198)">
+    <g
+       id="g974"
+       transform="matrix(0.68637303,0,0,0.68637303,101.54506,85.990868)">
+      <g
+         transform="matrix(1.6051334,0,0,1.6051334,729.22354,659.09883)"
+         id="g14">
+        <g
+           stroke-opacity="1"
+           stroke-width="2"
+           fill="none"
+           stroke="#000000"
+           stroke-linecap="butt"
+           id="g12">
+          <path
+             d="m 246.05975,-216.23332 h 46.94248"
+             id="path10" />
+        </g>
+        <!-- drawing style -->
+      </g>
+      <g
+         transform="matrix(-3.2102669,0,0,-3.2102669,1124.1823,312.0155)"
+         id="g20">
+        <g
+           fill="#000000"
+           fill-rule="nonzero"
+           fill-opacity="1"
+           stroke="none"
+           id="g18">
+          <path
+             d="M 0,0.5 C 0.27614237,0.5 0.5,0.27614237 0.5,0 0.5,-0.27614237 0.27614237,-0.5 0,-0.5 Z"
+             id="path16" />
+        </g>
+        <!-- drawing style -->
+      </g>
+      <g
+         transform="matrix(12.841067,0,0,12.841067,1225.2133,312.0155)"
+         id="g26">
+        <g
+           fill="#000000"
+           fill-rule="nonzero"
+           fill-opacity="1"
+           stroke="none"
+           id="g24">
+          <path
+             d="M -2,-0.5 0,0 -2,0.5 Z"
+             id="path22" />
+        </g>
+        <!-- drawing style -->
+      </g>
+      <g
+         transform="matrix(1.6051334,0,0,1.6051334,729.22354,659.09883)"
+         id="g32">
+        <g
+           stroke-opacity="1"
+           stroke-width="2"
+           fill="none"
+           stroke="#000000"
+           stroke-linecap="butt"
+           id="g30">
+          <path
+             d="M 231.05975,-216.23332 H 168.11729"
+             id="path28" />
+        </g>
+        <!-- drawing style -->
+      </g>
+      <g
+         transform="matrix(1.6051334,0,0,1.6051334,729.22354,659.09883)"
+         id="g38">
+        <g
+           stroke-opacity="1"
+           stroke-width="2"
+           fill="none"
+           stroke="#000000"
+           stroke-linecap="butt"
+           id="g36">
+          <path
+             d="m -133.44223,-216.23332 h -60.21031"
+             id="path34" />
+        </g>
+        <!-- drawing style -->
+      </g>
+      <g
+         transform="matrix(1.6051334,0,0,1.6051334,729.22354,659.09883)"
+         id="g68">
+        <g
+           stroke-opacity="1"
+           stroke-width="2"
+           fill="none"
+           stroke="#000000"
+           stroke-linecap="butt"
+           id="g66">
+          <path
+             d="m -118.44222,-216.23332 h 49.674596"
+             id="path64" />
+        </g>
+        <!-- drawing style -->
+      </g>
+      <g
+         transform="matrix(-3.2102669,0,0,-3.2102669,539.10797,312.0155)"
+         id="g74">
+        <g
+           fill="#000000"
+           fill-rule="nonzero"
+           fill-opacity="1"
+           stroke="none"
+           id="g72">
+          <path
+             d="M 0,0.5 C 0.27614237,0.5 0.5,0.27614237 0.5,0 0.5,-0.27614237 0.27614237,-0.5 0,-0.5 Z"
+             id="path70" />
+        </g>
+        <!-- drawing style -->
+      </g>
+      <g
+         transform="matrix(12.841067,0,0,12.841067,644.52446,312.0155)"
+         id="g80">
+        <g
+           fill="#000000"
+           fill-rule="nonzero"
+           fill-opacity="1"
+           stroke="none"
+           id="g78">
+          <path
+             d="M -2,-0.5 0,0 -2,0.5 Z"
+             id="path76" />
+        </g>
+        <!-- drawing style -->
+      </g>
+      <g
+         transform="matrix(1.6051334,0,0,1.6051334,729.22354,659.09883)"
+         id="g86">
+        <g
+           stroke-opacity="1"
+           stroke-width="2"
+           fill="none"
+           stroke="#000000"
+           stroke-linecap="butt"
+           id="g84">
+          <path
+             d="M 50.174839,-216.23332 H -12.767622"
+             id="path82" />
+        </g>
+        <!-- drawing style -->
+      </g>
+      <g
+         transform="matrix(1.6051334,0,0,1.6051334,729.22354,659.09883)"
+         id="g92">
+        <g
+           stroke-opacity="1"
+           stroke-width="2"
+           fill="none"
+           stroke="#000000"
+           stroke-linecap="butt"
+           id="g90">
+          <path
+             d="M 65.174835,-216.23332 H 112.11729"
+             id="path88" />
+        </g>
+        <!-- drawing style -->
+      </g>
+      <g
+         transform="matrix(-3.2102669,0,0,-3.2102669,833.83784,312.0155)"
+         id="g98">
+        <g
+           fill="#000000"
+           fill-rule="nonzero"
+           fill-opacity="1"
+           stroke="none"
+           id="g96">
+          <path
+             d="M 0,0.5 C 0.27614237,0.5 0.5,0.27614237 0.5,0 0.5,-0.27614237 0.27614237,-0.5 0,-0.5 Z"
+             id="path94" />
+        </g>
+        <!-- drawing style -->
+      </g>
+      <g
+         transform="matrix(12.841067,0,0,12.841067,934.86889,312.0155)"
+         id="g104">
+        <g
+           fill="#000000"
+           fill-rule="nonzero"
+           fill-opacity="1"
+           stroke="none"
+           id="g102">
+          <path
+             d="M -2,-0.5 0,0 -2,0.5 Z"
+             id="path100" />
+        </g>
+        <!-- drawing style -->
+      </g>
+      <g
+         transform="matrix(1.6051334,0,0,1.6051334,729.22354,659.09883)"
+         id="g110">
+        <g
+           stroke-opacity="0.784314"
+           stroke-width="5"
+           fill="none"
+           stroke="#000000"
+           stroke-linecap="butt"
+           id="g108">
+          <path
+             d="m 233.55975,-221.23332 h 10 v 10 h -10 z"
+             id="path106" />
+        </g>
+        <!-- drawing style -->
+      </g>
+      <g
+         transform="matrix(1.6051334,0,0,1.6051334,729.22354,659.09883)"
+         id="g116">
+        <g
+           fill="#ff3333"
+           fill-rule="nonzero"
+           fill-opacity="1"
+           stroke="none"
+           id="g114">
+          <path
+             d="m 233.55975,-221.23332 h 10 v 10 h -10 z"
+             id="path112" />
+        </g>
+        <!-- drawing style -->
+      </g>
+      <g
+         transform="matrix(1.6051334,0,0,1.6051334,1003.6969,279.12505)"
+         id="g120">
+        <text
+           font-weight="normal"
+           font-size="16px"
+           font-family="'Liberation Sans Bold'"
+           font-style="normal"
+           fill="#000000"
+           fill-opacity="1"
+           stroke="none"
+           x="0"
+           y="0"
+           id="text118">ICG bile transport</text>
+      </g>
+      <g
+         transform="matrix(1.6051334,0,0,1.6051334,729.22354,659.09883)"
+         id="g126">
+        <g
+           stroke-opacity="0.784314"
+           stroke-width="5"
+           fill="none"
+           stroke="#3333ff"
+           stroke-linecap="butt"
+           id="g124">
+          <path
+             d="m -196.15254,-216.23332 c 0,9.66498 -7.83502,17.5 -17.5,17.5 -9.66499,0 -17.5,-7.83502 -17.5,-17.5 0,-9.66499 7.83501,-17.5 17.5,-17.5 9.66498,0 17.5,7.83501 17.5,17.5 z"
+             id="path122" />
+        </g>
+        <!-- drawing style -->
+      </g>
+      <g
+         transform="matrix(1.6051334,0,0,1.6051334,729.22354,659.09883)"
+         id="g132">
+        <g
+           fill="#f0f0f0"
+           fill-rule="nonzero"
+           fill-opacity="1"
+           stroke="none"
+           id="g130">
+          <path
+             d="m -196.15254,-216.23332 c 0,9.66498 -7.83502,17.5 -17.5,17.5 -9.66499,0 -17.5,-7.83502 -17.5,-17.5 0,-9.66499 7.83501,-17.5 17.5,-17.5 9.66498,0 17.5,7.83501 17.5,17.5 z"
+             id="path128" />
+        </g>
+        <!-- drawing style -->
+      </g>
+      <g
+         transform="matrix(1.6051334,0,0,1.6051334,322.05855,367.36752)"
+         id="g136">
+        <text
+           font-weight="normal"
+           font-size="16px"
+           font-family="'Liberation Sans'"
+           font-style="normal"
+           fill="#000000"
+           fill-opacity="1"
+           stroke="none"
+           x="12.707399"
+           y="0"
+           id="text134"><tspan
+             sodipodi:role="line"
+             id="tspan1529"
+             x="12.707399"
+             y="0">Plasma</tspan></text>
+      </g>
+      <g
+         transform="matrix(1.6051334,0,0,1.6051334,729.22354,659.09883)"
+         id="g158">
+        <g
+           stroke-opacity="0.784314"
+           stroke-width="5"
+           fill="none"
+           stroke="#000000"
+           stroke-linecap="butt"
+           id="g156">
+          <path
+             d="m -130.94223,-221.23332 h 10.00001 v 10 h -10.00001 z"
+             id="path154" />
+        </g>
+        <!-- drawing style -->
+      </g>
+      <g
+         transform="matrix(1.6051334,0,0,1.6051334,729.22354,659.09883)"
+         id="g164">
+        <g
+           fill="#ff3333"
+           fill-rule="nonzero"
+           fill-opacity="1"
+           stroke="none"
+           id="g162">
+          <path
+             d="m -130.94223,-221.23332 h 10.00001 v 10 h -10.00001 z"
+             id="path160" />
+        </g>
+        <!-- drawing style -->
+      </g>
+      <g
+         transform="matrix(1.6051334,0,0,1.6051334,460.72603,282.03892)"
+         id="g168">
+        <text
+           font-weight="normal"
+           font-size="16px"
+           font-family="'Liberation Sans Bold'"
+           font-style="normal"
+           fill="#000000"
+           fill-opacity="1"
+           stroke="none"
+           x="0"
+           y="0"
+           id="text166">ICG uptake</text>
+      </g>
+      <g
+         transform="matrix(1.6051334,0,0,1.6051334,729.22354,659.09883)"
+         id="g174">
+        <g
+           stroke-opacity="0.784314"
+           stroke-width="5"
+           fill="none"
+           stroke="#cc6600"
+           stroke-linecap="butt"
+           id="g172">
+          <path
+             d="m 346.50223,-216.23332 c 0,9.66498 -7.83502,17.5 -17.5,17.5 -9.66499,0 -17.5,-7.83502 -17.5,-17.5 0,-9.66499 7.83501,-17.5 17.5,-17.5 9.66498,0 17.5,7.83501 17.5,17.5 z"
+             id="path170" />
+        </g>
+        <!-- drawing style -->
+      </g>
+      <g
+         transform="matrix(1.6051334,0,0,1.6051334,729.22354,659.09883)"
+         id="g180">
+        <g
+           fill="#f0f0f0"
+           fill-rule="nonzero"
+           fill-opacity="1"
+           stroke="none"
+           id="g178">
+          <path
+             d="m 346.50223,-216.23332 c 0,9.66498 -7.83502,17.5 -17.5,17.5 -9.66499,0 -17.5,-7.83502 -17.5,-17.5 0,-9.66499 7.83501,-17.5 17.5,-17.5 9.66498,0 17.5,7.83501 17.5,17.5 z"
+             id="path176" />
+        </g>
+        <!-- drawing style -->
+      </g>
+      <g
+         transform="matrix(1.6051334,0,0,1.6051334,1221.4003,367.36752)"
+         id="g184">
+        <text
+           font-weight="normal"
+           font-size="16px"
+           font-family="'Liberation Sans'"
+           font-style="normal"
+           fill="#000000"
+           fill-opacity="1"
+           stroke="none"
+           x="0"
+           y="0"
+           id="text182">Feces</text>
+      </g>
+      <g
+         transform="matrix(1.6051334,0,0,1.6051334,729.22354,659.09883)"
+         id="g190">
+        <g
+           stroke-opacity="0.784314"
+           stroke-width="5"
+           fill="none"
+           stroke="#000000"
+           stroke-linecap="butt"
+           id="g188">
+          <path
+             d="m 52.674839,-221.23332 h 9.999996 v 10 h -9.999996 z"
+             id="path186" />
+        </g>
+        <!-- drawing style -->
+      </g>
+      <g
+         transform="matrix(1.6051334,0,0,1.6051334,729.22354,659.09883)"
+         id="g196">
+        <g
+           fill="#ff3333"
+           fill-rule="nonzero"
+           fill-opacity="1"
+           stroke="none"
+           id="g194">
+          <path
+             d="m 52.674839,-221.23332 h 9.999996 v 10 h -9.999996 z"
+             id="path192" />
+        </g>
+        <!-- drawing style -->
+      </g>
+      <g
+         transform="matrix(1.6051334,0,0,1.6051334,692.77871,273.29731)"
+         id="g200">
+        <text
+           font-weight="normal"
+           font-size="16px"
+           font-family="'Liberation Sans Bold'"
+           font-style="normal"
+           fill="#000000"
+           fill-opacity="1"
+           stroke="none"
+           x="38.122189"
+           y="-3.6306856"
+           id="text198"
+           style="line-height:1"><tspan
+             sodipodi:role="line"
+             id="tspan32967"
+             x="38.122189"
+             y="-3.6306856">ICG biliary</tspan><tspan
+             sodipodi:role="line"
+             id="tspan32969"
+             x="38.122189"
+             y="12.369314">excretion</tspan></text>
+      </g>
+      <g
+         transform="matrix(1.6051334,0,0,1.6051334,729.22354,659.09883)"
+         id="g206">
+        <g
+           stroke-opacity="0.784314"
+           stroke-width="5"
+           fill="none"
+           stroke="#336600"
+           stroke-linecap="butt"
+           id="g204">
+          <path
+             d="m 165.61729,-216.23332 c 0,9.66498 -7.83501,17.5 -17.5,17.5 -9.66498,0 -17.5,-7.83502 -17.5,-17.5 0,-9.66499 7.83502,-17.5 17.5,-17.5 9.66499,0 17.5,7.83501 17.5,17.5 z"
+             id="path202" />
+        </g>
+        <!-- drawing style -->
+      </g>
+      <g
+         transform="matrix(1.6051334,0,0,1.6051334,729.22354,659.09883)"
+         id="g212">
+        <g
+           fill="#f0f0f0"
+           fill-rule="nonzero"
+           fill-opacity="1"
+           stroke="none"
+           id="g210">
+          <path
+             d="m 165.61729,-216.23332 c 0,9.66498 -7.83501,17.5 -17.5,17.5 -9.66498,0 -17.5,-7.83502 -17.5,-17.5 0,-9.66499 7.83502,-17.5 17.5,-17.5 9.66499,0 17.5,7.83501 17.5,17.5 z"
+             id="path208" />
+        </g>
+        <!-- drawing style -->
+      </g>
+      <g
+         transform="matrix(1.6051334,0,0,1.6051334,944.67245,367.36752)"
+         id="g216">
+        <text
+           font-weight="normal"
+           font-size="16px"
+           font-family="'Liberation Sans'"
+           font-style="normal"
+           fill="#000000"
+           fill-opacity="1"
+           stroke="none"
+           x="0"
+           y="0"
+           id="text214">Bile</text>
+      </g>
+      <g
+         transform="matrix(1.6051334,0,0,1.6051334,729.22354,659.09883)"
+         id="g222">
+        <g
+           stroke-opacity="0.784314"
+           stroke-width="5"
+           fill="none"
+           stroke="#ff3333"
+           stroke-linecap="butt"
+           id="g220">
+          <path
+             d="m -15.267624,-216.23332 c 0,9.66498 -7.835017,17.5 -17.5,17.5 -9.664983,0 -17.5,-7.83502 -17.5,-17.5 0,-9.66499 7.835017,-17.5 17.5,-17.5 9.664983,0 17.5,7.83501 17.5,17.5 z"
+             id="path218" />
+        </g>
+        <!-- drawing style -->
+      </g>
+      <g
+         transform="matrix(1.6051334,0,0,1.6051334,729.22354,659.09883)"
+         id="g228">
+        <g
+           fill="#f0f0f0"
+           fill-rule="nonzero"
+           fill-opacity="1"
+           stroke="none"
+           id="g226">
+          <path
+             d="m -15.267624,-216.23332 c 0,9.66498 -7.835017,17.5 -17.5,17.5 -9.664983,0 -17.5,-7.83502 -17.5,-17.5 0,-9.66499 7.835017,-17.5 17.5,-17.5 9.664983,0 17.5,7.83501 17.5,17.5 z"
+             id="path224" />
+        </g>
+        <!-- drawing style -->
+      </g>
+      <g
+         transform="matrix(1.6051334,0,0,1.6051334,647.85903,367.36752)"
+         id="g232">
+        <text
+           font-weight="normal"
+           font-size="16px"
+           font-family="'Liberation Sans'"
+           font-style="normal"
+           fill="#000000"
+           fill-opacity="1"
+           stroke="none"
+           x="0"
+           y="0"
+           id="text230">Liver</text>
+      </g>
+    </g>
+    <!-- drawing style -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+    <!-- transform -->
+  </g>
+  <!-- default stroke -->
+</svg>
+<!-- bounding box -->
+

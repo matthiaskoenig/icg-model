@@ -1,0 +1,15 @@
+study	name	group_count	parent	measurement_type	choice	count	min	max	unit
+Marigold1981	all	14	NA	species	homo sapiens	14	NA	NA	NA
+Marigold1981	all	14	NA	healthy	Y	14	NA	NA	NA
+Marigold1981	all	14	NA	sex	M	9	NA	NA	NA
+Marigold1981	all	14	NA	sex	F	5	NA	NA	NA
+Marigold1981	all	14	NA	age	NA	14	21.0	34.0	yr
+Marigold1981	all	14	NA	medication	N	14	NA	NA	NA
+Marigold1981	all	14	NA	overnight fast	Y	14	NA	NA	NA
+Marigold1981	GLY	9	all	sex	M	6	NA	NA	NA
+Marigold1981	GLY	9	all	sex	F	3	NA	NA	NA
+Marigold1981	GLY	9	all	oral contraceptives	Y	2	NA	NA	NA
+Marigold1981	ICGALL	13	all	sex	MF	13	NA	NA	NA
+Marigold1981	ICG	2	ICGALL	sex	F	2	NA	NA	NA
+Marigold1981	ICGGLY	8	ICGALL	sex	MF	8	NA	NA	NA
+Marigold1981	ICGEV	3	ICGALL	sex	M	3	NA	NA	NA

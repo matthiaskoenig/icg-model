@@ -1,0 +1,5 @@
+study	group	interventions	measurement	tissue	substance	mean	mean_sd	label	mean_unit
+Haimerl2016	controls		liver volume	liver		1993.1	382.0	Tab1pk	ml
+Haimerl2016	ctpa		liver volume	liver		1911.0	442.1	Tab1pk	ml
+Haimerl2016	ctpb		liver volume	liver		1564.3	468.1	Tab1pk	ml
+Haimerl2016	ctpc		liver volume	liver		1860.0	798.6	Tab1pk	ml

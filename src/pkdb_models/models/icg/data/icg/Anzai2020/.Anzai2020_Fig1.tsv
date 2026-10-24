@@ -1,0 +1,39 @@
+study	individual	intervention	measurement	tissue	substance	value	unit	label	group
+Anzai2020	W1	ICG	retention ratio	plasma	indocyanine green	3.7543294	percent	Fig1_r15	wildtype
+Anzai2020	W2	ICG	retention ratio	plasma	indocyanine green	4.419185	percent	Fig1_r15	wildtype
+Anzai2020	W3	ICG	retention ratio	plasma	indocyanine green	4.8713055	percent	Fig1_r15	wildtype
+Anzai2020	W4	ICG	retention ratio	plasma	indocyanine green	6.370986	percent	Fig1_r15	wildtype
+Anzai2020	W5	ICG	retention ratio	plasma	indocyanine green	6.8754888	percent	Fig1_r15	wildtype
+Anzai2020	W6	ICG	retention ratio	plasma	indocyanine green	7.4817348	percent	Fig1_r15	wildtype
+Anzai2020	W7	ICG	retention ratio	plasma	indocyanine green	7.5467553	percent	Fig1_r15	wildtype
+Anzai2020	W8	ICG	retention ratio	plasma	indocyanine green	9.099734	percent	Fig1_r15	wildtype
+Anzai2020	W9	ICG	retention ratio	plasma	indocyanine green	10.7730465	percent	Fig1_r15	wildtype
+Anzai2020	W10	ICG	retention ratio	plasma	indocyanine green	12.047444	percent	Fig1_r15	wildtype
+Anzai2020	W11	ICG	retention ratio	plasma	indocyanine green	12.106146	percent	Fig1_r15	wildtype
+Anzai2020	W12	ICG	retention ratio	plasma	indocyanine green	12.3322525	percent	Fig1_r15	wildtype
+Anzai2020	W13	ICG	retention ratio	plasma	indocyanine green	14.277734	percent	Fig1_r15	wildtype
+Anzai2020	Het1	ICG	retention ratio	plasma	indocyanine green	3.8340023	percent	Fig1_r15	heterozygote
+Anzai2020	Het2	ICG	retention ratio	plasma	indocyanine green	4.44327	percent	Fig1_r15	heterozygote
+Anzai2020	Het3	ICG	retention ratio	plasma	indocyanine green	5.671422	percent	Fig1_r15	heterozygote
+Anzai2020	Het4	ICG	retention ratio	plasma	indocyanine green	14.413269	percent	Fig1_r15	heterozygote
+Anzai2020	Het5	ICG	retention ratio	plasma	indocyanine green	16.361864	percent	Fig1_r15	heterozygote
+Anzai2020	Homo1	ICG	retention ratio	plasma	indocyanine green	79.86045	percent	Fig1_r15	homozygote
+Anzai2020	W1	ICG	kel	plasma	indocyanine green	0.1484192	1/min	Fig1_kel	wildtype
+Anzai2020	W2	ICG	kel	plasma	indocyanine green	0.15462975	1/min	Fig1_kel	wildtype
+Anzai2020	W3	ICG	kel	plasma	indocyanine green	0.16231982	1/min	Fig1_kel	wildtype
+Anzai2020	W4	ICG	kel	plasma	indocyanine green	0.16333511	1/min	Fig1_kel	wildtype
+Anzai2020	W5	ICG	kel	plasma	indocyanine green	0.17607255	1/min	Fig1_kel	wildtype
+Anzai2020	W6	ICG	kel	plasma	indocyanine green	0.17926635	1/min	Fig1_kel	wildtype
+Anzai2020	W7	ICG	kel	plasma	indocyanine green	0.18427514	1/min	Fig1_kel	wildtype
+Anzai2020	W8	ICG	kel	plasma	indocyanine green	0.18931277	1/min	Fig1_kel	wildtype
+Anzai2020	W9	ICG	kel	plasma	indocyanine green	0.21125837	1/min	Fig1_kel	wildtype
+Anzai2020	W10	ICG	kel	plasma	indocyanine green	0.21111019	1/min	Fig1_kel	wildtype
+Anzai2020	W11	ICG	kel	plasma	indocyanine green	0.217134	1/min	Fig1_kel	wildtype
+Anzai2020	W12	ICG	kel	plasma	indocyanine green	0.238084	1/min	Fig1_kel	wildtype
+Anzai2020	W13	ICG	kel	plasma	indocyanine green	0.23941451	1/min	Fig1_kel	wildtype
+Anzai2020	Het1	ICG	kel	plasma	indocyanine green	0.1341018	1/min	Fig1_kel	heterozygote
+Anzai2020	Het2	ICG	kel	plasma	indocyanine green	0.14264901	1/min	Fig1_kel	heterozygote
+Anzai2020	Het3	ICG	kel	plasma	indocyanine green	0.2101909	1/min	Fig1_kel	heterozygote
+Anzai2020	Het4	ICG	kel	plasma	indocyanine green	0.23080543	1/min	Fig1_kel	heterozygote
+Anzai2020	Het5	ICG	kel	plasma	indocyanine green	0.24840292	1/min	Fig1_kel	heterozygote
+Anzai2020	Homo1	ICG	kel	plasma	indocyanine green	0.018555071	1/min	Fig1_kel	homozygote

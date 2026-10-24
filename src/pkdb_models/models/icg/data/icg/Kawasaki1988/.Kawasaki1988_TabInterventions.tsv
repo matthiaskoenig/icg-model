@@ -1,0 +1,5 @@
+study	name	substance	measurement_type	time	time_unit	route	value	unit	application
+Kawasaki1988	AP	antipyrine	qualitative dosing	0	min	oral	400.0	mg	single dose
+Kawasaki1988	ICG	indocyanine green	qualitative dosing	0	min	iv	0.5	mg/kg	single dose
+Kawasaki1988	GalBol	galactose	qualitative dosing	0	min	iv	1500.0	mg	single dose
+Kawasaki1988	GalInf	galactose	qualitative dosing	0	min	iv	150.0	mg/min	constant infusion

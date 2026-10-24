@@ -1,0 +1,4 @@
+study	name	substance	measurement	time	time_unit	route	form	value	unit	application
+Soons1991	ICG_0.5	indocyanine green	dosing	0	min	iv	solution	0.5	mg/min	constant infusion
+Soons1991	ICG_1.0	indocyanine green	dosing	0	min	iv	solution	1.0	mg/min	constant infusion
+Soons1991	ICG_2.0	indocyanine green	dosing	0	min	iv	solution	2.0	mg/min	constant infusion

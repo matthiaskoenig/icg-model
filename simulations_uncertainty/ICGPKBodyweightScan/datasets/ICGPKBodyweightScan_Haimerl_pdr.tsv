@@ -1,0 +1,5 @@
+study	group	interventions	measurement	tissue	substance	mean	mean_sd	label	mean_unit
+Haimerl2016	controls	ICG	pdr	plasma	indocyanine green	25.8	6.8	Tab1pk	percent/min
+Haimerl2016	ctpa	ICG	pdr	plasma	indocyanine green	15.2	3.9	Tab1pk	percent/min
+Haimerl2016	ctpb	ICG	pdr	plasma	indocyanine green	7.7	3.0	Tab1pk	percent/min
+Haimerl2016	ctpc	ICG	pdr	plasma	indocyanine green	5.0	1.8	Tab1pk	percent/min

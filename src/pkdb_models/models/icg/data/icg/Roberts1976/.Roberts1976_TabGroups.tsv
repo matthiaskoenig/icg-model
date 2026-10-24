@@ -1,0 +1,8 @@
+study	name	group_count	parent	measurement_type	choice	count	mean	sd	min	max	unit
+Roberts1976	all	10	na	species	homo sapiens	10	na	na	na	na	na
+Roberts1976	all	10	na	age	na	10	na	na	20	20	yr
+Roberts1976	all	10	na	sex	F	3	na	na	na	na	na
+Roberts1976	all	10	na	sex	M	7	na	na	na	na	na
+Roberts1976	all	10	na	weight	na	10	64	na	47.5	73	kg
+Roberts1976	all	10	na	healthy	Y	10	na	na	na	na	na
+Roberts1976	AP_group	9	all	sex	NR	9	na	na	na	na	na

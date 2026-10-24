@@ -1,0 +1,6 @@
+study	name	substance	measurement	time	time_unit	route	form	value	unit	application
+Leevy1962	ICG_Inf_0.3	indocyanine green	dosing	0	min	iv	solution	0.3	mg/min/m^2	constant infusion
+Leevy1962	ICG_Inf_1.5	indocyanine green	dosing	0	min	iv	solution	1.5	mg/min/m^2	constant infusion
+Leevy1962	ICG0.15	indocyanine green	dosing	0	min	iv	solution	0.15	mg/kg	single dose
+Leevy1962	ICG0.25	indocyanine green	dosing	0	min	iv	solution	0.25	mg/kg	single dose
+Leevy1962	ICG0.5	indocyanine green	dosing	0	min	iv	solution	0.5	mg/kg	single dose

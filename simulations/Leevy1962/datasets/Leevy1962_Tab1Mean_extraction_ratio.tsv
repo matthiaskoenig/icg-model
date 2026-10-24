@@ -1,0 +1,2 @@
+study	group	count	intervention	measurement	substance	tissue	mean	mean_sd	time	time_unit	comments	mean_unit	count_unit
+Leevy1962	ER_controls	14	ICG_Inf_0.3	extraction_ratio	indocyanine green	plasma	0.698	0.0863695193777934	50	min	no time provided assuming 50 min steady state	dimensionless	dimensionless

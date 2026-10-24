@@ -1,0 +1,49 @@
+study	name	group	measurement	choice
+Leevy1967	Fig6_Control1	controls	healthy	Y
+Leevy1967	Fig6_Control2	controls	healthy	Y
+Leevy1967	Fig6_Control3	controls	healthy	Y
+Leevy1967	Fig6_Control4	controls	healthy	Y
+Leevy1967	Fig6_Control5	controls	healthy	Y
+Leevy1967	Fig6_Control6	controls	healthy	Y
+Leevy1967	Fig6_Control7	controls	healthy	Y
+Leevy1967	Fig6_Control8	controls	healthy	Y
+Leevy1967	Fig6_Control9	controls	healthy	Y
+Leevy1967	Fig6_Control10	controls	healthy	Y
+Leevy1967	Fig6_Cirrhosis1	disease	disease	liver cirrhosis
+Leevy1967	Fig6_Cirrhosis2	disease	disease	liver cirrhosis
+Leevy1967	Fig6_Cirrhosis3	disease	disease	liver cirrhosis
+Leevy1967	Fig6_Cirrhosis4	disease	disease	liver cirrhosis
+Leevy1967	Fig6_Cirrhosis5	disease	disease	liver cirrhosis
+Leevy1967	Fig6_Cirrhosis6	disease	disease	liver cirrhosis
+Leevy1967	Fig6_Cirrhosis7	disease	disease	liver cirrhosis
+Leevy1967	Fig6_Cirrhosis8	disease	disease	liver cirrhosis
+Leevy1967	Fig6_Cirrhosis9	disease	disease	liver cirrhosis
+Leevy1967	Fig6_Cirrhosis10	disease	disease	liver cirrhosis
+Leevy1967	Fig6_Cirrhosis11	disease	disease	liver cirrhosis
+Leevy1967	Fig6_Cirrhosis12	disease	disease	liver cirrhosis
+Leevy1967	Fig6_Cirrhosis13	disease	disease	liver cirrhosis
+Leevy1967	Fig6_Hep_ac1	disease	disease	viral hepatitis
+Leevy1967	Fig6_Hep_ac2	disease	disease	viral hepatitis
+Leevy1967	Fig6_Hep_ac3	disease	disease	viral hepatitis
+Leevy1967	Fig6_Hep_ac4	disease	disease	viral hepatitis
+Leevy1967	Fig6_Hep_ac5	disease	disease	viral hepatitis
+Leevy1967	Fig6_Hep_rec1	disease	disease	viral hepatitis
+Leevy1967	Fig6_Hep_rec2	disease	disease	viral hepatitis
+Leevy1967	Fig6_Hep_rec3	disease	disease	viral hepatitis
+Leevy1967	Fig6_Hep_rec4	disease	disease	viral hepatitis
+Leevy1967	Fig6_Hep_rec5	disease	disease	viral hepatitis
+Leevy1967	Fig6_Hep_rec6	disease	disease	viral hepatitis
+Leevy1967	Fig6_Fat1	disease	disease	fatty liver disease
+Leevy1967	Fig6_Fat2	disease	disease	fatty liver disease
+Leevy1967	Fig6_Fat3	disease	disease	fatty liver disease
+Leevy1967	Fig6_Fat4	disease	disease	fatty liver disease
+Leevy1967	Fig6_Fat5	disease	disease	fatty liver disease
+Leevy1967	Fig6_Fat6	disease	disease	fatty liver disease
+Leevy1967	Fig6_Fat7	disease	disease	fatty liver disease
+Leevy1967	Fig6_Fat8	disease	disease	fatty liver disease
+Leevy1967	Fig6_Fat9	disease	disease	fatty liver disease
+Leevy1967	Fig6_Fat10	disease	disease	fatty liver disease
+Leevy1967	Fig6_Fat11	disease	disease	fatty liver disease
+Leevy1967	Fig2_Control1	controls	healthy	Y
+Leevy1967	Fig2_Hep1	disease	disease	viral hepatitis
+Leevy1967	Fig2_Cir1	disease	disease	liver cirrhosis

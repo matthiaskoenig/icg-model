@@ -1,0 +1,55 @@
+study	individual	measurement_type	substance	tissue	intervention	value	unit
+Klockowski1990	S1	clearance	indocyanine green	plasma	ICG	10.409486	ml/min/kg
+Klockowski1990	S1	clearance	indocyanine green	plasma	ICG, I -48, I -36, I -24, I -12, I +0	9.502523	ml/min/kg
+Klockowski1990	S1	clearance	indocyanine green	plasma	ICG, D -48, D -40, D -32, D -24, D -16, D -8, D +0	8.501108	ml/min/kg
+Klockowski1990	S2	clearance	indocyanine green	plasma	ICG	10.294181	ml/min/kg
+Klockowski1990	S2	clearance	indocyanine green	plasma	ICG, I -48, I -36, I -24, I -12, I +0	11.504645	ml/min/kg
+Klockowski1990	S2	clearance	indocyanine green	plasma	ICG, D -48, D -40, D -32, D -24, D -16, D -8, D +0	10.943456	ml/min/kg
+Klockowski1990	S3	clearance	indocyanine green	plasma	ICG	10.168465	ml/min/kg
+Klockowski1990	S3	clearance	indocyanine green	plasma	ICG, I -48, I -36, I -24, I -12, I +0	12.227892	ml/min/kg
+Klockowski1990	S3	clearance	indocyanine green	plasma	ICG, D -48, D -40, D -32, D -24, D -16, D -8, D +0	9.811374	ml/min/kg
+Klockowski1990	S4	clearance	indocyanine green	plasma	ICG	9.686225	ml/min/kg
+Klockowski1990	S4	clearance	indocyanine green	plasma	ICG, I -48, I -36, I -24, I -12, I +0	12.364146	ml/min/kg
+Klockowski1990	S4	clearance	indocyanine green	plasma	ICG, D -48, D -40, D -32, D -24, D -16, D -8, D +0	10.041997	ml/min/kg
+Klockowski1990	S5	clearance	indocyanine green	plasma	ICG	9.29841	ml/min/kg
+Klockowski1990	S5	clearance	indocyanine green	plasma	ICG, I -48, I -36, I -24, I -12, I +0	9.827501	ml/min/kg
+Klockowski1990	S5	clearance	indocyanine green	plasma	ICG, D -48, D -40, D -32, D -24, D -16, D -8, D +0	8.993745	ml/min/kg
+Klockowski1990	S6	clearance	indocyanine green	plasma	ICG	8.5017605	ml/min/kg
+Klockowski1990	S6	clearance	indocyanine green	plasma	ICG, I -48, I -36, I -24, I -12, I +0	9.649275	ml/min/kg
+Klockowski1990	S6	clearance	indocyanine green	plasma	ICG, D -48, D -40, D -32, D -24, D -16, D -8, D +0	9.67509	ml/min/kg
+Klockowski1990	S7	clearance	indocyanine green	plasma	ICG	8.386456	ml/min/kg
+Klockowski1990	S7	clearance	indocyanine green	plasma	ICG, I -48, I -36, I -24, I -12, I +0	10.760392	ml/min/kg
+Klockowski1990	S7	clearance	indocyanine green	plasma	ICG, D -48, D -40, D -32, D -24, D -16, D -8, D +0	8.867972	ml/min/kg
+Klockowski1990	S8	clearance	indocyanine green	plasma	ICG	8.0091095	ml/min/kg
+Klockowski1990	S8	clearance	indocyanine green	plasma	ICG, I -48, I -36, I -24, I -12, I +0	9.303361	ml/min/kg
+Klockowski1990	S8	clearance	indocyanine green	plasma	ICG, D -48, D -40, D -32, D -24, D -16, D -8, D +0	8.899433	ml/min/kg
+Klockowski1990	S9	clearance	indocyanine green	plasma	ICG	7.9462156	ml/min/kg
+Klockowski1990	S9	clearance	indocyanine green	plasma	ICG, I -48, I -36, I -24, I -12, I +0	7.9616766	ml/min/kg
+Klockowski1990	S9	clearance	indocyanine green	plasma	ICG, D -48, D -40, D -32, D -24, D -16, D -8, D +0	8.658327	ml/min/kg
+Klockowski1990	S10	clearance	indocyanine green	plasma	ICG	7.9042726	ml/min/kg
+Klockowski1990	S10	clearance	indocyanine green	plasma	ICG, I -48, I -36, I -24, I -12, I +0	8.097918	ml/min/kg
+Klockowski1990	S10	clearance	indocyanine green	plasma	ICG, D -48, D -40, D -32, D -24, D -16, D -8, D +0	8.249548	ml/min/kg
+Klockowski1990	S11	clearance	indocyanine green	plasma	ICG	7.7994504	ml/min/kg
+Klockowski1990	S11	clearance	indocyanine green	plasma	ICG, I -48, I -36, I -24, I -12, I +0	11.148207	ml/min/kg
+Klockowski1990	S11	clearance	indocyanine green	plasma	ICG, D -48, D -40, D -32, D -24, D -16, D -8, D +0	12.725422	ml/min/kg
+Klockowski1990	S12	clearance	indocyanine green	plasma	ICG	7.453579	ml/min/kg
+Klockowski1990	S12	clearance	indocyanine green	plasma	ICG, I -48, I -36, I -24, I -12, I +0	9.188085	ml/min/kg
+Klockowski1990	S12	clearance	indocyanine green	plasma	ICG, D -48, D -40, D -32, D -24, D -16, D -8, D +0	8.794597	ml/min/kg
+Klockowski1990	S13	clearance	indocyanine green	plasma	ICG	7.3592105	ml/min/kg
+Klockowski1990	S13	clearance	indocyanine green	plasma	ICG, I -48, I -36, I -24, I -12, I +0	9.1356735	ml/min/kg
+Klockowski1990	S13	clearance	indocyanine green	plasma	ICG, D -48, D -40, D -32, D -24, D -16, D -8, D +0	8.721235	ml/min/kg
+Klockowski1990	S14	clearance	indocyanine green	plasma	ICG	7.327721	ml/min/kg
+Klockowski1990	S14	clearance	indocyanine green	plasma	ICG, I -48, I -36, I -24, I -12, I +0	5.687031	ml/min/kg
+Klockowski1990	S14	clearance	indocyanine green	plasma	ICG, D -48, D -40, D -32, D -24, D -16, D -8, D +0	8.81556	ml/min/kg
+Klockowski1990	S15	clearance	indocyanine green	plasma	ICG	6.384376	ml/min/kg
+Klockowski1990	S15	clearance	indocyanine green	plasma	ICG, I -48, I -36, I -24, I -12, I +0	8.810739	ml/min/kg
+Klockowski1990	S15	clearance	indocyanine green	plasma	ICG, D -48, D -40, D -32, D -24, D -16, D -8, D +0	7.494813	ml/min/kg
+Klockowski1990	S16	clearance	indocyanine green	plasma	ICG	6.3109865	ml/min/kg
+Klockowski1990	S16	clearance	indocyanine green	plasma	ICG, I -48, I -36, I -24, I -12, I +0	11.336901	ml/min/kg
+Klockowski1990	S16	clearance	indocyanine green	plasma	ICG, D -48, D -40, D -32, D -24, D -16, D -8, D +0	10.366961	ml/min/kg
+Klockowski1990	S17	clearance	indocyanine green	plasma	ICG	6.2061496	ml/min/kg
+Klockowski1990	S17	clearance	indocyanine green	plasma	ICG, I -48, I -36, I -24, I -12, I +0	8.527732	ml/min/kg
+Klockowski1990	S17	clearance	indocyanine green	plasma	ICG, D -48, D -40, D -32, D -24, D -16, D -8, D +0	7.505295	ml/min/kg
+Klockowski1990	S18	clearance	indocyanine green	plasma	ICG	5.8078246	ml/min/kg
+Klockowski1990	S18	clearance	indocyanine green	plasma	ICG, I -48, I -36, I -24, I -12, I +0	6.6513824	ml/min/kg
+Klockowski1990	S18	clearance	indocyanine green	plasma	ICG, D -48, D -40, D -32, D -24, D -16, D -8, D +0	7.18036	ml/min/kg

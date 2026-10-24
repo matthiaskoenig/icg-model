@@ -1,0 +1,9 @@
+study	name	group_count	parent	measurement	choice	count
+Figg1995	all	24	NA	species	homo sapiens	24
+Figg1995	all	24	NA	sex	MF	24
+Figg1995	all	24	NA	healthy	Y	12
+Figg1995	all	24	NA	healthy	N	12
+Figg1995	Controls	12	all	healthy	Y	12
+Figg1995	Mild_cirrhosis	4	all	disease	liver cirrhosis	4
+Figg1995	Moderate_cirrhosis	4	all	disease	liver cirrhosis	4
+Figg1995	Severe_cirrhosis	4	all	disease	liver cirrhosis	4

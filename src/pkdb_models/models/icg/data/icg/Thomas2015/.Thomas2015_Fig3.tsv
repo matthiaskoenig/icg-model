@@ -1,0 +1,55 @@
+study	subject	x_intervention	y_intervention	x_tissue	y_tissue	substance	x_measurement	y_measurement	x	x_unit	y	y_unit	x_time	x_time_unit	y_time	y_time_unit	x_label	y_label
+Thomas2015	C_S1	ICG, hepatectomy	ICG, hepatectomy	liver	plasma	indocyanine green	fractional liver remnant volume	fractional pdr	0.10518732	dimensionless	0.53205127	dimensionless	NA	NA	2	day	Fig3c_liver_remnant	Fig3c_remnant_icgpdr
+Thomas2015	C_S2	ICG, hepatectomy	ICG, hepatectomy	liver	plasma	indocyanine green	fractional liver remnant volume	fractional pdr	0.13688761	dimensionless	0.8108974	dimensionless	NA	NA	2	day	Fig3c_liver_remnant	Fig3c_remnant_icgpdr
+Thomas2015	C_S3	ICG, hepatectomy	ICG, hepatectomy	liver	plasma	indocyanine green	fractional liver remnant volume	fractional pdr	0.14553314	dimensionless	0.4679487	dimensionless	NA	NA	2	day	Fig3c_liver_remnant	Fig3c_remnant_icgpdr
+Thomas2015	C_S4	ICG, hepatectomy	ICG, hepatectomy	liver	plasma	indocyanine green	fractional liver remnant volume	fractional pdr	0.30691642	dimensionless	0.525641	dimensionless	NA	NA	2	day	Fig3c_liver_remnant	Fig3c_remnant_icgpdr
+Thomas2015	C_S5	ICG, hepatectomy	ICG, hepatectomy	liver	plasma	indocyanine green	fractional liver remnant volume	fractional pdr	0.36599424	dimensionless	0.8333333	dimensionless	NA	NA	2	day	Fig3c_liver_remnant	Fig3c_remnant_icgpdr
+Thomas2015	C_S6	ICG, hepatectomy	ICG, hepatectomy	liver	plasma	indocyanine green	fractional liver remnant volume	fractional pdr	0.38760808	dimensionless	0.5224359	dimensionless	NA	NA	2	day	Fig3c_liver_remnant	Fig3c_remnant_icgpdr
+Thomas2015	C_S7	ICG, hepatectomy	ICG, hepatectomy	liver	plasma	indocyanine green	fractional liver remnant volume	fractional pdr	0.39769453	dimensionless	0.375	dimensionless	NA	NA	2	day	Fig3c_liver_remnant	Fig3c_remnant_icgpdr
+Thomas2015	C_S8	ICG, hepatectomy	ICG, hepatectomy	liver	plasma	indocyanine green	fractional liver remnant volume	fractional pdr	0.39625362	dimensionless	0.8333333	dimensionless	NA	NA	2	day	Fig3c_liver_remnant	Fig3c_remnant_icgpdr
+Thomas2015	C_S9	ICG, hepatectomy	ICG, hepatectomy	liver	plasma	indocyanine green	fractional liver remnant volume	fractional pdr	0.41930836	dimensionless	0.45192307	dimensionless	NA	NA	2	day	Fig3c_liver_remnant	Fig3c_remnant_icgpdr
+Thomas2015	C_S10	ICG, hepatectomy	ICG, hepatectomy	liver	plasma	indocyanine green	fractional liver remnant volume	fractional pdr	0.43659943	dimensionless	0.60897434	dimensionless	NA	NA	2	day	Fig3c_liver_remnant	Fig3c_remnant_icgpdr
+Thomas2015	C_S11	ICG, hepatectomy	ICG, hepatectomy	liver	plasma	indocyanine green	fractional liver remnant volume	fractional pdr	0.46829972	dimensionless	0.31410256	dimensionless	NA	NA	2	day	Fig3c_liver_remnant	Fig3c_remnant_icgpdr
+Thomas2015	C_S12	ICG, hepatectomy	ICG, hepatectomy	liver	plasma	indocyanine green	fractional liver remnant volume	fractional pdr	0.47838616	dimensionless	0.80448717	dimensionless	NA	NA	2	day	Fig3c_liver_remnant	Fig3c_remnant_icgpdr
+Thomas2015	C_S13	ICG, hepatectomy	ICG, hepatectomy	liver	plasma	indocyanine green	fractional liver remnant volume	fractional pdr	0.57060516	dimensionless	0.57371795	dimensionless	NA	NA	2	day	Fig3c_liver_remnant	Fig3c_remnant_icgpdr
+Thomas2015	C_S14	ICG, hepatectomy	ICG, hepatectomy	liver	plasma	indocyanine green	fractional liver remnant volume	fractional pdr	0.6311239	dimensionless	0.51282054	dimensionless	NA	NA	2	day	Fig3c_liver_remnant	Fig3c_remnant_icgpdr
+Thomas2015	C_S15	ICG, hepatectomy	ICG, hepatectomy	liver	plasma	indocyanine green	fractional liver remnant volume	fractional pdr	0.6599424	dimensionless	0.7948718	dimensionless	NA	NA	2	day	Fig3c_liver_remnant	Fig3c_remnant_icgpdr
+Thomas2015	C_S16	ICG, hepatectomy	ICG, hepatectomy	liver	plasma	indocyanine green	fractional liver remnant volume	fractional pdr	0.8112392	dimensionless	1.0032052	dimensionless	NA	NA	2	day	Fig3c_liver_remnant	Fig3c_remnant_icgpdr
+Thomas2015	C_S17	ICG, hepatectomy	ICG, hepatectomy	liver	plasma	indocyanine green	fractional liver remnant volume	fractional pdr	0.82132566	dimensionless	1.1378205	dimensionless	NA	NA	2	day	Fig3c_liver_remnant	Fig3c_remnant_icgpdr
+Thomas2015	B_S1	ICG, hepatectomy	ICG, hepatectomy	plasma	plasma	indocyanine green	pdr	pdr	4.0062327	percent/min	7.9827247	percent/min	1.0	day	2	day	Fig3b_icgpdrt1	Fig3b_icgpdrt2
+Thomas2015	B_S2	ICG, hepatectomy	ICG, hepatectomy	plasma	plasma	indocyanine green	pdr	pdr	5.915451	percent/min	7.978601	percent/min	1.0	day	2	day	Fig3b_icgpdrt1	Fig3b_icgpdrt2
+Thomas2015	B_S3	ICG, hepatectomy	ICG, hepatectomy	plasma	plasma	indocyanine green	pdr	pdr	7.931855	percent/min	7.0563173	percent/min	1.0	day	2	day	Fig3b_icgpdrt1	Fig3b_icgpdrt2
+Thomas2015	B_S4	ICG, hepatectomy	ICG, hepatectomy	plasma	plasma	indocyanine green	pdr	pdr	9.914054	percent/min	8.02396	percent/min	1.0	day	2	day	Fig3b_icgpdrt1	Fig3b_icgpdrt2
+Thomas2015	B_S5	ICG, hepatectomy	ICG, hepatectomy	plasma	plasma	indocyanine green	pdr	pdr	9.988955	percent/min	10.993567	percent/min	1.0	day	2	day	Fig3b_icgpdrt1	Fig3b_icgpdrt2
+Thomas2015	B_S6	ICG, hepatectomy	ICG, hepatectomy	plasma	plasma	indocyanine green	pdr	pdr	10.490836	percent/min	8.454681	percent/min	1.0	day	2	day	Fig3b_icgpdrt1	Fig3b_icgpdrt2
+Thomas2015	B_S7	ICG, hepatectomy	ICG, hepatectomy	plasma	plasma	indocyanine green	pdr	pdr	10.994743	percent/min	8.021626	percent/min	1.0	day	2	day	Fig3b_icgpdrt1	Fig3b_icgpdrt2
+Thomas2015	B_S8	ICG, hepatectomy	ICG, hepatectomy	plasma	plasma	indocyanine green	pdr	pdr	10.993756	percent/min	6.9957085	percent/min	1.0	day	2	day	Fig3b_icgpdrt1	Fig3b_icgpdrt2
+Thomas2015	B_S9	ICG, hepatectomy	ICG, hepatectomy	plasma	plasma	indocyanine green	pdr	pdr	10.963599	percent/min	13.097298	percent/min	1.0	day	2	day	Fig3b_icgpdrt1	Fig3b_icgpdrt2
+Thomas2015	B_S10	ICG, hepatectomy	ICG, hepatectomy	plasma	plasma	indocyanine green	pdr	pdr	11.897238	percent/min	10.017521	percent/min	1.0	day	2	day	Fig3b_icgpdrt1	Fig3b_icgpdrt2
+Thomas2015	B_S11	ICG, hepatectomy	ICG, hepatectomy	plasma	plasma	indocyanine green	pdr	pdr	12.976059	percent/min	8.071342	percent/min	1.0	day	2	day	Fig3b_icgpdrt1	Fig3b_icgpdrt2
+Thomas2015	B_S12	ICG, hepatectomy	ICG, hepatectomy	plasma	plasma	indocyanine green	pdr	pdr	12.946732	percent/min	15.036863	percent/min	1.0	day	2	day	Fig3b_icgpdrt1	Fig3b_icgpdrt2
+Thomas2015	B_S13	ICG, hepatectomy	ICG, hepatectomy	plasma	plasma	indocyanine green	pdr	pdr	13.2319565	percent/min	11.9584875	percent/min	1.0	day	2	day	Fig3b_icgpdrt1	Fig3b_icgpdrt2
+Thomas2015	B_S14	ICG, hepatectomy	ICG, hepatectomy	plasma	plasma	indocyanine green	pdr	pdr	14.922234	percent/min	9.039063	percent/min	1.0	day	2	day	Fig3b_icgpdrt1	Fig3b_icgpdrt2
+Thomas2015	B_S15	ICG, hepatectomy	ICG, hepatectomy	plasma	plasma	indocyanine green	pdr	pdr	14.9659395	percent/min	17.030346	percent/min	1.0	day	2	day	Fig3b_icgpdrt1	Fig3b_icgpdrt2
+Thomas2015	B_S16	ICG, hepatectomy	ICG, hepatectomy	plasma	plasma	indocyanine green	pdr	pdr	16.981253	percent/min	14.9741535	percent/min	1.0	day	2	day	Fig3b_icgpdrt1	Fig3b_icgpdrt2
+Thomas2015	B_S17	ICG, hepatectomy	ICG, hepatectomy	plasma	plasma	indocyanine green	pdr	pdr	17.955742	percent/min	16.915897	percent/min	1.0	day	2	day	Fig3b_icgpdrt1	Fig3b_icgpdrt2
+Thomas2015	B_S18	ICG, hepatectomy	ICG, hepatectomy	plasma	plasma	indocyanine green	pdr	pdr	18.967344	percent/min	19.991472	percent/min	1.0	day	2	day	Fig3b_icgpdrt1	Fig3b_icgpdrt2
+Thomas2015	B_S19	ICG, hepatectomy	ICG, hepatectomy	plasma	plasma	indocyanine green	pdr	pdr	19.97412	percent/min	18.04545	percent/min	1.0	day	2	day	Fig3b_icgpdrt1	Fig3b_icgpdrt2
+Thomas2015	A_S1	ICG	ICG, hepatectomy	plasma	plasma	indocyanine green	pdr	pdr	8.950446	percent/min	11.050471	percent/min	0.0	day	2	day	Fig3a_preopicgpdr	Fig3a_icgpdrt2
+Thomas2015	A_S2	ICG	ICG, hepatectomy	plasma	plasma	indocyanine green	pdr	pdr	9.987943	percent/min	7.9731383	percent/min	0.0	day	2	day	Fig3a_preopicgpdr	Fig3a_icgpdrt2
+Thomas2015	A_S3	ICG	ICG, hepatectomy	plasma	plasma	indocyanine green	pdr	pdr	14.543158	percent/min	7.8908224	percent/min	0.0	day	2	day	Fig3a_preopicgpdr	Fig3a_icgpdrt2
+Thomas2015	A_S4	ICG	ICG, hepatectomy	plasma	plasma	indocyanine green	pdr	pdr	14.804167	percent/min	8.47468	percent/min	0.0	day	2	day	Fig3a_preopicgpdr	Fig3a_icgpdrt2
+Thomas2015	A_S5	ICG	ICG, hepatectomy	plasma	plasma	indocyanine green	pdr	pdr	15.063765	percent/min	7.8903155	percent/min	0.0	day	2	day	Fig3a_preopicgpdr	Fig3a_icgpdrt2
+Thomas2015	A_S6	ICG	ICG, hepatectomy	plasma	plasma	indocyanine green	pdr	pdr	14.983161	percent/min	12.991637	percent/min	0.0	day	2	day	Fig3a_preopicgpdr	Fig3a_icgpdrt2
+Thomas2015	A_S7	ICG	ICG, hepatectomy	plasma	plasma	indocyanine green	pdr	pdr	16.060558	percent/min	7.0326476	percent/min	0.0	day	2	day	Fig3a_preopicgpdr	Fig3a_icgpdrt2
+Thomas2015	A_S8	ICG	ICG, hepatectomy	plasma	plasma	indocyanine green	pdr	pdr	15.979814	percent/min	12.017147	percent/min	0.0	day	2	day	Fig3a_preopicgpdr	Fig3a_icgpdrt2
+Thomas2015	A_S9	ICG	ICG, hepatectomy	plasma	plasma	indocyanine green	pdr	pdr	17.01731	percent/min	8.939815	percent/min	0.0	day	2	day	Fig3a_preopicgpdr	Fig3a_icgpdrt2
+Thomas2015	A_S10	ICG	ICG, hepatectomy	plasma	plasma	indocyanine green	pdr	pdr	18.02248	percent/min	15.013599	percent/min	0.0	day	2	day	Fig3a_preopicgpdr	Fig3a_icgpdrt2
+Thomas2015	A_S11	ICG	ICG, hepatectomy	plasma	plasma	indocyanine green	pdr	pdr	18.024927	percent/min	17.038519	percent/min	0.0	day	2	day	Fig3a_preopicgpdr	Fig3a_icgpdrt2
+Thomas2015	A_S12	ICG	ICG, hepatectomy	plasma	plasma	indocyanine green	pdr	pdr	19.014334	percent/min	10.067154	percent/min	0.0	day	2	day	Fig3a_preopicgpdr	Fig3a_icgpdrt2
+Thomas2015	A_S13	ICG	ICG, hepatectomy	plasma	plasma	indocyanine green	pdr	pdr	20.020634	percent/min	17.075516	percent/min	0.0	day	2	day	Fig3a_preopicgpdr	Fig3a_icgpdrt2
+Thomas2015	A_S14	ICG	ICG, hepatectomy	plasma	plasma	indocyanine green	pdr	pdr	20.457954	percent/min	19.956709	percent/min	0.0	day	2	day	Fig3a_preopicgpdr	Fig3a_icgpdrt2
+Thomas2015	A_S15	ICG	ICG, hepatectomy	plasma	plasma	indocyanine green	pdr	pdr	21.007545	percent/min	8.040293	percent/min	0.0	day	2	day	Fig3a_preopicgpdr	Fig3a_icgpdrt2
+Thomas2015	A_S16	ICG	ICG, hepatectomy	plasma	plasma	indocyanine green	pdr	pdr	23.957603	percent/min	7.9984794	percent/min	0.0	day	2	day	Fig3a_preopicgpdr	Fig3a_icgpdrt2
+Thomas2015	A_S17	ICG	ICG, hepatectomy	plasma	plasma	indocyanine green	pdr	pdr	26.040031	percent/min	7.9964523	percent/min	0.0	day	2	day	Fig3a_preopicgpdr	Fig3a_icgpdrt2
+Thomas2015	A_S18	ICG	ICG, hepatectomy	plasma	plasma	indocyanine green	pdr	pdr	35.075974	percent/min	17.99544	percent/min	0.0	day	2	day	Fig3a_preopicgpdr	Fig3a_icgpdrt2

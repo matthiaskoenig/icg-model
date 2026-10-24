@@ -1,0 +1,5 @@
+study	name_data	image	name_subset	dimensions	data_type	shared
+Roberts1976	Fig1A	Fig1	AP_Cl_vs_Liver_Volume	Fig1A liver vol, Fig1A AP Cl 	scatter	individual
+Roberts1976	Fig1B	Fig1	ICG_Cl_vs_Liver_Volume	Fig1B liver vol, Fig1B ICG Cl 	scatter	individual
+Roberts1976	Fig2A	Fig2	ICG_Cl_vs_Liver_Volume_pheno	Fig2A liver vol, Fig2A AP Cl 	scatter	individual
+Roberts1976	Fig2B	Fig2	ICG_Cl_vs_Liver_Volume_pheno	Fig2B liver vol, Fig2B ICG Cl 	scatter	individual

@@ -1,0 +1,6 @@
+study	subject	intervention	measurement	substance	tissue	time	time_unit	value	unit	count
+Grainger1983	2	ICG	extraction_ratio	indocyanine green	plasma	6	min	0.73	dimensionless	1
+Grainger1983	1	ICG	extraction_ratio	indocyanine green	plasma	7	min	0.73	dimensionless	1
+Grainger1983	5	ICG	extraction_ratio	indocyanine green	plasma	7	min	0.82	dimensionless	1
+Grainger1983	3	ICG	extraction_ratio	indocyanine green	plasma	9	min	0.69	dimensionless	1
+Grainger1983	4	ICG	extraction_ratio	indocyanine green	plasma	10	min	0.79	dimensionless	1

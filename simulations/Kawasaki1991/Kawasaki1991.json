@@ -1,0 +1,69 @@
+{
+  "experiment_id": "Kawasaki1991",
+  "base_path": "/home/mkoenig/git/icg-model/src/pkdb_models/models/icg",
+  "data_path": [
+    "/home/mkoenig/git/icg-model/src/pkdb_models/models/icg/data/icg"
+  ],
+  "models": {
+    "model": {
+      "sid": null,
+      "name": null,
+      "language": "SBML",
+      "language_type": "SBML",
+      "source": {
+        "source": "/home/mkoenig/git/icg-model/src/pkdb_models/models/icg/models/output/models/icg_body_flat.xml",
+        "path": "/home/mkoenig/git/icg-model/src/pkdb_models/models/icg/models/output/models/icg_body_flat.xml",
+        "content": null
+      },
+      "base_path": null,
+      "changes": {},
+      "selections": [
+        "Afeces_icg",
+        "BW",
+        "CLinfusion_icg",
+        "ER_icg",
+        "FQh",
+        "FVli",
+        "HCT",
+        "IVDOSE_icg",
+        "LI__ICGEX",
+        "LI__ICGIM",
+        "LI__ICGIM_Vmax",
+        "LI__ICGLI2BI",
+        "LI__ICGLI2CA",
+        "LI__f_oatp1b3",
+        "QC",
+        "Qgi",
+        "Qh",
+        "Qh_plasma",
+        "Qha",
+        "Qlu",
+        "Qpo",
+        "Qre",
+        "Ri_icg",
+        "Vli",
+        "[Car_icg]",
+        "[Chv_icg]",
+        "[Cli_plasma_icg]",
+        "[Cpo_icg]",
+        "[Cre_plasma_icg]",
+        "[Cve_icg]",
+        "[LI__bil_ext]",
+        "[LI__icg]",
+        "[LI__icg_bi]",
+        "f_bloodflow",
+        "f_cardiac_output",
+        "f_shunts",
+        "f_tissue_loss",
+        "resection_rate",
+        "time"
+      ],
+      "parameters": {}
+    }
+  },
+  "tasks": {},
+  "observables": {},
+  "simulations": {},
+  "data": {},
+  "figures": {}
+}

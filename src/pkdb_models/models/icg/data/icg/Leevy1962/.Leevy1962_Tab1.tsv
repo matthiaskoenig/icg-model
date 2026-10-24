@@ -1,0 +1,43 @@
+study	individual	intervention	measurement	substance	tissue	value	unit	time	time_unit	count	comments
+Leevy1962	S1	ICG_Inf_0.3	extraction_ratio	indocyanine green	plasma	71.0	percent	45.0	min	1.0	no time point reported, assuming 50 min for steady state
+Leevy1962	S2	ICG_Inf_0.3	extraction_ratio	indocyanine green	plasma	58.0	percent	45.0	min	1.0	no time point reported, assuming 50 min for steady state
+Leevy1962	S3	ICG_Inf_0.3	extraction_ratio	indocyanine green	plasma	66.0	percent	45.0	min	1.0	no time point reported, assuming 50 min for steady state
+Leevy1962	S4	ICG_Inf_0.3	extraction_ratio	indocyanine green	plasma	73.0	percent	45.0	min	1.0	no time point reported, assuming 50 min for steady state
+Leevy1962	S5	ICG_Inf_0.3	extraction_ratio	indocyanine green	plasma	79.0	percent	45.0	min	1.0	no time point reported, assuming 50 min for steady state
+Leevy1962	S6	ICG_Inf_0.3	extraction_ratio	indocyanine green	plasma	74.0	percent	45.0	min	1.0	no time point reported, assuming 50 min for steady state
+Leevy1962	S7	ICG_Inf_0.3	extraction_ratio	indocyanine green	plasma	83.0	percent	45.0	min	1.0	no time point reported, assuming 50 min for steady state
+Leevy1962	S8	ICG_Inf_0.3	extraction_ratio	indocyanine green	plasma	70.0	percent	45.0	min	1.0	no time point reported, assuming 50 min for steady state
+Leevy1962	S9	ICG_Inf_0.3	extraction_ratio	indocyanine green	plasma	82.0	percent	45.0	min	1.0	no time point reported, assuming 50 min for steady state
+Leevy1962	S10	ICG_Inf_0.3	extraction_ratio	indocyanine green	plasma	60.0	percent	45.0	min	1.0	no time point reported, assuming 50 min for steady state
+Leevy1962	S11	ICG_Inf_0.3	extraction_ratio	indocyanine green	plasma	68.0	percent	45.0	min	1.0	no time point reported, assuming 50 min for steady state
+Leevy1962	S12	ICG_Inf_0.3	extraction_ratio	indocyanine green	plasma	64.0	percent	45.0	min	1.0	no time point reported, assuming 50 min for steady state
+Leevy1962	S13	ICG_Inf_0.3	extraction_ratio	indocyanine green	plasma	76.0	percent	45.0	min	1.0	no time point reported, assuming 50 min for steady state
+Leevy1962	S14	ICG_Inf_0.3	extraction_ratio	indocyanine green	plasma	53.0	percent	45.0	min	1.0	no time point reported, assuming 50 min for steady state
+Leevy1962	S1	ICG_Inf_0.3	hbf	indocyanine green	plasma	470.0	ml/min/m^2	45.0	min	1.0	no time point reported, assuming 50 min for steady state
+Leevy1962	S2	ICG_Inf_0.3	hbf	indocyanine green	plasma	450.0	ml/min/m^2	45.0	min	1.0	no time point reported, assuming 50 min for steady state
+Leevy1962	S3	ICG_Inf_0.3	hbf	indocyanine green	plasma	410.0	ml/min/m^2	45.0	min	1.0	no time point reported, assuming 50 min for steady state
+Leevy1962	S4	ICG_Inf_0.3	hbf	indocyanine green	plasma	360.0	ml/min/m^2	45.0	min	1.0	no time point reported, assuming 50 min for steady state
+Leevy1962	S5	ICG_Inf_0.3	hbf	indocyanine green	plasma	590.0	ml/min/m^2	45.0	min	1.0	no time point reported, assuming 50 min for steady state
+Leevy1962	S6	ICG_Inf_0.3	hbf	indocyanine green	plasma	810.0	ml/min/m^2	45.0	min	1.0	no time point reported, assuming 50 min for steady state
+Leevy1962	S7	ICG_Inf_0.3	hbf	indocyanine green	plasma	300.0	ml/min/m^2	45.0	min	1.0	no time point reported, assuming 50 min for steady state
+Leevy1962	S8	ICG_Inf_0.3	hbf	indocyanine green	plasma	590.0	ml/min/m^2	45.0	min	1.0	no time point reported, assuming 50 min for steady state
+Leevy1962	S9	ICG_Inf_0.3	hbf	indocyanine green	plasma	530.0	ml/min/m^2	45.0	min	1.0	no time point reported, assuming 50 min for steady state
+Leevy1962	S10	ICG_Inf_0.3	hbf	indocyanine green	plasma	490.0	ml/min/m^2	45.0	min	1.0	no time point reported, assuming 50 min for steady state
+Leevy1962	S11	ICG_Inf_0.3	hbf	indocyanine green	plasma	340.0	ml/min/m^2	45.0	min	1.0	no time point reported, assuming 50 min for steady state
+Leevy1962	S12	ICG_Inf_0.3	hbf	indocyanine green	plasma	450.0	ml/min/m^2	45.0	min	1.0	no time point reported, assuming 50 min for steady state
+Leevy1962	S13	ICG_Inf_0.3	hbf	indocyanine green	plasma	430.0	ml/min/m^2	45.0	min	1.0	no time point reported, assuming 50 min for steady state
+Leevy1962	S14	ICG_Inf_0.3	hbf	indocyanine green	plasma	520.0	ml/min/m^2	45.0	min	1.0	no time point reported, assuming 50 min for steady state
+Leevy1962	S1	ICG_Inf_0.3	concentration_ss	indocyanine green	arterial plasma	0.28	mg/dl	45.0	min	1.0	no time point reported, assuming 50 min for steady state
+Leevy1962	S2	ICG_Inf_0.3	concentration_ss	indocyanine green	arterial plasma	0.34	mg/dl	45.0	min	1.0	no time point reported, assuming 50 min for steady state
+Leevy1962	S3	ICG_Inf_0.3	concentration_ss	indocyanine green	arterial plasma	0.28	mg/dl	45.0	min	1.0	no time point reported, assuming 50 min for steady state
+Leevy1962	S4	ICG_Inf_0.3	concentration_ss	indocyanine green	arterial plasma	0.33	mg/dl	45.0	min	1.0	no time point reported, assuming 50 min for steady state
+Leevy1962	S5	ICG_Inf_0.3	concentration_ss	indocyanine green	arterial plasma	0.23	mg/dl	45.0	min	1.0	no time point reported, assuming 50 min for steady state
+Leevy1962	S6	ICG_Inf_0.3	concentration_ss	indocyanine green	arterial plasma	0.2	mg/dl	45.0	min	1.0	no time point reported, assuming 50 min for steady state
+Leevy1962	S7	ICG_Inf_0.3	concentration_ss	indocyanine green	arterial plasma	0.34	mg/dl	45.0	min	1.0	no time point reported, assuming 50 min for steady state
+Leevy1962	S8	ICG_Inf_0.3	concentration_ss	indocyanine green	arterial plasma	0.42	mg/dl	45.0	min	1.0	no time point reported, assuming 50 min for steady state
+Leevy1962	S9	ICG_Inf_0.3	concentration_ss	indocyanine green	arterial plasma	0.31	mg/dl	45.0	min	1.0	no time point reported, assuming 50 min for steady state
+Leevy1962	S10	ICG_Inf_0.3	concentration_ss	indocyanine green	arterial plasma	0.39	mg/dl	45.0	min	1.0	no time point reported, assuming 50 min for steady state
+Leevy1962	S11	ICG_Inf_0.3	concentration_ss	indocyanine green	arterial plasma	0.3	mg/dl	45.0	min	1.0	no time point reported, assuming 50 min for steady state
+Leevy1962	S12	ICG_Inf_0.3	concentration_ss	indocyanine green	arterial plasma	0.36	mg/dl	45.0	min	1.0	no time point reported, assuming 50 min for steady state
+Leevy1962	S13	ICG_Inf_0.3	concentration_ss	indocyanine green	arterial plasma	0.26	mg/dl	45.0	min	1.0	no time point reported, assuming 50 min for steady state
+Leevy1962	S14	ICG_Inf_0.3	concentration_ss	indocyanine green	arterial plasma	0.15	mg/dl	45.0	min	1.0	no time point reported, assuming 50 min for steady state

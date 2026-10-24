@@ -1,0 +1,11 @@
+study	name	group_count	parent	measurement	choice	median	min	max	unit	count
+Skak1987	all	138	NA	species	homo sapiens	NA	NA	NA	NA	138
+Skak1987	all	138	NA	sex	NR	NA	NA	NA	NA	138
+Skak1987	all	138	NA	healthy	N	NA	NA	NA	NA	130
+Skak1987	all	138	NA	healthy	Y	NA	NA	NA	NA	8
+Skak1987	liver disease	52	all	healthy	N	NA	NA	NA	NA	52
+Skak1987	liver disease	52	all	disease	liver disease	NA	NA	NA	NA	52
+Skak1987	controls	86	all	sex	NR	NA	NA	NA	NA	86
+Skak1987	controls	86	all	healthy	Y	NA	NA	NA	NA	8
+Skak1987	controls	86	all	healthy	N	NA	NA	NA	NA	78
+Skak1987	healthy	8	controls	healthy	Y	NA	NA	NA	NA	8

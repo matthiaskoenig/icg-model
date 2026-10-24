@@ -1,0 +1,23 @@
+{
+  "sets": [
+    {
+      "sid": "PK_20261020_010006__506c2_0",
+      "values": {
+        "LI__ICGIM_Vmax": 0.09818957408838228,
+        "LI__ICGEX_k": 0.03754373050831551,
+        "LI__ICGLI2CA_Vmax": 0.0006494891743647626,
+        "LI__ICGLI2CA_Km": 0.006387203251870362,
+        "LI__ICGLI2BI_k": 0.005782218655695459
+      },
+      "units": {
+        "LI__ICGIM_Vmax": "(mmol)/(min)/l",
+        "LI__ICGEX_k": "1/(min)",
+        "LI__ICGLI2CA_Vmax": "(mmol)/(min)/l",
+        "LI__ICGLI2CA_Km": "mmol/l",
+        "LI__ICGLI2BI_k": "1/(min)"
+      },
+      "cost": 14.096577100700584,
+      "provenance": "optimization 'PK_20261020_010006__506c2', run '0'"
+    }
+  ]
+}

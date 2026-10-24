@@ -1,0 +1,6 @@
+study	name	substance	measurement_type	time	time_unit	route	value	unit	application
+Gelman1984	ICG	indocyanine green	qualitative dosing	0	min	iv	5	mg/kg	single dose
+Gelman1984	HAL1	halothane	qualitative dosing	0	min	inhalation	1	mg/min	constant infusion
+Gelman1984	ISO1	isoflurane	qualitative dosing	0	min	inhalation	1	count	constant infusion
+Gelman1984	HAL2	halothane	qualitative dosing	0	min	inhalation	2	count	constant infusion
+Gelman1984	ISO2	isoflurane	qualitative dosing	0	min	inhalation	2	count	constant infusion

@@ -1,0 +1,4 @@
+study	group	intervention	measurement	tissue	substance	mean	mean_sd	time	time_unit	ctp	count	mean_unit	count_unit
+Moeller2018	Child_A	ICG	retention ratio	plasma	indocyanine green	14.9	11.6	15.0	min	A	17	percent	dimensionless
+Moeller2018	Child_B	ICG	retention ratio	plasma	indocyanine green	40.6	20.6	15.0	min	B	37	percent	dimensionless
+Moeller2018	Child_C	ICG	retention ratio	plasma	indocyanine green	58.2	17.5	15.0	min	C	14	percent	dimensionless

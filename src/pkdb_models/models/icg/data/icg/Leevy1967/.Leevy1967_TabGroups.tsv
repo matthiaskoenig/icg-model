@@ -1,0 +1,14 @@
+study	name	group_count	parent	measurement	min	max	unit	choice	count
+Leevy1967	all	59	NA	species	NA	NA	NA	homo sapiens	59
+Leevy1967	all	59	NA	healthy	NA	NA	NA	Y	10
+Leevy1967	all	59	NA	healthy	NA	NA	NA	N	49
+Leevy1967	all	59	NA	disease	NA	NA	NA	liver disease	49
+Leevy1967	all	59	NA	sex	NA	NA	NA	NR	49
+Leevy1967	controls	10	all	healthy	NA	NA	NA	Y	10
+Leevy1967	controls	10	all	age	25.0	60.0	yr	NA	10
+Leevy1967	disease	49	all	healthy	NA	NA	NA	N	49
+Leevy1967	disease	49	all	disease	NA	NA	NA	viral hepatitis	11
+Leevy1967	disease	49	all	disease	NA	NA	NA	fatty liver disease	10
+Leevy1967	disease	49	all	disease	NA	NA	NA	liver cirrhosis	21
+Leevy1967	disease	49	all	disease	NA	NA	NA	biliary obstruction	3
+Leevy1967	disease	49	all	disease	NA	NA	NA	cancer	4

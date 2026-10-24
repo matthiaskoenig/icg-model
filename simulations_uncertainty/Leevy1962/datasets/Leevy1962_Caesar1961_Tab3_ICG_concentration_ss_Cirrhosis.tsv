@@ -1,0 +1,8 @@
+study	subject	intervention	measurement	tissue	substance	value	group	label	value_unit
+Caesar1961	Cirrhosis11	ICG_inf	concentration_ss	plasma	indocyanine green	0.8	Cirrhosis	Tab3	mg/l
+Caesar1961	Cirrhosis19	ICG_inf	concentration_ss	plasma	indocyanine green	1.4	Cirrhosis	Tab3	mg/l
+Caesar1961	Cirrhosis17	ICG_inf	concentration_ss	plasma	indocyanine green	1.01	Cirrhosis	Tab3	mg/l
+Caesar1961	Cirrhosis21	ICG_inf	concentration_ss	plasma	indocyanine green	0.57	Cirrhosis	Tab3	mg/l
+Caesar1961	Cirrhosis20	ICG_inf	concentration_ss	plasma	indocyanine green	0.35	Cirrhosis	Tab3	mg/l
+Caesar1961	Cirrhosis27	ICG_inf	concentration_ss	plasma	indocyanine green	7.71	Cirrhosis	Tab3	mg/l
+Caesar1961	Cirrhosis23	ICG_inf	concentration_ss	plasma	indocyanine green	2.9	Cirrhosis	Tab3	mg/l

@@ -1,0 +1,2 @@
+study	count	group	intervention	measurement	tissue	substance	mean	min	max	mean_se	mean_sd	time	time_unit	mean_unit	count_unit
+Gadano1997	356	Cirrhosis	MEP, Cir Inf1, Cir Inf2	clearance	plasma	indocyanine green	182.0	62.0	852.0	5.0	94.339811320566	25	min	ml/min	dimensionless

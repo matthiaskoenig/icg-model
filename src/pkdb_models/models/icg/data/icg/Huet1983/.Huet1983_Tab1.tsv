@@ -1,0 +1,9 @@
+study	group	count	intervention	tissue	substance	measurement	mean	sd	se	unit
+Huet1983	hepatitis	12	ICG	blood	indocyanine green	clearance	16.3	4.849742	1.4	ml/min/kg
+Huet1983	hepatitis	12	ICG	plasma	indocyanine green	extraction_ratio	0.53	0.069282	0.02	dimensionless
+Huet1983	hepatitis	12	ICG	plasma	indocyanine green	clearance_intrinsic	36.9	14.895637	4.3	ml/min/kg
+Huet1983	hepatitis	12	ICG	liver	NA	hbf	30.9	9.006664	2.6	ml/min/kg
+Huet1983	cirrhosis	53	ICG	blood	indocyanine green	clearance	5.9	2.912044	0.4	ml/min/kg
+Huet1983	cirrhosis	53	ICG	plasma	indocyanine green	extraction_ratio	0.25	0.145602	0.02	dimensionless
+Huet1983	cirrhosis	53	ICG	plasma	indocyanine green	clearance_intrinsic	9.2	7.28011	1.0	ml/min/kg
+Huet1983	cirrhosis	53	ICG	liver	NA	hbf	28.0	13.104198	1.8	ml/min/kg

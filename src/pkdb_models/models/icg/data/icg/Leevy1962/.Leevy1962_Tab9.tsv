@@ -1,0 +1,7 @@
+study	individual	intervention	measurement	substance	tissue	value	unit	time	time_unit	comments	count
+Leevy1962	S50	ICG0.15	extraction_ratio	indocyanine green	plasma	69.0	percent	8	min	time is not reported, samples every 2 min for 14 min, the middle 8 min is set for the simulation experiment	1
+Leevy1962	S50	ICG0.25	extraction_ratio	indocyanine green	plasma	68.0	percent	8	min	time is not reported, samples every 2 min for 14 min, the middle 8 min is set for the simulation experiment	1
+Leevy1962	S50	ICG0.5	extraction_ratio	indocyanine green	plasma	67.0	percent	8	min	time is not reported, samples every 2 min for 14 min, the middle 8 min is set for the simulation experiment	1
+Leevy1962	S51	ICG0.15	extraction_ratio	indocyanine green	plasma	74.8	percent	8	min	time is not reported, samples every 2 min for 14 min, the middle 8 min is set for the simulation experiment	1
+Leevy1962	S51	ICG0.25	extraction_ratio	indocyanine green	plasma	77.1	percent	8	min	time is not reported, samples every 2 min for 14 min, the middle 8 min is set for the simulation experiment	1
+Leevy1962	S51	ICG0.5	extraction_ratio	indocyanine green	plasma	81.2	percent	8	min	time is not reported, samples every 2 min for 14 min, the middle 8 min is set for the simulation experiment	1

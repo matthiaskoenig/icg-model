@@ -1,0 +1,82 @@
+study	subject	intervention	tissue	substance	measurement	value	unit	group	label
+Caesar1961	Control1	ICG	plasma	indocyanine green	kel	0.308	1/min	Controls	tab1
+Caesar1961	Control2	ICG	plasma	indocyanine green	kel	0.267	1/min	Controls	tab1
+Caesar1961	Control3	ICG	plasma	indocyanine green	kel	0.231	1/min	Controls	tab1
+Caesar1961	Control4	ICG	plasma	indocyanine green	kel	0.212	1/min	Controls	tab1
+Caesar1961	Control5	ICG	plasma	indocyanine green	kel	0.204	1/min	Controls	tab1
+Caesar1961	Control6	ICG	plasma	indocyanine green	kel	0.193	1/min	Controls	tab1
+Caesar1961	Control7	ICG	plasma	indocyanine green	kel	0.193	1/min	Controls	tab1
+Caesar1961	Control8	ICG	plasma	indocyanine green	kel	0.165	1/min	Controls	tab1
+Caesar1961	Control9	ICG	plasma	indocyanine green	kel	0.164	1/min	Controls	tab1
+Caesar1961	Control10	ICG	plasma	indocyanine green	kel	0.128	1/min	Controls	tab1
+Caesar1961	Cirrhosis11	ICG	plasma	indocyanine green	kel	0.133	1/min	Cirrhosis	tab1
+Caesar1961	Cirrhosis12	ICG	plasma	indocyanine green	kel	0.131	1/min	Cirrhosis	tab1
+Caesar1961	Cirrhosis13	ICG	plasma	indocyanine green	kel	0.131	1/min	Cirrhosis	tab1
+Caesar1961	Cirrhosis14	ICG	plasma	indocyanine green	kel	0.0806	1/min	Cirrhosis	tab1
+Caesar1961	Cirrhosis15	ICG	plasma	indocyanine green	kel	0.0797	1/min	Cirrhosis	tab1
+Caesar1961	Cirrhosis16	ICG	plasma	indocyanine green	kel	0.0787	1/min	Cirrhosis	tab1
+Caesar1961	Cirrhosis17	ICG	plasma	indocyanine green	kel	0.073	1/min	Cirrhosis	tab1
+Caesar1961	Cirrhosis18	ICG	plasma	indocyanine green	kel	0.0714	1/min	Cirrhosis	tab1
+Caesar1961	Cirrhosis19	ICG	plasma	indocyanine green	kel	0.0613	1/min	Cirrhosis	tab1
+Caesar1961	Cirrhosis20	ICG	plasma	indocyanine green	kel	0.0603	1/min	Cirrhosis	tab1
+Caesar1961	Cirrhosis21	ICG	plasma	indocyanine green	kel	0.0577	1/min	Cirrhosis	tab1
+Caesar1961	Cirrhosis22	ICG	plasma	indocyanine green	kel	0.0517	1/min	Cirrhosis	tab1
+Caesar1961	Cirrhosis23	ICG	plasma	indocyanine green	kel	0.0478	1/min	Cirrhosis	tab1
+Caesar1961	Cirrhosis24	ICG	plasma	indocyanine green	kel	0.042	1/min	Cirrhosis	tab1
+Caesar1961	Cirrhosis25	ICG	plasma	indocyanine green	kel	0.029	1/min	Cirrhosis	tab1
+Caesar1961	Cirrhosis26	ICG	plasma	indocyanine green	kel	0.0266	1/min	Cirrhosis	tab1
+Caesar1961	Cirrhosis27	ICG	plasma	indocyanine green	kel	0.0185	1/min	Cirrhosis	tab1
+Caesar1961	Control1	ICG	plasma	indocyanine green	retention ratio	1.0	percent	Controls	tab1
+Caesar1961	Control2	ICG	plasma	indocyanine green	retention ratio	3.7	percent	Controls	tab1
+Caesar1961	Control3	ICG	plasma	indocyanine green	retention ratio	1.4	percent	Controls	tab1
+Caesar1961	Control4	ICG	plasma	indocyanine green	retention ratio	2.1	percent	Controls	tab1
+Caesar1961	Control5	ICG	plasma	indocyanine green	retention ratio	5.0	percent	Controls	tab1
+Caesar1961	Control6	ICG	plasma	indocyanine green	retention ratio	3.0	percent	Controls	tab1
+Caesar1961	Control7	ICG	plasma	indocyanine green	retention ratio	4.4	percent	Controls	tab1
+Caesar1961	Control8	ICG	plasma	indocyanine green	retention ratio	3.0	percent	Controls	tab1
+Caesar1961	Control9	ICG	plasma	indocyanine green	retention ratio	4.0	percent	Controls	tab1
+Caesar1961	Control10	ICG	plasma	indocyanine green	retention ratio	3.5	percent	Controls	tab1
+Caesar1961	Cirrhosis11	ICG	plasma	indocyanine green	retention ratio	7.0	percent	Cirrhosis	tab1
+Caesar1961	Cirrhosis12	ICG	plasma	indocyanine green	retention ratio	8.0	percent	Cirrhosis	tab1
+Caesar1961	Cirrhosis13	ICG	plasma	indocyanine green	retention ratio	8.1	percent	Cirrhosis	tab1
+Caesar1961	Cirrhosis14	ICG	plasma	indocyanine green	retention ratio	21.0	percent	Cirrhosis	tab1
+Caesar1961	Cirrhosis15	ICG	plasma	indocyanine green	retention ratio	22.0	percent	Cirrhosis	tab1
+Caesar1961	Cirrhosis16	ICG	plasma	indocyanine green	retention ratio	24.0	percent	Cirrhosis	tab1
+Caesar1961	Cirrhosis17	ICG	plasma	indocyanine green	retention ratio	23.0	percent	Cirrhosis	tab1
+Caesar1961	Cirrhosis18	ICG	plasma	indocyanine green	retention ratio	25.0	percent	Cirrhosis	tab1
+Caesar1961	Cirrhosis19	ICG	plasma	indocyanine green	retention ratio	44.0	percent	Cirrhosis	tab1
+Caesar1961	Cirrhosis20	ICG	plasma	indocyanine green	retention ratio	30.0	percent	Cirrhosis	tab1
+Caesar1961	Cirrhosis21	ICG	plasma	indocyanine green	retention ratio	34.0	percent	Cirrhosis	tab1
+Caesar1961	Cirrhosis22	ICG	plasma	indocyanine green	retention ratio	35.0	percent	Cirrhosis	tab1
+Caesar1961	Cirrhosis23	ICG	plasma	indocyanine green	retention ratio	40.0	percent	Cirrhosis	tab1
+Caesar1961	Cirrhosis24	ICG	plasma	indocyanine green	retention ratio	43.0	percent	Cirrhosis	tab1
+Caesar1961	Cirrhosis25	ICG	plasma	indocyanine green	retention ratio	53.0	percent	Cirrhosis	tab1
+Caesar1961	Cirrhosis26	ICG	plasma	indocyanine green	retention ratio	68.0	percent	Cirrhosis	tab1
+Caesar1961	Cirrhosis27	ICG	plasma	indocyanine green	retention ratio	69.0	percent	Cirrhosis	tab1
+Caesar1961	Control1	ICG	plasma	bilirubin	concentration_ss	0.7	mg/dl	Controls	tab1
+Caesar1961	Control2	ICG	plasma	bilirubin	concentration_ss	0.8	mg/dl	Controls	tab1
+Caesar1961	Control3	ICG	plasma	bilirubin	concentration_ss	0.6	mg/dl	Controls	tab1
+Caesar1961	Control4	ICG	plasma	bilirubin	concentration_ss	0.7	mg/dl	Controls	tab1
+Caesar1961	Control5	ICG	plasma	bilirubin	concentration_ss	0.8	mg/dl	Controls	tab1
+Caesar1961	Control6	ICG	plasma	bilirubin	concentration_ss	0.5	mg/dl	Controls	tab1
+Caesar1961	Control7	ICG	plasma	bilirubin	concentration_ss	0.6	mg/dl	Controls	tab1
+Caesar1961	Control8	ICG	plasma	bilirubin	concentration_ss	0.5	mg/dl	Controls	tab1
+Caesar1961	Control9	ICG	plasma	bilirubin	concentration_ss	0.5	mg/dl	Controls	tab1
+Caesar1961	Control10	ICG	plasma	bilirubin	concentration_ss	0.6	mg/dl	Controls	tab1
+Caesar1961	Cirrhosis11	ICG	plasma	bilirubin	concentration_ss	1.0	mg/dl	Cirrhosis	tab1
+Caesar1961	Cirrhosis12	ICG	plasma	bilirubin	concentration_ss	0.9	mg/dl	Cirrhosis	tab1
+Caesar1961	Cirrhosis13	ICG	plasma	bilirubin	concentration_ss	0.9	mg/dl	Cirrhosis	tab1
+Caesar1961	Cirrhosis14	ICG	plasma	bilirubin	concentration_ss	2.4	mg/dl	Cirrhosis	tab1
+Caesar1961	Cirrhosis15	ICG	plasma	bilirubin	concentration_ss	2.2	mg/dl	Cirrhosis	tab1
+Caesar1961	Cirrhosis16	ICG	plasma	bilirubin	concentration_ss	0.8	mg/dl	Cirrhosis	tab1
+Caesar1961	Cirrhosis17	ICG	plasma	bilirubin	concentration_ss	0.5	mg/dl	Cirrhosis	tab1
+Caesar1961	Cirrhosis18	ICG	plasma	bilirubin	concentration_ss	1.9	mg/dl	Cirrhosis	tab1
+Caesar1961	Cirrhosis19	ICG	plasma	bilirubin	concentration_ss	1.0	mg/dl	Cirrhosis	tab1
+Caesar1961	Cirrhosis20	ICG	plasma	bilirubin	concentration_ss	2.7	mg/dl	Cirrhosis	tab1
+Caesar1961	Cirrhosis21	ICG	plasma	bilirubin	concentration_ss	0.6	mg/dl	Cirrhosis	tab1
+Caesar1961	Cirrhosis22	ICG	plasma	bilirubin	concentration_ss	2.6	mg/dl	Cirrhosis	tab1
+Caesar1961	Cirrhosis23	ICG	plasma	bilirubin	concentration_ss	0.4	mg/dl	Cirrhosis	tab1
+Caesar1961	Cirrhosis24	ICG	plasma	bilirubin	concentration_ss	1.4	mg/dl	Cirrhosis	tab1
+Caesar1961	Cirrhosis25	ICG	plasma	bilirubin	concentration_ss	9.6	mg/dl	Cirrhosis	tab1
+Caesar1961	Cirrhosis26	ICG	plasma	bilirubin	concentration_ss	3.0	mg/dl	Cirrhosis	tab1
+Caesar1961	Cirrhosis27	ICG	plasma	bilirubin	concentration_ss	2.0	mg/dl	Cirrhosis	tab1

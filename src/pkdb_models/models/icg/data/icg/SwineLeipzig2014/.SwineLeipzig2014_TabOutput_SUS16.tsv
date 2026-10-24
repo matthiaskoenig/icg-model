@@ -1,0 +1,69 @@
+study	subject	label	interventions	measurement_type	tissue	value	unit	time_of_day	day	time_resection	helper_t1	helper_t2	time	time_unit	comments
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	na	l/min	08:30:00	0.0	13:00:00	8.5	13.0	-4.5	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	na	l/min	09:00:00	0.0	13:00:00	9.0	13.0	-4.0	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	na	l/min	09:30:00	0.0	13:00:00	9.5	13.0	-3.5	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	na	l/min	10:00:00	0.0	13:00:00	10.0	13.0	-3.0	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	na	l/min	10:30:00	0.0	13:00:00	10.5	13.0	-2.5	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	3.67	l/min	11:00:00	0.0	13:00:00	11.0	13.0	-1.99999999999998	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	3.42	l/min	11:30:00	0.0	13:00:00	11.5	13.0	-1.49999999999999	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	3.31	l/min	12:00:00	0.0	13:00:00	12.0	13.0	-1.0	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	3.23	l/min	12:30:00	0.0	13:00:00	12.5	13.0	-0.499999999999982	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	3.12	l/min	13:00:00	0.0	13:00:00	13.0	13.0	0.0	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	2.89	l/min	13:30:00	0.0	13:00:00	13.5	13.0	0.5	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	3.07	l/min	14:00:00	0.0	13:00:00	14.0	13.0	0.999999999999993	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	3.04	l/min	14:30:00	0.0	13:00:00	14.5	13.0	1.50000000000001	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	2.94	l/min	15:00:00	0.0	13:00:00	15.0	13.0	2.0	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	2.93	l/min	15:30:00	0.0	13:00:00	15.5	13.0	2.49999999999999	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	2.77	l/min	16:00:00	0.0	13:00:00	16.0	13.0	3.00000000000001	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	2.78	l/min	16:30:00	0.0	13:00:00	16.5	13.0	3.5	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	2.83	l/min	17:00:00	0.0	13:00:00	17.0	13.0	3.99999999999999	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	2.8	l/min	17:30:00	0.0	13:00:00	17.5	13.0	4.50000000000001	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	2.85	l/min	18:00:00	0.0	13:00:00	18.0	13.0	5.0	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	2.87	l/min	18:30:00	0.0	13:00:00	18.5	13.0	5.49999999999999	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	2.94	l/min	19:00:00	0.0	13:00:00	19.0	13.0	6.00000000000001	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	2.91	l/min	19:30:00	0.0	13:00:00	19.5	13.0	6.5	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	2.86	l/min	20:00:00	0.0	13:00:00	20.0	13.0	6.99999999999999	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	2.32	l/min	20:30:00	0.0	13:00:00	20.5	13.0	7.50000000000001	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	2.73	l/min	21:00:00	0.0	13:00:00	21.0	13.0	8.0	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	2.78	l/min	21:30:00	0.0	13:00:00	21.5	13.0	8.49999999999999	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	2.78	l/min	22:00:00	0.0	13:00:00	22.0	13.0	9.00000000000001	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	3.39	l/min	22:30:00	0.0	13:00:00	22.5	13.0	9.5	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	3.22	l/min	23:00:00	0.0	13:00:00	23.0	13.0	10.0	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	3.11	l/min	23:30:00	0.0	13:00:00	23.5	13.0	10.5	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	3.31	l/min	1900-01-01 00:00:00	0.0	13:00:00	24.0	13.0	11.0	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	3	l/min	1900-01-01 00:30:00	0.0	13:00:00	24.4999999999999	13.0	11.4999999999999	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	3.08	l/min	1900-01-01 01:00:00	0.0	13:00:00	25.0000000000001	13.0	12.0000000000001	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	3.09	l/min	1900-01-01 01:30:00	0.0	13:00:00	25.5	13.0	12.5	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	2.77	l/min	1900-01-01 02:00:00	0.0	13:00:00	25.9999999999999	13.0	12.9999999999999	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	2.87	l/min	1900-01-01 02:30:00	0.0	13:00:00	26.5000000000001	13.0	13.5000000000001	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	2.93	l/min	1900-01-01 03:00:00	0.0	13:00:00	27.0	13.0	14.0	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	2.9	l/min	1900-01-01 03:30:00	0.0	13:00:00	27.4999999999999	13.0	14.4999999999999	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	2.99	l/min	1900-01-01 04:00:00	0.0	13:00:00	28.0000000000001	13.0	15.0000000000001	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	3.08	l/min	1900-01-01 04:30:00	0.0	13:00:00	28.5	13.0	15.5	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	3.2	l/min	1900-01-01 05:00:00	0.0	13:00:00	28.9999999999999	13.0	15.9999999999999	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	3.15	l/min	1900-01-01 05:30:00	0.0	13:00:00	29.5000000000001	13.0	16.5000000000001	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	3.09	l/min	1900-01-01 06:00:00	0.0	13:00:00	30.0	13.0	17.0	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	3.02	l/min	1900-01-01 06:30:00	0.0	13:00:00	30.4999999999999	13.0	17.4999999999999	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	4.33	l/min	1900-01-01 07:00:00	0.0	13:00:00	31.0000000000001	13.0	18.0000000000001	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	4.19	l/min	1900-01-01 07:30:00	0.0	13:00:00	31.5	13.0	18.5	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	4.36	l/min	1900-01-01 08:00:00	0.0	13:00:00	32.0000000000009	13.0	19.0000000000009	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	4.56	l/min	1900-01-01 08:30:00	0.0	13:00:00	32.500000000001	13.0	19.500000000001	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	4.54	l/min	1900-01-01 09:00:00	0.0	13:00:00	33.0000000000012	13.0	20.0000000000012	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	4.4	l/min	1900-01-01 09:30:00	0.0	13:00:00	33.5000000000014	13.0	20.5000000000014	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	4.32	l/min	1900-01-01 10:00:00	0.0	13:00:00	34.0000000000015	13.0	21.0000000000015	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	4.44	l/min	1900-01-01 10:30:00	0.0	13:00:00	34.5000000000017	13.0	21.5000000000017	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	4.41	l/min	11:00:00	1.0	13:00:00	11.0	13.0	22.0	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	4.77	l/min	11:30:00	1.0	13:00:00	11.5	13.0	22.5	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	4.38	l/min	1900-01-01 12:00:00	0.0	13:00:00	36.0000000000022	13.0	23.0000000000022	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	4.4	l/min	1900-01-01 12:30:00	0.0	13:00:00	36.5000000000023	13.0	23.5000000000023	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_cardiac_output	ICG	cardiac output	heart	4.76	l/min	1900-01-01 13:00:00	0.0	13:00:00	37.0000000000025	13.0	24.0000000000025	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_pdr	ICG	pdr	plasma	20.4	precent/min	10:30:00	0.0	13:00:00	10.5	13.0	-2.5	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_pdr	ICG	pdr	plasma	29.5	precent/min	13:00:00	0.0	13:00:00	13.0	13.0	0.0	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_pdr	ICG	pdr	plasma	44.5	precent/min	19:00:00	0.0	13:00:00	19.0	13.0	6.0	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_pdr	ICG	pdr	plasma	33.6	precent/min	01:00:00	1.0	13:00:00	1.0	13.0	12.0	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_pdr	ICG	pdr	plasma	24.3	precent/min	13:00:00	1.0	13:00:00	13.0	13.0	24.0	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_r15	ICG	retention ratio	plasma	4.7	percent	10:30:00	0.0	13:00:00	10.5	13.0	-2.5	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_r15	ICG	retention ratio	plasma	1.2	percent	13:00:00	0.0	13:00:00	13.0	13.0	0.0	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_r15	ICG	retention ratio	plasma	0.1	percent	19:00:00	0.0	13:00:00	19.0	13.0	6.0	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_r15	ICG	retention ratio	plasma	0.6	percent	01:00:00	1.0	13:00:00	1.0	13.0	12.0	hr	HZV:PICCO
+SwineLeipzig2014	SUS16	SUS16_r15	ICG	retention ratio	plasma	2.6	percent	13:00:00	1.0	13:00:00	13.0	13.0	24.0	hr	HZV:PICCO

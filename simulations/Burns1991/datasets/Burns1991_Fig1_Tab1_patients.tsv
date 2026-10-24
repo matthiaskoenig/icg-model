@@ -1,0 +1,7 @@
+individual	cl_infusion	cl_infusion_unit	cl_bolus	cl_bolus_unit	er	er_unit
+Chronic active	131.4035	ml/min	74.148	ml/min	0.41	dimensionless
+Alcoholic 1	166.90575	ml/min	115.47818	ml/min	0.23	dimensionless
+Haemochromatosis	213.35736	ml/min	162.55061	ml/min	0.25	dimensionless
+Alcoholic 2	218.15878	ml/min	217.57199	ml/min	0.23	dimensionless
+Primary biliary	235.25505	ml/min	173.51099	ml/min	0.34	dimensionless
+Wilson‘s disease	249.88933	ml/min	198.11343	ml/min	0.61	dimensionless

@@ -1,0 +1,6 @@
+study	name	group_count	parent	measurement_type	choice	count	min	max	unit
+Klockowski1990	all	18	na	species	homo sapiens	18	na	na	na
+Klockowski1990	all	18	na	sex	NR	18	na	na	na
+Klockowski1990	all	18	na	age	na	18	65	80	yr
+Klockowski1990	all	18	na	healthy	Y	18	na	na	na
+Klockowski1990	all	18	na	medication	N	18	na	na	na

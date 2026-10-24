@@ -1,0 +1,4 @@
+study	group	count	measurement_type	substance	tissue	intervention	label	time	time_unit	mean	mean_sd	min	max	mean_unit	count_unit
+Kamimori2000	Follicular	6	concentration	indocyanine green	plasma	ICG	Follicular_ICG	5	min	0.006658365817921593	0.0013607509466517923	3.7	6.79	mole/meter^3	dimensionless
+Kamimori2000	Follicular	7	concentration	indocyanine green	plasma	ICG	Follicular_ICG	10	min	0.002245262892089839	0.0019771717341514022	0.55813956	5.0465117	mole/meter^3	dimensionless
+Kamimori2000	Follicular	7	concentration	indocyanine green	plasma	ICG	Follicular_ICG	15	min	0.0007355171543052922	0.0008115084206518545	0.023255814	1.8837209	mole/meter^3	dimensionless

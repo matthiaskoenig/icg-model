@@ -1,0 +1,82 @@
+study	name	group	measurement	choice	value	unit
+Leevy1962	S1	controls	sex	M	NA	NA
+Leevy1962	S2	controls	sex	M	NA	NA
+Leevy1962	S3	controls	sex	M	NA	NA
+Leevy1962	S4	controls	sex	M	NA	NA
+Leevy1962	S5	controls	sex	M	NA	NA
+Leevy1962	S6	controls	sex	M	NA	NA
+Leevy1962	S7	controls	sex	M	NA	NA
+Leevy1962	S8	controls	sex	M	NA	NA
+Leevy1962	S9	controls	sex	M	NA	NA
+Leevy1962	S10	controls	sex	M	NA	NA
+Leevy1962	S11	controls	sex	M	NA	NA
+Leevy1962	S12	controls	sex	M	NA	NA
+Leevy1962	S13	controls	sex	M	NA	NA
+Leevy1962	S14	controls	sex	M	NA	NA
+Leevy1962	S1	controls	age	NA	34.0	yr
+Leevy1962	S2	controls	age	NA	30.0	yr
+Leevy1962	S3	controls	age	NA	42.0	yr
+Leevy1962	S4	controls	age	NA	49.0	yr
+Leevy1962	S5	controls	age	NA	47.0	yr
+Leevy1962	S6	controls	age	NA	38.0	yr
+Leevy1962	S7	controls	age	NA	34.0	yr
+Leevy1962	S8	controls	age	NA	53.0	yr
+Leevy1962	S9	controls	age	NA	38.0	yr
+Leevy1962	S10	controls	age	NA	36.0	yr
+Leevy1962	S11	controls	age	NA	50.0	yr
+Leevy1962	S12	controls	age	NA	30.0	yr
+Leevy1962	S13	controls	age	NA	27.0	yr
+Leevy1962	S14	controls	age	NA	36.0	yr
+Leevy1962	S1	controls	body surface area	NA	1.95	m^2
+Leevy1962	S2	controls	body surface area	NA	1.65	m^2
+Leevy1962	S3	controls	body surface area	NA	1.87	m^2
+Leevy1962	S4	controls	body surface area	NA	1.64	m^2
+Leevy1962	S5	controls	body surface area	NA	1.65	m^2
+Leevy1962	S6	controls	body surface area	NA	1.87	m^2
+Leevy1962	S7	controls	body surface area	NA	1.95	m^2
+Leevy1962	S8	controls	body surface area	NA	1.89	m^2
+Leevy1962	S9	controls	body surface area	NA	1.64	m^2
+Leevy1962	S10	controls	body surface area	NA	1.69	m^2
+Leevy1962	S11	controls	body surface area	NA	1.92	m^2
+Leevy1962	S12	controls	body surface area	NA	1.88	m^2
+Leevy1962	S13	controls	body surface area	NA	1.91	m^2
+Leevy1962	S14	controls	body surface area	NA	1.46	m^2
+Leevy1962	S15	patients	age	NA	38.0	yr
+Leevy1962	S16	patients	age	NA	57.0	yr
+Leevy1962	S17	patients	age	NA	41.0	yr
+Leevy1962	S18	patients	age	NA	64.0	yr
+Leevy1962	S19	patients	age	NA	44.0	yr
+Leevy1962	S15	patients	sex	M	NA	NA
+Leevy1962	S16	patients	sex	M	NA	NA
+Leevy1962	S17	patients	sex	M	NA	NA
+Leevy1962	S18	patients	sex	M	NA	NA
+Leevy1962	S19	patients	sex	F	NA	NA
+Leevy1962	S15	patients	disease	liver cirrhosis	NA	NA
+Leevy1962	S16	patients	disease	liver cirrhosis	NA	NA
+Leevy1962	S17	patients	disease	liver cirrhosis	NA	NA
+Leevy1962	S18	patients	disease	liver cirrhosis	NA	NA
+Leevy1962	S19	patients	disease	liver cirrhosis	NA	NA
+Leevy1962	Norm1	controls	sex	NR	NA	NA
+Leevy1962	S25	controls	sex	M	NA	NA
+Leevy1962	S26	controls	sex	M	NA	NA
+Leevy1962	S27	controls	sex	M	NA	NA
+Leevy1962	S28	controls	sex	M	NA	NA
+Leevy1962	S30	patients	sex	M	NA	NA
+Leevy1962	S31	patients	sex	M	NA	NA
+Leevy1962	S32	patients	sex	F	NA	NA
+Leevy1962	S25	controls	age	NA	46.0	yr
+Leevy1962	S26	controls	age	NA	27.0	yr
+Leevy1962	S27	controls	age	NA	32.0	yr
+Leevy1962	S28	controls	age	NA	49.0	yr
+Leevy1962	S30	patients	age	NA	51.0	yr
+Leevy1962	S31	patients	age	NA	34.0	yr
+Leevy1962	S32	patients	age	NA	44.0	yr
+Leevy1962	S25	controls	body surface area	NA	1.76	m^2
+Leevy1962	S26	controls	body surface area	NA	1.98	m^2
+Leevy1962	S27	controls	body surface area	NA	1.85	m^2
+Leevy1962	S28	controls	body surface area	NA	2.06	m^2
+Leevy1962	S30	patients	body surface area	NA	1.65	m^2
+Leevy1962	S31	patients	body surface area	NA	1.87	m^2
+Leevy1962	S32	patients	body surface area	NA	1.74	m^2
+Leevy1962	S50	controls	sex	NR	NA	NA
+Leevy1962	S51	controls	sex	NR	NA	NA

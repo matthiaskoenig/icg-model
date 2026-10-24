@@ -1,0 +1,13 @@
+study	group	intervention	tissue	substance	measurement	mean	se	unit
+Okochi2002	all	ICG	plasma	indocyanine green	kel	0.193	0.011	1/min
+Okochi2002	all	ICG	plasma	bilirubin	concentration_ss	0.73	0.05	mg/dl
+Okochi2002	all	ICG	plasma	ast	concentration_ss	48.8	8.5	IU/l
+Okochi2002	all	ICG	plasma	alt	concentration_ss	62.6	12.9	IU/l
+Okochi2002	cirrhotic	ICG	plasma	indocyanine green	kel	0.224	0.014	1/min
+Okochi2002	cirrhotic	ICG	plasma	bilirubin	concentration_ss	0.78	0.07	mg/dl
+Okochi2002	cirrhotic	ICG	plasma	ast	concentration_ss	28.7	6.7	IU/l
+Okochi2002	cirrhotic	ICG	plasma	alt	concentration_ss	40.1	13.9	IU/l
+Okochi2002	noncirrhotic	ICG	plasma	indocyanine green	kel	0.161	0.012	1/min
+Okochi2002	noncirrhotic	ICG	plasma	bilirubin	concentration_ss	0.68	0.07	mg/dl
+Okochi2002	noncirrhotic	ICG	plasma	ast	concentration_ss	68.9	13.3	IU/l
+Okochi2002	noncirrhotic	ICG	plasma	alt	concentration_ss	85.0	20.2	IU/l

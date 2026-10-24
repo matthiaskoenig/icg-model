@@ -1,0 +1,5 @@
+study	group	intervention	measurement	tissue	substance	mean	mean_sd	time	time_unit	ctp	count	mean_unit	count_unit
+Moeller2018	Controls	ICG	kel	plasma	indocyanine green	0.21	0.08			Controls	16	1/min	dimensionless
+Moeller2018	Child_A	ICG	kel	plasma	indocyanine green	0.14	0.06			A	17	1/min	dimensionless
+Moeller2018	Child_B	ICG	kel	plasma	indocyanine green	0.08	0.09			B	37	1/min	dimensionless
+Moeller2018	Child_C	ICG	kel	plasma	indocyanine green	0.04	0.02			C	14	1/min	dimensionless

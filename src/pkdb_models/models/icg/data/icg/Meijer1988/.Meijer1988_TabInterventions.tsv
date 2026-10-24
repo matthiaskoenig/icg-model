@@ -1,0 +1,4 @@
+study	name	substance	measurement_type	time	time_unit	route	form	value	unit	application
+Meijer1988	0.5icg	indocyanine green	dosing	0	min	iv	solution	0.5	mg/kg	single dose
+Meijer1988	1.0icg	indocyanine green	dosing	0	min	iv	solution	1.0	mg/kg	single dose
+Meijer1988	2.0icg	indocyanine green	dosing	0	min	iv	solution	2.0	mg/kg	single dose

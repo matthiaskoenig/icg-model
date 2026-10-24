@@ -1,0 +1,4 @@
+study	group	intervention	measurement	tissue	substance	mean	2sd	mean_sd	label	mean_unit
+Pind2016	ctpa		cardiac output	blood		6.4	1.9	0.95	tab2	l/min
+Pind2016	ctpb		cardiac output	blood		6.9	1.9	0.95	tab2	l/min
+Pind2016	ctpc		cardiac output	blood		7.8	2.1	1.05	tab2	l/min

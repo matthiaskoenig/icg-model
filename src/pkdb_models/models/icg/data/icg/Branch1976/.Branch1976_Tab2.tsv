@@ -1,0 +1,25 @@
+study	group	intervention	measurement_type	tissue	substance	mean	se	unit
+Branch1976	control	AP	clearance	blood	antipyrine	38.4	4.4	ml/min
+Branch1976	control	AP	vd	blood	antipyrine	33.3	2.8	l
+Branch1976	control	AP	thalf	blood	antipyrine	10.3	0.6	hr
+Branch1976	control	ICG	clearance	blood	indocyanine green	1215.0	190.0	ml/min
+Branch1976	control	ICG	vd	blood	indocyanine green	3.5	0.41	l
+Branch1976	control	ICG	thalf	blood	indocyanine green	3.5	0.33	min
+Branch1976	SerAlb>3 NoShunt	AP	clearance	blood	antipyrine	27.1	2.1	ml/min
+Branch1976	SerAlb>3 NoShunt	AP	vd	blood	antipyrine	33.6	2.4	l
+Branch1976	SerAlb>3 NoShunt	AP	thalf	blood	antipyrine	14.5	1.1	hr
+Branch1976	SerAlb>3 NoShunt	ICG	clearance	blood	indocyanine green	766.0	76.0	ml/min
+Branch1976	SerAlb>3 NoShunt	ICG	vd	blood	indocyanine green	3.35	0.49	l
+Branch1976	SerAlb>3 NoShunt	ICG	thalf	blood	indocyanine green	5.0	0.85	min
+Branch1976	SerAlb>3 Shunt	AP	clearance	blood	antipyrine	22.8	3.2	ml/min
+Branch1976	SerAlb>3 Shunt	AP	vd	blood	antipyrine	37.0	3.7	l
+Branch1976	SerAlb>3 Shunt	AP	thalf	blood	antipyrine	19.9	2.2	hr
+Branch1976	SerAlb>3 Shunt	ICG	clearance	blood	indocyanine green	381.0	127.0	ml/min
+Branch1976	SerAlb>3 Shunt	ICG	vd	blood	indocyanine green	6.64	1.2	l
+Branch1976	SerAlb>3 Shunt	ICG	thalf	blood	indocyanine green	18.0	3.6	min
+Branch1976	SerAlb<3	AP	clearance	blood	antipyrine	10.3	1.6	ml/min
+Branch1976	SerAlb<3	AP	vd	blood	antipyrine	41.3	3.2	l
+Branch1976	SerAlb<3	AP	thalf	blood	antipyrine	53.1	7.5	hr
+Branch1976	SerAlb<3	ICG	clearance	blood	indocyanine green	182.0	55.0	ml/min
+Branch1976	SerAlb<3	ICG	vd	blood	indocyanine green	5.33	0.67	l
+Branch1976	SerAlb<3	ICG	thalf	blood	indocyanine green	44.7	16.3	min

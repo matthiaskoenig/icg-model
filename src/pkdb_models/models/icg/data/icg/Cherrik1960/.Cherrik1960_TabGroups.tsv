@@ -1,0 +1,14 @@
+study	name	group_count	parent	measurement	mean	unit	choice	count
+Cherrik1960	all	25	NA	species	NA	NA	homo sapiens	25
+Cherrik1960	all	25	NA	sex	NA	NA	M	20
+Cherrik1960	all	25	NA	sex	NA	NA	F	5
+Cherrik1960	all	25	NA	age	47.48	yr	NA	25
+Cherrik1960	all	25	NA	healthy	NA	NA	N	25
+Cherrik1960	controls	9	all	sex	NA	NA	M	9
+Cherrik1960	controls	9	all	age	46.33	yr	NA	9
+Cherrik1960	controls	9	all	healthy	NA	NA	N	9
+Cherrik1960	disease	16	all	sex	NA	NA	M	11
+Cherrik1960	disease	16	all	sex	NA	NA	F	5
+Cherrik1960	disease	16	all	age	48.75	yr	NA	16
+Cherrik1960	disease	16	all	healthy	NA	NA	N	16
+Cherrik1960	disease	16	all	disease	NA	NA	liver cirrhosis	16

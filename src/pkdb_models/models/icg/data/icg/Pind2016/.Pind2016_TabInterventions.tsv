@@ -1,0 +1,3 @@
+study	name	substance	measurement	time	time_unit	route	form	value	unit	application
+Pind2016	icg_priming	indocyanine green	dosing	0	min	iv	solution	2.0	mg	single dose
+Pind2016	icg_iv	indocyanine green	dosing	0	min	iv	solution	0.2	mg/min	constant infusion

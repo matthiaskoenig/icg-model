@@ -1,0 +1,13 @@
+study	name	group_count	parent	measurement	choice	mean	sd	se	unit	count
+Huet1983	all	65	NA	species	homo sapiens	NA	NA	NA	NA	65
+Huet1983	all	65	NA	healthy	N	NA	NA	NA	NA	65
+Huet1983	all	65	NA	sex	MF	NA	NA	NA	NA	65
+Huet1983	cirrhosis	53	all	sex	M	NA	NA	NA	NA	39
+Huet1983	cirrhosis	53	all	sex	F	NA	NA	NA	NA	14
+Huet1983	cirrhosis	53	all	healthy	N	NA	NA	NA	NA	53
+Huet1983	cirrhosis	53	all	disease	liver cirrhosis	NA	NA	NA	NA	53
+Huet1983	cirrhosis	53	all	weight	NA	69.5	14.56022	2.0	kg	53
+Huet1983	hepatitis	12	all	sex	NR	NA	NA	NA	NA	12
+Huet1983	hepatitis	12	all	disease	chronic hepatitis	NA	NA	NA	NA	12
+Huet1983	hepatitis	12	all	healthy	N	NA	NA	NA	NA	12
+Huet1983	hepatitis	12	all	weight	NA	66.3	12.124356	3.5	kg	12

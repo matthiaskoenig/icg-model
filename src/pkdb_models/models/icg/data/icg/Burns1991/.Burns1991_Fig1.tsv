@@ -1,0 +1,7 @@
+study	individual	substance	tissue	measurement	y_intervention	y	y_label	x_intervention	x	x_label	x_unit	y_unit
+Burns1991	Chronic active	indocyanine green	plasma	clearance	Exp1 Bolus2 ICG	74.148	bolus	Exp1 Infusion1 ICG	131.4035	infusion	ml/min	ml/min
+Burns1991	Alcoholic 1	indocyanine green	plasma	clearance	Exp1 Bolus2 ICG	115.47818	bolus	Exp1 Infusion1 ICG	166.90575	infusion	ml/min	ml/min
+Burns1991	Haemochromatosis	indocyanine green	plasma	clearance	Exp1 Bolus2 ICG	162.55061	bolus	Exp1 Infusion1 ICG	213.35736	infusion	ml/min	ml/min
+Burns1991	Alcoholic 2	indocyanine green	plasma	clearance	Exp1 Bolus2 ICG	217.57199	bolus	Exp1 Infusion1 ICG	218.15878	infusion	ml/min	ml/min
+Burns1991	Primary biliary	indocyanine green	plasma	clearance	Exp1 Bolus2 ICG	173.51099	bolus	Exp1 Infusion1 ICG	235.25505	infusion	ml/min	ml/min
+Burns1991	Wilson‘s disease	indocyanine green	plasma	clearance	Exp1 Bolus2 ICG	198.11343	bolus	Exp1 Infusion1 ICG	249.88933	infusion	ml/min	ml/min

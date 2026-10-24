@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meijer1988 | sbmlsim experiment</title>
+<style>
+:root {
+  --bg: #ffffff; --bg-soft: #f6f7f9; --bg-card: #ffffff;
+  --fg: #1b1f24; --fg-soft: #5b6472; --line: #e3e6ea;
+  --accent: #3b5bdb; --training: #2f9e44; --validation: #1c7ed6; --outlier: #e8590c;
+  --excluded: #868e96;
+  --radius: 10px; --shadow: 0 1px 2px rgba(16,24,40,.06), 0 1px 3px rgba(16,24,40,.1);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14171c; --bg-soft: #1a1e24; --bg-card: #1a1e24;
+    --fg: #e6e9ee; --fg-soft: #9aa4b2; --line: #2a3038;
+    --accent: #748ffc; --training: #51cf66; --validation: #4dabf7; --outlier: #ff922b;
+    --excluded: #adb5bd;
+    --shadow: none;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+code, .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .92em; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+header.top {
+  position: sticky; top: 0; z-index: 20; background: var(--bg);
+  border-bottom: 1px solid var(--line); padding: 14px 24px 0;
+}
+.top .row { display: flex; flex-wrap: wrap; gap: 12px; align-items: baseline; }
+.top h1 { margin: 0; font-size: 20px; font-weight: 650; letter-spacing: -.01em; }
+.top .sub { color: var(--fg-soft); font-size: 13px; }
+.badges { display: flex; flex-wrap: wrap; gap: 8px; margin-left: auto; }
+.badge {
+  background: var(--bg-soft); border: 1px solid var(--line); border-radius: 999px;
+  padding: 2px 10px; font-size: 12px; color: var(--fg-soft); white-space: nowrap;
+}
+.badge b { color: var(--fg); font-weight: 600; }
+.badge.failed, .badge.failed b { color: var(--outlier); border-color: var(--outlier); }
+nav.sections { display: flex; gap: 4px; margin-top: 12px; }
+nav.sections a {
+  padding: 8px 14px; border-bottom: 2px solid transparent; color: var(--fg-soft);
+  font-size: 14px; font-weight: 550;
+}
+nav.sections a.active { color: var(--fg); border-bottom-color: var(--accent); }
+.search { display: flex; gap: 8px; align-items: center; padding: 10px 0 12px; }
+.search input {
+  flex: 1; max-width: 460px; padding: 8px 12px; font-size: 14px; color: var(--fg);
+  background: var(--bg-soft); border: 1px solid var(--line); border-radius: 8px;
+}
+.search input:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+.chip {
+  border: 1px solid var(--line); background: var(--bg-soft); color: var(--fg-soft);
+  border-radius: 999px; padding: 5px 12px; font-size: 12.5px; cursor: pointer;
+}
+.chip[aria-pressed="true"] { color: #fff; border-color: transparent; }
+.chip[data-kind="training"][aria-pressed="true"] { background: var(--training); }
+.chip[data-kind="validation"][aria-pressed="true"] { background: var(--validation); }
+.chip[data-kind="outlier"][aria-pressed="true"] { background: var(--outlier); }
+.chip[data-kind="excluded"][aria-pressed="true"] { background: var(--excluded); }
+#hits { color: var(--fg-soft); font-size: 12.5px; margin-left: auto; }
+
+main { padding: 24px; max-width: 1400px; margin: 0 auto; }
+section { margin-bottom: 44px; scroll-margin-top: 150px; }
+section > h2 {
+  font-size: 17px; font-weight: 650; margin: 0 0 4px; padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+}
+h3 { font-size: 14px; font-weight: 600; color: var(--fg-soft); margin: 26px 0 10px;
+     text-transform: uppercase; letter-spacing: .04em; }
+.card {
+  background: var(--bg-card); border: 1px solid var(--line); border-radius: var(--radius);
+  box-shadow: var(--shadow); padding: 16px; margin-bottom: 16px;
+}
+/* a heading which opens a card sits at the padding of the card */
+.card > h3:first-child { margin-top: 0; }
+.grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+        margin-bottom: 16px; }
+/* the gap of the grid is the space between its cards */
+.grid > .card { margin-bottom: 0; }
+.card.wide { grid-column: 1 / -1; }
+
+table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+/* two tables in one card, e.g. the networks and their arrays */
+table + table { margin-top: 24px; }
+th, td { text-align: left; padding: 7px 12px 7px 0; border-bottom: 1px solid var(--line); }
+th { color: var(--fg-soft); font-weight: 600; white-space: nowrap; }
+th[data-sort] { cursor: pointer; user-select: none; }
+th[data-sort]:hover { color: var(--fg); }
+th[data-sort]::after { content: " ⇅"; opacity: .35; }
+th[data-sort].asc::after { content: " ↑"; opacity: 1; }
+th[data-sort].desc::after { content: " ↓"; opacity: 1; }
+td.num, th.num { text-align: right; padding-right: 18px; font-variant-numeric: tabular-nums; }
+tbody tr:hover { background: var(--bg-soft); }
+tr.total td { font-weight: 650; border-top: 2px solid var(--line); }
+
+.kv { display: grid; grid-template-columns: max-content 1fr; gap: 4px 20px; font-size: 13.5px;
+      margin: 0; }
+.kv dt { color: var(--fg-soft); }
+.kv dd { margin: 0; word-break: break-word; white-space: pre-line; }
+
+.tag { border-radius: 999px; padding: 1px 9px; font-size: 11.5px; font-weight: 600; color: #fff; }
+.tag.training { background: var(--training); }
+.tag.validation { background: var(--validation); }
+.tag.outlier { background: var(--outlier); }
+.tag.excluded { background: var(--excluded); }
+.warn { color: var(--outlier); }
+
+/* what a value means, on the header of a column or next to a figure */
+.hint {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 14px; height: 14px; margin-left: 4px; border-radius: 50%;
+  border: 1px solid var(--line); color: var(--fg-soft);
+  font-size: 10px; font-weight: 700; line-height: 1; cursor: help;
+  position: relative; vertical-align: middle; user-select: none;
+}
+.hint:hover, .hint:focus { border-color: var(--accent); color: var(--accent); }
+.hint::after {
+  content: attr(data-tip);
+  position: absolute; bottom: calc(100% + 8px); left: 50%;
+  transform: translateX(-50%);
+  width: max-content; max-width: 320px; padding: 8px 10px;
+  border-radius: 6px; border: 1px solid var(--line);
+  background: var(--bg); color: var(--fg); box-shadow: 0 4px 16px rgb(0 0 0 / 18%);
+  font-size: 12px; font-weight: 400; line-height: 1.45; text-align: left;
+  white-space: normal; opacity: 0; visibility: hidden; transition: opacity .12s;
+  z-index: 20; pointer-events: none;
+}
+.hint:hover::after, .hint:focus::after { opacity: 1; visibility: visible; }
+/* a tooltip of the last columns would leave the page */
+td:last-child .hint::after, th:last-child .hint::after { left: auto; right: 0; transform: none; }
+/* on a phone a wide table scrolls inside its card and not the page; the
+   tooltips of its header open downwards, into the table, not above the card */
+@media (max-width: 700px) {
+  .card { overflow-x: auto; }
+  th .hint::after { bottom: auto; top: calc(100% + 8px); }
+  /* the header of a phone is not sticky, it would cover half of the screen,
+     and its rows wrap; the gutter is 16px */
+  header.top { position: static; padding: 12px 16px 0; }
+  main { padding: 16px; }
+  footer { padding: 8px 16px 24px; }
+  section { scroll-margin-top: 16px; }
+  nav.sections { overflow-x: auto; }
+  nav.sections a { padding: 8px 10px; white-space: nowrap; }
+  .search { flex-wrap: wrap; }
+  .search input { flex-basis: 100%; max-width: none; }
+}
+
+figure { margin: 0; }
+figure img {
+  width: 100%; height: auto; background: #fff; border: 1px solid var(--line);
+  border-radius: 8px; cursor: zoom-in;
+}
+figcaption { color: var(--fg-soft); font-size: 12.5px; margin-top: 6px; }
+
+.mapping { }
+.mapping header { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; margin-bottom: 10px; }
+.mapping header .name { font-weight: 650; }
+.mapping header .exp { color: var(--fg-soft); font-size: 13px; }
+.mapping .metrics { margin-left: auto; display: flex; gap: 14px; font-size: 12.5px; color: var(--fg-soft); }
+.mapping .metrics b { color: var(--fg); font-weight: 600; }
+.hidden { display: none !important; }
+.failed { color: var(--outlier); }
+.empty { color: var(--fg-soft); font-style: italic; padding: 16px 0; }
+
+pre.code {
+  margin: 0; padding: 14px 16px; overflow-x: auto; max-height: 70vh;
+  background: var(--bg-soft); border: 1px solid var(--line); border-radius: 8px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12.5px; line-height: 1.5; tab-size: 4;
+}
+#lightbox {
+  position: fixed; inset: 0; background: rgba(8,10,14,.86); z-index: 50;
+  display: none; align-items: center; justify-content: center; padding: 24px; cursor: zoom-out;
+}
+#lightbox.open { display: flex; }
+#lightbox img { max-width: 100%; max-height: 100%; background: #fff; border-radius: 8px; }
+footer { color: var(--fg-soft); font-size: 12.5px; padding: 8px 24px 32px; max-width: 1400px; margin: 0 auto; }
+</style>
+<style>
+  /* an interactive figure is a page of its own, shown in place of the image */
+  figure iframe { width: 100%; height: 520px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg-card); }
+  /* a figure of one panel is not stretched to the width of the page, a figure
+     of many panels still uses it */
+  #figures figure img { width: auto; max-width: 100%; max-height: 70vh; display: block; margin: 0 auto; }
+  .mapping header .exp a + a::before { content: "·"; color: var(--fg-soft); margin: 0 6px; }
+</style>
+</head>
+<body data-items="figures">
+
+<header class="top">
+  <div class="row">
+    <h1>Meijer1988</h1>
+    <span class="sub">simulation experiment</span>
+    <div class="badges">
+<span class="badge">models <b>1</b></span>
+<span class="badge">datasets <b>15</b></span>
+<span class="badge">figures <b>3</b></span>
+    </div>
+  </div>
+  <nav class="sections">
+<a href="#overview">Overview</a>
+<a href="#figures">Figures</a>
+<a href="#code">Code</a>
+  </nav>
+  <div class="search">
+    <input id="search" type="search" placeholder="Search figures, models, datasets …" autocomplete="off">
+    <span id="hits"></span>
+  </div>
+</header>
+
+<main>
+
+<section id="overview">
+  <h2>Overview</h2>
+
+  <h3>Models</h3>
+  <div class="card">
+    <table data-filter="row">
+      <thead><tr><th data-sort="text">model</th><th data-sort="text">source</th></tr></thead>
+      <tbody>
+      <tr><td class="mono">model</td><td><a href="../../../../src/pkdb_models/models/icg/models/output/models/icg_body_flat.xml" title="../../../../src/pkdb_models/models/icg/models/output/models/icg_body_flat.xml">icg_body_flat.xml</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Datasets</h3>
+  <div class="card">
+    <table data-filter="row">
+      <thead><tr><th data-sort="text">dataset</th><th data-sort="text">file</th></tr></thead>
+      <tbody>
+      <tr><td class="mono">Fig2_indocyanine_green_0p5</td><td><a href="datasets/Meijer1988_Fig2_indocyanine_green_0p5.tsv">datasets/Meijer1988_Fig2_indocyanine_green_0p5.tsv</a></td></tr>
+      <tr><td class="mono">Fig2_indocyanine_green_1p0</td><td><a href="datasets/Meijer1988_Fig2_indocyanine_green_1p0.tsv">datasets/Meijer1988_Fig2_indocyanine_green_1p0.tsv</a></td></tr>
+      <tr><td class="mono">Fig2_indocyanine_green_2p0</td><td><a href="datasets/Meijer1988_Fig2_indocyanine_green_2p0.tsv">datasets/Meijer1988_Fig2_indocyanine_green_2p0.tsv</a></td></tr>
+      <tr><td class="mono">Fig3_indocyanine_green_0p5</td><td><a href="datasets/Meijer1988_Fig3_indocyanine_green_0p5.tsv">datasets/Meijer1988_Fig3_indocyanine_green_0p5.tsv</a></td></tr>
+      <tr><td class="mono">Fig3_indocyanine_green_1p0</td><td><a href="datasets/Meijer1988_Fig3_indocyanine_green_1p0.tsv">datasets/Meijer1988_Fig3_indocyanine_green_1p0.tsv</a></td></tr>
+      <tr><td class="mono">Fig3_indocyanine_green_2p0</td><td><a href="datasets/Meijer1988_Fig3_indocyanine_green_2p0.tsv">datasets/Meijer1988_Fig3_indocyanine_green_2p0.tsv</a></td></tr>
+      <tr><td class="mono">Fig2_icg_0p5_fast</td><td><a href="datasets/Meijer1988_Fig2_icg_0p5_fast.tsv">datasets/Meijer1988_Fig2_icg_0p5_fast.tsv</a></td></tr>
+      <tr><td class="mono">Fig2_icg_0p5_secondary</td><td><a href="datasets/Meijer1988_Fig2_icg_0p5_secondary.tsv">datasets/Meijer1988_Fig2_icg_0p5_secondary.tsv</a></td></tr>
+      <tr><td class="mono">Fig2_icg_1p0_fast</td><td><a href="datasets/Meijer1988_Fig2_icg_1p0_fast.tsv">datasets/Meijer1988_Fig2_icg_1p0_fast.tsv</a></td></tr>
+      <tr><td class="mono">Fig2_icg_1p0_secondary</td><td><a href="datasets/Meijer1988_Fig2_icg_1p0_secondary.tsv">datasets/Meijer1988_Fig2_icg_1p0_secondary.tsv</a></td></tr>
+      <tr><td class="mono">Fig2_icg_2p0_fast</td><td><a href="datasets/Meijer1988_Fig2_icg_2p0_fast.tsv">datasets/Meijer1988_Fig2_icg_2p0_fast.tsv</a></td></tr>
+      <tr><td class="mono">Fig2_icg_2p0_secondary</td><td><a href="datasets/Meijer1988_Fig2_icg_2p0_secondary.tsv">datasets/Meijer1988_Fig2_icg_2p0_secondary.tsv</a></td></tr>
+      <tr><td class="mono">Tab2_ICGcl</td><td><a href="datasets/Meijer1988_Tab2_ICGcl.tsv">datasets/Meijer1988_Tab2_ICGcl.tsv</a></td></tr>
+      <tr><td class="mono">Tab2_ICGthalf</td><td><a href="datasets/Meijer1988_Tab2_ICGthalf.tsv">datasets/Meijer1988_Tab2_ICGthalf.tsv</a></td></tr>
+      <tr><td class="mono">Chijiiwa2000_excretion_rate</td><td><a href="datasets/Meijer1988_Chijiiwa2000_excretion_rate.tsv">datasets/Meijer1988_Chijiiwa2000_excretion_rate.tsv</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="figures">
+  <h2>Figures (3)</h2>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name mono">fig_plasma</span>
+      <span class="exp">
+<a href="Meijer1988_fig_plasma.svg">svg</a>      </span>
+    </header>
+    <figure>
+      <img loading="lazy" src="Meijer1988_fig_plasma.svg" alt="fig_plasma">
+    </figure>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name mono">fig_bile</span>
+      <span class="exp">
+<a href="Meijer1988_fig_bile.svg">svg</a>      </span>
+    </header>
+    <figure>
+      <img loading="lazy" src="Meijer1988_fig_bile.svg" alt="fig_bile">
+    </figure>
+  </div>
+  <div class="card mapping" data-filter="card">
+    <header>
+      <span class="name mono">fig_pk</span>
+      <span class="exp">
+<a href="Meijer1988_fig_pk.svg">svg</a>      </span>
+    </header>
+    <figure>
+      <img loading="lazy" src="Meijer1988_fig_pk.svg" alt="fig_pk">
+    </figure>
+  </div>
+  <p class="empty hidden" data-empty>No figure matches the search.</p>
+</section>
+
+<section id="code">
+  <h2>Code</h2>
+  <div class="card">
+    <p><a href="../../../../src/pkdb_models/models/icg/experiments/studies/Meijer1988.py" title="../../../../src/pkdb_models/models/icg/experiments/studies/Meijer1988.py">Meijer1988.py</a></p>
+    <pre class="code"><code>&#34;&#34;&#34;Simulation experiment of the study Meijer1988.&#34;&#34;&#34;
+
+from dataclasses import replace
+from typing import ClassVar, override
+
+import numpy as np
+import pandas as pd
+from matplotlib import pyplot as plt
+from pkpdsim.metadata import (
+    ApplicationForm,
+    DataType,
+    Dosing,
+    Fasting,
+    Health,
+    PKPDData,
+    PKPDMappingMetaData,
+    Route,
+    Tissue,
+)
+from sbmlsim import Q
+from sbmlsim.data import DataSet
+from sbmlsim.fit import FitData, FitMapping
+from sbmlsim.plot import Axis, Figure
+from sbmlsim.plot.serialization_matplotlib import FigureMPL
+from sbmlsim.simulation import Simulation
+from sbmlsim.units import Quantity
+
+from pkdb_models.models.icg.experiments.base_experiment import ICGSimulationExperiment
+from pkdb_models.models.icg.icg_pk import summarize
+
+
+class Meijer1988(ICGSimulationExperiment):
+    &#34;&#34;&#34;Simulation experiment of Meijer1988.
+
+    Plasma concentrations and biliary excretion of indocyanine green after
+    intravenous doses of 0.5, 1.0 and 2.0 mg/kg in 15 patients on the third day
+    after a cholecystectomy, with a drain in the common bile duct (normal liver
+    and renal function and bilirubin; with the biliary excretion of
+    Chijiiwa2000). The plasma (Fig 2) is sampled at 2, 4, 6, 8, 10, 15, 20, 30,
+    40, 50 and 60 min (the times of the copy are these nominal times), the bile
+    (Fig 3) in periods of 30 min, 2 h and 4 h; both figures show geometric
+    means. Table 2: the clearance (dose over the AUC to infinity) and the
+    half-life of the fast phase (mean and SEM).
+    &#34;&#34;&#34;
+
+    doses: ClassVar[list[float]] = [0.5, 1.0, 2.0]  # [mg/kg]
+    bodyweights: ClassVar[list[float]] = [62.167, 63.8, 70]  # [kg]
+    colors: ClassVar[list[str]] = [&#34;green&#34;, &#34;blue&#34;, &#34;red&#34;]
+    # [min] the start of the secondary phase of the plasma curves (the
+    # half-life of the secondary phase is the regression from 30 min on)
+    secondary_start: ClassVar[float] = 20.0
+
+    @override
+    def datasets(self) -&gt; dict[str, DataSet]:
+        dsets = {}
+        for fig_id in [&#34;Fig2&#34;, &#34;Fig3&#34;]:
+            for substance, df in self.load_dataframes_by_substance(fig_id).items():
+                dset = DataSet.from_df(df, self.ureg)
+                for dose in self.doses:
+                    dsets[self.to_sid(f&#34;{fig_id}_{substance}_{dose}&#34;)] = dset[
+                        dset.group == f&#34;ICG{dose}&#34;
+                    ]
+        # the two phases of the plasma curves, which differ by one to two
+        # orders of magnitude: a curve is fitted relative to its mean, the
+        # secondary phase is fitted on its own scale
+        for dose in self.doses:
+            dset = dsets[self.to_sid(f&#34;Fig2_indocyanine green_{dose}&#34;)]
+            secondary = dset.time &gt; self.secondary_start
+            dsets[self.to_sid(f&#34;Fig2_icg_{dose}_fast&#34;)] = dset[~secondary]
+            dsets[self.to_sid(f&#34;Fig2_icg_{dose}_secondary&#34;)] = dset[secondary]
+
+        # Tab2 has the clearance (dose/AUC, the CL of Table 2 in the copy; the
+        # value of pkdb_data is CL12), the half-life of the fast phase, the
+        # maximum excretion rate and the biliary recovery after 18 hr (in
+        # percent at 18 hr, the fix of pkdb_data#2490 in the copy), each in its
+        # unit; a data set holds the rows of one measurement type (sbmlsim reads
+        # a column in one unit), without the columns they have no value in (the
+        # time of the recovery)
+        for df in self.load_dataframes_by_substance(&#34;Tab2&#34;).values():
+            for key, measurement_type in [
+                (&#34;Tab2_ICGcl&#34;, &#34;clearance&#34;),
+                (&#34;Tab2_ICGthalf&#34;, &#34;thalf&#34;),
+            ]:
+                rows = df[df.measurement_type == measurement_type]
+                dsets[key] = DataSet.from_df(rows.dropna(axis=1, how=&#34;all&#34;), self.ureg)
+
+        # biliary excretion of Chijiiwa2000
+        bodyweight = Q(75, &#34;kg&#34;)
+        dframes_chijiiwa = self.load_dataframes_by_substance(
+            &#34;Fig1&#34;, study=&#34;Chijiiwa2000&#34;
+        )
+        for substance, df in dframes_chijiiwa.items():
+            if substance == &#34;indocyanine green&#34;:
+                dset = DataSet.from_df(
+                    df[df.measurement == &#34;excretion rate&#34;], self.ureg
+                )
+                dset.unit_conversion(&#34;mean&#34;, bodyweight / self.Mr.icg)
+                dsets[&#34;Chijiiwa2000_excretion_rate&#34;] = dset
+
+        return dsets
+
+    @override
+    def simulations(self) -&gt; dict[str, Simulation]:
+        # the timecourses of 12 h (the bile), resolved to 0.1 min for the
+        # plasma of the first minutes and the area under the curve
+        return {
+            self.to_sid(f&#34;icg_iv_{dose}&#34;): Simulation(
+                time_unit=&#34;min&#34;,
+                end=12 * 60 + 10,
+                preinit_changes={
+                    **self.default_changes(),
+                    &#34;IVDOSE_icg&#34;: Q(dose * bodyweight, &#34;mg&#34;),
+                    &#34;BW&#34;: Q(bodyweight, &#34;kg&#34;),
+                },
+            )
+            for dose, bodyweight in zip(self.doses, self.bodyweights, strict=True)
+        }
+
+    @override
+    def fit_mappings(self) -&gt; dict[str, FitMapping]:
+        # the patients had a cholecystectomy and a drain in the common bile
+        # duct, with normal liver function: the only dose resolved data of the
+        # biliary excretion, training data by name. The plasma curve is split
+        # into the fast phase (to 20 min) and the slow secondary phase (30 -
+        # 60 min, the reflux and the export at low hepatic concentrations of
+        # the model), each a mapping: the residuals of a curve are relative to
+        # its mean, so the secondary phase would not enter a fit of the whole
+        # curve.
+        metadata = PKPDMappingMetaData(
+            tissue=Tissue.PLASMA,
+            route=Route.IV,
+            application_form=ApplicationForm.SOLUTION,
+            dosing=Dosing.SINGLE,
+            health=Health.CHOLECYSTECTOMY,
+            fasting=Fasting.NR,
+            data=PKPDData.PK,
+            data_type=DataType.MEAN,
+        )
+        mappings = {}
+        for dose in self.doses:
+            for suffix, phase in [(&#34;&#34;, &#34;fast&#34;), (&#34;_secondary&#34;, &#34;secondary&#34;)]:
+                mappings[self.to_sid(f&#34;fm_Cve_icg_{dose}{suffix}&#34;)] = FitMapping(
+                    self,
+                    reference=FitData(
+                        self,
+                        dataset=self.to_sid(f&#34;Fig2_icg_{dose}_{phase}&#34;),
+                        xid=&#34;time&#34;,
+                        yid=&#34;mean&#34;,
+                        count=&#34;count&#34;,
+                    ),
+                    observable=FitData(
+                        self,
+                        task=self.to_sid(f&#34;task_icg_iv_{dose}&#34;),
+                        xid=&#34;time&#34;,
+                        yid=&#34;[Cve_icg]&#34;,
+                    ),
+                    metadata=metadata,
+                )
+            # the excretion rate of the periods of collection (30 min, after
+            # 2 h periods of 2 h and 4 h) is compared with the rate of the model
+            mappings[self.to_sid(f&#34;fm_LI__ICGLI2BI_{dose}&#34;)] = FitMapping(
+                self,
+                reference=FitData(
+                    self,
+                    dataset=self.to_sid(f&#34;Fig3_indocyanine green_{dose}&#34;),
+                    xid=&#34;time&#34;,
+                    yid=&#34;mean&#34;,
+                    count=&#34;count&#34;,
+                ),
+                observable=FitData(
+                    self,
+                    task=self.to_sid(f&#34;task_icg_iv_{dose}&#34;),
+                    xid=&#34;time&#34;,
+                    yid=&#34;LI__ICGLI2BI&#34;,
+                ),
+                metadata=replace(metadata, tissue=Tissue.BILE),
+            )
+        return mappings
+
+    @override
+    def figures(self) -&gt; dict[str, Figure]:
+        return {
+            &#34;fig_plasma&#34;: self._figure_plasma(),
+            &#34;fig_bile&#34;: self._figure_bile(),
+        }
+
+    def _figure_plasma(self) -&gt; Figure:
+        &#34;&#34;&#34;Plasma concentrations, Fig 2 (linear and logarithmic).&#34;&#34;&#34;
+        fig = Figure(
+            experiment=self,
+            sid=&#34;Fig2&#34;,
+            num_cols=2,
+            width=12,
+            height=6,
+            settings={&#34;legend_scope&#34;: &#34;row&#34;},
+        )
+        plots = fig.create_plots(
+            xaxis=Axis(&#34;Time&#34;, unit=self.unit_time, min=0, max=65), legend=True
+        )
+        plots[0].set_yaxis(&#34;ICG&#34;, self.unit_icg)
+        plots[1].set_yaxis(&#34;ICG&#34;, self.unit_icg, scale=&#34;log&#34;, min=0.1)
+        for plot in plots:
+            for dose, color in zip(self.doses, self.colors, strict=True):
+                plot.add_data(
+                    task=self.to_sid(f&#34;task_icg_iv_{dose}&#34;),
+                    xid=&#34;time&#34;,
+                    yid=&#34;[Cve_icg]&#34;,
+                    label=f&#34;Sim: {dose} mg/kg (venous plasma)&#34;,
+                    color=color,
+                )
+                plot.add_data(
+                    dataset=self.to_sid(f&#34;Fig2_indocyanine green_{dose}&#34;),
+                    xid=&#34;time&#34;,
+                    yid=&#34;mean&#34;,
+                    count=&#34;count&#34;,
+                    color=color,
+                    label=f&#34;Meijer 1988 {dose} mg/kg&#34;,
+                )
+        return fig
+
+    def _figure_bile(self) -&gt; Figure:
+        &#34;&#34;&#34;Biliary excretion rate, Fig 3 (with Chijiiwa2000).&#34;&#34;&#34;
+        fig = Figure(experiment=self, sid=&#34;Fig3&#34;, width=6, height=6)
+        plots = fig.create_plots(xaxis=Axis(&#34;Time&#34;, unit=self.unit_time), legend=True)
+        plots[0].set_yaxis(&#34;ICG bile excretion&#34;, self.unit_bile_rate)
+        for dose, color in zip(self.doses, self.colors, strict=True):
+            plots[0].add_data(
+                task=self.to_sid(f&#34;task_icg_iv_{dose}&#34;),
+                xid=&#34;time&#34;,
+                yid=&#34;LI__ICGLI2BI&#34;,
+                label=f&#34;Sim: {dose} mg/kg (bile)&#34;,
+                color=color,
+            )
+            plots[0].add_data(
+                dataset=self.to_sid(f&#34;Fig3_indocyanine green_{dose}&#34;),
+                xid=&#34;time&#34;,
+                yid=&#34;mean&#34;,
+                count=&#34;count&#34;,
+                color=color,
+                label=f&#34;Meijer 1988 {dose} mg/kg&#34;,
+            )
+        plots[0].add_data(
+            dataset=&#34;Chijiiwa2000_excretion_rate&#34;,
+            xid=&#34;time&#34;,
+            yid=&#34;mean&#34;,
+            yid_sd=&#34;mean_sd&#34;,
+            count=&#34;count&#34;,
+            color=&#34;grey&#34;,
+            label=&#34;Chijiiwa 2000&#34;,
+        )
+        return fig
+
+    @override
+    def figures_mpl(self) -&gt; dict[str, FigureMPL]:
+        self.pk_dfs = self.calculate_icg_pk()
+        return {**self._figure_pk()}
+
+    def _pk_band(
+        self, df: pd.DataFrame, key: str, unit: str
+    ) -&gt; tuple[Quantity, Quantity | None, Quantity | None]:
+        &#34;&#34;&#34;Get a parameter of a simulation, the median and the band of the draws.
+
+        Returns:
+            The value (the median of the draws in a run over them), and the
+            lower and the upper quantile, `None` without draws.
+        &#34;&#34;&#34;
+        source = df[f&#34;{key}_unit&#34;].iloc[0]
+        run = self.uncertainty
+        if run is None:
+            return Q(df[key].to_numpy(dtype=float), source).to(unit), None, None
+        summary = summarize(df, key, run.quantiles)
+        median, lower, upper = (
+            Q(summary[column].to_numpy(), source).to(unit)
+            for column in [&#34;median&#34;, &#34;lower&#34;, &#34;upper&#34;]
+        )
+        return median, lower, upper
+
+    def _figure_pk(self) -&gt; dict[str, FigureMPL]:
+        &#34;&#34;&#34;Clearance and half-life of the fast phase vs dose, Table 2.
+
+        The clearance of the paper is the dose over the AUC to infinity, the
+        clearance of the non-compartmental analysis of the 12 h simulation
+        (`cl`); the half-life of the fast phase of the biexponential fit is
+        compared with the half-life of the regression of 2 - 15 min
+        (`thalf_kel`).
+        &#34;&#34;&#34;
+        f, axes = plt.subplots(nrows=1, ncols=2, figsize=(12, 6))
+        f.subplots_adjust(wspace=0.3)
+        panels = [
+            (&#34;cl&#34;, &#34;ml/min&#34;, &#34;Tab2_ICGcl&#34;, &#34;ICG-clearance (dose/AUC)&#34;),
+            (&#34;thalf_kel&#34;, &#34;min&#34;, &#34;Tab2_ICGthalf&#34;, &#34;ICG-thalf (fast phase)&#34;),
+        ]
+        for ax, (key, unit, dset_key, label) in zip(axes, panels, strict=True):
+            ax.set_xlabel(&#34;Dose [mg/kg]&#34;, fontdict=self.font)
+            ax.set_ylabel(f&#34;{label} [{unit}]&#34;, fontdict=self.font)
+            ax.tick_params(axis=&#34;both&#34;, labelsize=self.tick_font_size)
+            values = []
+            for dose, color in zip(self.doses, self.colors, strict=True):
+                df = self.pk_dfs[self.to_sid(f&#34;icg_iv_{dose}&#34;)]
+                value, lower, upper = self._pk_band(df, key, unit)
+                yerr = (
+                    None
+                    if lower is None or upper is None
+                    else np.array(
+                        [
+                            value.magnitude - lower.magnitude,
+                            upper.magnitude - value.magnitude,
+                        ]
+                    )
+                )
+                ax.errorbar(
+                    [dose],
+                    value.magnitude,
+                    yerr=yerr,
+                    marker=&#34;o&#34;,
+                    linestyle=&#34;&#34;,
+                    color=color,
+                    ms=8,
+                    label=f&#34;Sim: {dose} mg/kg&#34;,
+                )
+                values.append(float(value.magnitude[0]))
+            ax.plot(self.doses, values, linestyle=&#34;-&#34;, color=&#34;black&#34;, zorder=0)
+
+            # data: the dose of a group is in its name (ICG0.5, ...)
+            dset = self._datasets[dset_key]
+            doses = dset[&#34;group&#34;].str.removeprefix(&#34;ICG&#34;).astype(float)
+            ax.errorbar(
+                doses.to_numpy(),
+                dset.get_quantity(&#34;mean&#34;).to(unit).magnitude,
+                yerr=Q(dset[&#34;mean_se&#34;].to_numpy(), dset[&#34;mean_unit&#34;].iloc[0])
+                .to(unit)
+                .magnitude,
+                marker=&#34;s&#34;,
+                linestyle=&#34;&#34;,
+                color=&#34;black&#34;,
+                label=&#34;Meijer 1988 (mean ± SEM)&#34;,
+            )
+            ax.set_ylim(bottom=0)
+        axes[0].legend(fontsize=self.legend_font_size, loc=&#34;lower right&#34;)
+        return {&#34;fig_pk&#34;: f}
+</code></pre>
+  </div>
+</section>
+
+</main>
+
+<footer>
+<a href="../index.html">all experiments</a> · <a href="../../../../src/pkdb_models/models/icg/experiments/studies/Meijer1988.py" title="../../../../src/pkdb_models/models/icg/experiments/studies/Meijer1988.py">Meijer1988.py</a>
+</footer>
+
+<div id="lightbox"><img alt=""></div>
+
+<script>
+(function () {
+  "use strict";
+
+  // ---- search and the filter chips ------------------------------------
+  const search = document.getElementById("search");
+  const hits = document.getElementById("hits");
+  const chips = Array.from(document.querySelectorAll(".chip"));
+  const cards = Array.from(document.querySelectorAll('[data-filter="card"]'));
+  const rows = Array.from(document.querySelectorAll('table[data-filter="row"] tbody tr'));
+  const empty = document.querySelector("[data-empty]");
+  const itemLabel = document.body.dataset.items || "items";
+
+  const haystack = new Map();
+  for (const node of [...cards, ...rows]) {
+    haystack.set(node, node.textContent.toLowerCase());
+  }
+
+  function activeKinds() {
+    return new Set(chips.filter((c) => c.getAttribute("aria-pressed") === "true")
+                        .map((c) => c.dataset.kind));
+  }
+
+  function matches(node, query, kinds) {
+    const kind = node.dataset.kind;
+    if (kind && !kinds.has(kind)) return false;
+    return !query || haystack.get(node).includes(query);
+  }
+
+  function apply() {
+    const query = search.value.trim().toLowerCase();
+    const kinds = activeKinds();
+    let shownCards = 0;
+    for (const node of cards) {
+      const show = matches(node, query, kinds);
+      node.classList.toggle("hidden", !show);
+      if (show) shownCards += 1;
+    }
+    for (const node of rows) {
+      node.classList.toggle("hidden", !matches(node, query, kinds));
+    }
+    if (empty) empty.classList.toggle("hidden", shownCards > 0 || cards.length === 0);
+    const filtering = Boolean(query) || (chips.length > 0 && kinds.size < chips.length);
+    hits.textContent = filtering
+      ? shownCards + " / " + cards.length + " " + itemLabel
+      : "";
+  }
+
+  search.addEventListener("input", apply);
+  for (const chip of chips) {
+    chip.addEventListener("click", () => {
+      chip.setAttribute("aria-pressed", chip.getAttribute("aria-pressed") === "true" ? "false" : "true");
+      apply();
+    });
+  }
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "/" && document.activeElement !== search) {
+      event.preventDefault();
+      search.focus();
+    } else if (event.key === "Escape") {
+      if (document.activeElement === search && search.value) { search.value = ""; apply(); }
+      closeLightbox();
+    }
+  });
+
+  // ---- sortable tables -------------------------------------------------
+  function cellValue(row, index, kind) {
+    const text = row.cells[index] ? row.cells[index].textContent.trim() : "";
+    if (kind !== "num") return text.toLowerCase();
+    // the AIC of a perfect fit is -inf, a cell without a value sorts last
+    if (text === "-inf") return Number.NEGATIVE_INFINITY;
+    const value = parseFloat(text);
+    return Number.isNaN(value) ? Number.POSITIVE_INFINITY : value;
+  }
+
+  for (const table of document.querySelectorAll("table")) {
+    const headers = Array.from(table.querySelectorAll("th[data-sort]"));
+    headers.forEach((th, index) => {
+      th.addEventListener("click", () => {
+        const body = table.tBodies[0];
+        if (!body) return;
+        const kind = th.dataset.sort;
+        const descending = th.classList.contains("asc");
+        for (const other of headers) other.classList.remove("asc", "desc");
+        th.classList.add(descending ? "desc" : "asc");
+        const sorted = Array.from(body.rows).sort((a, b) => {
+          const left = cellValue(a, index, kind);
+          const right = cellValue(b, index, kind);
+          if (left < right) return descending ? 1 : -1;
+          if (left > right) return descending ? -1 : 1;
+          return 0;
+        });
+        for (const row of sorted) body.appendChild(row);
+      });
+    });
+  }
+
+  // ---- the section the page is scrolled to -----------------------------
+  // a tab (data-tab) is not a section, its page marks the tab which is shown
+  const links = Array.from(document.querySelectorAll("nav.sections a:not([data-tab])"));
+  const sections = links.map((link) => document.querySelector(link.getAttribute("href")));
+  function scrollspy() {
+    let current = 0;
+    sections.forEach((section, index) => {
+      if (section && section.getBoundingClientRect().top < 200) current = index;
+    });
+    links.forEach((link, index) => link.classList.toggle("active", index === current));
+  }
+  window.addEventListener("scroll", scrollspy, { passive: true });
+  scrollspy();
+
+  // ---- click a figure to enlarge it ------------------------------------
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImage = lightbox.querySelector("img");
+  function closeLightbox() { lightbox.classList.remove("open"); lightboxImage.src = ""; }
+  for (const image of document.querySelectorAll("figure img")) {
+    image.addEventListener("click", () => {
+      lightboxImage.src = image.getAttribute("src");
+      lightbox.classList.add("open");
+    });
+  }
+  lightbox.addEventListener("click", closeLightbox);
+
+  apply();
+})();
+</script>
+</body>
+</html>

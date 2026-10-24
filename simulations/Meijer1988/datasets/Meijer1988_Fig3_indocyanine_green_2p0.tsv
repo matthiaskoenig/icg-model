@@ -1,0 +1,8 @@
+study	group	count	intervention	measurement_type	tissue	substance	label	time	time_unit	mean	comments	mean_unit	count_unit
+Meijer1988	ICG2.0	4	2.0icg	excretion rate	bile duct	indocyanine green	fig3_2.0icg_excretion rate	0.76645434	hr	0.82050354	data points multiplied by 2 to account for unit	micromol/hr	dimensionless
+Meijer1988	ICG2.0	4	2.0icg	excretion rate	bile duct	indocyanine green	fig3_2.0icg_excretion rate	1.1167728	hr	9.395156	data points multiplied by 2 to account for unit	micromol/hr	dimensionless
+Meijer1988	ICG2.0	4	2.0icg	excretion rate	bile duct	indocyanine green	fig3_2.0icg_excretion rate	1.6772823	hr	17.957004	data points multiplied by 2 to account for unit	micromol/hr	dimensionless
+Meijer1988	ICG2.0	4	2.0icg	excretion rate	bile duct	indocyanine green	fig3_2.0icg_excretion rate	3.0	hr	24.972178	data points multiplied by 2 to account for unit	micromol/hr	dimensionless
+Meijer1988	ICG2.0	4	2.0icg	excretion rate	bile duct	indocyanine green	fig3_2.0icg_excretion rate	5.0	hr	15.048997	data points multiplied by 2 to account for unit	micromol/hr	dimensionless
+Meijer1988	ICG2.0	4	2.0icg	excretion rate	bile duct	indocyanine green	fig3_2.0icg_excretion rate	8.0	hr	7.735796	data points multiplied by 2 to account for unit	micromol/hr	dimensionless
+Meijer1988	ICG2.0	4	2.0icg	excretion rate	bile duct	indocyanine green	fig3_2.0icg_excretion rate	12.0	hr	4.4211808	data points multiplied by 2 to account for unit	micromol/hr	dimensionless

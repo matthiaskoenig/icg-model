@@ -1,0 +1,6 @@
+study	individual	count	label	measurement_type	substance	tissue	intervention	value	time	time_unit	value_unit	count_unit
+Klockowski1990	ICG_typical	1	diltiazem	concentration	indocyanine green	plasma	ICG, D -48, D -40, D -32, D -24, D -16, D -8, D +0	0.01292591266033161	2.0	min	mole/meter^3	dimensionless
+Klockowski1990	ICG_typical	1	diltiazem	concentration	indocyanine green	plasma	ICG, D -48, D -40, D -32, D -24, D -16, D -8, D +0	0.007744689169353766	4.0	min	mole/meter^3	dimensionless
+Klockowski1990	ICG_typical	1	diltiazem	concentration	indocyanine green	plasma	ICG, D -48, D -40, D -32, D -24, D -16, D -8, D +0	0.004879498224519656	6.0	min	mole/meter^3	dimensionless
+Klockowski1990	ICG_typical	1	diltiazem	concentration	indocyanine green	plasma	ICG, D -48, D -40, D -32, D -24, D -16, D -8, D +0	0.0028509466873552587	8.0	min	mole/meter^3	dimensionless
+Klockowski1990	ICG_typical	1	diltiazem	concentration	indocyanine green	plasma	ICG, D -48, D -40, D -32, D -24, D -16, D -8, D +0	0.0019371421104178222	10.0	min	mole/meter^3	dimensionless

@@ -1,0 +1,8 @@
+study	subject	intervention	measurement	tissue	substance	value	group	label	value_unit
+Caesar1961	Cirrhosis11	ICG_inf	extraction_ratio	plasma	indocyanine green	38.0	Cirrhosis	Tab3	percent
+Caesar1961	Cirrhosis19	ICG_inf	extraction_ratio	plasma	indocyanine green	40.0	Cirrhosis	Tab3	percent
+Caesar1961	Cirrhosis17	ICG_inf	extraction_ratio	plasma	indocyanine green	51.0	Cirrhosis	Tab3	percent
+Caesar1961	Cirrhosis21	ICG_inf	extraction_ratio	plasma	indocyanine green	71.0	Cirrhosis	Tab3	percent
+Caesar1961	Cirrhosis20	ICG_inf	extraction_ratio	plasma	indocyanine green	79.0	Cirrhosis	Tab3	percent
+Caesar1961	Cirrhosis27	ICG_inf	extraction_ratio	plasma	indocyanine green	17.0	Cirrhosis	Tab3	percent
+Caesar1961	Cirrhosis23	ICG_inf	extraction_ratio	plasma	indocyanine green	45.0	Cirrhosis	Tab3	percent

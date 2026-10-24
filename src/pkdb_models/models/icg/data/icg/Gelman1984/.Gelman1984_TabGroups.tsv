@@ -1,0 +1,7 @@
+study	name	group_count	parent	measurement_type	choice	mean	sd	min	max	unit	count
+Gelman1984	all	18	NA	healthy	Y	NA	NA	NA	NA	NA	18
+Gelman1984	all	18	NA	species	mongrel dog	NA	NA	NA	NA	NA	18
+Gelman1984	all	18	NA	sex	NR	NA	NA	NA	NA	NA	18
+Gelman1984	all	18	all	weight	NA	NA	NA	15.0	20.0	kg	18
+Gelman1984	Iso	8	all	sex	NR	NA	NA	NA	NA	NA	8
+Gelman1984	Hal	10	all	sex	NR	NA	NA	NA	NA	NA	10

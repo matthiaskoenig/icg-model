@@ -1,0 +1,19 @@
+study	name	group_count	parent	measurement_type	choice	mean	min	max	unit	count
+Martin1976	all	86	NA	species	homo sapiens	NA	NA	NA	NA	86
+Martin1976	all	86	NA	healthy	Y	NA	NA	NA	NA	60
+Martin1976	all	86	NA	healthy	N	NA	NA	NA	NA	26
+Martin1976	all	86	NA	sex	M	NA	NA	NA	NA	50
+Martin1976	all	86	NA	sex	F	NA	NA	NA	NA	36
+Martin1976	GS	26	all	disease	Gilbert syndrome	NA	NA	NA	NA	26
+Martin1976	GS	26	all	sex	M	NA	NA	NA	NA	21
+Martin1976	GS	26	all	sex	F	NA	NA	NA	NA	5
+Martin1976	GS	26	all	age	NA	29.0	9.0	66.0	yr	26
+Martin1976	Controls	60	all	healthy	Y	NA	NA	NA	NA	60
+Martin1976	Controls	60	all	sex	M	NA	NA	NA	NA	29
+Martin1976	Controls	60	all	sex	F	NA	NA	NA	NA	31
+Martin1976	ICGControls	19	Controls	healthy	Y	NA	NA	NA	NA	19
+Martin1976	ICGControls	19	Controls	sex	M	NA	NA	NA	NA	9
+Martin1976	ICGControls	19	Controls	sex	F	NA	NA	NA	NA	10
+Martin1976	GS1	15	GS	disease	Gilbert syndrome	NA	NA	NA	NA	15
+Martin1976	GS2	5	GS	disease	Gilbert syndrome	NA	NA	NA	NA	5
+Martin1976	GS3	6	GS	disease	Gilbert syndrome	NA	NA	NA	NA	6

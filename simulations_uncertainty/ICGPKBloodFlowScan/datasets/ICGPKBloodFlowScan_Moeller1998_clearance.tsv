@@ -1,0 +1,4 @@
+study	group	intervention	measurement	tissue	substance	mean	mean_sd	min	max	ctp	count	mean_unit	count_unit
+Moeller1998	Child_A	ICG	clearance	plasma	indocyanine green	0.3	0.1275	0.09	0.6	A	41	l/min	dimensionless
+Moeller1998	Child_B	ICG	clearance	plasma	indocyanine green	0.23	0.1375	0.05	0.6	B	57	l/min	dimensionless
+Moeller1998	Child_C	ICG	clearance	plasma	indocyanine green	0.16	0.1675	0.01	0.68	C	44	l/min	dimensionless

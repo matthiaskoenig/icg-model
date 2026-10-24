@@ -1,0 +1,5 @@
+study	group	intervention	measurement	tissue	substance	mean	mean_sd	ctp	count	mean_unit	count_unit
+Figg1995	Controls	ICG	clearance	plasma	indocyanine green	9.1632185	3.7798215	5.0	12	ml/kg/min	dimensionless
+Figg1995	Mild_cirrhosis	ICG	clearance	plasma	indocyanine green	5.0171137	2.6462326	6.0	4	ml/kg/min	dimensionless
+Figg1995	Moderate_cirrhosis	ICG	clearance	plasma	indocyanine green	2.566539	1.663857	8.5	4	ml/kg/min	dimensionless
+Figg1995	Severe_cirrhosis	ICG	clearance	plasma	indocyanine green	2.4521072	1.8538954	11.0	4	ml/kg/min	dimensionless

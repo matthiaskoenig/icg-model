@@ -1,0 +1,2 @@
+study	count	group	intervention	measurement	tissue	substance	mean	min	max	mean_se	mean_sd	time	time_unit	mean_unit	count_unit
+Gadano1997	36	Hepatic Fibrosis	MEP, Fib/Con Inf1, Fib/Con Inf2	clearance	plasma	indocyanine green	276.0	90.0	558.0	22.0	132.0	25	min	ml/min	dimensionless

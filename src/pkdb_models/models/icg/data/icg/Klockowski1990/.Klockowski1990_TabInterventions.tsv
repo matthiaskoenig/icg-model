@@ -1,0 +1,15 @@
+study	name	substance	measurement_type	time	time_unit	route	form	value	unit	application
+Klockowski1990	ICG	indocyanine green	dosing	0	hr	iv	solution	0.5	mg/kg	single dose
+Klockowski1990	AP	antipyrine	dosing	0	hr	oral	solution	1.2	mg	single dose
+Klockowski1990	I -48	isradipine	dosing	-48	hr	oral	NR	5.0	mg	single dose
+Klockowski1990	I -36	isradipine	dosing	-36	hr	oral	NR	5.0	mg	single dose
+Klockowski1990	I -24	isradipine	dosing	-24	hr	oral	NR	5.0	mg	single dose
+Klockowski1990	I -12	isradipine	dosing	-12	hr	oral	NR	5.0	mg	single dose
+Klockowski1990	I +0	isradipine	dosing	0	hr	oral	NR	5.0	mg	single dose
+Klockowski1990	D -48	diltiazem	dosing	-48	hr	oral	NR	90.0	mg	single dose
+Klockowski1990	D -40	diltiazem	dosing	-40	hr	oral	NR	90.0	mg	single dose
+Klockowski1990	D -32	diltiazem	dosing	-32	hr	oral	NR	90.0	mg	single dose
+Klockowski1990	D -24	diltiazem	dosing	-24	hr	oral	NR	90.0	mg	single dose
+Klockowski1990	D -16	diltiazem	dosing	-16	hr	oral	NR	90.0	mg	single dose
+Klockowski1990	D -8	diltiazem	dosing	-8	hr	oral	NR	90.0	mg	single dose
+Klockowski1990	D +0	diltiazem	dosing	0	hr	oral	NR	90.0	mg	single dose

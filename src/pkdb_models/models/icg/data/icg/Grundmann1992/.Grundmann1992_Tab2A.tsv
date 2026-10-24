@@ -1,0 +1,32 @@
+study	group	measurement_type	substance	tissue	intervention	time	time_unit	mean	unit
+Grundmann1992	all	concentration	indocyanine green	plasma	ICG1	1.9553828000000002	min	5.183789	microg/ml
+Grundmann1992	all	concentration	indocyanine green	plasma	ICG1	3.9294593	min	3.5103237999999997	microg/ml
+Grundmann1992	all	concentration	indocyanine green	plasma	ICG1	5.910662	min	2.3874166	microg/ml
+Grundmann1992	all	concentration	indocyanine green	plasma	ICG1	7.9407190000000005	min	1.4597852	microg/ml
+Grundmann1992	all	concentration	indocyanine green	plasma	ICG1	9.914927	min	1.0267693000000002	microg/ml
+Grundmann1992	all	concentration	indocyanine green	plasma	ICG1	11.926411	min	0.67749256	microg/ml
+Grundmann1992	all	concentration	indocyanine green	plasma	ICG1	13.947989000000002	min	0.5860927	microg/ml
+Grundmann1992	all	concentration	indocyanine green	plasma	ICG2	1.9750153000000001	min	4.500905	microg/ml
+Grundmann1992	all	concentration	indocyanine green	plasma	ICG2	3.913501	min	3.8308402999999998	microg/ml
+Grundmann1992	all	concentration	indocyanine green	plasma	ICG2	5.910662	min	2.3874166	microg/ml
+Grundmann1992	all	concentration	indocyanine green	plasma	ICG2	7.8896747000000005	min	1.4805361000000001	microg/ml
+Grundmann1992	all	concentration	indocyanine green	plasma	ICG2	9.902148	min	1.033699	microg/ml
+Grundmann1992	all	concentration	indocyanine green	plasma	ICG2	11.939119	min	0.6775313000000001	microg/ml
+Grundmann1992	all	concentration	indocyanine green	plasma	ICG2	13.935210000000001	min	0.5930225	microg/ml
+Grundmann1992	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Grundmann1992	NA	NA	NA	NA	hzv1	1.9712564	NA	6.9789724	NA
+Grundmann1992	NA	NA	NA	NA	NA	3.9263222	NA	7.367628999999999	NA
+Grundmann1992	NA	NA	NA	NA	NA	5.882296599999999	NA	7.583467	NA
+Grundmann1992	NA	NA	NA	NA	NA	7.8659277	NA	7.373129	NA
+Grundmann1992	NA	NA	NA	NA	NA	9.848348	NA	7.393215700000001	NA
+Grundmann1992	NA	NA	NA	NA	NA	11.855216	NA	7.597752000000001	NA
+Grundmann1992	NA	NA	NA	NA	NA	13.865232	NA	7.2031837	NA
+Grundmann1992	NA	NA	NA	NA	NA	NA	NA	NA	NA
+Grundmann1992	NA	NA	NA	NA	hzv2	1.9712564	NA	6.9789724	NA
+Grundmann1992	NA	NA	NA	NA	NA	3.9262617	NA	7.3791504	NA
+Grundmann1992	NA	NA	NA	NA	NA	5.9118915	NA	6.7886114	NA
+Grundmann1992	NA	NA	NA	NA	NA	7.8669577	NA	7.177267999999999	NA
+Grundmann1992	NA	NA	NA	NA	NA	9.864144999999999	NA	6.805687400000001	NA
+Grundmann1992	NA	NA	NA	NA	NA	11.860303	NA	6.6299677	NA
+Grundmann1992	NA	NA	NA	NA	NA	13.852464000000001	NA	7.21465	NA
+Grundmann1992	NA	NA	NA	NA	NA	NA	NA	NA	NA

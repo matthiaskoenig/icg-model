@@ -1,0 +1,16 @@
+study	individual	intervention	measurement_type	tissue	substance	label	time	time_unit	value	unit
+Meijer1988	PatientB	1.0icg	concentration	plasma	indocyanine green	fig4_1.0icg_concentration	6.8743277	min	11.267758	nmol/ml
+Meijer1988	PatientB	1.0icg	concentration	plasma	indocyanine green	fig4_1.0icg_concentration	9.62621	min	4.7307754	nmol/ml
+Meijer1988	PatientB	1.0icg	concentration	plasma	indocyanine green	fig4_1.0icg_concentration	14.465758	min	2.2470531	nmol/ml
+Meijer1988	PatientB	1.0icg	concentration	plasma	indocyanine green	fig4_1.0icg_concentration	19.575117	min	1.6712239	nmol/ml
+Meijer1988	PatientB	1.0icg	concentration	plasma	indocyanine green	fig4_1.0icg_concentration	29.625313	min	1.229483	nmol/ml
+Meijer1988	PatientB	1.0icg	concentration	plasma	indocyanine green	fig4_1.0icg_concentration	39.500717	min	1.3229678	nmol/ml
+Meijer1988	PatientB	1.0icg	concentration	plasma	indocyanine green	fig4_1.0icg_concentration	49.837757	min	1.1773211	nmol/ml
+Meijer1988	PatientB	1.0icg	concentration	plasma	indocyanine green	fig4_1.0icg_concentration	59.715847	min	1.2162545	nmol/ml
+Meijer1988	PatientB	1.0icg	excretion rate	bile duct	indocyanine green	fig4_1.0icg_excretion rate	0.21	hr	0.028898465	micromol/(0.5*hr)
+Meijer1988	PatientB	1.0icg	excretion rate	bile duct	indocyanine green	fig4_1.0icg_excretion rate	0.75	hr	0.67596215	micromol/(0.5*hr)
+Meijer1988	PatientB	1.0icg	excretion rate	bile duct	indocyanine green	fig4_1.0icg_excretion rate	1.2	hr	1.3786252	micromol/(0.5*hr)
+Meijer1988	PatientB	1.0icg	excretion rate	bile duct	indocyanine green	fig4_1.0icg_excretion rate	1.77	hr	1.4364924	micromol/(0.5*hr)
+Meijer1988	PatientB	1.0icg	excretion rate	bile duct	indocyanine green	fig4_1.0icg_excretion rate	3.0	hr	1.8134009	micromol/(0.5*hr)
+Meijer1988	PatientB	1.0icg	excretion rate	bile duct	indocyanine green	fig4_1.0icg_excretion rate	5.0	hr	2.4515808	micromol/(0.5*hr)
+Meijer1988	PatientB	1.0icg	excretion rate	bile duct	indocyanine green	fig4_1.0icg_excretion rate	8.0	hr	1.6702425	micromol/(0.5*hr)

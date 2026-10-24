@@ -1,0 +1,17 @@
+study	group	intervention	measurement	substance	tissue	mean	sd	unit	dose	dose_unit
+Martin1976	ICGControls	ICG0.5	kel	indocyanine green	plasma	0.216	0.032	1/min	0.5	mg/kg
+Martin1976	ICGControls	ICG2.0	kel	indocyanine green	plasma	0.192	0.027	1/min	2.0	mg/kg
+Martin1976	ICGControls	ICG3.5	kel	indocyanine green	plasma	0.176	0.028	1/min	3.5	mg/kg
+Martin1976	ICGControls	ICG5.0	kel	indocyanine green	plasma	0.178	0.02	1/min	5.0	mg/kg
+Martin1976	GS1	ICG0.5	kel	indocyanine green	plasma	0.214	0.037	1/min	0.5	mg/kg
+Martin1976	GS1	ICG2.0	kel	indocyanine green	plasma	0.202	0.034	1/min	2.0	mg/kg
+Martin1976	GS1	ICG3.5	kel	indocyanine green	plasma	0.184	0.049	1/min	3.5	mg/kg
+Martin1976	GS1	ICG5.0	kel	indocyanine green	plasma	0.186	0.041	1/min	5.0	mg/kg
+Martin1976	GS2	ICG0.5	kel	indocyanine green	plasma	0.203	0.04	1/min	0.5	mg/kg
+Martin1976	GS2	ICG2.0	kel	indocyanine green	plasma	0.185	0.043	1/min	2.0	mg/kg
+Martin1976	GS2	ICG3.5	kel	indocyanine green	plasma	0.153	0.02	1/min	3.5	mg/kg
+Martin1976	GS2	ICG5.0	kel	indocyanine green	plasma	0.159	0.031	1/min	5.0	mg/kg
+Martin1976	GS3	ICG0.5	kel	indocyanine green	plasma	0.173	0.041	1/min	0.5	mg/kg
+Martin1976	GS3	ICG2.0	kel	indocyanine green	plasma	0.157	0.017	1/min	2.0	mg/kg
+Martin1976	GS3	ICG3.5	kel	indocyanine green	plasma	0.119	0.033	1/min	3.5	mg/kg
+Martin1976	GS3	ICG5.0	kel	indocyanine green	plasma	0.092	0.031	1/min	5.0	mg/kg

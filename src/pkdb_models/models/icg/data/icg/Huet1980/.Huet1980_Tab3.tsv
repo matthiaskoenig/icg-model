@@ -1,0 +1,16 @@
+study	individual	measurement_type	substance	tissue	intervention	value	unit
+Huet1980	I10	hbf	na	blood	Lidor, Lidiv	34.66	ml/min/kg
+Huet1980	I11	hbf	na	blood	Lidor, Lidiv	35.78	ml/min/kg
+Huet1980	I13	hbf	na	blood	Lidor, Lidiv	20.78	ml/min/kg
+Huet1980	I14	hbf	na	blood	Lidor, Lidiv	20.83	ml/min/kg
+Huet1980	I15	hbf	na	blood	Lidor, Lidiv	35.3	ml/min/kg
+Huet1980	I10	hbf	na	blood	ICG	32.04	ml/min/kg
+Huet1980	I11	hbf	na	blood	ICG	32.28	ml/min/kg
+Huet1980	I13	hbf	na	blood	ICG	19.17	ml/min/kg
+Huet1980	I14	hbf	na	blood	ICG	23.24	ml/min/kg
+Huet1980	I15	hbf	na	blood	ICG	35.65	ml/min/kg
+Huet1980	I10	extraction_ratio	indocyanine green	plasma	ICG	0.53	dimensionless
+Huet1980	I11	extraction_ratio	indocyanine green	plasma	ICG	0.62	dimensionless
+Huet1980	I13	extraction_ratio	indocyanine green	plasma	ICG	0.53	dimensionless
+Huet1980	I14	extraction_ratio	indocyanine green	plasma	ICG	0.47	dimensionless
+Huet1980	I15	extraction_ratio	indocyanine green	plasma	ICG	0.59	dimensionless

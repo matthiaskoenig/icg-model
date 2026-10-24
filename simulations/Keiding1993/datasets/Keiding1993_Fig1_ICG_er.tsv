@@ -1,0 +1,6 @@
+study	subject	count	measurement	intervention	tissue	substance	time	time_unit	value	label	comment	value_unit	count_unit
+Keiding1993	S1	1	extraction_ratio	ICG	liver	indocyanine green	90.0	min	0.291777380521485	Fig1_er		dimensionless	dimensionless
+Keiding1993	S1	1	extraction_ratio	ICG	liver	indocyanine green	94.82932	min	0.288098016561382	Fig1_er		dimensionless	dimensionless
+Keiding1993	S1	1	extraction_ratio	ICG	liver	indocyanine green	99.86476	min	0.277158881516705	Fig1_er		dimensionless	dimensionless
+Keiding1993	S1	1	extraction_ratio	ICG	liver	indocyanine green	104.7572	min	0.284263795665353	Fig1_er		dimensionless	dimensionless
+Keiding1993	S1	1	extraction_ratio	ICG	liver	indocyanine green	109.7919	min	0.292348184473941	Fig1_er		dimensionless	dimensionless

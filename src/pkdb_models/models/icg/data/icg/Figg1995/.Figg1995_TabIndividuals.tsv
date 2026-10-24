@@ -1,0 +1,25 @@
+study	name	group	measurement	value	unit
+Figg1995	Control1	Controls	child-pugh score numeric	5	dimensionless
+Figg1995	Control2	Controls	child-pugh score numeric	5	dimensionless
+Figg1995	Control3	Controls	child-pugh score numeric	5	dimensionless
+Figg1995	Control4	Controls	child-pugh score numeric	5	dimensionless
+Figg1995	Control5	Controls	child-pugh score numeric	5	dimensionless
+Figg1995	Control6	Controls	child-pugh score numeric	5	dimensionless
+Figg1995	Control7	Controls	child-pugh score numeric	5	dimensionless
+Figg1995	Control8	Controls	child-pugh score numeric	5	dimensionless
+Figg1995	Control9	Controls	child-pugh score numeric	5	dimensionless
+Figg1995	Control10	Controls	child-pugh score numeric	5	dimensionless
+Figg1995	Control11	Controls	child-pugh score numeric	5	dimensionless
+Figg1995	Control12	Controls	child-pugh score numeric	5	dimensionless
+Figg1995	Mild1	Mild_cirrhosis	child-pugh score numeric	6	dimensionless
+Figg1995	Mild2	Mild_cirrhosis	child-pugh score numeric	6	dimensionless
+Figg1995	Mild3	Mild_cirrhosis	child-pugh score numeric	6	dimensionless
+Figg1995	Mild4	Mild_cirrhosis	child-pugh score numeric	6	dimensionless
+Figg1995	Moderate1	Moderate_cirrhosis	child-pugh score numeric	8	dimensionless
+Figg1995	Moderate2	Moderate_cirrhosis	child-pugh score numeric	8	dimensionless
+Figg1995	Moderate3	Moderate_cirrhosis	child-pugh score numeric	8	dimensionless
+Figg1995	Moderate4	Moderate_cirrhosis	child-pugh score numeric	9	dimensionless
+Figg1995	Severe1	Severe_cirrhosis	child-pugh score numeric	10	dimensionless
+Figg1995	Severe2	Severe_cirrhosis	child-pugh score numeric	11	dimensionless
+Figg1995	Severe3	Severe_cirrhosis	child-pugh score numeric	11	dimensionless
+Figg1995	Severe4	Severe_cirrhosis	child-pugh score numeric	12	dimensionless

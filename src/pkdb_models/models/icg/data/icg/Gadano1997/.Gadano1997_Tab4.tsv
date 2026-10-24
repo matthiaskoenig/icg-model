@@ -1,0 +1,7 @@
+study	group	measurement	tissue	substance	intervention	mean	se	unit
+Gadano1997	T4 Controls	MAP	blood	NA	MEP, Fib/Con Inf1, Fib/Con Inf2	90.0	2.0	mmHg
+Gadano1997	T4 Controls	azygos_blood_flow	blood	NA	MEP, Fib/Con Inf1, Fib/Con Inf2	0.17	0.03	l/min
+Gadano1997	T4 Hepatic Fibrosis	MAP	blood	NA	MEP, Fib/Con Inf1, Fib/Con Inf2	90.0	2.0	mmHg
+Gadano1997	T4 Hepatic Fibrosis	azygos_blood_flow	blood	NA	MEP, Fib/Con Inf1, Fib/Con Inf2	0.43	0.05	l/min
+Gadano1997	T4 Cirrhosis	MAP	blood	NA	MEP, Cir Inf1, Cir Inf2	86.0	1.0	mmHg
+Gadano1997	T4 Cirrhosis	azygos_blood_flow	blood	NA	MEP, Cir Inf1, Cir Inf2	0.53	0.02	l/min

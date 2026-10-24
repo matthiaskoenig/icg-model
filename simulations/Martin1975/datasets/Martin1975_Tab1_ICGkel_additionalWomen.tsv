@@ -1,0 +1,4 @@
+study	group	intervention	measurement_type	substance	tissue	mean	mean_se	dose	dose_unit	mean_unit
+Martin1975	additionalWomen	ICG2.0	kel	indocyanine green	plasma	0.204	0.009	2.0	mg/kg	1/min
+Martin1975	additionalWomen	ICG3.5	kel	indocyanine green	plasma	0.172	0.007	3.5	mg/kg	1/min
+Martin1975	additionalWomen	ICG5.0	kel	indocyanine green	plasma	0.178	0.005	5.0	mg/kg	1/min

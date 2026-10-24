@@ -1,0 +1,4 @@
+study	name	substance	measurement_type	time	time_unit	route	value	unit	application
+Huet1980	Lidor	lidocaine	qualitative dosing	0	min	oral	100.0	mg	single dose
+Huet1980	Lidiv	lidocaine	qualitative dosing	0	min	iv	100.0	mg	single dose
+Huet1980	ICG	indocyanine green	qualitative dosing	0	min	iv	0.5	mg/kg	single dose

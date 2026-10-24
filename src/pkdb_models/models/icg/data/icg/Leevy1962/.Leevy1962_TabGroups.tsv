@@ -1,0 +1,9 @@
+study	name	group_count	parent	measurement	mean	unit	choice	count
+Leevy1962	all	62	NA	species	NA	NA	homo sapiens	62
+Leevy1962	all	62	NA	sex	NA	NA	MF	62
+Leevy1962	all	62	NA	healthy	NA	NA	Y	28
+Leevy1962	all	62	NA	healthy	NA	NA	N	34
+Leevy1962	controls	28	all	healthy	NA	NA	Y	28
+Leevy1962	patients	34	all	healthy	NA	NA	N	34
+Leevy1962	patients	34	all	disease	NA	NA	liver disease	34
+Leevy1962	ER_controls	14	controls	body surface area	1.78357142857143	m^2	NA	14

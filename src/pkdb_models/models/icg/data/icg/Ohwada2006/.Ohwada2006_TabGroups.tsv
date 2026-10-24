@@ -1,0 +1,15 @@
+study	name	group_count	parent	measurement_type	choice	mean	sd	min	max	unit	count
+Ohwada2006	all	75	NA	species	homo sapiens	NA	NA	NA	NA	NA	75
+Ohwada2006	all	75	NA	healthy	N	NA	NA	NA	NA	NA	75
+Ohwada2006	all	75	NA	disease	hepatocellular carcinoma	NA	NA	NA	NA	NA	75
+Ohwada2006	all	75	NA	sex	M	NA	NA	NA	NA	NA	58
+Ohwada2006	all	75	NA	sex	F	NA	NA	NA	NA	NA	17
+Ohwada2006	all	75	NA	age	NA	63.4	8.2	45.0	81.0	yr	75
+Ohwada2006	all	75	NA	child-pugh score	child-pugh class A	NA	NA	NA	NA	NA	72
+Ohwada2006	all	75	NA	child-pugh score	child-pugh class B	NA	NA	NA	NA	NA	3
+Ohwada2006	all	75	NA	disease	hcv	NA	NA	NA	NA	NA	63
+Ohwada2006	all	75	NA	disease	hepatitis B	NA	NA	NA	NA	NA	1
+Ohwada2006	no_hepatic_failure	67	all	age	NA	63.4	8.2	NA	NA	yr	67
+Ohwada2006	no_hepatic_failure	67	all	sex	MF	NA	NA	NA	NA	NA	67
+Ohwada2006	hepatic_failure	8	all	age	NA	66.9	4.3	NA	NA	yr	8
+Ohwada2006	hepatic_failure	8	all	sex	MF	NA	NA	NA	NA	NA	8

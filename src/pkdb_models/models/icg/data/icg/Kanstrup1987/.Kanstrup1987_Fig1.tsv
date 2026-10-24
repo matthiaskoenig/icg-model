@@ -1,0 +1,37 @@
+study	subject	group	intervention	hbf_percent	icg_cl_percent	hbf_control	icg_cl_control	hbf	icg_cl
+Kanstrup1987	R1	Rowell 1964	exercise, icg_injection	16.44068	35.430656	NA	NA	NA	NA
+Kanstrup1987	R2	Rowell 1964	exercise, icg_injection	19.830183	39.025364	NA	NA	NA	NA
+Kanstrup1987	R3	Rowell 1964	exercise, icg_injection	31.877016	44.284935	NA	NA	NA	NA
+Kanstrup1987	R4	Rowell 1964	exercise, icg_injection	37.241596	40.020428	NA	NA	NA	NA
+Kanstrup1987	R5	Rowell 1964	exercise, icg_injection	37.437096	35.881615	NA	NA	NA	NA
+Kanstrup1987	R6	Rowell 1964	exercise, icg_injection	39.379814	47.545742	NA	NA	NA	NA
+Kanstrup1987	R7	Rowell 1964	exercise, icg_injection	42.66819	52.30798	NA	NA	NA	NA
+Kanstrup1987	R8	Rowell 1964	exercise, icg_injection	49.70606	44.111267	NA	NA	NA	NA
+Kanstrup1987	R9	Rowell 1964	exercise, icg_injection	52.795757	52.163498	NA	NA	NA	NA
+Kanstrup1987	R10	Rowell 1964	exercise, icg_injection	53.02822	57.892254	NA	NA	NA	NA
+Kanstrup1987	R11	Rowell 1964	exercise, icg_injection	50.714386	59.8109	NA	NA	NA	NA
+Kanstrup1987	R12	Rowell 1964	exercise, icg_injection	48.08723	62.57957	NA	NA	NA	NA
+Kanstrup1987	AE1	Group A	ergotamin PII, icg_infusion	54.797867	51.519283	1.35	0.66	0.7397712045	0.3400272678
+Kanstrup1987	AE2	Group A	ergotamin PII, icg_infusion	56.588577	50.769768	1.35	0.66	0.7639457895	0.3350804688
+Kanstrup1987	AE3	Group A	ergotamin PII, icg_infusion	59.454956	55.533604	1.35	0.66	0.802641906	0.3665217864
+Kanstrup1987	AE4	Group A	ergotamin PII, icg_infusion	59.357006	57.549957	1.35	0.66	0.801319581	0.3798297162
+Kanstrup1987	AE5	Group A	ergotamin PII, icg_infusion	66.332306	60.812763	1.35	0.66	0.895486131	0.4013642358
+Kanstrup1987	AE6	Group A	ergotamin PII, icg_infusion	77.742966	65.22591	1.35	0.66	1.049530041	0.430491006
+Kanstrup1987	AE7	Group A	ergotamin PII, icg_infusion	100.74546	66.09368	1.35	0.66	1.36006371	0.436218288
+Kanstrup1987	AEP1	Group A	ergotamin PIII, icg_infusion	72.32591	55.48483	1.35	0.66	0.976399785	0.366199878
+Kanstrup1987	AEP2	Group A	ergotamin PIII, icg_infusion	86.81116	63.918293	1.35	0.66	1.17195066	0.4218607338
+Kanstrup1987	AEP3	Group A	ergotamin PIII, icg_infusion	92.46863	81.510185	1.35	0.66	1.248326505	0.537967221
+Kanstrup1987	AEP4	Group A	ergotamin PIII, icg_infusion	97.53261	81.491	1.35	0.66	1.316690235	0.5378406
+Kanstrup1987	AEP5	Group A	ergotamin PIII, icg_infusion	115.230316	74.42104	1.35	0.66	1.555609266	0.491178864
+Kanstrup1987	AEP6	Group A	ergotamin PIII, icg_infusion	124.82362	72.47481	1.35	0.66	1.68511887	0.478333746
+Kanstrup1987	AEP7	Group A	ergotamin PIII, icg_infusion	122.10965	80.23071	1.35	0.66	1.648480275	0.529522686
+Kanstrup1987	B1	Group B	food, icg_infusion	84.43157	76.44763	0.87	0.31	0.734554659	0.236987653
+Kanstrup1987	B2	Group B	food, icg_infusion	92.31821	69.52096	0.87	0.31	0.803168427	0.215514976
+Kanstrup1987	B3	Group B	food, icg_infusion	115.58617	84.924034	0.87	0.31	1.005599679	0.2632645054
+Kanstrup1987	B4	Group B	food, icg_infusion	119.392105	87.0317	0.87	0.31	1.0387113135	0.26979827
+Kanstrup1987	B5	Group B	food, icg_infusion	124.65158	82.873695	0.87	0.31	1.084468746	0.2569084545
+Kanstrup1987	B6	Group B	food, icg_infusion	127.11584	92.944275	0.87	0.31	1.105907808	0.2881272525
+Kanstrup1987	B7	Group B	food, icg_infusion	126.38966	96.23627	0.87	0.31	1.099590042	0.298332437
+Kanstrup1987	B8	Group B	food, icg_infusion	130.84569	102.90396	0.87	0.31	1.138357503	0.319002276
+Kanstrup1987	B9	Group B	food, icg_infusion	132.08147	94.835335	0.87	0.31	1.149108789	0.2939895385
+Kanstrup1987	B10	Group B	food, icg_infusion	149.80025	93.38884	0.87	0.31	1.303262175	0.289505404

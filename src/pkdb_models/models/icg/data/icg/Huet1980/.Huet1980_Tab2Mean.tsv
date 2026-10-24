@@ -1,0 +1,9 @@
+study	group	measurement_type	intervention	tissue	substance	mean	se	unit
+Huet1980	controls	clearance	Lidor, Lidiv	plasma	lidocaine	14.34	0.92	ml/min/kg
+Huet1980	controls	clearance_other	Lidor, Lidiv	plasma	lidocaine	49.7	11.75	ml/min/kg
+Huet1980	controls	hbf	Lidor, Lidiv	liver	lidocaine	22.31	1.77	ml/min/kg
+Huet1980	controls	clearance	ICG	blood	indocyanine green	9.09	0.56	ml/min/kg
+Huet1980	patients	clearance	Lidor, Lidiv	plasma	lidocaine	20.76	2.42	ml/min/kg
+Huet1980	patients	clearance_other	Lidor, Lidiv	plasma	lidocaine	113.23	54.81	ml/min/kg
+Huet1980	patients	hbf	Lidor, Lidiv	liver	lidocaine	28.68	2.19	ml/min/kg
+Huet1980	patients	clearance	ICG	blood	indocyanine green	12.12	1.97	ml/min/kg

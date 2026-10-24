@@ -1,0 +1,10 @@
+study	group	intervention	measurement	tissue	substance	mean	sd	unit	label
+Figg1995	Mild_cirrhosis	NA	concentration_ss	plasma	bilirubin	0.7	0.18	mg/dl	Tab3_patientinfo
+Figg1995	Moderate_cirrhosis	NA	concentration_ss	plasma	bilirubin	2.0	0.89	mg/dl	Tab3_patientinfo
+Figg1995	Severe_cirrhosis	NA	concentration_ss	plasma	bilirubin	3.1	1.28	mg/dl	Tab3_patientinfo
+Figg1995	Mild_cirrhosis	NA	concentration_ss	plasma	albumin	3.6	0.4	g/dl	Tab3_patientinfo
+Figg1995	Moderate_cirrhosis	NA	concentration_ss	plasma	albumin	3.1	0.5	g/dl	Tab3_patientinfo
+Figg1995	Severe_cirrhosis	NA	concentration_ss	plasma	albumin	2.6	0.2	g/dl	Tab3_patientinfo
+Figg1995	Mild_cirrhosis	NA	prothrombin time	plasma	NA	12.9	1.2	s	Tab3_patientinfo
+Figg1995	Moderate_cirrhosis	NA	prothrombin time	plasma	NA	15.2	3.2	s	Tab3_patientinfo
+Figg1995	Severe_cirrhosis	NA	prothrombin time	plasma	NA	18.3	1.2	s	Tab3_patientinfo

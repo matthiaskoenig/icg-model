@@ -1,0 +1,22 @@
+study	group	count	intervention	measurement_type	tissue	substance	label	time	time_unit	mean	unit	comments
+Meijer1988	ICG0.5	6	0.5icg	excretion rate	bile duct	indocyanine green	fig3_0.5icg_excretion rate	0.76645434	hr	4.717058	micromol/hr	data points multiplied by 2 to account for unit
+Meijer1988	ICG0.5	6	0.5icg	excretion rate	bile duct	indocyanine green	fig3_0.5icg_excretion rate	1.1401274	hr	13.776674	micromol/hr	data points multiplied by 2 to account for unit
+Meijer1988	ICG0.5	6	0.5icg	excretion rate	bile duct	indocyanine green	fig3_0.5icg_excretion rate	1.700637	hr	13.615365	micromol/hr	data points multiplied by 2 to account for unit
+Meijer1988	ICG0.5	6	0.5icg	excretion rate	bile duct	indocyanine green	fig3_0.5icg_excretion rate	2.9384289	hr	5.213742	micromol/hr	data points multiplied by 2 to account for unit
+Meijer1988	ICG0.5	6	0.5icg	excretion rate	bile duct	indocyanine green	fig3_0.5icg_excretion rate	4.9936304	hr	0.923063	micromol/hr	data points multiplied by 2 to account for unit
+Meijer1988	ICG0.5	6	0.5icg	excretion rate	bile duct	indocyanine green	fig3_0.5icg_excretion rate	8.029724	hr	0.20440894	micromol/hr	data points multiplied by 2 to account for unit
+Meijer1988	ICG1.0	5	1.0icg	excretion rate	bile duct	indocyanine green	fig3_1.0icg_excretion rate	0.22929937	hr	0.38384614	micromol/hr	data points multiplied by 2 to account for unit
+Meijer1988	ICG1.0	5	1.0icg	excretion rate	bile duct	indocyanine green	fig3_1.0icg_excretion rate	0.6730361	hr	11.682428	micromol/hr	data points multiplied by 2 to account for unit
+Meijer1988	ICG1.0	5	1.0icg	excretion rate	bile duct	indocyanine green	fig3_1.0icg_excretion rate	1.1868365	hr	22.593222	micromol/hr	data points multiplied by 2 to account for unit
+Meijer1988	ICG1.0	5	1.0icg	excretion rate	bile duct	indocyanine green	fig3_1.0icg_excretion rate	1.700637	hr	20.68307	micromol/hr	data points multiplied by 2 to account for unit
+Meijer1988	ICG1.0	5	1.0icg	excretion rate	bile duct	indocyanine green	fig3_1.0icg_excretion rate	3.0	hr	9.28515	micromol/hr	data points multiplied by 2 to account for unit
+Meijer1988	ICG1.0	5	1.0icg	excretion rate	bile duct	indocyanine green	fig3_1.0icg_excretion rate	5.0	hr	3.032881	micromol/hr	data points multiplied by 2 to account for unit
+Meijer1988	ICG1.0	5	1.0icg	excretion rate	bile duct	indocyanine green	fig3_1.0icg_excretion rate	8.0	hr	0.79201824	micromol/hr	data points multiplied by 2 to account for unit
+Meijer1988	ICG1.0	5	1.0icg	excretion rate	bile duct	indocyanine green	fig3_1.0icg_excretion rate	12.0	hr	0.2453487	micromol/hr	data points multiplied by 2 to account for unit
+Meijer1988	ICG2.0	4	2.0icg	excretion rate	bile duct	indocyanine green	fig3_2.0icg_excretion rate	0.76645434	hr	0.82050354	micromol/hr	data points multiplied by 2 to account for unit
+Meijer1988	ICG2.0	4	2.0icg	excretion rate	bile duct	indocyanine green	fig3_2.0icg_excretion rate	1.1167728	hr	9.395156	micromol/hr	data points multiplied by 2 to account for unit
+Meijer1988	ICG2.0	4	2.0icg	excretion rate	bile duct	indocyanine green	fig3_2.0icg_excretion rate	1.6772823	hr	17.957004	micromol/hr	data points multiplied by 2 to account for unit
+Meijer1988	ICG2.0	4	2.0icg	excretion rate	bile duct	indocyanine green	fig3_2.0icg_excretion rate	3.0	hr	24.972178	micromol/hr	data points multiplied by 2 to account for unit
+Meijer1988	ICG2.0	4	2.0icg	excretion rate	bile duct	indocyanine green	fig3_2.0icg_excretion rate	5.0	hr	15.048997	micromol/hr	data points multiplied by 2 to account for unit
+Meijer1988	ICG2.0	4	2.0icg	excretion rate	bile duct	indocyanine green	fig3_2.0icg_excretion rate	8.0	hr	7.735796	micromol/hr	data points multiplied by 2 to account for unit
+Meijer1988	ICG2.0	4	2.0icg	excretion rate	bile duct	indocyanine green	fig3_2.0icg_excretion rate	12.0	hr	4.4211808	micromol/hr	data points multiplied by 2 to account for unit

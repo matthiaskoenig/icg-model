@@ -1,0 +1,8 @@
+study	group	count	label	measurement_type	substance	tissue	intervention	time	time_unit	mean	mean_unit	count_unit
+Grundmann1992	volunteers		Plasma Concentration 1	concentration	indocyanine green	plasma	ICG1	1.9553828	min	0.006689062690875573	mole/meter^3	dimensionless
+Grundmann1992	volunteers		Plasma Concentration 1	concentration	indocyanine green	plasma	ICG1	3.9294593	min	0.004529655038712526	mole/meter^3	dimensionless
+Grundmann1992	volunteers		Plasma Concentration 1	concentration	indocyanine green	plasma	ICG1	5.910662	min	0.0030806769539880982	mole/meter^3	dimensionless
+Grundmann1992	volunteers		Plasma Concentration 1	concentration	indocyanine green	plasma	ICG1	7.940719	min	0.0018836790459666349	mole/meter^3	dimensionless
+Grundmann1992	volunteers		Plasma Concentration 1	concentration	indocyanine green	plasma	ICG1	9.914927	min	0.0013249235678316435	mole/meter^3	dimensionless
+Grundmann1992	volunteers		Plasma Concentration 1	concentration	indocyanine green	plasma	ICG1	11.926411	min	0.0008742235084108902	mole/meter^3	dimensionless
+Grundmann1992	volunteers		Plasma Concentration 1	concentration	indocyanine green	plasma	ICG1	13.947989	min	0.0007562828681808866	mole/meter^3	dimensionless

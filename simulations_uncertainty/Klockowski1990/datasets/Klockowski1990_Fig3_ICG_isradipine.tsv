@@ -1,0 +1,6 @@
+study	individual	count	label	measurement_type	substance	tissue	intervention	value	time	time_unit	value_unit	count_unit
+Klockowski1990	ICG_typical	1	isradipine	concentration	indocyanine green	plasma	ICG, I -48, I -36, I -24, I -12, I +0	0.012137775060350148	2.0	min	mole/meter^3	dimensionless
+Klockowski1990	ICG_typical	1	isradipine	concentration	indocyanine green	plasma	ICG, I -48, I -36, I -24, I -12, I +0	0.006332470554506254	4.0	min	mole/meter^3	dimensionless
+Klockowski1990	ICG_typical	1	isradipine	concentration	indocyanine green	plasma	ICG, I -48, I -36, I -24, I -12, I +0	0.0037465959911243984	6.0	min	mole/meter^3	dimensionless
+Klockowski1990	ICG_typical	1	isradipine	concentration	indocyanine green	plasma	ICG, I -48, I -36, I -24, I -12, I +0	0.0022448103554827954	8.0	min	mole/meter^3	dimensionless
+Klockowski1990	ICG_typical	1	isradipine	concentration	indocyanine green	plasma	ICG, I -48, I -36, I -24, I -12, I +0	0.0012629058323968285	10.0	min	mole/meter^3	dimensionless

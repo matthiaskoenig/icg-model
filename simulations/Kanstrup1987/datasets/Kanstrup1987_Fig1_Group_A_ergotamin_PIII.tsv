@@ -1,0 +1,8 @@
+study	subject	group	intervention	hbf_percent	icg_cl_percent	hbf_control	icg_cl_control	hbf	icg_cl
+Kanstrup1987	AEP1	Group A	ergotamin PIII, icg_infusion	72.32591	55.48483	1.35	0.66	0.976399785	0.366199878
+Kanstrup1987	AEP2	Group A	ergotamin PIII, icg_infusion	86.81116	63.918293	1.35	0.66	1.17195066	0.4218607338
+Kanstrup1987	AEP3	Group A	ergotamin PIII, icg_infusion	92.46863	81.510185	1.35	0.66	1.248326505	0.537967221
+Kanstrup1987	AEP4	Group A	ergotamin PIII, icg_infusion	97.53261	81.491	1.35	0.66	1.316690235	0.5378406
+Kanstrup1987	AEP5	Group A	ergotamin PIII, icg_infusion	115.230316	74.42104	1.35	0.66	1.555609266	0.491178864
+Kanstrup1987	AEP6	Group A	ergotamin PIII, icg_infusion	124.82362	72.47481	1.35	0.66	1.68511887	0.478333746
+Kanstrup1987	AEP7	Group A	ergotamin PIII, icg_infusion	122.10965	80.23071	1.35	0.66	1.648480275	0.529522686

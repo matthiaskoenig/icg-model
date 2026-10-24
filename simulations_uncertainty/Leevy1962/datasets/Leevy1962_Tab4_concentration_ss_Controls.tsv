@@ -1,0 +1,5 @@
+study	individual	intervention	measurement	substance	tissue	value	time	time_unit	group	count	value_unit	count_unit
+Leevy1962	S25	ICG_Inf_1.5	concentration_ss	indocyanine green	arterial plasma	0.018581486003502116	50	min	Controls	1	mole/meter^3	dimensionless
+Leevy1962	S26	ICG_Inf_1.5	concentration_ss	indocyanine green	arterial plasma	0.02142032414292605	50	min	Controls	1	mole/meter^3	dimensionless
+Leevy1962	S27	ICG_Inf_1.5	concentration_ss	indocyanine green	arterial plasma	0.014968419280598926	50	min	Controls	1	mole/meter^3	dimensionless
+Leevy1962	S28	ICG_Inf_1.5	concentration_ss	indocyanine green	arterial plasma	0.018581486003502116	50	min	Controls	1	mole/meter^3	dimensionless

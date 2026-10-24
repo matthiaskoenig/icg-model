@@ -1,0 +1,10 @@
+study	group	intervention	measurement_type	substance	tissue	mean	sd	min	max	unit
+Grundmann1992	all	ICG1	cardiac output	na	blood	6.7	1.6	4.3	11.6	l/min
+Grundmann1992	all	ICG1	blood pressure systolic	na	blood	130.0	14.2	105.0	162.0	mmHg
+Grundmann1992	all	ICG1	blood pressure diastolic	na	blood	74.0	10.6	53.0	98.0	mmHg
+Grundmann1992	all	ICG1	MAP	na	blood	101.0	12.1	79.0	130.0	mmHg
+Grundmann1992	all	ICG1	heart rate	na	blood	67.0	10.8	50.0	103.0	1/min
+Grundmann1992	all	ICG1	vd	indocyanine green	plasma	2.8	0.5	2.0	3.9	l
+Grundmann1992	all	ICG1	thalf	indocyanine green	plasma	3.3	0.5	2.4	4.6	min
+Grundmann1992	all	ICG1	clearance	indocyanine green	plasma	762.0	178.0	474.0	1210.0	ml/min
+Grundmann1992	all	ICG1	hbf	na	liver	1.3	0.3	0.8	2.1	l/min

@@ -1,0 +1,72 @@
+study	subject	label	interventions	measurement_type	tissue	value	unit	time_of_day	day	time_resection	helper_t1	helper_t2	time	time_unit	comments
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	na	l/min	10:00:00	0	21:00:00	10.0	21	-11.0	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	na	l/min	10:07:00	0	21:00:00	10.1166666666667	21	-10.8833333333333	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	4.1	l/min	10:15:00	0	21:00:00	10.25	21	-10.75	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	4.4	l/min	10:45:00	0	21:00:00	10.75	21	-10.25	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	4.4	l/min	11:15:00	0	21:00:00	11.25	21	-9.75	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	3.8	l/min	11:45:00	0	21:00:00	11.75	21	-9.25	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	4	l/min	12:15:00	0	21:00:00	12.25	21	-8.75	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	3.5	l/min	12:45:00	0	21:00:00	12.75	21	-8.25	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	3.5	l/min	13:15:00	0	21:00:00	13.25	21	-7.75	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	3.4	l/min	13:45:00	0	21:00:00	13.75	21	-7.25	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	3.3	l/min	14:15:00	0	21:00:00	14.25	21	-6.75	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	3.3	l/min	14:45:00	0	21:00:00	14.75	21	-6.25	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	3.5	l/min	15:15:00	0	21:00:00	15.25	21	-5.75	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	3.4	l/min	15:45:00	0	21:00:00	15.75	21	-5.25	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	3.6	l/min	16:15:00	0	21:00:00	16.25	21	-4.75	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	3.7	l/min	16:45:00	0	21:00:00	16.75	21	-4.25	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	3.7	l/min	17:15:00	0	21:00:00	17.25	21	-3.75	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	3.7	l/min	17:45:00	0	21:00:00	17.75	21	-3.25	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	3.9	l/min	18:15:00	0	21:00:00	18.25	21	-2.75	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	3.6	l/min	18:45:00	0	21:00:00	18.75	21	-2.25	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	4.2	l/min	19:15:00	0	21:00:00	19.25	21	-1.75	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	3.8	l/min	20:15:00	0	21:00:00	20.25	21	-0.75	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	3.7	l/min	20:45:00	0	21:00:00	20.75	21	-0.25	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	3.3	l/min	21:15:00	0	21:00:00	21.25	21	0.25	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	3.3	l/min	21:45:00	0	21:00:00	21.75	21	0.75	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	3.2	l/min	22:15:00	0	21:00:00	22.25	21	1.25	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	3.7	l/min	22:45:00	0	21:00:00	22.75	21	1.75	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	3.6	l/min	23:15:00	0	21:00:00	23.25	21	2.25	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	3.5	l/min	23:45:00	0	21:00:00	23.75	21	2.75	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	3.6	l/min	00:15:00	1	21:00:00	0.25	21	3.25	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	3.7	l/min	00:45:00	1	21:00:00	0.75	21	3.75	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	4.8	l/min	01:15:00	1	21:00:00	1.25	21	4.25	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	4.8	l/min	01:45:00	1	21:00:00	1.75	21	4.75	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	5	l/min	02:15:00	1	21:00:00	2.25	21	5.25	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	5	l/min	02:45:00	1	21:00:00	2.75	21	5.75	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	4.3	l/min	03:15:00	1	21:00:00	3.25	21	6.25	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	4.8	l/min	03:45:00	1	21:00:00	3.75	21	6.75	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	4.8	l/min	04:15:00	1	21:00:00	4.25	21	7.25	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	4.6	l/min	04:45:00	1	21:00:00	4.75	21	7.75	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	4.5	l/min	05:15:00	1	21:00:00	5.25	21	8.25	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	5	l/min	05:45:00	1	21:00:00	5.75	21	8.75	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	4.5	l/min	06:15:00	1	21:00:00	6.25	21	9.25	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	5.2	l/min	06:45:00	1	21:00:00	6.75	21	9.75	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	4.9	l/min	07:15:00	1	21:00:00	7.25	21	10.25	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	5.1	l/min	07:45:00	1	21:00:00	7.75	21	10.75	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	5	l/min	08:15:00	1	21:00:00	8.25	21	11.25	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	5	l/min	08:45:00	1	21:00:00	8.75	21	11.75	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	4.5	l/min	09:15:00	1	21:00:00	9.25	21	12.25	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	4.6	l/min	09:45:00	1	21:00:00	9.75	21	12.75	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	4.7	l/min	10:15:00	1	21:00:00	10.25	21	13.25	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	4.7	l/min	10:45:00	1	21:00:00	10.75	21	13.75	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	4.5	l/min	11:15:00	1	21:00:00	11.25	21	14.25	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	4.4	l/min	11:45:00	1	21:00:00	11.75	21	14.75	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	4.7	l/min	12:15:00	1	21:00:00	12.25	21	15.25	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	5.1	l/min	12:45:00	1	21:00:00	12.75	21	15.75	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	4.6	l/min	13:15:00	1	21:00:00	13.25	21	16.25	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	5.3	l/min	13:45:00	1	21:00:00	13.75	21	16.75	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	5.5	l/min	14:15:00	1	21:00:00	14.25	21	17.25	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_cardiac_output	ICG	cardiac output	heart	5.4	l/min	14:45:00	1	21:00:00	14.75	21	17.75	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_pdr	ICG	pdr	plasma	20.4	precent/min	18:30:00	0	21:00:00	18.5	21	-2.5	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_pdr	ICG	pdr	plasma	25.2	precent/min	21:00:00	0	21:00:00	21.0	21	0.0	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_pdr	ICG	pdr	plasma	32.1	precent/min	03:00:00	1	21:00:00	3.0	21	6.0	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_pdr	ICG	pdr	plasma	32.6	precent/min	09:00:00	1	21:00:00	9.0	21	12.0	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_pdr	ICG	pdr	plasma	22.2	precent/min	15:00:00	1	21:00:00	15.0	21	18.0	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_pdr	ICG	pdr	plasma	26.1	precent/min	21:00:00	1	21:00:00	21.0	21	24.0	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_r15	ICG	retention ratio	plasma	4.7	percent	18:30:00	0	21:00:00	18.5	21	-2.5	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_r15	ICG	retention ratio	plasma	2.3	percent	21:00:00	0	21:00:00	21.0	21	0.0	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_r15	ICG	retention ratio	plasma	0.8	percent	03:00:00	1	21:00:00	3.0	21	6.0	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_r15	ICG	retention ratio	plasma	0.8	percent	09:00:00	1	21:00:00	9.0	21	12.0	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_r15	ICG	retention ratio	plasma	3.6	percent	15:00:00	1	21:00:00	15.0	21	18.0	hr	HZV:PICCO
+SwineLeipzig2014	SUS23	SUS23_r15	ICG	retention ratio	plasma	0.2	percent	21:00:00	1	21:00:00	21.0	21	24.0	hr	HZV:PICCO

@@ -1,0 +1,233 @@
+study	name	group	measurement_type	choice	value	substance	unit	tissue
+Kawasaki1988	I1	normal	age	NA	39.0	NA	yr	NA
+Kawasaki1988	I1	normal	sex	M	NA	NA	NA	NA
+Kawasaki1988	I1	normal	medication	N	NA	NA	NA	NA
+Kawasaki1988	I1	normal	concentration	NA	0.3	bilirubin	mg/dl	plasma
+Kawasaki1988	I1	normal	concentration	NA	3.9	albumin	mg/dl	plasma
+Kawasaki1988	I1	normal	concentration	NA	34.0	ast	IU/l	liver
+Kawasaki1988	I1	normal	concentration	NA	60.0	alt	IU/l	liver
+Kawasaki1988	I1	normal	concentration	NA	4.0	bile acids	micromol/l	bile
+Kawasaki1988	I2	normal	age	NA	30.0	NA	yr	NA
+Kawasaki1988	I2	normal	sex	M	NA	NA	NA	NA
+Kawasaki1988	I2	normal	medication	N	NA	NA	NA	NA
+Kawasaki1988	I2	normal	concentration	NA	0.9	bilirubin	mg/dl	plasma
+Kawasaki1988	I2	normal	concentration	NA	5.1	albumin	mg/dl	plasma
+Kawasaki1988	I2	normal	concentration	NA	20.0	ast	IU/l	liver
+Kawasaki1988	I2	normal	concentration	NA	8.0	alt	IU/l	liver
+Kawasaki1988	I2	normal	concentration	NA	4.0	bile acids	micromol/l	bile
+Kawasaki1988	I3	normal	age	NA	28.0	NA	yr	NA
+Kawasaki1988	I3	normal	sex	M	NA	NA	NA	NA
+Kawasaki1988	I3	normal	medication	N	NA	NA	NA	NA
+Kawasaki1988	I3	normal	concentration	NA	0.8	bilirubin	mg/dl	plasma
+Kawasaki1988	I3	normal	concentration	NA	4.5	albumin	mg/dl	plasma
+Kawasaki1988	I3	normal	concentration	NA	16.0	ast	IU/l	liver
+Kawasaki1988	I3	normal	concentration	NA	14.0	alt	IU/l	liver
+Kawasaki1988	I3	normal	concentration	NA	5.0	bile acids	micromol/l	bile
+Kawasaki1988	I4	normal	age	NA	32.0	NA	yr	NA
+Kawasaki1988	I4	normal	sex	M	NA	NA	NA	NA
+Kawasaki1988	I4	normal	medication	N	NA	NA	NA	NA
+Kawasaki1988	I4	normal	concentration	NA	0.5	bilirubin	mg/dl	plasma
+Kawasaki1988	I4	normal	concentration	NA	4.5	albumin	mg/dl	plasma
+Kawasaki1988	I4	normal	concentration	NA	28.0	ast	IU/l	liver
+Kawasaki1988	I4	normal	concentration	NA	36.0	alt	IU/l	liver
+Kawasaki1988	I4	normal	concentration	NA	2.0	bile acids	micromol/l	bile
+Kawasaki1988	I5	normal	age	NA	26.0	NA	yr	NA
+Kawasaki1988	I5	normal	sex	M	NA	NA	NA	NA
+Kawasaki1988	I5	normal	medication	N	NA	NA	NA	NA
+Kawasaki1988	I5	normal	concentration	NA	0.4	bilirubin	mg/dl	plasma
+Kawasaki1988	I5	normal	concentration	NA	4.3	albumin	mg/dl	plasma
+Kawasaki1988	I5	normal	concentration	NA	14.0	ast	IU/l	liver
+Kawasaki1988	I5	normal	concentration	NA	6.0	alt	IU/l	liver
+Kawasaki1988	I5	normal	concentration	NA	5.0	bile acids	micromol/l	bile
+Kawasaki1988	I6	cirrhosis	age	NA	49.0	NA	yr	NA
+Kawasaki1988	I6	cirrhosis	sex	M	NA	NA	NA	NA
+Kawasaki1988	I6	cirrhosis	medication	N	NA	NA	NA	NA
+Kawasaki1988	I6	cirrhosis	concentration	NA	0.9	bilirubin	mg/dl	plasma
+Kawasaki1988	I6	cirrhosis	concentration	NA	3.7	albumin	mg/dl	plasma
+Kawasaki1988	I6	cirrhosis	concentration	NA	54.0	ast	IU/l	liver
+Kawasaki1988	I6	cirrhosis	concentration	NA	44.0	alt	IU/l	liver
+Kawasaki1988	I6	cirrhosis	concentration	NA	68.0	bile acids	micromol/l	bile
+Kawasaki1988	I7	cirrhosis	age	NA	68.0	NA	yr	NA
+Kawasaki1988	I7	cirrhosis	sex	M	NA	NA	NA	NA
+Kawasaki1988	I7	cirrhosis	medication	N	NA	NA	NA	NA
+Kawasaki1988	I7	cirrhosis	concentration	NA	0.7	bilirubin	mg/dl	plasma
+Kawasaki1988	I7	cirrhosis	concentration	NA	3.8	albumin	mg/dl	plasma
+Kawasaki1988	I7	cirrhosis	concentration	NA	101.0	ast	IU/l	liver
+Kawasaki1988	I7	cirrhosis	concentration	NA	133.0	alt	IU/l	liver
+Kawasaki1988	I7	cirrhosis	concentration	NA	6.0	bile acids	micromol/l	bile
+Kawasaki1988	I8	cirrhosis	age	NA	53.0	NA	yr	NA
+Kawasaki1988	I8	cirrhosis	sex	M	NA	NA	NA	NA
+Kawasaki1988	I8	cirrhosis	medication	N	NA	NA	NA	NA
+Kawasaki1988	I8	cirrhosis	concentration	NA	1.1	bilirubin	mg/dl	plasma
+Kawasaki1988	I8	cirrhosis	concentration	NA	3.7	albumin	mg/dl	plasma
+Kawasaki1988	I8	cirrhosis	concentration	NA	122.0	ast	IU/l	liver
+Kawasaki1988	I8	cirrhosis	concentration	NA	143.0	alt	IU/l	liver
+Kawasaki1988	I8	cirrhosis	concentration	NA	65.0	bile acids	micromol/l	bile
+Kawasaki1988	I9	cirrhosis	age	NA	52.0	NA	yr	NA
+Kawasaki1988	I9	cirrhosis	sex	M	NA	NA	NA	NA
+Kawasaki1988	I9	cirrhosis	medication	Y	NA	NA	NA	NA
+Kawasaki1988	I9	cirrhosis	concentration	NA	0.7	bilirubin	mg/dl	plasma
+Kawasaki1988	I9	cirrhosis	concentration	NA	3.9	albumin	mg/dl	plasma
+Kawasaki1988	I9	cirrhosis	concentration	NA	61.0	ast	IU/l	liver
+Kawasaki1988	I9	cirrhosis	concentration	NA	54.0	alt	IU/l	liver
+Kawasaki1988	I9	cirrhosis	concentration	NA	38.0	bile acids	micromol/l	bile
+Kawasaki1988	I10	cirrhosis	age	NA	66.0	NA	yr	NA
+Kawasaki1988	I10	cirrhosis	sex	M	NA	NA	NA	NA
+Kawasaki1988	I10	cirrhosis	medication	N	NA	NA	NA	NA
+Kawasaki1988	I10	cirrhosis	concentration	NA	0.6	bilirubin	mg/dl	plasma
+Kawasaki1988	I10	cirrhosis	concentration	NA	4.2	albumin	mg/dl	plasma
+Kawasaki1988	I10	cirrhosis	concentration	NA	44.0	ast	IU/l	liver
+Kawasaki1988	I10	cirrhosis	concentration	NA	44.0	alt	IU/l	liver
+Kawasaki1988	I10	cirrhosis	concentration	NA	9.0	bile acids	micromol/l	bile
+Kawasaki1988	I11	cirrhosis	age	NA	50.0	NA	yr	NA
+Kawasaki1988	I11	cirrhosis	sex	M	NA	NA	NA	NA
+Kawasaki1988	I11	cirrhosis	medication	N	NA	NA	NA	NA
+Kawasaki1988	I11	cirrhosis	concentration	NA	1.4	bilirubin	mg/dl	plasma
+Kawasaki1988	I11	cirrhosis	concentration	NA	3.4	albumin	mg/dl	plasma
+Kawasaki1988	I11	cirrhosis	concentration	NA	112.0	ast	IU/l	liver
+Kawasaki1988	I11	cirrhosis	concentration	NA	160.0	alt	IU/l	liver
+Kawasaki1988	I11	cirrhosis	concentration	NA	32.0	bile acids	micromol/l	bile
+Kawasaki1988	I12	cirrhosis	age	NA	47.0	NA	yr	NA
+Kawasaki1988	I12	cirrhosis	sex	M	NA	NA	NA	NA
+Kawasaki1988	I12	cirrhosis	medication	Y	NA	NA	NA	NA
+Kawasaki1988	I12	cirrhosis	concentration	NA	1.1	bilirubin	mg/dl	plasma
+Kawasaki1988	I12	cirrhosis	concentration	NA	3.0	albumin	mg/dl	plasma
+Kawasaki1988	I12	cirrhosis	concentration	NA	95.0	ast	IU/l	liver
+Kawasaki1988	I12	cirrhosis	concentration	NA	47.0	alt	IU/l	liver
+Kawasaki1988	I12	cirrhosis	concentration	NA	23.0	bile acids	micromol/l	bile
+Kawasaki1988	I13	cirrhosis	age	NA	59.0	NA	yr	NA
+Kawasaki1988	I13	cirrhosis	sex	M	NA	NA	NA	NA
+Kawasaki1988	I13	cirrhosis	medication	Y	NA	NA	NA	NA
+Kawasaki1988	I13	cirrhosis	concentration	NA	0.7	bilirubin	mg/dl	plasma
+Kawasaki1988	I13	cirrhosis	concentration	NA	4.6	albumin	mg/dl	plasma
+Kawasaki1988	I13	cirrhosis	concentration	NA	47.0	ast	IU/l	liver
+Kawasaki1988	I13	cirrhosis	concentration	NA	36.0	alt	IU/l	liver
+Kawasaki1988	I13	cirrhosis	concentration	NA	14.0	bile acids	micromol/l	bile
+Kawasaki1988	I14	cirrhosis	age	NA	64.0	NA	yr	NA
+Kawasaki1988	I14	cirrhosis	sex	F	NA	NA	NA	NA
+Kawasaki1988	I14	cirrhosis	medication	N	NA	NA	NA	NA
+Kawasaki1988	I14	cirrhosis	concentration	NA	0.5	bilirubin	mg/dl	plasma
+Kawasaki1988	I14	cirrhosis	concentration	NA	4.2	albumin	mg/dl	plasma
+Kawasaki1988	I14	cirrhosis	concentration	NA	49.0	ast	IU/l	liver
+Kawasaki1988	I14	cirrhosis	concentration	NA	36.0	alt	IU/l	liver
+Kawasaki1988	I14	cirrhosis	concentration	NA	22.0	bile acids	micromol/l	bile
+Kawasaki1988	I15	cirrhosis	age	NA	49.0	NA	yr	NA
+Kawasaki1988	I15	cirrhosis	sex	M	NA	NA	NA	NA
+Kawasaki1988	I15	cirrhosis	medication	N	NA	NA	NA	NA
+Kawasaki1988	I15	cirrhosis	concentration	NA	1.2	bilirubin	mg/dl	plasma
+Kawasaki1988	I15	cirrhosis	concentration	NA	3.3	albumin	mg/dl	plasma
+Kawasaki1988	I15	cirrhosis	concentration	NA	53.0	ast	IU/l	liver
+Kawasaki1988	I15	cirrhosis	concentration	NA	31.0	alt	IU/l	liver
+Kawasaki1988	I15	cirrhosis	concentration	NA	50.0	bile acids	micromol/l	bile
+Kawasaki1988	I16	cirrhosis	age	NA	63.0	NA	yr	NA
+Kawasaki1988	I16	cirrhosis	sex	M	NA	NA	NA	NA
+Kawasaki1988	I16	cirrhosis	medication	Y	NA	NA	NA	NA
+Kawasaki1988	I16	cirrhosis	concentration	NA	3.8	bilirubin	mg/dl	plasma
+Kawasaki1988	I16	cirrhosis	concentration	NA	2.3	albumin	mg/dl	plasma
+Kawasaki1988	I16	cirrhosis	concentration	NA	58.0	ast	IU/l	liver
+Kawasaki1988	I16	cirrhosis	concentration	NA	38.0	alt	IU/l	liver
+Kawasaki1988	I16	cirrhosis	concentration	NA	144.0	bile acids	micromol/l	bile
+Kawasaki1988	I17	cirrhosis	age	NA	54.0	NA	yr	NA
+Kawasaki1988	I17	cirrhosis	sex	M	NA	NA	NA	NA
+Kawasaki1988	I17	cirrhosis	medication	N	NA	NA	NA	NA
+Kawasaki1988	I17	cirrhosis	concentration	NA	0.7	bilirubin	mg/dl	plasma
+Kawasaki1988	I17	cirrhosis	concentration	NA	4.2	albumin	mg/dl	plasma
+Kawasaki1988	I17	cirrhosis	concentration	NA	79.0	ast	IU/l	liver
+Kawasaki1988	I17	cirrhosis	concentration	NA	44.0	alt	IU/l	liver
+Kawasaki1988	I17	cirrhosis	concentration	NA	25.0	bile acids	micromol/l	bile
+Kawasaki1988	I18	cirrhosis	age	NA	50.0	NA	yr	NA
+Kawasaki1988	I18	cirrhosis	sex	M	NA	NA	NA	NA
+Kawasaki1988	I18	cirrhosis	medication	N	NA	NA	NA	NA
+Kawasaki1988	I18	cirrhosis	concentration	NA	1.2	bilirubin	mg/dl	plasma
+Kawasaki1988	I18	cirrhosis	concentration	NA	4.3	albumin	mg/dl	plasma
+Kawasaki1988	I18	cirrhosis	concentration	NA	67.0	ast	IU/l	liver
+Kawasaki1988	I18	cirrhosis	concentration	NA	64.0	alt	IU/l	liver
+Kawasaki1988	I18	cirrhosis	concentration	NA	69.0	bile acids	micromol/l	bile
+Kawasaki1988	I19	cirrhosis	age	NA	63.0	NA	yr	NA
+Kawasaki1988	I19	cirrhosis	sex	F	NA	NA	NA	NA
+Kawasaki1988	I19	cirrhosis	medication	N	NA	NA	NA	NA
+Kawasaki1988	I19	cirrhosis	concentration	NA	0.8	bilirubin	mg/dl	plasma
+Kawasaki1988	I19	cirrhosis	concentration	NA	3.1	albumin	mg/dl	plasma
+Kawasaki1988	I19	cirrhosis	concentration	NA	100.0	ast	IU/l	liver
+Kawasaki1988	I19	cirrhosis	concentration	NA	102.0	alt	IU/l	liver
+Kawasaki1988	I19	cirrhosis	concentration	NA	24.0	bile acids	micromol/l	bile
+Kawasaki1988	I20	cirrhosis	age	NA	63.0	NA	yr	NA
+Kawasaki1988	I20	cirrhosis	sex	M	NA	NA	NA	NA
+Kawasaki1988	I20	cirrhosis	medication	Y	NA	NA	NA	NA
+Kawasaki1988	I20	cirrhosis	concentration	NA	0.6	bilirubin	mg/dl	plasma
+Kawasaki1988	I20	cirrhosis	concentration	NA	3.4	albumin	mg/dl	plasma
+Kawasaki1988	I20	cirrhosis	concentration	NA	24.0	ast	IU/l	liver
+Kawasaki1988	I20	cirrhosis	concentration	NA	26.0	alt	IU/l	liver
+Kawasaki1988	I20	cirrhosis	concentration	NA	45.0	bile acids	micromol/l	bile
+Kawasaki1988	I21	cirrhosis	age	NA	53.0	NA	yr	NA
+Kawasaki1988	I21	cirrhosis	sex	M	NA	NA	NA	NA
+Kawasaki1988	I21	cirrhosis	medication	Y	NA	NA	NA	NA
+Kawasaki1988	I21	cirrhosis	concentration	NA	2.2	bilirubin	mg/dl	plasma
+Kawasaki1988	I21	cirrhosis	concentration	NA	3.0	albumin	mg/dl	plasma
+Kawasaki1988	I21	cirrhosis	concentration	NA	42.0	ast	IU/l	liver
+Kawasaki1988	I21	cirrhosis	concentration	NA	38.0	alt	IU/l	liver
+Kawasaki1988	I21	cirrhosis	concentration	NA	97.0	bile acids	micromol/l	bile
+Kawasaki1988	I22	cirrhosis	age	NA	60.0	NA	yr	NA
+Kawasaki1988	I22	cirrhosis	sex	M	NA	NA	NA	NA
+Kawasaki1988	I22	cirrhosis	medication	N	NA	NA	NA	NA
+Kawasaki1988	I22	cirrhosis	concentration	NA	1.6	bilirubin	mg/dl	plasma
+Kawasaki1988	I22	cirrhosis	concentration	NA	2.7	albumin	mg/dl	plasma
+Kawasaki1988	I22	cirrhosis	concentration	NA	38.0	ast	IU/l	liver
+Kawasaki1988	I22	cirrhosis	concentration	NA	14.0	alt	IU/l	liver
+Kawasaki1988	I22	cirrhosis	concentration	NA	57.0	bile acids	micromol/l	bile
+Kawasaki1988	I23	EPO	age	NA	36.0	NA	yr	NA
+Kawasaki1988	I23	EPO	sex	F	NA	NA	NA	NA
+Kawasaki1988	I23	EPO	medication	N	NA	NA	NA	NA
+Kawasaki1988	I23	EPO	concentration	NA	0.6	bilirubin	mg/dl	plasma
+Kawasaki1988	I23	EPO	concentration	NA	3.4	albumin	mg/dl	plasma
+Kawasaki1988	I23	EPO	concentration	NA	66.0	ast	IU/l	liver
+Kawasaki1988	I23	EPO	concentration	NA	63.0	alt	IU/l	liver
+Kawasaki1988	I23	EPO	concentration	NA	8.0	bile acids	micromol/l	bile
+Kawasaki1988	I24	EPO	age	NA	37.0	NA	yr	NA
+Kawasaki1988	I24	EPO	sex	M	NA	NA	NA	NA
+Kawasaki1988	I24	EPO	medication	N	NA	NA	NA	NA
+Kawasaki1988	I24	EPO	concentration	NA	0.7	bilirubin	mg/dl	plasma
+Kawasaki1988	I24	EPO	concentration	NA	3.8	albumin	mg/dl	plasma
+Kawasaki1988	I24	EPO	concentration	NA	25.0	ast	IU/l	liver
+Kawasaki1988	I24	EPO	concentration	NA	27.0	alt	IU/l	liver
+Kawasaki1988	I24	EPO	concentration	NA	34.0	bile acids	micromol/l	bile
+Kawasaki1988	I25	EPO	age	NA	59.0	NA	yr	NA
+Kawasaki1988	I25	EPO	sex	M	NA	NA	NA	NA
+Kawasaki1988	I25	EPO	medication	Y	NA	NA	NA	NA
+Kawasaki1988	I25	EPO	concentration	NA	0.9	bilirubin	mg/dl	plasma
+Kawasaki1988	I25	EPO	concentration	NA	4.6	albumin	mg/dl	plasma
+Kawasaki1988	I25	EPO	concentration	NA	32.0	ast	IU/l	liver
+Kawasaki1988	I25	EPO	concentration	NA	70.0	alt	IU/l	liver
+Kawasaki1988	I25	EPO	concentration	NA	22.0	bile acids	micromol/l	bile
+Kawasaki1988	I26	Fibrosis	age	NA	54.0	NA	yr	NA
+Kawasaki1988	I26	Fibrosis	sex	M	NA	NA	NA	NA
+Kawasaki1988	I26	Fibrosis	medication	Y	NA	NA	NA	NA
+Kawasaki1988	I26	Fibrosis	concentration	NA	0.6	bilirubin	mg/dl	plasma
+Kawasaki1988	I26	Fibrosis	concentration	NA	3.4	albumin	mg/dl	plasma
+Kawasaki1988	I26	Fibrosis	concentration	NA	66.0	ast	IU/l	liver
+Kawasaki1988	I26	Fibrosis	concentration	NA	63.0	alt	IU/l	liver
+Kawasaki1988	I26	Fibrosis	concentration	NA	21.0	bile acids	micromol/l	bile
+Kawasaki1988	I27	Fibrosis	age	NA	47.0	NA	yr	NA
+Kawasaki1988	I27	Fibrosis	sex	M	NA	NA	NA	NA
+Kawasaki1988	I27	Fibrosis	medication	N	NA	NA	NA	NA
+Kawasaki1988	I27	Fibrosis	concentration	NA	0.5	bilirubin	mg/dl	plasma
+Kawasaki1988	I27	Fibrosis	concentration	NA	5.1	albumin	mg/dl	plasma
+Kawasaki1988	I27	Fibrosis	concentration	NA	52.0	ast	IU/l	liver
+Kawasaki1988	I27	Fibrosis	concentration	NA	60.0	alt	IU/l	liver
+Kawasaki1988	I27	Fibrosis	concentration	NA	10.0	bile acids	micromol/l	bile
+Kawasaki1988	I28	Hepatitis	age	NA	52.0	NA	yr	NA
+Kawasaki1988	I28	Hepatitis	sex	M	NA	NA	NA	NA
+Kawasaki1988	I28	Hepatitis	medication	N	NA	NA	NA	NA
+Kawasaki1988	I28	Hepatitis	concentration	NA	0.8	bilirubin	mg/dl	plasma
+Kawasaki1988	I28	Hepatitis	concentration	NA	4.8	albumin	mg/dl	plasma
+Kawasaki1988	I28	Hepatitis	concentration	NA	147.0	ast	IU/l	liver
+Kawasaki1988	I28	Hepatitis	concentration	NA	156.0	alt	IU/l	liver
+Kawasaki1988	I28	Hepatitis	concentration	NA	17.0	bile acids	micromol/l	bile
+Kawasaki1988	I29	Hepatitis	age	NA	24.0	NA	yr	NA
+Kawasaki1988	I29	Hepatitis	sex	F	NA	NA	NA	NA
+Kawasaki1988	I29	Hepatitis	medication	N	NA	NA	NA	NA
+Kawasaki1988	I29	Hepatitis	concentration	NA	0.7	bilirubin	mg/dl	plasma
+Kawasaki1988	I29	Hepatitis	concentration	NA	3.7	albumin	mg/dl	plasma
+Kawasaki1988	I29	Hepatitis	concentration	NA	22.0	ast	IU/l	liver
+Kawasaki1988	I29	Hepatitis	concentration	NA	25.0	alt	IU/l	liver
+Kawasaki1988	I29	Hepatitis	concentration	NA	3.0	bile acids	micromol/l	bile

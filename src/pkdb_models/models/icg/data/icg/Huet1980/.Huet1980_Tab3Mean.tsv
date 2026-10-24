@@ -1,0 +1,4 @@
+study	group	measurement_type	substance	tissue	intervention	mean	se	unit
+Huet1980	patients	hbf	na	blood	Lidor, Lidiv	29.47	3.54	ml/min/kg
+Huet1980	patients	hbf	na	blood	ICG	28.5	3.11	ml/min/kg
+Huet1980	patients	extraction_ratio	indocyanine green	plasma	ICG	0.55	0.03	dimensionless

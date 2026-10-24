@@ -1,0 +1,8 @@
+study	name	group_count	parent	measurement_type	median	min	max	unit	choice	count
+SwineLeipzig2014	all	20	NA	species	NA	NA	NA	NA	swine	15
+SwineLeipzig2014	all	20	NA	healthy	NA	NA	NA	NA	NR	15
+SwineLeipzig2014	all	20	NA	sex	NA	NA	NA	NA	M	15
+SwineLeipzig2014	PBS	4	all	species	NA	NA	NA	NA	swine	4
+SwineLeipzig2014	MSC PV	3	all	species	NA	NA	NA	NA	swine	3
+SwineLeipzig2014	MSC ZV	4	all	species	NA	NA	NA	NA	swine	4
+SwineLeipzig2014	NO_RES	4	all	species	NA	NA	NA	NA	swine	4

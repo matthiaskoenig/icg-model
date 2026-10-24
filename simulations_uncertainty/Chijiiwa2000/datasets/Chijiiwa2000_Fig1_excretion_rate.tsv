@@ -1,0 +1,6 @@
+study	group	count	intervention	measurement	tissue	substance	label	dose	dose_unit	time	time_unit	meanraw	sdraw	unitraw	mean	mean_sd	mean_unit	count_unit
+Chijiiwa2000	all	14	ICG	excretion rate	bile	indocyanine green	excretion rate	0.5	mg/kg	0.5	hr	2.0	2.408163	percent/hr	2.688293692636302e-10	3.236924701870058e-10	mole/second	dimensionless
+Chijiiwa2000	all	14	ICG	excretion rate	bile	indocyanine green	excretion rate	0.5	mg/kg	1.5	hr	8.0	7.755102	percent/hr	1.0753174770545208e-09	1.0423995896175585e-09	mole/second	dimensionless
+Chijiiwa2000	all	14	ICG	excretion rate	bile	indocyanine green	excretion rate	0.5	mg/kg	2.5	hr	12.489796	6.530613	percent/hr	1.6788119904557057e-09	8.77810286847432e-10	mole/second	dimensionless
+Chijiiwa2000	all	14	ICG	excretion rate	bile	indocyanine green	excretion rate	0.5	mg/kg	3.5	hr	10.285714	6.938776	percent/hr	1.3825510035230454e-09	9.326733877708074e-10	mole/second	dimensionless
+Chijiiwa2000	all	14	ICG	excretion rate	bile	indocyanine green	excretion rate	0.5	mg/kg	4.5	hr	6.163265	4.734694	percent/hr	8.284333212773039e-10	6.364124008381472e-10	mole/second	dimensionless

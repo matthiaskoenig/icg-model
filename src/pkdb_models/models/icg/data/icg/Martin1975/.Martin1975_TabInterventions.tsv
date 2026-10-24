@@ -1,0 +1,5 @@
+study	name	substance	measurement_type	time	time_unit	route	form	value	unit	application
+Martin1975	ICG0.5	indocyanine green	dosing	0	min	iv	solution	0.5	mg/kg	single dose
+Martin1975	ICG2.0	indocyanine green	dosing	0	min	iv	solution	2.0	mg/kg	single dose
+Martin1975	ICG3.5	indocyanine green	dosing	0	min	iv	solution	3.5	mg/kg	single dose
+Martin1975	ICG5.0	indocyanine green	dosing	0	min	iv	solution	5.0	mg/kg	single dose

@@ -1,0 +1,11 @@
+study	group	count	substance	intervention	measurement	tissue	mean	sd	unit	time	time_unit
+Caesar1961	Controls	4	indocyanine green	ICG_inf	extraction_ratio	plasma	62.0	7.08872343937891	percent	60.0	min
+Caesar1961	Cirrhosis	7	indocyanine green	ICG_inf	extraction_ratio	plasma	49.0	20.9341370788981	percent	60.0	min
+Caesar1961	Controls	4	indocyanine green	ICG_inf	concentration_ss	hepatic vein plasma	0.385	0.13	mg/l	60.0	min
+Caesar1961	Cirrhosis	7	indocyanine green	ICG_inf	concentration_ss	hepatic vein plasma	2.10571428571429	2.61034389268832	mg/l	60.0	min
+Caesar1961	Controls	4	indocyanine green	ICG_inf	concentration_ss	arterial plasma	1.02	0.266395695660922	mg/l	60.0	min
+Caesar1961	Cirrhosis	7	indocyanine green	ICG_inf	concentration_ss	arterial plasma	3.41	2.90593071722870	mg/l	60.0	min
+Caesar1961	Controls	4	indocyanine green	ICG_inf	infusion_rate	NA	0.56	0.0597215762230964	mg/min	NA	NA
+Caesar1961	Cirrhosis	7	indocyanine green	ICG_inf	infusion_rate	NA	0.49	0.0213808993529940	mg/min	NA	NA
+Caesar1961	Controls	4	indocyanine green	ICG_inf	hbf	plasma	1460.0	363.134502170569	ml/min	NA	NA
+Caesar1961	Cirrhosis	7	indocyanine green	ICG_inf	hbf	plasma	683.571428571429	381.627155368018	ml/min	NA	NA

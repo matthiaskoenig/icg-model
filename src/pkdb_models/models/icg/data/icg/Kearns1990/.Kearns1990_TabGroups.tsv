@@ -1,0 +1,26 @@
+study	name	group_count	parent	measurement_type	substance	choice	count	mean	sd	unit
+Kearns1990	all	23	na	species	na	homo sapiens	23	na	na	na
+Kearns1990	all	23	na	sex	na	M	10	na	na	na
+Kearns1990	all	23	na	sex	na	F	13	na	na	na
+Kearns1990	all	23	na	healthy	na	Y	9	na	na	na
+Kearns1990	all	23	na	healthy	na	N	14	na	na	na
+Kearns1990	CF	14	all	sex	na	M	7	na	na	na
+Kearns1990	CF	14	all	sex	na	F	7	na	na	na
+Kearns1990	CF	14	all	age	na	na	14	20.9	4.6	yr
+Kearns1990	CF	14	all	weight	na	na	14	43.6	11	kg
+Kearns1990	CF	14	all	height	na	na	14	161.3	9.7	cm
+Kearns1990	CF	14	all	body surface area	na	na	14	1.4	0.2	m^2
+Kearns1990	CF	14	all	hematocrit	na	na	14	42.6	3.2	percent
+Kearns1990	CF	14	all	prothrombin time	na	na	14	12.5	1	sec
+Kearns1990	CF	14	all	concentration	albumin	na	14	3.7	0.3	mg/dl
+Kearns1990	CF	14	all	disease	na	liver fibrosis	14	na	na	na
+Kearns1990	Control	9	all	sex	na	M	3	na	na	na
+Kearns1990	Control	9	all	sex	na	F	6	na	na	na
+Kearns1990	Control	9	all	age	na	na	9	12.7	4.2	yr
+Kearns1990	Control	9	all	healthy	na	Y	9	na	na	na
+Kearns1990	Control	9	all	weight	na	na	9	47.2	20.4	kg
+Kearns1990	Control	9	all	height	na	na	9	150.7	22.4	cm
+Kearns1990	Control	9	all	body surface area	na	na	9	1.4	0.1	m^2
+Kearns1990	Control	9	all	hematocrit	na	na	9	38.3	2.4	percent
+Kearns1990	Control	9	all	prothrombin time	na	na	9	10.3	0.4	sec
+Kearns1990	Control	9	all	concentration	albumin	na	9	4.1	0.2	mg/dl
